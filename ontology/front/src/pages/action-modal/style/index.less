@@ -1,0 +1,98 @@
+.action-step-modal{
+  .arco-modal-content{
+    padding: 0;
+  }
+  .create-step-container{
+    display: flex;
+    height: 690px;
+    font-family: "PingFang SC";
+    .step-left{
+      width: 180px;
+      padding: 16px 20px;
+      box-sizing: border-box;
+      border-right: 1px solid var(--color-border-1, #EFF4F9);
+      background: var(--color-fill-1, #F9FBFD);
+      .arco-steps-item-active{
+        font-weight: 600;
+      }
+    }
+    .step-right{
+      padding: 16px 20px 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .step-desc{
+        display: flex;
+        align-items: center;
+        .step-index{
+          background-color: #C9D5F1;
+          color: var(--color-primary-6, #3261CE);
+          width: 15px;
+          height: 15px;
+          line-height: 15px;
+          text-align: center;
+          font-size: 10px;
+          font-weight: 600px;
+          margin: 5px;
+        }
+
+        .step-text {
+          color: var(--color-text-1, #242E43);
+          font-size: 14px;
+          margin: 0 4px;
+          font-weight: 600;
+          span{
+            font-size: 12px;
+            font-weight: 400;
+          }
+        }
+      }
+      .step-footer-btn{
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        button{
+          margin-left: 8px;
+        }
+      }
+      .step-config{
+        flex: 1;
+      }
+      .arco-alert.action-alert{
+        padding: 6px 12px;
+      }
+    }
+  }
+  .arco-select-popup .arco-select-popup-inner{
+    max-height: 300px;
+  }
+  .icon-select-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    padding: 6px;
+    border-radius: var(--border-radius-medium);
+    background-color: var(--color-bg-popup);
+    border: 1px solid var(--color-fill-3);
+    &>div>div{
+      display: flex;
+      flex-direction: row !important;
+      flex-wrap: wrap;
+      li.arco-select-option{
+        width: 22px;
+        height: 22px;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+        padding: 0;
+        margin: 4px;
+        border-radius: 2px;
+        &.arco-select-option-selected {
+          background-color: var(--color-fill-2);
+        }
+      }
+    }
+  }
+}

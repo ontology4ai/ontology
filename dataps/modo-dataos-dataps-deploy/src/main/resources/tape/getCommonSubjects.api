@@ -1,0 +1,40 @@
+{
+  "id": "121952148195086336",
+  "name": "getCommonSubjects",
+  "label": "获取通用参考数据",
+  "descr": "获取通用参考数据",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"190\" y\u003d\"140\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236063466669670400",
+  "respContentType": "application/json",
+  "url": "get/common/subjects",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[{\"id\":\"1ae6b878-0685-4db4-a3d5-610a9dcdfe94\",\"name\":\"subjectName\",\"required\":\"1\",\"example\":\"\",\"desc\":\"\"}]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "232524623573860352",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "121952148195086336",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport io.github.suanchou.driver.repo.AbstractRepository;\\nimport io.github.suanchou.utils.JsonUtil;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.springframework.data.jpa.domain.Specification;\\n\\nimport javax.persistence.criteria.Predicate;\\nimport java.util.ArrayList;\\nimport java.util.List;\\nimport java.util.Map;\\n\\n\\n\\n    public Object getWorkspaceSubjects(Map\u003cString, Object\u003e params) {\\n        List\u003cMap\u003cString, Object\u003e\u003e result \u003d new ArrayList\u003c\u003e();\\n        String subjectName \u003d MapUtils.getString(params, \\\"subjectName\\\");\\n        AbstractRepository datapsSysEnumsDefRepo \u003d (AbstractRepository) SpringContextUtil.getBean(\\\"datapsSysEnumsDefRepo\\\");\\n        AbstractRepository datapsSysEnumsRepo \u003d (AbstractRepository) SpringContextUtil.getBean(\\\"datapsSysEnumsRepo\\\");\\n        Specification specification \u003d (root, query, cb) -\u003e {\\n            List\u003cPredicate\u003e predicateList \u003d new ArrayList\u003c\u003e();\\n            predicateList.add(cb.equal(root.get(\\\"name\\\").as(String.class), subjectName));\\n            return query.where(predicateList.toArray(new Predicate[predicateList.size()])).getRestriction();\\n        };\\n        List list \u003d datapsSysEnumsDefRepo.findAll(specification);\\n        if (list.isEmpty()) {\\n            return result;\\n        }\\n        String itemId \u003d null;\\n        for (Object l : list) {\\n            Map\u003cString, Object\u003e target \u003d JsonUtil.getInstance().convertValue(l, Map.class);\\n            itemId \u003d MapUtils.getString(target, \\\"id\\\");\\n        }\\n        if (itemId \u003d\u003d null) {\\n            return result;\\n        }\\n        String finalItemId \u003d itemId;\\n        specification \u003d (root, query, cb) -\u003e {\\n            List\u003cPredicate\u003e predicateList \u003d new ArrayList\u003c\u003e();\\n            predicateList.add(cb.equal(root.get(\\\"defId\\\").as(String.class), finalItemId));\\n            return query.where(predicateList.toArray(new Predicate[predicateList.size()])).getRestriction();\\n        };\\n        list \u003d datapsSysEnumsRepo.findAll(specification);\\n        list.forEach(l -\u003e {\\n            Map\u003cString, Object\u003e temp \u003d JsonUtil.getInstance().convertValue(l, Map.class);\\n            temp.put(\\\"subjectName\\\", MapUtils.getString(temp, \\\"name\\\"));\\n            temp.put(\\\"subjectLabel\\\", MapUtils.getString(temp, \\\"label\\\"));\\n            temp.put(\\\"subjectDescr\\\", MapUtils.getString(temp, \\\"descr\\\"));\\n            result.add(temp);\\n        });\\n        return result;\\n    }\\n\\n\\n\\nreturn getWorkspaceSubjects(params);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport io.github.suanchou.driver.repo.AbstractRepository;\nimport io.github.suanchou.utils.JsonUtil;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.springframework.data.jpa.domain.Specification;\n\nimport javax.persistence.criteria.Predicate;\nimport java.util.ArrayList;\nimport java.util.List;\nimport java.util.Map;\n\n\n\n    public Object getWorkspaceSubjects(Map\u003cString, Object\u003e params) {\n        List\u003cMap\u003cString, Object\u003e\u003e result \u003d new ArrayList\u003c\u003e();\n        String subjectName \u003d MapUtils.getString(params, \"subjectName\");\n        AbstractRepository datapsSysEnumsDefRepo \u003d (AbstractRepository) SpringContextUtil.getBean(\"datapsSysEnumsDefRepo\");\n        AbstractRepository datapsSysEnumsRepo \u003d (AbstractRepository) SpringContextUtil.getBean(\"datapsSysEnumsRepo\");\n        Specification specification \u003d (root, query, cb) -\u003e {\n            List\u003cPredicate\u003e predicateList \u003d new ArrayList\u003c\u003e();\n            predicateList.add(cb.equal(root.get(\"name\").as(String.class), subjectName));\n            return query.where(predicateList.toArray(new Predicate[predicateList.size()])).getRestriction();\n        };\n        List list \u003d datapsSysEnumsDefRepo.findAll(specification);\n        if (list.isEmpty()) {\n            return result;\n        }\n        String itemId \u003d null;\n        for (Object l : list) {\n            Map\u003cString, Object\u003e target \u003d JsonUtil.getInstance().convertValue(l, Map.class);\n            itemId \u003d MapUtils.getString(target, \"id\");\n        }\n        if (itemId \u003d\u003d null) {\n            return result;\n        }\n        String finalItemId \u003d itemId;\n        specification \u003d (root, query, cb) -\u003e {\n            List\u003cPredicate\u003e predicateList \u003d new ArrayList\u003c\u003e();\n            predicateList.add(cb.equal(root.get(\"defId\").as(String.class), finalItemId));\n            return query.where(predicateList.toArray(new Predicate[predicateList.size()])).getRestriction();\n        };\n        list \u003d datapsSysEnumsRepo.findAll(specification);\n        list.forEach(l -\u003e {\n            Map\u003cString, Object\u003e temp \u003d JsonUtil.getInstance().convertValue(l, Map.class);\n            temp.put(\"subjectName\", MapUtils.getString(temp, \"name\"));\n            temp.put(\"subjectLabel\", MapUtils.getString(temp, \"label\"));\n            temp.put(\"subjectDescr\", MapUtils.getString(temp, \"descr\"));\n            result.add(temp);\n        });\n        return result;\n    }\n\n\n\nreturn getWorkspaceSubjects(params);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

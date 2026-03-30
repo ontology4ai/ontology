@@ -1,0 +1,65 @@
+.tip-copy-spin{
+  .tips-container{
+    height: 100%;
+
+    .tips-header {
+      display: flex;
+      margin-bottom: 16px;
+      .pos-left {
+        flex: 1;
+        .title {
+          font-size: 14px;
+          font-weight: 600;
+          color: var(--color-text-1);
+          display: inline-block;
+          margin-right: 8px;
+          &:before {
+            content: '';
+            width: 3px;
+            height: 12px;
+            margin-right: 4px;
+            border-radius: 6px;
+            background: var(--color-primary-6);
+            display: inline-block;
+            position: relative;
+            top: 2px;
+          }
+        }
+        .moda-tag{
+          vertical-align: baseline;
+        }
+      }
+      .pos-right {
+        display: flex;
+        gap: 8px;
+        .arco-input-inner-wrapper {
+          width: 200px;
+          border-radius: 12px;
+        }
+        .arco-dropdown-popup-visible .moda-icon-arrow-down {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .tip-form{
+      width: 90%;
+      height: calc(100% - 60px);
+      .tip-content{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        .arco-form-item{
+          flex: 1;
+          margin-bottom: 20px;
+          div{
+            height: 100%;
+          }
+          .arco-textarea{
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

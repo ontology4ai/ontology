@@ -1,0 +1,62 @@
+{
+  "id": "204648736790736896",
+  "name": "getJobVersion",
+  "label": "获取调度版本",
+  "descr": "获取调度版本",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-fuzhizujian;title\u003d2.变量赋值\" title\u003d\"变量赋值\" modelData\u003d\"\" stepInst\u003d\"def\" vertex\u003d\"1\" parent\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"140\" y\u003d\"230\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"3\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d3.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" vertex\u003d\"1\" parent\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"290\" y\u003d\"230\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"4\" value\u003d\"成功时\" edge\u003d\"1\" parent\u003d\"1\" source\u003d\"2\" target\u003d\"3\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "172665357969428480",
+  "respContentType": "application/json",
+  "url": "dq/getJobVersion",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "liutao26",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "204651583510999040",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.变量赋值",
+      "graphId": "204648736790736896",
+      "stepInst": "def",
+      "preStepId": "-1",
+      "nextStepId": "3",
+      "successStepId": "3",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.变量赋值\",\"processor\":\"sql\",\"statement\":\"select * from dacp_meta_property where prop_name \u003d \u0027${params.propName}\u0027 and prop_domain \u003d \u0027datage\u0027\",\"variable\":\"resList\"}",
+      "createUser": "liutao26",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.变量赋值",
+        "processor": "sql",
+        "statement": "select * from dacp_meta_property where prop_name \u003d \u0027${params.propName}\u0027 and prop_domain \u003d \u0027datage\u0027",
+        "variable": "resList"
+      }
+    },
+    {
+      "id": "204651583510999041",
+      "stepSeq": "3",
+      "parentStepId": "-1",
+      "label": "3.执行脚本",
+      "graphId": "204648736790736896",
+      "stepInst": "script",
+      "preStepId": "2",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"3.执行脚本\",\"scriptText\":\"import java.util.*;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.lang3.StringUtils;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport io.github.suanchou.utils.JsonUtil;\\n\\nreturn resList;\\n\"}",
+      "createUser": "liutao26",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "3.执行脚本",
+        "scriptText": "import java.util.*;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.lang3.StringUtils;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport org.apache.commons.collections.MapUtils;\nimport io.github.suanchou.utils.JsonUtil;\n\nreturn resList;\n"
+      }
+    }
+  ]
+}

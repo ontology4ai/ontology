@@ -1,0 +1,107 @@
+import React, { useState, useEffect, useMemo } from 'react';
+import { connect } from 'react-redux';
+import { Form, Button, Input, Switch, Select, InputNumber } from "@arco-design/web-react";
+import BindVar from 'packages/modo-view/designer/src/components/BindVar';
+
+
+class Attr extends React.Component {
+    constructor(props: any) {
+        super(props);
+        this.state = {
+        };
+        this.formRef = React.createRef();
+    }
+    onValuesChange = (changeValue, values) => {
+        this.props.dispatch({
+            type: 'SETNODE',
+            nodeKey: this.props.activeNodeKey,
+            currentNode: this.formRef.current.getFieldsValue()
+        })
+    };
+    componentDidUpdate(prevProps) {
+        const { nodes, activeNodeKey, node } = this.props;
+        const prevNode = prevProps.nodes.byId[prevProps.activeNodeKey];
+        if (!_.isEqual(prevNode, node)) {
+            this.formRef.current.setFieldsValue(node);
+        }
+    }
+    render() {
+        /*
+        labelCol={{
+            flex: '100px',
+        }}
+        wrapperCol={{
+            flex: '1'
+        }}
+        */
+        const {
+            activeNodeKey,
+            nodes,
+            node,
+            ...rest
+        } = this.props;
+
+        const { current } = this.formRef;
+
+        return (
+            <Form
+                ref={this.formRef}
+                key={activeNodeKey}
+                layout="vertical"
+                initialValues={node}
+                onValuesChange={this.onValuesChange}>
+                <Form.Item
+                    label="尺寸"
+                    field="options.size">
+                    <Select
+                        size='small'
+                        options={[
+                            'small',
+                            'default'
+                        ]}/>
+                </Form.Item>
+                <Form.Item
+                    label="样式类型"
+                    field="options.type">
+                    <Select
+                        size='small'
+                        options={[
+                            'circle',
+                            'round',
+                            'line'
+                        ]}/>
+                </Form.Item>
+                <Form.Item
+                    label="开关打开时显示的图标"
+                    field="options.checkedIcon">
+                    <Input size='small'/>
+                </Form.Item>
+                <Form.Item
+                    label="开关打开时显示的文案"
+                    field="options.checkedText">
+                    <Input size='small'/>
+                </Form.Item>
+                <Form.Item
+                    label="开关关闭时显示的图标"
+                    field="options.uncheckedIcon">
+                    <Input size='small'/>
+                </Form.Item>
+                <Form.Item
+                    label="开关关闭时显示的文案"
+                    field="options.uncheckedText">
+                    <Input size='small'/>
+                </Form.Item>
+            </Form>
+        );
+    }
+}
+
+export default connect((state, ownProps) => {
+    const { nodes, activeNodeKey} = state;
+    const node = nodes.byId[activeNodeKey];
+    return {
+        node,
+        nodes,
+        activeNodeKey
+    }
+})(Attr);

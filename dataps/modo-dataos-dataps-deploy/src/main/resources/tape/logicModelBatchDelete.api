@@ -1,0 +1,103 @@
+{
+  "id": "78439665329475584",
+  "name": "logicModelBatchDelete",
+  "label": "逻辑模型批量删除",
+  "descr": "逻辑模型批量删除",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"230\" y\u003d\"140\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"3\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-httpdiaoyong;title\u003d3.HTTP调用\" title\u003d\"HTTP调用\" modelData\u003d\"\" stepInst\u003d\"http\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"560\" y\u003d\"150\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"7\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d7.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"560\" y\u003d\"310\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"8\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"3\" target\u003d\"7\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"9\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-tiaojianpanduan;title\u003d9.条件判断\" title\u003d\"条件判断\" modelData\u003d\"\" stepInst\u003d\"if\" vertex\u003d\"1\" parent\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"390\" y\u003d\"160\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"10\" value\u003d\"成功时\" edge\u003d\"1\" parent\u003d\"1\" source\u003d\"2\" target\u003d\"9\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"11\" value\u003d\"成功时\" edge\u003d\"1\" parent\u003d\"1\" source\u003d\"9\" target\u003d\"3\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"12\" value\u003d\"成功时\" edge\u003d\"1\" parent\u003d\"1\" source\u003d\"9\" target\u003d\"7\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "",
+  "respContentType": "application/json",
+  "url": "logic/model/batch/delete",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\n    \"body\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ],\n    \"headers\": [],\n    \"query\": []\n}",
+  "apiOutputParams": "{\n    \"mockJson\": \"\",\n    \"responseBody\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ]\n}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "8a748bf593afe9cd0193b3cbadae00b7",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "78439665329475584",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "9",
+      "successStepId": "9",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"import com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport com.asiainfo.modo.dataps.DatapsOperLogHelper;\\nimport com.asiainfo.modo.dataps.LogicModelBatchDeleteTransactional;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport liquibase.util.StringUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.apache.commons.lang3.StringUtils;\\nimport org.springframework.jdbc.core.JdbcTemplate;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\nimport com.asiainfo.dataos.core.Configuration;\\nimport com.asiainfo.modo.dataps.DatapsModoDevLogHelper;\\n\\nimport java.util.Arrays;\\nimport java.util.HashMap;\\nimport java.util.List;\\nimport java.util.Map;\\n\\n\\n\\n    public Object save(Map\u003cString, Object\u003e body) {\\n        Object idsObj \u003d body.get(\\\"ids\\\");\\n        List\u003cString\u003e ids \u003d (List\u003cString\u003e) idsObj;\\n        Map\u003cString, Object\u003e result \u003d new HashMap\u003c\u003e();\\n        if (ids \u003d\u003d null || ids.isEmpty()) {\\n            result.put(\\\"msg\\\", \\\"模型ID不能为空！\\\");\\n            return result;\\n        }\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select o.obj_id,p.state,p.procinst_id,p.label,t.model_label,t.model_name from dataos_online_offline_obj o left join dataps_logic_model_draft t on o.obj_id \u003d t.id inner join modo_flowable_procinst p on o.flow_id \u003d p.procinst_id where (p.state\u003d\u00273\u0027 or p.state\u003d\u00270\u0027) and o.obj_id in (:ids) order by p.create_dt asc\\\", body));\\n        for (Map\u003cString, Object\u003e map : list) {\\n            String modelLabel \u003d MapUtils.getString(map, \\\"modelLabel\\\");\\n            if (StringUtils.isBlank(modelLabel)) {\\n                modelLabel \u003d MapUtils.getString(map, \\\"modelName\\\");\\n            }\\n            String flowLabel \u003d MapUtils.getString(map, \\\"label\\\");\\n            if (StringUtils.isNotBlank(flowLabel)) {\\n                result.put(\\\"msg\\\", \\\"模型【\\\" + modelLabel + \\\"】已提交流程【\\\" + flowLabel + \\\"】，不允许删除！\\\");\\n                return result;\\n            }\\n        }\\n        DatapsOperLogHelper logger \u003d SpringContextUtil.getBean(DatapsOperLogHelper.class);\\n        try {\\n            // add by rl 20240912\\n            String inOutCheckResult \u003d checkProcInOutTabContainsTab(body);\\n            if (inOutCheckResult !\u003d null) {\\n                throw new RuntimeException(inOutCheckResult);\\n            }\\n            LogicModelBatchDeleteTransactional targetBean \u003d SpringContextUtil.getBean(LogicModelBatchDeleteTransactional.class);\\n            result \u003d targetBean.batchDelete(body);\\n            logger.log(\\\"删除\\\", \\\"模型\\\", MapUtils.getString(result, \\\"ids\\\"), MapUtils.getString(result, \\\"names\\\"), true);\\n            deleteDevCheckResults(MapUtils.getString(result, \\\"ids\\\"));\\n            return result;\\n        } catch (Exception e) {\\n            idsObj \u003d body.get(\\\"ids\\\");\\n            ids \u003d (List\u003cString\u003e) idsObj;\\n            logger.log(\\\"删除\\\", \\\"模型\\\", StringUtil.join(ids, \\\",\\\"), StringUtil.join(ids, \\\",\\\"), false);\\n            throw new RuntimeException(e);\\n        }\\n    }\\n\\n    private void deleteDevCheckResults(String ids) {\\n        if (StringUtils.isBlank(ids)) {\\n            return;\\n        }\\n        List\u003cString\u003e idList \u003d Arrays.asList(ids.split(\\\",\\\"));\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        Map\u003cString, Object\u003e params \u003d new HashMap\u003c\u003e();\\n        params.put(\\\"ids\\\", idList);\\n        jt.update(\\\"delete from dataps_dev_check_res where obj_id in (:ids)\\\", params);\\n        jt.update(\\\"delete from dataps_dev_check_detail where obj_id in (:ids)\\\", params);\\n    }\\n\\n    /**\\n     * 检查待删除模型是否是程序、单元的输入输出表,add by rl 20240912\\n     */\\n    private String checkProcInOutTabContainsTab(Map\u003cString, Object\u003e body) {\\n        Object idsObj \u003d body.get(\\\"ids\\\");\\n        if (idsObj \u003d\u003d null) {\\n            return null;\\n        }\\n        List\u003cString\u003e ids \u003d (List\u003cString\u003e) idsObj;\\n        if (ids.isEmpty()) {\\n            return null;\\n        }\\n        JdbcTemplate jt \u003d SpringJdbcUtil.getJdbcTemplate();\\n        for (String s : ids) {\\n            String sql \u003d \\\" select proc_label FROM dataos_meta_proc x WHERE extend_cfg like \u0027%\\\" + s + \\\"%\u0027 \\\";\\n            List\u003cMap\u003cString, Object\u003e\u003e mapList \u003d jt.queryForList(sql);\\n            if (mapList \u003d\u003d null || mapList.isEmpty()) {\\n                continue;\\n            }\\n            for (Map\u003cString, Object\u003e map : mapList) {\\n                Object procLabel \u003d map.get(\\\"proc_label\\\");\\n                if (procLabel \u003d\u003d null) {\\n                    continue;\\n                }\\n                return String.format(\\\"模型ID为%s的模型已被程序/单元%s引用为输入输出表，不允许删除\\\", s, procLabel);\\n            }\\n        }\\n        return null;\\n    }\\n\\n\\n\\nresult \u003d save(body);\\nmodelSecurity \u003d \\\"true\\\".equals(Configuration.getInstance().getProperty(\\\"model.security\\\"));\\nDatapsModoDevLogHelper.info(\\\"-----------------modelSecurity---------------------{}\\\",modelSecurity)\\npolicyData \u003d result.get(\\\"policyDatas\\\");\",\"label\":\"2.执行脚本\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "import com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport com.asiainfo.modo.dataps.DatapsOperLogHelper;\nimport com.asiainfo.modo.dataps.LogicModelBatchDeleteTransactional;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport liquibase.util.StringUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.apache.commons.lang3.StringUtils;\nimport org.springframework.jdbc.core.JdbcTemplate;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\nimport com.asiainfo.dataos.core.Configuration;\nimport com.asiainfo.modo.dataps.DatapsModoDevLogHelper;\n\nimport java.util.Arrays;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\n\n\n    public Object save(Map\u003cString, Object\u003e body) {\n        Object idsObj \u003d body.get(\"ids\");\n        List\u003cString\u003e ids \u003d (List\u003cString\u003e) idsObj;\n        Map\u003cString, Object\u003e result \u003d new HashMap\u003c\u003e();\n        if (ids \u003d\u003d null || ids.isEmpty()) {\n            result.put(\"msg\", \"模型ID不能为空！\");\n            return result;\n        }\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select o.obj_id,p.state,p.procinst_id,p.label,t.model_label,t.model_name from dataos_online_offline_obj o left join dataps_logic_model_draft t on o.obj_id \u003d t.id inner join modo_flowable_procinst p on o.flow_id \u003d p.procinst_id where (p.state\u003d\u00273\u0027 or p.state\u003d\u00270\u0027) and o.obj_id in (:ids) order by p.create_dt asc\", body));\n        for (Map\u003cString, Object\u003e map : list) {\n            String modelLabel \u003d MapUtils.getString(map, \"modelLabel\");\n            if (StringUtils.isBlank(modelLabel)) {\n                modelLabel \u003d MapUtils.getString(map, \"modelName\");\n            }\n            String flowLabel \u003d MapUtils.getString(map, \"label\");\n            if (StringUtils.isNotBlank(flowLabel)) {\n                result.put(\"msg\", \"模型【\" + modelLabel + \"】已提交流程【\" + flowLabel + \"】，不允许删除！\");\n                return result;\n            }\n        }\n        DatapsOperLogHelper logger \u003d SpringContextUtil.getBean(DatapsOperLogHelper.class);\n        try {\n            // add by rl 20240912\n            String inOutCheckResult \u003d checkProcInOutTabContainsTab(body);\n            if (inOutCheckResult !\u003d null) {\n                throw new RuntimeException(inOutCheckResult);\n            }\n            LogicModelBatchDeleteTransactional targetBean \u003d SpringContextUtil.getBean(LogicModelBatchDeleteTransactional.class);\n            result \u003d targetBean.batchDelete(body);\n            logger.log(\"删除\", \"模型\", MapUtils.getString(result, \"ids\"), MapUtils.getString(result, \"names\"), true);\n            deleteDevCheckResults(MapUtils.getString(result, \"ids\"));\n            return result;\n        } catch (Exception e) {\n            idsObj \u003d body.get(\"ids\");\n            ids \u003d (List\u003cString\u003e) idsObj;\n            logger.log(\"删除\", \"模型\", StringUtil.join(ids, \",\"), StringUtil.join(ids, \",\"), false);\n            throw new RuntimeException(e);\n        }\n    }\n\n    private void deleteDevCheckResults(String ids) {\n        if (StringUtils.isBlank(ids)) {\n            return;\n        }\n        List\u003cString\u003e idList \u003d Arrays.asList(ids.split(\",\"));\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        Map\u003cString, Object\u003e params \u003d new HashMap\u003c\u003e();\n        params.put(\"ids\", idList);\n        jt.update(\"delete from dataps_dev_check_res where obj_id in (:ids)\", params);\n        jt.update(\"delete from dataps_dev_check_detail where obj_id in (:ids)\", params);\n    }\n\n    /**\n     * 检查待删除模型是否是程序、单元的输入输出表,add by rl 20240912\n     */\n    private String checkProcInOutTabContainsTab(Map\u003cString, Object\u003e body) {\n        Object idsObj \u003d body.get(\"ids\");\n        if (idsObj \u003d\u003d null) {\n            return null;\n        }\n        List\u003cString\u003e ids \u003d (List\u003cString\u003e) idsObj;\n        if (ids.isEmpty()) {\n            return null;\n        }\n        JdbcTemplate jt \u003d SpringJdbcUtil.getJdbcTemplate();\n        for (String s : ids) {\n            String sql \u003d \" select proc_label FROM dataos_meta_proc x WHERE extend_cfg like \u0027%\" + s + \"%\u0027 \";\n            List\u003cMap\u003cString, Object\u003e\u003e mapList \u003d jt.queryForList(sql);\n            if (mapList \u003d\u003d null || mapList.isEmpty()) {\n                continue;\n            }\n            for (Map\u003cString, Object\u003e map : mapList) {\n                Object procLabel \u003d map.get(\"proc_label\");\n                if (procLabel \u003d\u003d null) {\n                    continue;\n                }\n                return String.format(\"模型ID为%s的模型已被程序/单元%s引用为输入输出表，不允许删除\", s, procLabel);\n            }\n        }\n        return null;\n    }\n\n\n\nresult \u003d save(body);\nmodelSecurity \u003d \"true\".equals(Configuration.getInstance().getProperty(\"model.security\"));\nDatapsModoDevLogHelper.info(\"-----------------modelSecurity---------------------{}\",modelSecurity)\npolicyData \u003d result.get(\"policyDatas\");",
+        "label": "2.执行脚本"
+      }
+    },
+    {
+      "id": "8a748bf593afe9cd0193b3cbadae00b8",
+      "stepSeq": "3",
+      "parentStepId": "-1",
+      "label": "3.HTTP调用",
+      "graphId": "78439665329475584",
+      "stepInst": "http",
+      "preStepId": "9",
+      "nextStepId": "7",
+      "successStepId": "7",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"3.HTTP调用\",\"method\":\"POST\",\"dataSource\":\"data_security_http_service\",\"url\":\"/_api/_/policy/table/one-click/delete\",\"jsonHeaders\":\"{\\\"Content-Type\\\":\\\"application/json;charset\u003dUTF-8\\\"}\",\"jsonParams\":\"policyData\",\"reqContentType\":\"application/json\",\"socketTimeout\":\"30000\",\"variable\":\"policyResult\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "3.HTTP调用",
+        "method": "POST",
+        "dataSource": "data_security_http_service",
+        "url": "/_api/_/policy/table/one-click/delete",
+        "jsonHeaders": "{\"Content-Type\":\"application/json;charset\u003dUTF-8\"}",
+        "jsonParams": "policyData",
+        "reqContentType": "application/json",
+        "socketTimeout": "30000",
+        "variable": "policyResult"
+      }
+    },
+    {
+      "id": "8a748bf593afe9cd0193b3cbadae00b9",
+      "stepSeq": "7",
+      "parentStepId": "-1",
+      "label": "7.执行脚本",
+      "graphId": "78439665329475584",
+      "stepInst": "script",
+      "preStepId": "3,9",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"7.执行脚本\",\"scriptText\":\"import java.util.*;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.lang3.StringUtils;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport io.github.suanchou.utils.JsonUtil;\\nimport io.github.suanchou.utils.StringUtil;\\nimport java.text.SimpleDateFormat;\\n\\nreturn result;\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "7.执行脚本",
+        "scriptText": "import java.util.*;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.lang3.StringUtils;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport org.apache.commons.collections.MapUtils;\nimport io.github.suanchou.utils.JsonUtil;\nimport io.github.suanchou.utils.StringUtil;\nimport java.text.SimpleDateFormat;\n\nreturn result;"
+      }
+    },
+    {
+      "id": "8a748bf593afe9cd0193b3cbadae00ba",
+      "stepSeq": "9",
+      "parentStepId": "-1",
+      "label": "9.条件判断",
+      "graphId": "78439665329475584",
+      "stepInst": "if",
+      "preStepId": "2",
+      "nextStepId": "3,7",
+      "successStepId": "3,7",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"9.条件判断\",\"expressions\":\"[{\\\"id\\\":\\\"3\\\",\\\"label\\\":\\\"3.HTTP调用\\\",\\\"expression\\\":\\\"modelSecurity\\\",\\\"__ORIGIN_DATA\\\":{\\\"id\\\":\\\"3\\\",\\\"label\\\":\\\"3.HTTP调用\\\",\\\"expression\\\":\\\"\\\"}},{\\\"id\\\":\\\"7\\\",\\\"label\\\":\\\"7.执行脚本\\\",\\\"expression\\\":\\\"!modelSecurity\\\",\\\"__ORIGIN_DATA\\\":{\\\"id\\\":\\\"7\\\",\\\"label\\\":\\\"7.执行脚本\\\",\\\"expression\\\":\\\"modelSecurity\\\",\\\"__ORIGIN_DATA\\\":{\\\"id\\\":\\\"7\\\",\\\"label\\\":\\\"7.执行脚本\\\",\\\"expression\\\":\\\"\\\"}}}]\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "9.条件判断",
+        "expressions": "[{\"id\":\"3\",\"label\":\"3.HTTP调用\",\"expression\":\"modelSecurity\",\"__ORIGIN_DATA\":{\"id\":\"3\",\"label\":\"3.HTTP调用\",\"expression\":\"\"}},{\"id\":\"7\",\"label\":\"7.执行脚本\",\"expression\":\"!modelSecurity\",\"__ORIGIN_DATA\":{\"id\":\"7\",\"label\":\"7.执行脚本\",\"expression\":\"modelSecurity\",\"__ORIGIN_DATA\":{\"id\":\"7\",\"label\":\"7.执行脚本\",\"expression\":\"\"}}}]"
+      }
+    }
+  ]
+}

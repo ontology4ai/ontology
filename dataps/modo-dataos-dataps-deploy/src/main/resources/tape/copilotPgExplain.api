@@ -1,0 +1,39 @@
+{
+  "id": "8a7494bd8f51c770018f51ce7c7b0002",
+  "name": "copilotPgExplain",
+  "label": "copilot程序解释",
+  "descr": "copilot程序解释演示接口",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"260\" y\u003d\"150\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "8a7494bd8f51c770018f51cab8ac0001",
+  "respContentType": "application/json",
+  "url": "open/copilotPgExplain",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\n    \"body\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": [\n                {\n                    \"name\": \"taskId\",\n                    \"id\": \"1abb0a9a-3a9a-4da0-a929-dec3738295c8\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false\n                },\n                {\n                    \"name\": \"pgType\",\n                    \"id\": \"d318a219-63c2-468a-8e16-54aa496aa585\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false\n                }\n            ]\n        }\n    ],\n    \"headers\": [],\n    \"query\": []\n}",
+  "apiOutputParams": "{\n    \"mockJson\": \"\",\n    \"responseBody\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ]\n}",
+  "createUser": "zouyc",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "8a7499668f0ebdfe018f56dbad2d000a",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "8a7494bd8f51c770018f51ce7c7b0002",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import com.asiainfo.modo.dataps.VectorExecutor;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport io.github.suanchou.utils.StringUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.apache.commons.lang.exception.ExceptionUtils;\\nimport org.apache.commons.lang3.StringUtils;\\n\\nimport java.util.*;\\n\\n\\n//String taskId \u003d new Date().getTime();\\nString taskId\u003dMapUtils.getString(body, \\\"taskId\\\");\\nString pgType\u003dMapUtils.getString(body, \\\"pgType\\\");\\ndef copilotDemoService \u003d SpringContextUtil.getBean(\\\"copilotDemoService\\\");\\nVectorExecutor.asyncSearchExecutor.execute(() -\u003e {\\ntry {\\n  copilotDemoService.execTask(taskId,pgType);\\n} catch (Exception e) {\\n  System.out.println(e);\\n  return e;\\n}\\n});\\n\\nreturn taskId;\\n\\n\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import com.asiainfo.modo.dataps.VectorExecutor;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport io.github.suanchou.utils.StringUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.apache.commons.lang.exception.ExceptionUtils;\nimport org.apache.commons.lang3.StringUtils;\n\nimport java.util.*;\n\n\n//String taskId \u003d new Date().getTime();\nString taskId\u003dMapUtils.getString(body, \"taskId\");\nString pgType\u003dMapUtils.getString(body, \"pgType\");\ndef copilotDemoService \u003d SpringContextUtil.getBean(\"copilotDemoService\");\nVectorExecutor.asyncSearchExecutor.execute(() -\u003e {\ntry {\n  copilotDemoService.execTask(taskId,pgType);\n} catch (Exception e) {\n  System.out.println(e);\n  return e;\n}\n});\n\nreturn taskId;\n\n"
+      }
+    }
+  ]
+}

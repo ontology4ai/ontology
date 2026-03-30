@@ -1,0 +1,40 @@
+{
+  "id": "203908411951214592",
+  "name": "getDsTypeCascaderOptions",
+  "label": "获取数据源类型级联选项信息",
+  "descr": "获取数据源类型级联选项信息",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" parent\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" vertex\u003d\"1\" parent\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"240\" y\u003d\"140\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236063466669670400",
+  "respContentType": "application/json",
+  "url": "get/dsType/cascader/options",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "203908412005740544",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "203908411951214592",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport java.util.ArrayList;\\nimport java.util.HashMap;\\nimport java.util.List;\\nimport java.util.Map;\\n\\n\\n\\n    public Object get(Map\u003cString, Object\u003e params) {\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        Map\u003cString, Map\u003cString, Object\u003e\u003e cateMap \u003d new HashMap\u003c\u003e();\\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select category_name name, category_label label from modo_ds_category where category_name not in (\u0027all\u0027,\u0027other\u0027,\u0027mostuse\u0027,\u0027itai\u0027)\\\", params));\\n        list.forEach(map -\u003e {\\n            String name \u003d MapUtils.getString(map, \\\"name\\\");\\n            map.put(\\\"children\\\", new ArrayList\u003c\u003e());\\n            cateMap.put(name, map);\\n        });\\n        if (!cateMap.isEmpty()) {\\n            params.put(\\\"dsCategorys\\\", new ArrayList\u003c\u003e(cateMap.keySet()));\\n        }\\n        list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select ds_type name,ds_type_label label,ds_category from modo_ds_type where ds_category in (:dsCategorys)\\\", params));\\n        list.forEach(map -\u003e {\\n            String dsCategory \u003d MapUtils.getString(map, \\\"dsCategory\\\");\\n            if (cateMap.containsKey(dsCategory)) {\\n                List\u003cMap\u003cString, Object\u003e\u003e children \u003d (List\u003cMap\u003cString, Object\u003e\u003e) cateMap.get(dsCategory).get(\\\"children\\\");\\n                children.add(map);\\n            }\\n        });\\n        return new ArrayList\u003c\u003e(cateMap.values());\\n    }\\n\\n\\nreturn get(params);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport java.util.ArrayList;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\n\n\n    public Object get(Map\u003cString, Object\u003e params) {\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        Map\u003cString, Map\u003cString, Object\u003e\u003e cateMap \u003d new HashMap\u003c\u003e();\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select category_name name, category_label label from modo_ds_category where category_name not in (\u0027all\u0027,\u0027other\u0027,\u0027mostuse\u0027,\u0027itai\u0027)\", params));\n        list.forEach(map -\u003e {\n            String name \u003d MapUtils.getString(map, \"name\");\n            map.put(\"children\", new ArrayList\u003c\u003e());\n            cateMap.put(name, map);\n        });\n        if (!cateMap.isEmpty()) {\n            params.put(\"dsCategorys\", new ArrayList\u003c\u003e(cateMap.keySet()));\n        }\n        list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select ds_type name,ds_type_label label,ds_category from modo_ds_type where ds_category in (:dsCategorys)\", params));\n        list.forEach(map -\u003e {\n            String dsCategory \u003d MapUtils.getString(map, \"dsCategory\");\n            if (cateMap.containsKey(dsCategory)) {\n                List\u003cMap\u003cString, Object\u003e\u003e children \u003d (List\u003cMap\u003cString, Object\u003e\u003e) cateMap.get(dsCategory).get(\"children\");\n                children.add(map);\n            }\n        });\n        return new ArrayList\u003c\u003e(cateMap.values());\n    }\n\n\nreturn get(params);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

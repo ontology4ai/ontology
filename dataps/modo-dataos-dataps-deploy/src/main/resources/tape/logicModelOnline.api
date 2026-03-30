@@ -1,0 +1,39 @@
+{
+  "id": "76375058062479360",
+  "name": "logicModelOnline",
+  "label": "逻辑模型上线",
+  "descr": "逻辑模型上线",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"60\" y\u003d\"100\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "",
+  "respContentType": "application/json",
+  "url": "logic/model/online",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\n    \"body\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ],\n    \"headers\": [],\n    \"query\": []\n}",
+  "apiOutputParams": "{\n    \"mockJson\": \"\",\n    \"responseBody\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ]\n}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "8a740a1899cc306c0199cc32c8ed0001",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "76375058062479360",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"import com.asiainfo.modo.dataos.model.LogicModelFlow;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nLogicModelFlow targetBean \u003d SpringContextUtil.getBean(LogicModelFlow.class);\\ntargetBean.logicModelOnline(body)\\n\",\"label\":\"2.执行脚本\"}",
+      "stepConfigMap": {
+        "scriptText": "import com.asiainfo.modo.dataos.model.LogicModelFlow;\nimport io.github.suanchou.utils.SpringContextUtil;\nLogicModelFlow targetBean \u003d SpringContextUtil.getBean(LogicModelFlow.class);\ntargetBean.logicModelOnline(body)\n",
+        "label": "2.执行脚本"
+      }
+    }
+  ],
+  "operLogConf": "{\"objType\":\"\",\"operType\":\"\",\"objIdConf\":{\"from\":\"\",\"argName\":\"\",\"jsonPath\":\"\"},\"objNameConf\":{\"from\":\"\",\"argName\":\"\",\"jsonPath\":\"\"}}"
+}

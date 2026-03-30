@@ -1,0 +1,171 @@
+[
+    {
+        "id": "0",
+        "name": "0",
+        "label": "页面",
+        "type": "view",
+        "options": {
+            "hidden": false,
+            "hiddenBindVar": null,
+            "isLoading": false,
+            "loading": false,
+            "loadingBindVar": null,
+            "loadingText": null,
+            "loadingTextBindVar": null,
+            "showTooltip": false,
+            "tooltipText": null,
+            "className": "",
+            "css": ":root {\n    background-color: var(--color-gray-2);\n    padding: 10px 12px;\n}",
+            "loop": {
+                "data": null,
+                "dataBindVar": null,
+                "var": "item",
+                "index": "index",
+                "key": "index",
+                "paginationVisible": true,
+                "disabled": false
+            },
+            "eventMap": {},
+            "type": "one-screen-layout",
+            "titleVisible": false,
+            "vars": [],
+            "models": [],
+            "services": []
+        },
+        "children": [
+            {
+                "id": "1f7ef9b5ac279705",
+                "name": "1f7ef9b5ac279705",
+                "label": "页面布局",
+                "type": "flexLayout",
+                "options": {
+                    "hidden": false,
+                    "hiddenBindVar": null,
+                    "isLoading": false,
+                    "loading": false,
+                    "loadingBindVar": null,
+                    "loadingText": null,
+                    "loadingTextBindVar": null,
+                    "showTooltip": false,
+                    "tooltipText": null,
+                    "className": "",
+                    "css": ":root{\r\n}",
+                    "loop": {
+                        "data": null,
+                        "dataBindVar": null,
+                        "var": "item",
+                        "index": "index",
+                        "key": "index",
+                        "paginationVisible": true,
+                        "disabled": false
+                    },
+                    "eventMap": {},
+                    "gutter": "5px",
+                    "width": "100%",
+                    "height": "100%",
+                    "flexDirection": "row",
+                    "flex": "auto",
+                    "flexGrow": true
+                },
+                "defaultOptions": {
+                    "gutter": "5px",
+                    "width": "100%",
+                    "height": "200px",
+                    "flexDirection": "row",
+                    "flex": "auto",
+                    "flexGrow": true
+                },
+                "children": [
+                    {
+                        "id": "92f80da468af5aca",
+                        "name": "92f80da468af5aca",
+                        "label": "树布局",
+                        "type": "flexLayout",
+                        "options": {
+                            "hidden": false,
+                            "hiddenBindVar": null,
+                            "isLoading": false,
+                            "loading": false,
+                            "loadingBindVar": null,
+                            "loadingText": null,
+                            "loadingTextBindVar": null,
+                            "showTooltip": false,
+                            "tooltipText": null,
+                            "className": "",
+                            "css": ":root{\r\n    background-color: var(--color-white);\r\n    border-radius: 6px;\r\n    margin-right: 10px;\r\n}",
+                            "loop": {
+                                "data": null,
+                                "dataBindVar": null,
+                                "var": "item",
+                                "index": "index",
+                                "key": "index",
+                                "paginationVisible": true,
+                                "disabled": false
+                            },
+                            "eventMap": {},
+                            "width": "200px",
+                            "height": "auto",
+                            "gutter": "5px",
+                            "flexDirection": "row",
+                            "flex": "auto",
+                            "flexGrow": false
+                        },
+                        "defaultOptions": {
+                            "gutter": "5px",
+                            "width": "100%",
+                            "height": "200px",
+                            "flexDirection": "row",
+                            "flex": "auto",
+                            "flexGrow": true
+                        },
+                        "children": []
+                    },
+                    {
+                        "id": "e47f5a7991d13109",
+                        "name": "e47f5a7991d13109",
+                        "label": "表格布局",
+                        "type": "flexLayout",
+                        "options": {
+                            "hidden": false,
+                            "hiddenBindVar": null,
+                            "isLoading": false,
+                            "loading": false,
+                            "loadingBindVar": null,
+                            "loadingText": null,
+                            "loadingTextBindVar": null,
+                            "showTooltip": false,
+                            "tooltipText": null,
+                            "className": "",
+                            "css": ":root{\r\n}",
+                            "loop": {
+                                "data": null,
+                                "dataBindVar": null,
+                                "var": "item",
+                                "index": "index",
+                                "key": "index",
+                                "paginationVisible": true,
+                                "disabled": false
+                            },
+                            "eventMap": {},
+                            "width": "auto",
+                            "height": "auto",
+                            "gutter": "5px",
+                            "flexDirection": "row",
+                            "flex": "auto",
+                            "flexGrow": true
+                        },
+                        "defaultOptions": {
+                            "gutter": "5px",
+                            "width": "100%",
+                            "height": "200px",
+                            "flexDirection": "row",
+                            "flex": "auto",
+                            "flexGrow": true
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+]

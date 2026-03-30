@@ -1,0 +1,40 @@
+{
+  "id": "223768182076424192",
+  "name": "getUsersToArchPriv",
+  "label": "获取可授权架构的用户",
+  "descr": "获取可授权架构的用户",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"240\" y\u003d\"190\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236137581396668416",
+  "respContentType": "application/json",
+  "url": "get/users/to/arch/priv",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "236138334119460864",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "223768182076424192",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.apache.commons.lang3.StringUtils;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport java.util.*;\\n\\n\\n\\n    public Object getUsers(Map\u003cString, Object\u003e params) {\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        List\u003cString\u003e mgrRoles \u003d getMgrRoles();\\n        if (mgrRoles.isEmpty()) {\\n            return DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select user_id, user_name from modo_user where state\u003d\u00271\u0027\\\", params));\\n        } else {\\n            params.put(\\\"roleIds\\\", mgrRoles);\\n            return DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select user_id, user_name from modo_user u where u.state\u003d\u00271\u0027 and not exists(select rela_id from modo_user_role_rela where user_id\u003du.user_id and role_id in (:roleIds))\\\", params));\\n        }\\n    }\\n\\n    private List\u003cString\u003e getMgrRoles() {\\n        Map\u003cString, Object\u003e params \u003d new HashMap\u003c\u003e();\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d jt.queryForList(\\\"select prop_label from dacp_meta_property where prop_name\u003d\u0027sysDataArchMgrRoles\u0027\\\", params);\\n        Set\u003cString\u003e roles \u003d new HashSet\u003c\u003e();\\n        roles.add(\\\"platform_mgr\\\");\\n        roles.add(\\\"data_governance\\\");\\n        String roleStr \u003d \\\"\\\";\\n        for (Map\u003cString, Object\u003e map : list) {\\n            roleStr \u003d MapUtils.getString(map, \\\"prop_label\\\");\\n        }\\n        if (StringUtils.isNotBlank(roleStr)) {\\n            roles.addAll(Arrays.asList(roleStr.split(\\\",\\\")));\\n        }\\n        return new ArrayList\u003c\u003e(roles);\\n    }\\n\\n\\n\\nreturn getUsers(params);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.apache.commons.lang3.StringUtils;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport java.util.*;\n\n\n\n    public Object getUsers(Map\u003cString, Object\u003e params) {\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        List\u003cString\u003e mgrRoles \u003d getMgrRoles();\n        if (mgrRoles.isEmpty()) {\n            return DatapsHumpHelper.lineToHump(jt.queryForList(\"select user_id, user_name from modo_user where state\u003d\u00271\u0027\", params));\n        } else {\n            params.put(\"roleIds\", mgrRoles);\n            return DatapsHumpHelper.lineToHump(jt.queryForList(\"select user_id, user_name from modo_user u where u.state\u003d\u00271\u0027 and not exists(select rela_id from modo_user_role_rela where user_id\u003du.user_id and role_id in (:roleIds))\", params));\n        }\n    }\n\n    private List\u003cString\u003e getMgrRoles() {\n        Map\u003cString, Object\u003e params \u003d new HashMap\u003c\u003e();\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d jt.queryForList(\"select prop_label from dacp_meta_property where prop_name\u003d\u0027sysDataArchMgrRoles\u0027\", params);\n        Set\u003cString\u003e roles \u003d new HashSet\u003c\u003e();\n        roles.add(\"platform_mgr\");\n        roles.add(\"data_governance\");\n        String roleStr \u003d \"\";\n        for (Map\u003cString, Object\u003e map : list) {\n            roleStr \u003d MapUtils.getString(map, \"prop_label\");\n        }\n        if (StringUtils.isNotBlank(roleStr)) {\n            roles.addAll(Arrays.asList(roleStr.split(\",\")));\n        }\n        return new ArrayList\u003c\u003e(roles);\n    }\n\n\n\nreturn getUsers(params);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

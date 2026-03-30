@@ -1,0 +1,148 @@
+.modo-editor {
+    border: 1px solid var(--color-gray-2);
+    background: var(--color-white);
+    box-sizing: border-box;
+    overflow: hidden;
+    &.fullscreen {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 5000;
+        width: 100%;
+        height: 100%;
+    }
+    &>section {
+        left: -1px;
+    }
+    .margin-view-overlays {
+        background: var(--color-gray-2);
+    }
+    .modo-editor-header {
+        color: var(--color-gray-6);
+        display: flex;
+        padding-left: 10px;
+        line-height: 30px;
+        border-bottom: 1px solid var(--color-gray-2);
+        .pos-left {
+            flex: 1;
+        }
+        .arco-tag {
+            .moda-icon {
+                margin-right: 0px;
+            }
+        }
+        .moda-icon {
+            margin-right: 10px;
+            vertical-align: middle;
+            cursor: pointer;
+            transition: all .1s linear;
+            &:hover,
+            .active {
+                color: var(--color-primary-6);
+            }
+        }
+    }
+    .mo-mainBench .monaco-scrollable-element > .scrollbar > .slider {
+        background: rgba(255, 255, 255, 0.2);
+    }
+    .modo-editor-hint {
+        .modo-editor-hint-toolbar {
+
+        }
+    }
+    .modo-editor-hint {
+        position: relative;
+        padding: 0px;
+        margin: 0px;
+        line-height: 16px;
+        background: var(--color-fill-1);
+        color: var(--color-text-3);
+        font-family: Inter, -apple-system, BlinkMacSystemFont, PingFang SC, Hiragino Sans GB, noto sans, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+        pre {
+            padding: 0px;
+            margin: 0px;
+            font-family: Inter, -apple-system, BlinkMacSystemFont, PingFang SC, Hiragino Sans GB, noto sans, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+        .modo-editor-hint-toolbar {
+            position: absolute;
+            top: 0px;
+            right:20px;
+            background: var(--color-white);
+            padding: 4px 10px;
+            border-radius: 4px;
+            box-shadow: 0px 0px 5px #d3d3d3;
+            button {
+                border: 0px;
+                border-radius: 4px;
+                padding: 3px 6px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+.modo-diff-editor {
+    .monaco-editor .margin-view-overlays .line-numbers {
+        padding-right: 8px;
+    }
+}
+.ds-container{
+    .example-info-container {
+        margin-top: 10px;
+        max-height: 500px;
+        overflow: auto;
+        background-color: var(--color-gray-2);
+        padding: 10px;
+        border-radius: var(--border-radius-small);
+        .arco-spin-children {
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        p {
+            margin-block-start: 0;
+            margin-block-end: 5px;
+            user-select: text;
+            .text-bracket {
+                color: var(--color-magenta-8);
+            }
+        }
+    }
+}
+.modo-editor-context-menu{
+    box-shadow: 0px 0px 5px #d3d3d3;
+    border-radius: 4px;
+}
+.modo-editor-context-menu-item {
+    height: 24px;
+    line-height: 24px !important;
+    padding: 0px 4px !important;
+    margin-bottom: 0px !important;
+    &.arco-dropdown-menu-item {
+        padding: 0px 10px !important;
+    }
+    svg {
+        margin-right: 4px;
+        display: inline-block;
+        margin-bottom: 0px;
+    }
+    .ai-btn-small {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background: linear-gradient(90deg, #ff7636, #ffbf1b);
+    border-radius: 2px;
+    
+    vertical-align:top;
+    text-align: center;
+    margin-right: 4px;
+    margin-top: 5px;
+    img {
+        width: 10px;
+        height: 10px;
+        vertical-align: top;
+        margin-top: 1px;
+        
+    }
+}
+}

@@ -1,0 +1,87 @@
+{
+  "id": "76375447415525376",
+  "name": "logicModelOffline",
+  "label": "逻辑模型下线",
+  "descr": "逻辑模型下线",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"190\" y\u003d\"130\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"3\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-httpdiaoyong;title\u003d3.HTTP调用\" title\u003d\"HTTP调用\" modelData\u003d\"\" stepInst\u003d\"http\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"410\" y\u003d\"150\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"4\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"2\" target\u003d\"3\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"5\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d5.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"600\" y\u003d\"160\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"6\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"3\" target\u003d\"5\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236064974534127616",
+  "respContentType": "application/json",
+  "url": "logic/model/offline",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\"body\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}],\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "262601332270813184",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "76375447415525376",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "3",
+      "successStepId": "3",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"import com.asiainfo.modo.dataps.LogicModelOfflineTransactional;\\nimport com.asiainfo.modo.dataps.DatapsOperLogHelper;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.apache.commons.lang3.StringUtils;\\n\\nimport java.util.ArrayList;\\nimport java.util.HashMap;\\nimport java.util.List;\\nimport java.util.Map;\\n\\nDatapsOperLogHelper logger \u003d SpringContextUtil.getBean(DatapsOperLogHelper.class);\\ntry {\\n\\n    LogicModelOfflineTransactional targetBean \u003d SpringContextUtil.getBean(LogicModelOfflineTransactional.class);\\n    result \u003d targetBean.batchOffline(body);\\n    targetBean.offlineRuntime(body);\\n    syncData \u003d new HashMap\u003c\u003e();\\n    List\u003cMap\u003cString, Object\u003e\u003e tabData \u003d targetBean.tranferMetaTab(result);\\n    syncData.put(\\\"tabData\\\", tabData);\\n    List\u003cString\u003e ids \u003d new ArrayList\u003c\u003e();\\n    List\u003cString\u003e names \u003d new ArrayList\u003c\u003e();\\n    tabData.forEach(map -\u003e {\\n        ids.add(MapUtils.getString(map, \\\"tabId\\\"));\\n        names.add(MapUtils.getString(map, \\\"tabName\\\"));\\n    });\\n    logger.log(\\\"下线\\\", \\\"模型\\\", StringUtils.join(ids, \\\",\\\"), StringUtils.join(names, \\\",\\\"), true);\\n} catch (Exception e) {\\n    Object idsObj \u003d body.get(\\\"ids\\\");\\n    List\u003cString\u003e ids \u003d (List\u003cString\u003e) idsObj;\\n    logger.log(\\\"下线\\\", \\\"模型\\\", StringUtils.join(ids, \\\",\\\"), StringUtils.join(ids, \\\",\\\"), false);\\n    throw new RuntimeException(e);\\n}\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "import com.asiainfo.modo.dataps.LogicModelOfflineTransactional;\nimport com.asiainfo.modo.dataps.DatapsOperLogHelper;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.apache.commons.lang3.StringUtils;\n\nimport java.util.ArrayList;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\nDatapsOperLogHelper logger \u003d SpringContextUtil.getBean(DatapsOperLogHelper.class);\ntry {\n\n    LogicModelOfflineTransactional targetBean \u003d SpringContextUtil.getBean(LogicModelOfflineTransactional.class);\n    result \u003d targetBean.batchOffline(body);\n    targetBean.offlineRuntime(body);\n    syncData \u003d new HashMap\u003c\u003e();\n    List\u003cMap\u003cString, Object\u003e\u003e tabData \u003d targetBean.tranferMetaTab(result);\n    syncData.put(\"tabData\", tabData);\n    List\u003cString\u003e ids \u003d new ArrayList\u003c\u003e();\n    List\u003cString\u003e names \u003d new ArrayList\u003c\u003e();\n    tabData.forEach(map -\u003e {\n        ids.add(MapUtils.getString(map, \"tabId\"));\n        names.add(MapUtils.getString(map, \"tabName\"));\n    });\n    logger.log(\"下线\", \"模型\", StringUtils.join(ids, \",\"), StringUtils.join(names, \",\"), true);\n} catch (Exception e) {\n    Object idsObj \u003d body.get(\"ids\");\n    List\u003cString\u003e ids \u003d (List\u003cString\u003e) idsObj;\n    logger.log(\"下线\", \"模型\", StringUtils.join(ids, \",\"), StringUtils.join(ids, \",\"), false);\n    throw new RuntimeException(e);\n}",
+        "label": "2.执行脚本"
+      }
+    },
+    {
+      "id": "262601332270813185",
+      "stepSeq": "3",
+      "parentStepId": "-1",
+      "label": "3.HTTP调用",
+      "graphId": "76375447415525376",
+      "stepInst": "http",
+      "preStepId": "2",
+      "nextStepId": "5",
+      "successStepId": "5",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"3.HTTP调用\",\"url\":\"api/meta/tab/batch/sync\",\"dataSource\":\"datago_http_service\",\"method\":\"POST\",\"jsonHeaders\":\"{\\\"Content-Type\\\":\\\"application/json;charset\u003dUTF-8\\\"}\",\"jsonParams\":\"syncData\",\"reqContentType\":\"application/json\",\"socketTimeout\":\"30000\",\"variable\":\"syncResult\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "3.HTTP调用",
+        "url": "api/meta/tab/batch/sync",
+        "dataSource": "datago_http_service",
+        "method": "POST",
+        "jsonHeaders": "{\"Content-Type\":\"application/json;charset\u003dUTF-8\"}",
+        "jsonParams": "syncData",
+        "reqContentType": "application/json",
+        "socketTimeout": "30000",
+        "variable": "syncResult"
+      }
+    },
+    {
+      "id": "262601332270813186",
+      "stepSeq": "5",
+      "parentStepId": "-1",
+      "label": "5.执行脚本",
+      "graphId": "76375447415525376",
+      "stepInst": "script",
+      "preStepId": "3",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"5.执行脚本\",\"scriptText\":\"import java.util.*;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.lang3.StringUtils;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport io.github.suanchou.utils.JsonUtil;\\n\\nreturn result;\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "5.执行脚本",
+        "scriptText": "import java.util.*;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.lang3.StringUtils;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport org.apache.commons.collections.MapUtils;\nimport io.github.suanchou.utils.JsonUtil;\n\nreturn result;"
+      }
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+.agent-app-chat {
+	width: 100%;
+	height: 100%;
+	padding: 24px;
+	display: flex;
+	column-gap: 32px;
+	.menu-container {
+		width: 320px;
+		height: 100%;
+		padding-top: 58px;
+		position: relative;
+		.menu-arrow {
+			position: absolute;
+			top: 93px;
+			left: 30px;
+			width: 280px;
+		}
+		.menu-robot {
+			position: absolute;
+			top: 0px;
+			left: 98px;
+			width: 122px;
+		}
+		.menu-content {
+			width: 100%;
+			height: 100%;
+			padding: 110px 20px 0px;
+			border-radius: 20px;
+			background: #1A1939;
+			.menu-item {
+				width: 280px;
+				height: 72px;
+				padding: 16px 20px;
+				border-radius: 16px;
+				background: #2E3263;
+				margin-bottom: 20px;
+				display: flex;
+				column-gap: 10px;
+				align-items: center;
+				cursor: pointer;
+				&.active {
+					background: #fff;
+					.icon {
+						background: linear-gradient(90deg, #1D4BFF 0%, #DF23FE 100%);
+					}
+					.text {
+						color: #1A1939;
+					}
+				}
+				.icon {
+					display: flex;
+					width: 40px;
+					height: 40px;
+					padding: 8px;
+					align-items: center;
+					gap: 10px;
+					flex-shrink: 0;
+					border-radius: 12px;
+					background: #5A5E90;
+				}
+				.text {
+					flex: 1;
+					overflow: hidden;
+					color: #fff;
+					font-family: "DingTalk JinBuTi";
+					font-size: 18px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 24px; /* 133.333% */
+				}
+			}
+		}
+	}
+	.chat-container {
+		flex: 1;
+		height: 100%;
+		overflow: hidden;
+	}
+	.chat-flow-container {
+		width: 320px;
+		height: 100%;
+		border-radius: 20px;
+		background: #1A1939;
+		display: flex;
+    	flex-direction: column;
+		.chat-flow-graph {
+			flex: 1;
+			overflow: hidden;
+			.empty {
+				width: 64px;
+				height: 90px;
+				flex-shrink: 0;
+				margin: 0px auto;
+				position: relative;
+				top: 50%;
+				transform: translateY(-45px);
+				svg {
+					margin-bottom: 6px;
+				}
+				.text {
+					color: rgba(255, 255, 255, 0.50);
+					text-align: center;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 20px; /* 125% */
+				}
+			}
+		}
+		.chat-flow-sh {
+			width: 320px;
+			height: 180px;
+			padding: 0px 20px;
+			margin-bottom: 50px;
+			flex-shrink: 0;
+			color: #C3CAD4;
+			font-family: "HarmonyOS Sans SC";
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 26px; /* 162.5% */
+			svg {
+				// margin-bottom: 20px;
+			}
+			&>div {
+				width: 100%;
+				height: 100%;
+				word-break: break-all;
+				overflow: auto;
+				padding-top: 20px;
+			}
+			pre {
+				margin: 0px;
+				padding: 0px;
+				font-family: inherit;
+				word-break: break-all;
+			    width: 100%;
+			    white-space: pre-wrap;
+			}
+			/*&:before {
+				content: '';
+				width: calc(100%);
+				height: 1px;
+				background: rgba(80, 87, 110, 0.50);
+				display: block;
+				margin-bottom: 20px;
+			}*/
+		}
+	}
+}

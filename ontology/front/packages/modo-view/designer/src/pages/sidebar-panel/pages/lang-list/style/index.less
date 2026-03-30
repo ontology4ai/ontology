@@ -1,0 +1,86 @@
+.modo-lang-list {
+	height: 100%;
+	flex: 1;
+	padding: 0px 0px;
+	box-sizing: border-box;
+    border-left: 1px solid var(--color-gray-2);
+    overflow: auto;
+    &>.header {
+        line-height: 30px;
+        padding: 0px 16px;
+        color: var(--color-text-primary);
+        font-weight: 600;
+    }
+    &>.content {
+        height: calc(100% - 30px);
+        padding: 0px 0px;
+        overflow: auto;
+        box-sizing: border-box;
+        border-top: 1px solid var(--border-color-base);
+        //border-bottom: 1px solid var(--border-color-base);
+    }
+    /* .footer {
+    	height: 30px;
+        padding: 3px 10px;
+    	display: flex;
+        box-sizing: border-box;
+    	justify-content: flex-end;
+    } */
+    .arco-tabs {
+        height: 100%;
+        .arco-tabs-header-nav-line .arco-tabs-header-title {
+            padding: 5px 0;
+        }
+        .arco-tabs-content {
+            height: calc(100% - 30px);
+            padding-top: 0px;
+            .arco-tabs-content-inner {
+                height: 100%;
+                .arco-tabs-content-item {
+                    height: 100%;
+                    .arco-tabs-pane {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .lang-select {
+        float: right;
+        width: auto;
+        margin-right: 10px;
+        margin-top: 3px;
+    }
+}
+.global-lang-tooltip {
+    min-width: 350px;
+    .arco-tooltip-content {
+        padding: 0px;
+    }
+    .header {
+        color: var(--color-text-1);
+        line-height: 30px;
+        border-bottom: 1px solid var(--border-color-base);
+        padding: 0px 16px;
+        font-weight: 600;
+    }
+    .arco-tabs {
+        height: 100%;
+        .arco-tabs-header-nav-line .arco-tabs-header-title {
+            padding: 5px 0;
+        }
+        .arco-tabs-content {
+            height: calc(100% - 30px);
+            padding-top: 0px;
+            .arco-tabs-content-inner {
+                height: 100%;
+                .arco-tabs-content-item {
+                    height: 100%;
+                    .arco-tabs-pane {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

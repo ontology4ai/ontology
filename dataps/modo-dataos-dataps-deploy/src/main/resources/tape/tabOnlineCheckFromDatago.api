@@ -1,0 +1,67 @@
+{
+  "id": "179297810120495104",
+  "name": "tabOnlineCheckFromDatago",
+  "label": "模型信息检查",
+  "descr": "模型信息检查",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-httpdiaoyong;title\u003d2.HTTP调用\" title\u003d\"HTTP调用\" modelData\u003d\"\" stepInst\u003d\"http\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"160\" y\u003d\"150\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"3\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d3.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"310\" y\u003d\"170\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"4\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"2\" target\u003d\"3\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236065630355501056",
+  "respContentType": "application/json",
+  "url": "tab/online/check/from/datago",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\"body\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}],\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "232524515654418432",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.HTTP调用",
+      "graphId": "179297810120495104",
+      "stepInst": "http",
+      "preStepId": "-1",
+      "nextStepId": "3",
+      "successStepId": "3",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.HTTP调用\",\"dataSource\":\"datago_http_service\",\"url\":\"api/tab/online/check\",\"jsonHeaders\":\"{\\\"Content-Type\\\":\\\"application/json;charset\u003dUTF-8\\\"}\",\"jsonParams\":\"body\",\"reqContentType\":\"application/json\",\"socketTimeout\":\"30000\",\"variable\":\"result\",\"method\":\"POST\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.HTTP调用",
+        "dataSource": "datago_http_service",
+        "url": "api/tab/online/check",
+        "jsonHeaders": "{\"Content-Type\":\"application/json;charset\u003dUTF-8\"}",
+        "jsonParams": "body",
+        "reqContentType": "application/json",
+        "socketTimeout": "30000",
+        "variable": "result",
+        "method": "POST"
+      }
+    },
+    {
+      "id": "232524515654418433",
+      "stepSeq": "3",
+      "parentStepId": "-1",
+      "label": "3.执行脚本",
+      "graphId": "179297810120495104",
+      "stepInst": "script",
+      "preStepId": "2",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"3.执行脚本\",\"scriptText\":\"import com.asiainfo.modo.dataps.BatchSaveDevCheckResult;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.apache.commons.lang3.StringUtils;\\nimport java.util.Arrays;\\nimport java.util.Map;\\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport com.asiainfo.modo.utils.DateHelper;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport io.github.suanchou.utils.StringUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.apache.commons.lang3.StringUtils;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport java.util.ArrayList;\\nimport java.util.HashMap;\\nimport java.util.List;\\nimport java.util.Map;\\n\\n\\n\\nString tabId \u003d MapUtils.getString(body, \\\"tabId\\\");\\nif(StringUtils.isNotBlank(tabId)){\\n    result.data.put(\\\"tabId\\\", tabId);\\n    BatchSaveDevCheckResult checkServ \u003d SpringContextUtil.getBean(BatchSaveDevCheckResult.class);\\n    checkServ.realCheckSave(\\\"\\\", Arrays.asList(result.data));   \\n}\\nreturn result.data;\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "3.执行脚本",
+        "scriptText": "import com.asiainfo.modo.dataps.BatchSaveDevCheckResult;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.apache.commons.lang3.StringUtils;\nimport java.util.Arrays;\nimport java.util.Map;\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport com.asiainfo.modo.utils.DateHelper;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport io.github.suanchou.utils.StringUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.apache.commons.lang3.StringUtils;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport java.util.ArrayList;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\n\n\nString tabId \u003d MapUtils.getString(body, \"tabId\");\nif(StringUtils.isNotBlank(tabId)){\n    result.data.put(\"tabId\", tabId);\n    BatchSaveDevCheckResult checkServ \u003d SpringContextUtil.getBean(BatchSaveDevCheckResult.class);\n    checkServ.realCheckSave(\"\", Arrays.asList(result.data));   \n}\nreturn result.data;"
+      }
+    }
+  ]
+}

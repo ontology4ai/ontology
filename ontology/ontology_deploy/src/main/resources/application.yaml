@@ -1,0 +1,63 @@
+workspace:
+  git:
+    location: xxx
+  studio:
+    workspace-type: -1
+server:
+  port: 8018
+  compression:
+    enabled: true #静态 gzip压缩
+    min-response-size: 2KB
+  servlet:
+    context-path: /ontology
+  tomcat:
+    max-threads: 500  # 默认200
+    min-spare-thread: 20  # 默认25
+
+spring:
+  profiles:
+    active: runtime
+  codec:
+    max-in-memory-size: 10MB
+
+
+modo:
+  links:
+    host: ${APISIX_GATEWAY_HOST:http://10.19.28.145:8333}
+  file-upload:
+    uploadSuffixs: csv,doc,docx,jar,jpg,png,py,sh,sql,txt,xls,xlsx,plugin,js,css,html,gif,xml,ttf,eot,svg,woff,ico,webp,zip
+    fileUtil: minio
+    minio:
+      address: ${MINIO_URL:http://127.0.0.1:9000}
+      # address: ${MINIO_URL:http://10.19.28.145:19090}
+      accessKey: ${MINIO_USER:minioadmin}
+      secretKey: ${MINIO_PWD:minioadmin}
+      # accessKey: ${MINIO_USER:modo}
+      # secretKey: ${MINIO_PWD:Modo@123}
+      defaultBucketName: ${MINIO_BUCKET:modo}
+      # appAddress: ${MINIO_URL:http://10.19.28.145:19090}
+      appAddress: ${MINIO_URL:http://127.0.0.1:9000}
+      # appAccessKey: ${MINIO_USER:modo}
+      # appSecretKey: ${MINIO_PWD:Modo@123}
+      appAccessKey: ${MINIO_USER:minioadmin}
+      appSecretKey: ${MINIO_PWD:minioadmin}
+      appDefaultBucketName: ${MINIO_BUCKET:modo}
+  platform:
+    enableDetailLogging: false
+
+  app:
+    publish:
+      fileList:
+        - application-test.yaml
+        - modo-rte-boot.jar
+    web:
+      regex:
+        proxyToApp: ${PROXY_APP:}
+        currentContext: ${PROXY_CONTEXT:}
+      staticResourceProxy: false
+
+logging:
+  level:
+    com.asiainfo: debug
+
+deployMode: ${DEPLOY_MODE:jar}

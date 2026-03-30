@@ -1,0 +1,40 @@
+{
+  "id": "177375736527818752",
+  "name": "DatapsWorkspace4Subject",
+  "label": "工作空间参考数据空间Id获取",
+  "descr": "工作空间参考数据空间Id获取",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"490\" y\u003d\"180\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "173889682855469056",
+  "respContentType": "application/json",
+  "url": "dataps/workspace/subject",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "xutb",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "177385004204212224",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "177375736527818752",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport com.asiainfo.modo.dataps.DatapsJdbcQueryHelper;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\nimport java.util.HashMap;\\nimport java.util.List;\\nimport java.util.Map;\\n\\n\\npublic Object Workspace4SubjectSearch() {\\n        Map\u003cString, Object\u003e queryParams \u003d Workspace4SubjectSearchsql();\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        String listSql \u003d MapUtils.getString(queryParams, \\\"listSql\\\");\\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(listSql, queryParams));\\n        if (list.isEmpty()) {\\n            return new HashMap\u003c\u003e();\\n        }\\n        for (Map\u003cString, Object\u003e stringObjectMap : list) {\\n            if (null \u003d\u003d stringObjectMap.get(\\\"name\\\")) {   \\n                stringObjectMap.replace(\\\"name\\\",stringObjectMap.get(\\\"workspaceId\\\"));\\n            }\\n        }\\n        Map\u003cString, Object\u003e result \u003d new HashMap\u003c\u003e();\\n        result.put(\\\"data\\\",list);\\n        result.put(\\\"listSql\\\", DatapsJdbcQueryHelper.explainSql(listSql, queryParams));\\n        return result;\\n    }\\n\\n    public Map\u003cString, Object\u003e Workspace4SubjectSearchsql() {\\n        Map\u003cString, Object\u003e queryParams \u003d new HashMap\u003c\u003e();\\n        StringBuilder listSql \u003d new StringBuilder();\\n\\n        listSql.append(\\\"select dpw.name,ds.workspace_id from \\\" +\\n                \\\"(select id ,w.name,w.label from dataos_platform_workspace w where id in (select s.workspace_id  from dataps_subject  s group by workspace_id )) as dpw \\\" +\\n                \\\"right join \\\" +\\n                \\\"(select s.workspace_id  from dataps_subject  s group by workspace_id ) as ds on dpw.id \u003d ds.workspace_id \\\");\\n        queryParams.put(\\\"listSql\\\", listSql.toString());\\n        return queryParams;\\n    }\\n    \\n    \\n    return Workspace4SubjectSearch()\"}",
+      "createUser": "xutb",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport com.asiainfo.modo.dataps.DatapsJdbcQueryHelper;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\n\npublic Object Workspace4SubjectSearch() {\n        Map\u003cString, Object\u003e queryParams \u003d Workspace4SubjectSearchsql();\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        String listSql \u003d MapUtils.getString(queryParams, \"listSql\");\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(listSql, queryParams));\n        if (list.isEmpty()) {\n            return new HashMap\u003c\u003e();\n        }\n        for (Map\u003cString, Object\u003e stringObjectMap : list) {\n            if (null \u003d\u003d stringObjectMap.get(\"name\")) {   \n                stringObjectMap.replace(\"name\",stringObjectMap.get(\"workspaceId\"));\n            }\n        }\n        Map\u003cString, Object\u003e result \u003d new HashMap\u003c\u003e();\n        result.put(\"data\",list);\n        result.put(\"listSql\", DatapsJdbcQueryHelper.explainSql(listSql, queryParams));\n        return result;\n    }\n\n    public Map\u003cString, Object\u003e Workspace4SubjectSearchsql() {\n        Map\u003cString, Object\u003e queryParams \u003d new HashMap\u003c\u003e();\n        StringBuilder listSql \u003d new StringBuilder();\n\n        listSql.append(\"select dpw.name,ds.workspace_id from \" +\n                \"(select id ,w.name,w.label from dataos_platform_workspace w where id in (select s.workspace_id  from dataps_subject  s group by workspace_id )) as dpw \" +\n                \"right join \" +\n                \"(select s.workspace_id  from dataps_subject  s group by workspace_id ) as ds on dpw.id \u003d ds.workspace_id \");\n        queryParams.put(\"listSql\", listSql.toString());\n        return queryParams;\n    }\n    \n    \n    return Workspace4SubjectSearch()"
+      }
+    }
+  ]
+}

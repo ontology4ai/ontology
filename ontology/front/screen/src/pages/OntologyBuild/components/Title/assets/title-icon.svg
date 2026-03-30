@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="5px" height="20px" viewBox="0 0 5 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>点4</title>
+    <defs>
+        <linearGradient x1="-46.8641314%" y1="49.9995544%" x2="100.000022%" y2="49.9995544%" id="linearGradient-1">
+            <stop stop-color="#1D4BFF" offset="0%"></stop>
+            <stop stop-color="#DF23FE" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="new" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="新建对象" transform="translate(-1088.000000, -95.000000)" fill="url(#linearGradient-1)">
+            <g id="编组-12" transform="translate(1040.000000, 0.000000)">
+                <g id="编组-33" transform="translate(47.615051, 94.000000)">
+                    <g id="编组-29" transform="translate(0.953979, 0.000000)">
+                        <path d="M11.6814461,9 L-3.99745369,9 L-7.52301025,13.1584358 L8.15588903,13.1584358 L11.6814461,9 L11.6814461,9 Z" id="点4" transform="translate(2.079218, 11.079218) rotate(-270.000000) translate(-2.079218, -11.079218) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

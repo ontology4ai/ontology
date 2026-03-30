@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>成功-大</title>
+    <defs>
+        <linearGradient x1="-1.61290323%" y1="50%" x2="97.7419355%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#1D85FF" offset="0%"></stop>
+            <stop stop-color="#33FCB4" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="8.84919355%" y1="-1.61290724%" x2="112.278387%" y2="10.4934194%" id="linearGradient-2">
+            <stop stop-color="#56B8FF" offset="0%"></stop>
+            <stop stop-color="#31FFB0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-50.000000, -131.000000)" fill-rule="nonzero">
+            <g id="成功-大" transform="translate(51.000000, 132.000000)">
+                <rect id="矩形" stroke="url(#linearGradient-2)" stroke-width="2" fill-opacity="0.25" fill="url(#linearGradient-1)" x="0" y="0" width="62" height="62" rx="31"></rect>
+                <path d="M27.2825,42.1751 C26.65,42.1751 26.02,41.9326 25.5375,41.4501 L15.665,31.5376 C14.7025,30.5701 14.7025,29.0001 15.665,28.0326 C16.63,27.0651 18.1925,27.0651 19.155,28.0326 L27.2825,36.1926 L42.8125,20.6001 C43.775,19.6301 45.3375,19.6301 46.3025,20.6001 C47.265,21.5676 47.265,23.1351 46.3025,24.1026 L29.0275,41.4501 C28.545,41.9326 27.9125,42.1751 27.2825,42.1751 Z" id="路径" fill="#31F0BC"></path>
+            </g>
+        </g>
+    </g>
+</svg>

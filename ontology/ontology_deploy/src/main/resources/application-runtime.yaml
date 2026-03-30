@@ -1,0 +1,112 @@
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  datasource:
+    config-local-h2:
+      mode: -1
+      db-path: /
+    main:
+      jdbcUrl: ${APP_DB_URL:jdbc:mysql://10.19.95.33:3306/atlas_dev?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false}
+      username: ${APP_DB_USER:prd}
+      password: ${APP_DB_PWD:wUl7Y6SFhEmbY5lnPuCobA==}
+      driverClassName: ${APP_DB_DRIVER:com.mysql.jdbc.Driver}
+      maximumPoolSize: ${APP_DB_POOL_SIZE:20}
+      connectionTimeout: ${APP_DB_CONNECTION_TIMEOUT:30000}
+      dataSource:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+        useLocalSessionState: true
+        rewriteBatchedStatements: true
+        cacheResultSetMetadata: true
+        cacheServerConfiguration: true
+        elideSetAutoCommits: true
+        maintainTimeStats: false
+    config:
+      import: dataflow.yaml
+      jdbcUrl: ${CONF_DB_URL:${APP_DB_URL:jdbc:mysql://10.19.95.33:3306/atlas_dev?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false}}
+      username: ${CONF_DB_USER:${APP_DB_USER:prd}}
+      password: ${CONF_DB_PWD:${APP_DB_PWD:wUl7Y6SFhEmbY5lnPuCobA==}}
+      driverClassName: ${CONF_DB_DRIVER:com.mysql.jdbc.Driver}
+      maximumPoolSize: ${CONF_DB_POOL_SIZE:2}
+      dataSource:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+        useLocalSessionState: true
+        rewriteBatchedStatements: true
+        cacheResultSetMetadata: true
+        cacheServerConfiguration: true
+        elideSetAutoCommits: true
+        maintainTimeStats: false
+    metadbs:
+      jdbcUrl: ${APP_DB_URL:jdbc:mysql://10.19.95.33:3306/atlas_pro?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false}
+      username: ${APP_DB_USER:prd}
+      password: ${APP_DB_PWD:wUl7Y6SFhEmbY5lnPuCobA==}
+      driverClassName: ${APP_DB_DRIVER:com.mysql.jdbc.Driver}
+      maximumPoolSize: ${APP_DB_POOL_SIZE:20}
+      connectionTimeout: ${APP_DB_CONNECTION_TIMEOUT:30000}
+      dataSource:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+        useLocalSessionState: true
+        rewriteBatchedStatements: true
+        cacheResultSetMetadata: true
+        cacheServerConfiguration: true
+        elideSetAutoCommits: true
+        maintainTimeStats: false
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    database: ${DB_TYPE:mysql}
+    show-sql: false
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        generateDdl: false
+        dialect: ${DB_DIALECT:org.hibernate.dialect.MySQL5InnoDBDialect}
+        vector:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+  redis:
+    # 单点
+    host: ${REDIS_HOST:10.19.28.149}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PASSWD:redis123aB}
+
+suanchou:
+  microservice:
+    admin:
+      host: ${APISIX_ADMIN_HOST:${APISIX_GATEWAY_HOST:http://10.19.29.141:9180}}
+    gateway:
+      host: ${APISIX_GATEWAY_HOST:http://10.19.29.140:9080}
+      app-secret: ${APISIX_SECRET:2bfbf9a4156599844cf49f8aa75f3f4f}
+      upstream-nodes-expr: $.node.value.upstream.nodes
+      connTimeout: ${APISIX_CONN_TIMEOUT:6000}
+      sendTimeout: ${APISIX_SEND_TIMEOUT:6000}
+      readTimeout: ${APISIX_READ_TIMEOUT:6000}
+
+aap:
+  host: 10.19.93.128
+  port: 30015
+  context-path: ""
+
+sandbox:
+  dev:
+    host: ${SANDBOX_HOST:10.21.20.170}
+    dest-port: ${SANDBOX_DEST_PORT:8031} #vscode
+    port: ${SANDBOX_PORT:8032}
+  pro:
+    host: ${SANDBOX_HOST:10.21.20.170}
+    dest-port: ${SANDBOX_DEST_PORT_PRO:8033}
+    port: ${SANDBOX_PORT_PRO:8034}
+

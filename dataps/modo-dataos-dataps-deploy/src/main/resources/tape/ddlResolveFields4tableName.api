@@ -1,0 +1,39 @@
+{
+  "id": "186852960548438016",
+  "name": "ddlResolveFields4tableName",
+  "label": "DDL解析字段服务",
+  "descr": "DDL解析字段服务包含表名",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"330\" y\u003d\"130\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "",
+  "respContentType": "application/json",
+  "url": "ddl/resolve/fields/tableName",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\n    \"body\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": [\n                {\n                    \"name\": \"ddl\",\n                    \"id\": \"1b58cb3d-88cc-455b-b4b1-048dc9118289\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false\n                },\n                {\n                    \"name\": \"dsType\",\n                    \"id\": \"3d9056cb-1815-4b18-9a97-0aa4d367cab9\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false\n                }\n            ]\n        }\n    ],\n    \"headers\": [],\n    \"query\": []\n}",
+  "apiOutputParams": "{\n    \"mockJson\": \"\",\n    \"responseBody\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ]\n}",
+  "createUser": "xutb",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "8a7499568fc78ab00190489c0e180043",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "186852960548438016",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.dataps.LogicModelDdlImportService;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nLogicModelDdlImportService targetBean = SpringContextUtil.getBean(LogicModelDdlImportService.class);\\nreturn targetBean.getColInfosWithCreateSql(body);\",\"label\":\"2.执行脚本\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.dataps.LogicModelDdlImportService;\n\nimport io.github.suanchou.utils.SpringContextUtil;\n\nLogicModelDdlImportService targetBean = SpringContextUtil.getBean(LogicModelDdlImportService.class);\n\nreturn targetBean.getColInfosWithCreateSql(body);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

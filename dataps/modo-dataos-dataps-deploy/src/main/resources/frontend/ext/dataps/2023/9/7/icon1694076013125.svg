@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="14px" viewBox="0 0 16 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组</title>
+    <g id="浙江地图" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="数据资源目录-长卡片" transform="translate(-262.000000, -213.000000)" fill="#E8F3FF" fill-rule="nonzero">
+            <g id="编组-7备份-2" transform="translate(228.000000, 182.000000)">
+                <g id="icon" transform="translate(24.000000, 20.000000)">
+                    <g id="编组" transform="translate(10.000000, 11.000000)">
+                        <path d="M3.5,4.37499999 L3.5,14 L0,14 L0,4.37499999 L3.5,4.37499999 Z M16,7.87499999 L16,10.5 L4.37500001,10.5 L4.37500001,7.87499999 L16,7.87499999 Z M16,0 L16,3.5 L0,3.5 L0,0 L16,0 Z" id="形状结合"></path>
+                        <path d="M4.37500001,4.37499999 L16,4.37499999 L16,6.99999999 L4.37500001,6.99999999 L4.37500001,4.37499999 Z M4.37500001,11.375 L16,11.375 L16,14 L4.37500001,14 L4.37500001,11.375 Z" id="形状结合"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

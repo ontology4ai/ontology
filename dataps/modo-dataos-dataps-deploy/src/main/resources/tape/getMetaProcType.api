@@ -1,0 +1,38 @@
+{
+  "id": "dataps-139382549821755392",
+  "name": "getMetaProcType",
+  "label": "查询dp程序类型",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"370\" y\u003d\"240\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "respContentType": "application/json",
+  "url": "get/meta/proc/type",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[{\"id\":\"9927f0c6-c585-49dc-9316-6d834987c4de\",\"name\":\"procName\",\"required\":\"1\",\"example\":\"\",\"desc\":\"\",\"value\":\"demo_test_20221023_copy\"}]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "xiacj3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "dataps-139382549842726912",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "dataps-139382549821755392",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\nimport com.asiainfo.modo.app.datasource.dynamic.TargetDataSource\\n\\nimport java.util.HashMap;\\nimport java.util.List;\\nimport java.util.Map;\\n\\n@TargetDataSource(\\\"V430_PRO\\\")\\npublic Map\u003cString,Object\u003e getMetaProcType(Map\u003cString, Object\u003e params){\\n    NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n    params.put(\\\"stepInst\\\", \\\"udtRest\\\");\\n    List\u003cMap\u003cString, Object\u003e\u003e stepList \u003d jt.queryForList(\\\"select * from dataos_meta_proc_step where proc_name \u003d :procName and step_inst \u003d :stepInst limit 1\\\", params);\\n    Map\u003cString,Object\u003e result \u003d new HashMap\u003cString,Object\u003e();\\n    result.put(\\\"procType\\\",stepList.size()\u003e0?\\\"udt\\\":\\\"dp\\\")\\n    return result;\\n}\\n\\nreturn getMetaProcType(params);\"}",
+      "createUser": "xiacj3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import io.github.suanchou.utils.SpringJdbcUtil;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\nimport com.asiainfo.modo.app.datasource.dynamic.TargetDataSource\n\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\n@TargetDataSource(\"V430_PRO\")\npublic Map\u003cString,Object\u003e getMetaProcType(Map\u003cString, Object\u003e params){\n    NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n    params.put(\"stepInst\", \"udtRest\");\n    List\u003cMap\u003cString, Object\u003e\u003e stepList \u003d jt.queryForList(\"select * from dataos_meta_proc_step where proc_name \u003d :procName and step_inst \u003d :stepInst limit 1\", params);\n    Map\u003cString,Object\u003e result \u003d new HashMap\u003cString,Object\u003e();\n    result.put(\"procType\",stepList.size()\u003e0?\"udt\":\"dp\")\n    return result;\n}\n\nreturn getMetaProcType(params);"
+      }
+    }
+  ]
+}

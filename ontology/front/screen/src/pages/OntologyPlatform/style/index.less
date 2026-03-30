@@ -1,0 +1,272 @@
+.ontology-platform {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .side {
+        width: 262px;
+        height: 456px;
+		height: fit-content;
+		position: relative;
+		padding: 24px;
+        color: #FFF;
+		border-radius: 20px;
+		border: 1px solid rgba(255, 255, 255, 0.30);
+		background: rgba(255, 255, 255, 0.06);
+		backdrop-filter: blur(10px);
+		.side-header {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 16px;
+            font-size: 20px;
+            font-family: "DingTalk JinBuTi";
+		}
+		.side-item {
+			display: flex;
+            min-height: 92px;
+			padding: 24px;
+			flex-direction: row;
+			justify-content: center;
+			gap: 16px;
+            font-size: 16px;
+            font-weight: 500;
+			align-items: center;
+            line-height: 22px;
+			margin-top: 36px;
+			border-radius: 20px;
+			background: rgba(150, 152, 255, 0.1);
+		}
+	}
+	.left {
+        .side {
+			width: 269px;
+		}
+        position: absolute;
+        top: 269px;
+        left: 50px;
+		.arrow {
+            position: absolute;
+            left: 324px;
+            top: 50%;
+            transform: translateY(-50%);
+		}
+	}
+    .right {
+        position: absolute;
+        top: 269px;
+        right: 50px;
+		.side {
+			position: relative;
+			border-radius: 16px;
+			border: none;
+			background: var(--linear-5-paints, radial-gradient(837.88% 230.53% at 0% -13.89%, rgba(27, 62, 248, 0.20) 0%, rgba(152, 61, 255, 0.20) 74.9%, rgba(236, 125, 255, 0.20) 100%));
+			backdrop-filter: blur(15px);
+			
+			&::before {
+			content: '';
+			position: absolute;
+			inset: -1px;
+			border-radius: 16px;
+			padding: 1px;
+			background: linear-gradient(105deg, #4598FF 10.34%, #983DFF 43.63%, #EC7DFF 68.27%, #FFB096 89.66%);
+			-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+			mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+			-webkit-mask-composite: destination-out;
+			mask-composite: exclude;
+			z-index: -1;
+			}
+			.side-item {
+				background: linear-gradient(135deg, rgba(27, 62, 248, 0.40) 0%, rgba(152, 61, 255, 0.40) 100%);
+			}
+		}
+		.arrow {
+            position: absolute;
+            right: 324px;
+            top: 50%;
+            transform: translateY(-50%);
+		}
+	}
+    .home-title {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 28px;
+        font-family: "DingTalk JinBuTi";
+        font-size: 48px;
+        line-height: 50px;
+        color: #FFF;
+        .name {
+            background: linear-gradient(89deg, #09F 13.16%, #00FEE1 20.82%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .lvl-group {
+        .agent-app {
+            transform: scale(0.375);
+            transform-origin: center;
+            position: absolute;
+            top: -42px;
+            left: 590px;
+            z-index: 3;
+            // transition: all .1s;
+        }
+        .ontology-build {
+            transform: scale(0.375);
+            transform-origin: center;
+            position: absolute;
+            top: 164px;
+            left: 590px;
+            z-index: 2;
+            // transition: all .1s;
+        }
+        .data-prepare {
+            transform: scale(0.375);
+            transform-origin: center;
+            position: absolute;
+            top: 380px;
+            left: 590px;
+            z-index: 1;
+            // transition: all .1s;
+        }
+
+        &.has-active {
+            &.active-1 {
+               .agent-app {
+                    transform: scale(0.5);
+                    position: absolute;
+                    top: -14px;
+                    left: 466px;
+                } 
+                .ontology-build,
+                .data-prepare {
+                    display: none;
+                    visibility: hidden;
+                    z-index: -1;
+                }
+            }
+            &.active-2 {
+                .agent-app,
+                .data-prepare {
+                    display: none;
+                    visibility: hidden;
+                    z-index: -1;
+                }
+                .ontology-build {
+                    transform: scale(0.5);
+                    position: absolute;
+                    top: -14px;
+                    left: 466px;
+                }
+            }
+            &.active-3 {
+                .agent-app,
+                .ontology-build {
+                    display: none;
+                    visibility: hidden;
+                    z-index: -1;
+                }
+                .data-prepare {
+                    transform: scale(0.5);
+                    position: absolute;
+                    top: -14px;
+                    left: 466px;
+                }
+            }
+        }
+    }
+    .lvl-arrow-group {
+        .lvl-arrow-1 {
+            position: absolute;
+            top: 420px;
+            left: 623.75px;
+            width: 26px;
+        }
+        .lvl-arrow-2 {
+            position: absolute;
+            top: 420px;
+            left: 1271px;
+            width: 26px;
+        }
+        .lvl-arrow-3 {
+            position: absolute;
+            top: 636px;
+            left: 623.75px;
+            width: 26px;
+        }
+        .lvl-arrow-4 {
+            position: absolute;
+            top: 636px;
+            left: 1271px;
+            width: 26px;
+        }
+    }
+    
+    .lvl-intro {
+        position: absolute;
+        top: 850px;
+        left: 460px;
+        width: 1000px;
+        padding-top: 10px;
+        text-align: center;
+        img {
+            width: 1000px;
+            height: 100px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        .lvl-title {
+            color: #FFF;
+            text-align: center;
+            font-family: "DingTalk JinBuTi";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px; /* 150% */
+            margin-bottom: 6px;
+            position: relative;
+            z-index: 1;
+        }
+        .lvl-descr {
+            width: 658px;
+            color: #FFF;
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px; /* 157.143% */
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+        }
+    }
+}
+.ontology-platform-en {
+    .side {
+		width: 364px;
+		.side-item {
+			justify-content: flex-start;
+		}
+	}
+	.left {
+        .side {
+			width: 364px;
+		}
+		.arrow {
+			position: relative;
+		    left: 386px;
+            top: -220px;
+		}
+	}
+	.right {
+        top: 247px;
+		.arrow {
+			position: relative;
+			right: 67px;
+			top: -220px;
+		
+		}
+	}
+}

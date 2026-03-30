@@ -1,0 +1,70 @@
+server:
+  port: 8333
+  compression:
+    enabled: true #静态js tomcat gzip压缩
+  servlet:
+    context-path: /
+    session:
+      timeout: 30m
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: ${APP_DB_URL:jdbc:mysql://10.19.32.139:3306/modo_v50_arm_dev?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false}
+    driverClassName: ${APP_DB_DRIVER:com.mysql.jdbc.Driver}
+    username: ${APP_DB_USER:root}
+    password: ${APP_DB_PWD:xdjr0lxGu}
+  jpa:
+    database: MYSQL
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+logging:
+  config: logback.xml
+  level:
+    root : info
+
+#suanchou:
+#  name: suanchou
+#  microservice:
+#    gateway:
+#      host: http://127.0.0.1:3333
+      #app-secret: edd1c9f034335f136f87ad84b625c8f1
+      #upstream-nodes-expr: $.node.value.upstream.nodes
+token:
+  jwt:
+    secret: JDBCGATAWAY
+    signKey: JDBC_GATEWAY_ISSUER
+    exipretime: 3600
+
+minio:
+  url: ${MINIO_URL:http://10.1.207.222:19090}
+  accessKey: ${MINIO_USER:modo}
+  secretKey: ${MINIO_PWD:Modo@123}
+  bucket: ${MINIO_BUCKET:modo}    
+
+suanchou:
+  microservice:
+    admin:
+      host: ${APISIX_ADMIN_HOST:${APISIX_GATEWAY_HOST:http://10.19.28.149:80}}
+    gateway:
+      host: ${APISIX_GATEWAY_HOST:http://10.19.28.149:80}
+      app-secret: ${APISIX_SECRET:ch1vxh4leq}
+      upstream-nodes-expr: $.node.value.upstream.nodes
+      connTimeout: ${APISIX_CONN_TIMEOUT:6000}
+      sendTimeout: ${APISIX_SEND_TIMEOUT:6000}
+      readTimeout: ${APISIX_READ_TIMEOUT:6000}
+  jdbc:
+    use-cache: false
+    singleton: false
+    ttl: 30  
+submit:
+  path:
+    dsClusterPath:
+    dataPath:
+    pluginPath:
+    dsLogPath:
+    dsxPath:  ${DSXPATH}

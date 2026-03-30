@@ -1,0 +1,40 @@
+{
+  "id": "232933753551806464",
+  "name": "stopAssetArchImportCnooc",
+  "label": "资产编目任务导入停止",
+  "descr": "资产编目任务导入停止",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" parent\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" vertex\u003d\"1\" parent\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"300\" y\u003d\"140\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "224962265545494528",
+  "respContentType": "application/json",
+  "url": "stop/asset/arch/import/cnooc",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\"body\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}],\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "232933753572777984",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "232933753551806464",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport java.util.Map;\\n\\n\\n\\n    public Object stopImport(Map\u003cString, Object\u003e body) {\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        return jt.update(\\\"update dataps_asset_arch_import_log set state\u003d\u0027stoping\u0027 where id\u003d:id and state not in (\u0027stoping\u0027, \u0027finish\u0027,\u0027error\u0027)\\\", body);\\n    }\\n\\n\\nreturn stopImport(body);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport java.util.Map;\n\n\n\n    public Object stopImport(Map\u003cString, Object\u003e body) {\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        return jt.update(\"update dataps_asset_arch_import_log set state\u003d\u0027stoping\u0027 where id\u003d:id and state not in (\u0027stoping\u0027, \u0027finish\u0027,\u0027error\u0027)\", body);\n    }\n\n\nreturn stopImport(body);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

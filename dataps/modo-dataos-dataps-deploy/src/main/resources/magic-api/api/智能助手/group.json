@@ -1,0 +1,14 @@
+{
+  "properties" : { },
+  "id" : "4489e4a313974cadb795d58656710ff8",
+  "name" : "智能助手",
+  "type" : "api",
+  "parentId" : "0",
+  "path" : "api",
+  "createTime" : null,
+  "updateTime" : 1715137896898,
+  "createBy" : null,
+  "updateBy" : null,
+  "paths" : [ ],
+  "options" : [ ]
+}

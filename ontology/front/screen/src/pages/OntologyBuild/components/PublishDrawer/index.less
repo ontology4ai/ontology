@@ -1,0 +1,102 @@
+.publish-drawer {
+  position: relative;
+  background: transparent;
+  border: none;
+  .arco-drawer-content {
+    overflow: hidden;
+    border-radius: 30px 0 0 30px;
+  }
+  .publish-drawer-wrap {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    color: #FFF;
+    z-index: 1;
+    .publish-drawer-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 32px 50px 25px;
+      font-family: "DingTalk JinBuTi";
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 0;
+      img {
+        cursor: pointer;
+      }
+    }
+    .publish-drawer-content {
+      flex: 1;
+      overflow: auto;
+      padding: 20px 50px;
+      .arco-table-tr {
+        color: rgba(255, 255, 255, 0.80);
+        font-size: 16px;
+        font-weight: 500;
+      }
+      thead {
+        background: linear-gradient(90deg, rgba(27, 62, 248, 0.20) 0%,rgba(152, 61, 255, 0.20) 74.9%, rgba(236, 125, 255, 0.20) 100%);
+
+      }
+      .arco-table-th {
+        color: rgba(255, 255, 255, 0.80);
+        font-family: "PingFang SC";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      .arco-textarea {
+        padding: 12px 20px;
+      }
+      .arco-input {
+        padding: 12px 20px;
+      }
+      .publish-drawer-content-title {
+        margin-bottom: 24px;
+      }
+      .publish-knowledge {
+        height: 300px;
+        background: rgba(44, 50, 98, 0.4);
+        box-shadow: inset 0px -4px 10px 0px rgba(171, 168, 227, 0.2);
+        border-radius: 10px;
+        border: 1px solid #535c8f;
+        overflow: auto;
+        margin-bottom: 30px;
+      }
+    }
+    .publish-drawer-footer {
+      padding: 20px 50px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+  }
+  
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+  
+  &-content {
+    padding: 30px 50px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &-title {
+    margin-bottom: 24px;
+  }
+}

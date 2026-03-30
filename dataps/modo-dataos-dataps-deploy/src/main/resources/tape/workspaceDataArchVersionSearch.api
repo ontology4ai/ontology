@@ -1,0 +1,40 @@
+{
+  "id": "178906179227402240",
+  "name": "workspaceDataArchVersionSearch",
+  "label": "工作空间数据编目历史版本查询",
+  "descr": "工作空间数据编目历史版本查询",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"300\" y\u003d\"160\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "",
+  "respContentType": "application/json",
+  "url": "workspace/data/arch/version/search",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[{\"id\":\"61de7bc5-8ab5-4281-875c-8c6f920a7978\",\"name\":\"workspaceId\",\"required\":\"1\",\"example\":\"\",\"desc\":\"\",\"value\":\"testWorkspaceId\"},{\"id\":\"96b64f1e-e6ce-4814-ab5f-34a45f03ae40\",\"name\":\"limit\",\"required\":\"1\",\"example\":\"\",\"desc\":\"\",\"value\":\"20\"},{\"id\":\"f654a51f-ede5-4a13-aa46-fbba62526d4d\",\"name\":\"offset\",\"required\":\"1\",\"example\":\"\",\"desc\":\"\",\"value\":\"0\"}]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "gaopeng3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "178921250910314496",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "178906179227402240",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport com.asiainfo.modo.dataps.DatapsJdbcQueryHelper;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.apache.commons.collections.map.HashedMap;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport java.util.List;\\nimport java.util.Map;\\nimport java.util.Objects;\\n\\npublic Object workspaceDataArchVersionSearch(Map\u003cString, Object\u003e params) {\\n        String workspaceId \u003d MapUtils.getString(params, \\\"workspaceId\\\");\\n        Objects.requireNonNull(workspaceId, \\\"workspaceId不能为空！\\\");\\n        int offset \u003d MapUtils.getIntValue(params, \\\"offset\\\");\\n        Objects.requireNonNull(offset, \\\"offset不能为空！\\\");\\n        int limit \u003d MapUtils.getIntValue(params, \\\"limit\\\");\\n        Objects.requireNonNull(limit, \\\"limit不能为空！\\\");\\n\\n        int pageNum \u003d offset / limit;\\n        int pageSize \u003d limit;\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        Map\u003cString, Object\u003e sqlParams \u003d new HashedMap();\\n        sqlParams.put(\\\"workspaceId\\\", workspaceId);\\n\\n        StringBuilder listSql \u003d new StringBuilder(\\\"select i.flow_id,i.version_number,p.create_dt,p.label,p.descr from dataps_subject_ver_info i left join modo_flowable_procinst p on i.flow_id\u003dp.procinst_id where 1\u003d1 \\\");\\n        StringBuilder countSql \u003d new StringBuilder(\\\"select count(i.flow_id) from dataps_subject_ver_info i left join modo_flowable_procinst p on i.flow_id\u003dp.procinst_id where 1\u003d1 \\\");\\n        DatapsJdbcQueryHelper.equals(\\\"workspaceId\\\", workspaceId, \\\"and i.workspace_id\u003d:workspaceId \\\", sqlParams, listSql, countSql);\\n        listSql.append(\\\" order by CONVERT(i.version_number, SIGNED) desc\\\");\\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d jt.queryForList(DatapsJdbcQueryHelper.getLimitSql(jt, listSql.toString(), pageNum, pageSize), params);\\n        return DatapsJdbcQueryHelper.toPage(jt, countSql.toString(), params, DatapsHumpHelper.lineToHump(list), pageNum, pageSize);\\n}\\n\\nreturn workspaceDataArchVersionSearch(params);\"}",
+      "createUser": "gaopeng3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport com.asiainfo.modo.dataps.DatapsJdbcQueryHelper;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.apache.commons.collections.map.HashedMap;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport java.util.List;\nimport java.util.Map;\nimport java.util.Objects;\n\npublic Object workspaceDataArchVersionSearch(Map\u003cString, Object\u003e params) {\n        String workspaceId \u003d MapUtils.getString(params, \"workspaceId\");\n        Objects.requireNonNull(workspaceId, \"workspaceId不能为空！\");\n        int offset \u003d MapUtils.getIntValue(params, \"offset\");\n        Objects.requireNonNull(offset, \"offset不能为空！\");\n        int limit \u003d MapUtils.getIntValue(params, \"limit\");\n        Objects.requireNonNull(limit, \"limit不能为空！\");\n\n        int pageNum \u003d offset / limit;\n        int pageSize \u003d limit;\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        Map\u003cString, Object\u003e sqlParams \u003d new HashedMap();\n        sqlParams.put(\"workspaceId\", workspaceId);\n\n        StringBuilder listSql \u003d new StringBuilder(\"select i.flow_id,i.version_number,p.create_dt,p.label,p.descr from dataps_subject_ver_info i left join modo_flowable_procinst p on i.flow_id\u003dp.procinst_id where 1\u003d1 \");\n        StringBuilder countSql \u003d new StringBuilder(\"select count(i.flow_id) from dataps_subject_ver_info i left join modo_flowable_procinst p on i.flow_id\u003dp.procinst_id where 1\u003d1 \");\n        DatapsJdbcQueryHelper.equals(\"workspaceId\", workspaceId, \"and i.workspace_id\u003d:workspaceId \", sqlParams, listSql, countSql);\n        listSql.append(\" order by CONVERT(i.version_number, SIGNED) desc\");\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d jt.queryForList(DatapsJdbcQueryHelper.getLimitSql(jt, listSql.toString(), pageNum, pageSize), params);\n        return DatapsJdbcQueryHelper.toPage(jt, countSql.toString(), params, DatapsHumpHelper.lineToHump(list), pageNum, pageSize);\n}\n\nreturn workspaceDataArchVersionSearch(params);"
+      }
+    }
+  ]
+}

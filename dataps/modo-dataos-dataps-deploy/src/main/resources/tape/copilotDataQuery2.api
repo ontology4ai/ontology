@@ -1,0 +1,38 @@
+{
+  "id": "8a7499668f6737ac018f7169c6bb0001",
+  "name": "copilotDataQuery2",
+  "label": "copilot数据查询接口2",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"280\" y\u003d\"170\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "8a7494bd8f51c770018f51cab8ac0001",
+  "respContentType": "application/json",
+  "url": "open/copilotDataQuery2",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\n    \"body\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": [\n                {\n                    \"name\": \"taskId\",\n                    \"id\": \"4f27bcb5-3de8-4ba9-b3e2-c1ac83751bca\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false\n                },\n                {\n                    \"name\": \"question\",\n                    \"id\": \"e2042e53-7d4b-4df2-a858-b1362ce71317\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false\n                },\n                {\n                    \"name\": \"tableName\",\n                    \"id\": \"c819764d-31c7-42d2-a760-3d0f39286ef1\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false\n                },\n                {\n                    \"name\": \"aiRole\",\n                    \"id\": \"493974d6-c9e8-4665-b631-44b7b90a0878\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false\n                },\n                {\n                    \"name\": \"userID\",\n                    \"id\": \"5c50d15a-e2b8-4e3d-8304-2aa378fe3013\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false\n                },\n                {\n                    \"name\": \"activePage\",\n                    \"id\": \"e0d97cef-1e3c-477c-a853-76db3b40070e\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false\n                },\n                {\n                    \"name\": \"command\",\n                    \"id\": \"c61f986f-86bc-45ed-940d-716005387772\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false\n                },\n                {\n                    \"name\": \"extern\",\n                    \"id\": \"cb89eebe-ca14-406e-96e4-78854dd70a1f\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false,\n                    \"children\": []\n                }\n            ]\n        }\n    ],\n    \"headers\": [],\n    \"query\": []\n}",
+  "apiOutputParams": "{\n    \"mockJson\": \"\",\n    \"responseBody\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ]\n}",
+  "createUser": "zouyc",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "8a7499668f6737ac018f89329ecd001f",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "8a7499668f6737ac018f7169c6bb0001",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import java.util.*;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.lang3.StringUtils;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport io.github.suanchou.utils.JsonUtil;\\nimport com.asiainfo.modo.dataps.VectorExecutor;\\n\\nString taskId \u003d MapUtils.getString(body, \\\"taskId\\\");\\nString question \u003d MapUtils.getString(body, \\\"question\\\");\\nString tableName \u003d MapUtils.getString(body, \\\"tableName\\\");\\ndef copilotDataQueryService \u003d SpringContextUtil.getBean(\\\"copilotDataQueryService3\\\");\\nVectorExecutor.asyncSearchExecutor.execute(() -\u003e {\\n    try {\\n        copilotDataQueryService.execTask(taskId, question, tableName);\\n    } catch (Exception e) {\\n        System.out.println(e);\\n        return e;\\n    }\\n});\\n\\nreturn taskId;\\n\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import java.util.*;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.lang3.StringUtils;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport org.apache.commons.collections.MapUtils;\nimport io.github.suanchou.utils.JsonUtil;\nimport com.asiainfo.modo.dataps.VectorExecutor;\n\nString taskId \u003d MapUtils.getString(body, \"taskId\");\nString question \u003d MapUtils.getString(body, \"question\");\nString tableName \u003d MapUtils.getString(body, \"tableName\");\ndef copilotDataQueryService \u003d SpringContextUtil.getBean(\"copilotDataQueryService3\");\nVectorExecutor.asyncSearchExecutor.execute(() -\u003e {\n    try {\n        copilotDataQueryService.execTask(taskId, question, tableName);\n    } catch (Exception e) {\n        System.out.println(e);\n        return e;\n    }\n});\n\nreturn taskId;\n"
+      }
+    }
+  ]
+}

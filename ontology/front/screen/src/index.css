@@ -1,0 +1,29 @@
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Inter,-apple-system,BlinkMacSystemFont,PingFang SC,Hiragino Sans GB,noto sans,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+li {
+  padding: 0px;
+  margin: 0px;
+}
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "DingTalk JinBuTi"; /* 自定义字体名称 */
+  src: url("./fonts/DingTalk JinBuTi.ttf") format("truetype"); /* 字体文件路径和格式 */
+  /* 可选属性 */
+  font-weight: normal; /* 字体粗细 */
+  font-style: normal;  /* 字体样式 */
+}

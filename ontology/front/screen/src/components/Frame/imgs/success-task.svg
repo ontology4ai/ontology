@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>成功任务</title>
+    <defs>
+        <linearGradient x1="0%" y1="50%" x2="96.25%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#1D85FF" offset="0%"></stop>
+            <stop stop-color="#33FCB4" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-152.000000, -157.000000)" fill-rule="nonzero">
+            <g id="成功任务" transform="translate(152.000000, 157.000000)">
+                <rect id="矩形" fill="url(#linearGradient-1)" x="0" y="0" width="32" height="32" rx="16"></rect>
+                <path d="M14.1412,21.5875 C13.825,21.5875 13.51,21.4663 13.2687,21.225 L8.3325,16.2688 C7.8512,15.785 7.8512,15 8.3325,14.5163 C8.815,14.0325 9.5962,14.0325 10.0775,14.5163 L14.1412,18.5963 L21.9062,10.8 C22.3875,10.315 23.1687,10.315 23.6512,10.8 C24.1325,11.2838 24.1325,12.0675 23.6512,12.5513 L15.0137,21.225 C14.7725,21.4663 14.4562,21.5875 14.1412,21.5875 Z" id="路径" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

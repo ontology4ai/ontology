@@ -1,0 +1,40 @@
+{
+  "id": "214327686641643520",
+  "name": "getUserWorkspaceOptions",
+  "label": "获取用户参与的工作空间",
+  "descr": "获取用户参与的工作空间",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" parent\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" vertex\u003d\"1\" parent\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"280\" y\u003d\"180\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236063466669670400",
+  "respContentType": "application/json",
+  "url": "get/user/workspace/options",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "214327688571023360",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "214327686641643520",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.app.web.ModoWebUtils;\\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\nimport org.springframework.web.context.request.RequestContextHolder;\\nimport org.springframework.web.context.request.ServletRequestAttributes;\\n\\nimport java.util.Map;\\n\\n\\n\\n    public Object getWs(Map\u003cString, Object\u003e params) {\\n        ServletRequestAttributes requestAttributes \u003d (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();\\n        ModoWebUtils.CookieIdentity identity \u003d ModoWebUtils.getCookieIdentity(requestAttributes.getRequest());\\n        String userId \u003d identity.getUserId();\\n        String teamName \u003d identity.getTeamName();\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        params.put(\\\"userId\\\", userId);\\n        params.put(\\\"teamName\\\", teamName);\\n        return DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select distinct ws.label,ws.id value from dataos_platform_workspace ws inner join dataos_platform_workspace_user u on ws.id \u003d u.workspace_id where 1\u003d1 and u.user_id \u003d :userId and team_name\u003d:teamName\\\", params));\\n    }\\n\\n\\nreturn getWs(params);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.app.web.ModoWebUtils;\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\nimport org.springframework.web.context.request.RequestContextHolder;\nimport org.springframework.web.context.request.ServletRequestAttributes;\n\nimport java.util.Map;\n\n\n\n    public Object getWs(Map\u003cString, Object\u003e params) {\n        ServletRequestAttributes requestAttributes \u003d (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();\n        ModoWebUtils.CookieIdentity identity \u003d ModoWebUtils.getCookieIdentity(requestAttributes.getRequest());\n        String userId \u003d identity.getUserId();\n        String teamName \u003d identity.getTeamName();\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        params.put(\"userId\", userId);\n        params.put(\"teamName\", teamName);\n        return DatapsHumpHelper.lineToHump(jt.queryForList(\"select distinct ws.label,ws.id value from dataos_platform_workspace ws inner join dataos_platform_workspace_user u on ws.id \u003d u.workspace_id where 1\u003d1 and u.user_id \u003d :userId and team_name\u003d:teamName\", params));\n    }\n\n\nreturn getWs(params);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

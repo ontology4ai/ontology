@@ -1,0 +1,177 @@
+.attrConfig-container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "PingFang SC";
+  .attr-form{
+    justify-content:space-between;
+    flex-direction: row;
+    margin-top: 20px;
+    width: 766px;
+    .arco-form-item{
+      width: 48%;
+    }
+  }
+  .attr-setting-container{
+    // flex: 1;
+    display: flex;
+    flex-direction: column;
+    .arco-alert{
+      padding: 6px 12px;
+      margin: 12px 0;
+    }
+    .attr-setting-head{
+      position: relative;
+      box-sizing: border-box;
+      height: 36px;
+      line-height: 20px;
+      padding: 8px 0px;
+      font-size: 12px;
+      font-weight: 600;
+      .dot{
+        display: inline-block;
+        width: 3px;
+        height: 10px;
+        margin-right: 5px;
+        border-radius: 2px;
+        background: var(--color-primary-6, #3261CE);
+      }
+      .ai-attr-btn{
+        position: absolute;
+        right: 0;
+        top: 4px;
+      }
+    }
+    .attr-table{
+      flex: 1;
+      .table-btn-group{
+        button{
+          padding: 0 4px;
+        }
+      }
+      .attr-tr{
+        position: relative;
+        .attr-tag{
+          display: inline-flex;
+          align-items: center;
+          justify-content: flex-start;
+          position: absolute;
+          height: 29px;
+          right: 10px;
+          //width: 176px;
+          pointer-events: none;
+          .arco-tag{
+            margin-left: 4px;
+          }
+          .moda-icon-brush-color{
+            pointer-events: visible;
+            position: absolute;
+            right: 0;
+          }
+        }
+      }
+    }
+    .attr-add-pop{
+      width: 100%;
+    }
+    .attr-add-btn{
+      width: 100px;
+      &.ai-attr-btn{
+        width: 124px;
+      }
+      margin: 5px 5px;
+      color: var(--color-link-6, #3261CE);
+      border: 1px dashed var(--color-border-2, #E3E9EF);
+      background: var(--color-fill-2, #EFF4F9);
+    }
+    .arco-empty .arco-empty-wrapper img{
+      height: 48px;
+    }
+  }
+}
+.object-attr-pop{
+  width: 780px;
+  position: absolute;
+  z-index: 1000;
+  margin: 5px 5px;
+  background-color: var(--color-bg-4, #FFF);
+  border-radius: var(--border-radius-medium, 4px);
+  border: 1px solid var(--color-border-2, #E3E9EF);
+  box-shadow: 0 4px 10px 0 var(--color-shadow, rgba(36, 46, 67, 0.10));
+  font-family: "PingFang SC";
+  .oper{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-border-1, #EFF4F9);
+
+  }
+  .arco-checkbox-group{
+    width: 100%;
+    max-height: 250px;
+    overflow: auto;
+    .arco-checkbox{
+      display: block;
+      &.arco-checkbox-disabled{
+        .custom-checkbox-card{
+          .custom-checkbox-card-mask{
+            background-color: var(--color-text-4, #B3C0CC);
+          }
+          .custom-checkbox-card-title {
+            color: var(--color-text-4);
+          }
+        }
+      }
+    }
+  }
+  .custom-checkbox-card {
+    align-items: center;
+    padding: 4px;
+    height: 28px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+
+  }
+
+  .custom-checkbox-card-mask {
+    height: 14px;
+    width: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    border: 1px solid var(--color-border-2);
+    box-sizing: border-box;
+  }
+
+  .custom-checkbox-card-mask-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+  }
+
+  .custom-checkbox-card-title {
+    color: var(--color-text-1);
+    font-size: 12px;
+  }
+
+  .custom-checkbox-card:hover,
+  .custom-checkbox-card-checked,
+  .custom-checkbox-card:hover .custom-checkbox-card-mask,
+  .custom-checkbox-card-checked  .custom-checkbox-card-mask{
+    //border-color: rgb(var(--primary-6));
+  }
+
+  .custom-checkbox-card-checked {
+    //background-color: var(--color-primary-light-1);
+  }
+
+  .custom-checkbox-card:hover .custom-checkbox-card-title,
+  .custom-checkbox-card-checked .custom-checkbox-card-title {
+    font-weight: bolder;
+  }
+
+  .custom-checkbox-card-checked .custom-checkbox-card-mask-dot {
+     background-color: rgb(var(--primary-6));
+  }
+}

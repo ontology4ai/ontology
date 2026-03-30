@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="90px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 13</title>
+    <defs>
+        <linearGradient x1="59.7680919%" y1="50%" x2="69.3000436%" y2="92.8363974%" id="linearGradient-1">
+            <stop stop-color="#6861D1" offset="0%"></stop>
+            <stop stop-color="#8A9FE3" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="35.1201227%" y1="3.46944695e-15%" x2="60.5452641%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#BEC5FF" offset="0%"></stop>
+            <stop stop-color="#29283F" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-3" x="0" y="0" width="90" height="90" rx="20"></rect>
+        <filter x="-7.8%" y="-7.8%" width="115.6%" height="115.6%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="-4" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.670215814   0 0 0 0 0.660201075   0 0 0 0 0.890540082  0 0 0 0.200174825 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <filter x="-86.1%" y="-104.3%" width="272.2%" height="308.6%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.165263776   0 0 0 0 0.166555518   0 0 0 0 0.860677083  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="new" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="打开文件" transform="translate(-651.000000, -348.000000)">
+            <g id="编组-13" transform="translate(651.000000, 348.000000)">
+                <g id="矩形">
+                    <use fill-opacity="0.8" fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <rect stroke="url(#linearGradient-2)" stroke-width="3" stroke-linejoin="square" x="1.5" y="1.5" width="87" height="87" rx="20"></rect>
+                </g>
+                <g id="文件-(7)" filter="url(#filter-5)" transform="translate(27.000000, 30.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M12.2987805,2.51829268 L30,2.51829268 C31.3550136,2.51829268 32.0325203,3.19579946 32.0325203,4.55081302 L32.0325203,16.3922764 C32.0325203,17.74729 31.3550136,18.4247967 30,18.4247967 L12.2987805,18.4247967 C10.9437669,18.4247967 10.2662601,17.74729 10.2662601,16.3922764 L10.2662601,4.55081302 C10.2662601,3.19579946 10.9437669,2.51829268 12.2987805,2.51829268 Z" id="路径" opacity="0.399181548"></path>
+                    <path d="M11.6971545,0 C12.3754775,0 13.0090313,0.338628952 13.3861789,0.902439024 L13.3861789,0.902439024 L16.8292683,6.05081302 C17.206816,6.6152218 17.8412823,6.95380716 18.5203252,6.95325205 L18.5203252,6.95325205 L31.9349594,6.95325205 C34.1800193,6.95325205 36,8.77323273 36,11.0182927 L36,11.0182927 L36,25.652439 C36,27.897499 34.1800193,29.7174797 31.9349594,29.7174797 L31.9349594,29.7174797 L4.06504063,29.7174797 C1.81998068,29.7174797 0,27.897499 0,25.652439 L0,25.652439 L0,4.06504063 C0,1.81998068 1.81998068,0 4.06504063,0 L4.06504063,0 Z M25.3455284,21.6504065 L10.6544716,21.6504065 C9.98095357,21.6504065 9.43495937,22.1964007 9.43495937,22.8699187 L9.43495937,24.2256098 C9.43495937,24.8991277 9.98095357,25.445122 10.6544716,25.445122 L25.3455284,25.445122 C26.0190464,25.445122 26.5650406,24.8991277 26.5650406,24.2256098 L26.5650406,22.8699187 C26.5650406,22.5464839 26.4365567,22.2362962 26.2078538,22.0075933 C25.9791509,21.7788904 25.6689632,21.6504065 25.3455284,21.6504065 Z" id="形状结合"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,521 @@
+version: '3.8'
+
+services:
+  # 1. Etcd (APISIX 依赖)
+  etcd:
+    image: bitnami/etcd:latest
+    container_name: etcd-service
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+      - ETCD_ADVERTISE_CLIENT_URLS=http://etcd:2379
+      - ETCD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379
+    volumes:
+      - etcd-data:/bitnami/etcd
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "etcdctl", "endpoint", "health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # 2. MySQL 8 (新增)
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-service
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-1qaz@WSX}
+      MYSQL_USER: ontology
+      MYSQL_PASSWORD: 1qaz@WSX
+      MYSQL_DATABASE: atlas_dev
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./mysql/init:/docker-entrypoint-initdb.d
+    command: --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD:-1qaz@WSX}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    networks:
+      - app-network
+
+  # 3. APISIX Gateway
+  apisix:
+    image: apache/apisix:3.2.2-debian
+    container_name: apisix-gateway
+    depends_on:
+      etcd:
+        condition: service_healthy
+    environment:
+      - APISIX_STAND_ALONE=false
+    volumes:
+      - ./apisix/conf/config.yaml:/usr/local/apisix/conf/config.yaml:ro
+      - apisix-logs:/usr/local/apisix/logs
+    ports:
+      - "9080:9080"
+      - "9091:9091"
+      - "9180:9180"
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9180/apisix/admin/routes", "-H", "X-API-KEY: 2bfbf9a4156599844cf49f8aa75f3f4f"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # 4. APISIX Dashboard
+  apisix-dashboard:
+    image: apache/apisix-dashboard:3.0.1-alpine
+    container_name: apisix-dashboard
+    depends_on:
+      etcd:
+        condition: service_healthy
+      apisix:
+        condition: service_healthy
+    volumes:
+      - ./apisix/dashboard/conf/conf.yaml:/usr/local/apisix-dashboard/conf/conf.yaml:ro
+    ports:
+      - "9000:9000"
+    networks:
+      - app-network
+    restart: on-failure
+
+  # 5. Redis (内部服务)
+  redis:
+    image: redis:7-alpine
+    container_name: redis-service
+    command: redis-server --requirepass ${REDIS_PASSWD}
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWD}", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - app-network
+
+  # 6. MinIO (使用官方镜像)
+  minio:
+    image: minio/minio:RELEASE.2025-02-18T16-25-55Z
+    container_name: minio-service
+    environment:
+      - MINIO_ROOT_USER=${MINIO_USER}
+      - MINIO_ROOT_PASSWORD=${MINIO_PWD}
+    command: server /data --console-address ":9001"
+    ports:
+      - "${MINIO_PORT}:9000"   # API 端口
+      - "${MINIO_ADMIN_PORT}:9001"   # 控制台端口
+    volumes:
+      - minio-data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+      start_period: 30s
+    networks:
+      - app-network
+
+  # 7. Ontology 服务
+  ontology:
+    build:
+      context: ./ontology
+      dockerfile: Dockerfile
+    image: baseimg:ontology
+    container_name: ontology-service
+    environment:
+      # Database (已更新为内部 MySQL)
+      APP_DB_URL: ${APP_DB_URL}
+      APP_DB_USER: ${APP_DB_USER}
+      APP_DB_PWD: ${APP_DB_PWD}
+      APP_DB_PRO_URL: ${APP_DB_PRO_URL}
+      APP_DB_PRO_USER: ${APP_DB_PRO_USER}
+      APP_DB_PRO_PWD: ${APP_DB_PRO_PWD}
+      APP_DB_DRIVER: ${APP_DB_DRIVER}
+      DB_TYPE: ${DB_TYPE}
+      DB_DIALECT: ${DB_DIALECT}
+      # MinIO (使用内部服务)
+      MINIO_URL: ${MINIO_URL}
+      MINIO_USER: ${MINIO_USER}
+      MINIO_PWD: ${MINIO_PWD}
+      MINIO_BUCKET: ${MINIO_BUCKET}
+      # Redis (使用内部服务)
+      REDIS_HOST: ${REDIS_HOST}
+      REDIS_PORT: ${REDIS_PORT}
+      REDIS_PASSWD: ${REDIS_PASSWD}
+      # APISIX (使用内部服务)
+      APISIX_ADMIN_HOST: ${APISIX_ADMIN_HOST}
+      APISIX_GATEWAY_HOST: ${APISIX_GATEWAY_HOST}
+      APISIX_SECRET: ${APISIX_SECRET}
+      APISIX_UPSTREAM_NODES_EXPR: ${APISIX_UPSTREAM_NODES_EXPR}
+      # Links
+      LINKS_DSPATH: ${LINKS_DSPATH}
+      # Docker
+      DOCKER_USER: ${DOCKER_USER}
+      DOCKER_PWD: ${DOCKER_PWD}
+      # Service Specific
+      DEPLOY_MODE: ${DEPLOY_MODE}
+      SERVER_PORT: ${SERVER_PORT}
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE}
+      APP_ID: ${APP_ID}
+      APP_NAME: ${APP_NAME}
+
+      SANDBOX_HOST: ${ONTOLOGY_SANDBOX_PORT}
+      SANDBOX_DEST_PORT: ${ONTOLOGY_SANDBOX_DEST_PORT}
+      SANDBOX_DEST_PORT_PRO: ${ONTOLOGY_SANDBOX_DEST_PORT_PRO}
+      SANDBOX_PORT_PRO: ${ONTOLOGY_SANDBOX_PORT_PRO}
+    ports:
+      - "${SERVER_PORT}:${SERVER_PORT}"
+    volumes:
+      - ./app-logs:${LOG_PATH}
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      apisix:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    healthcheck:
+      disable: true
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - app-network
+
+  # 8. Dataps 服务
+  dataps:
+    build:
+      context: ./dataps
+      dockerfile: Dockerfile
+    image: baseimg:dataps
+    container_name: dataps-service
+    environment:
+      # Database (复用 ontology 配置)
+      APP_DB_URL: ${APP_DB_URL}
+      APP_DB_USER: ${APP_DB_USER}
+      APP_DB_PWD: ${APP_DB_PWD}
+      APP_DB_PRO_URL: ${APP_DB_PRO_URL}
+      APP_DB_PRO_USER: ${APP_DB_PRO_USER}
+      APP_DB_PRO_PWD: ${APP_DB_PRO_PWD}
+      APP_DB_DRIVER: ${APP_DB_DRIVER}
+      DB_TYPE: ${DB_TYPE}
+      DB_DIALECT: ${DB_DIALECT}
+      # MinIO (使用内部服务)
+      MINIO_URL: ${MINIO_URL}
+      MINIO_USER: ${MINIO_USER}
+      MINIO_PWD: ${MINIO_PWD}
+      MINIO_BUCKET: ${MINIO_BUCKET}
+      # Redis (使用内部服务)
+      REDIS_HOST: ${REDIS_HOST}
+      REDIS_PORT: ${REDIS_PORT}
+      REDIS_PASSWD: ${REDIS_PASSWD}
+      # APISIX (使用内部服务)
+      APISIX_ADMIN_HOST: ${APISIX_ADMIN_HOST}
+      APISIX_GATEWAY_HOST: ${APISIX_GATEWAY_HOST}
+      APISIX_SECRET: ${APISIX_SECRET}
+      APISIX_UPSTREAM_NODES_EXPR: ${APISIX_UPSTREAM_NODES_EXPR}
+      # Links
+      LINKS_DSPATH: ${LINKS_DSPATH}
+      # Docker
+      DOCKER_USER: ${DOCKER_USER}
+      DOCKER_PWD: ${DOCKER_PWD}
+      # Service Specific (Dataps 特定)
+      DEPLOY_MODE: ${DEPLOY_MODE}
+      SERVER_PORT: ${DATAPS_PORT}
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE}
+      APP_ID: dataps
+      APP_NAME: dataps
+    ports:
+      - "${DATAPS_PORT}:${DATAPS_PORT}"
+    volumes:
+      - ./app-logs:${LOG_PATH}
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      apisix:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    healthcheck:
+      disable: true
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - app-network
+
+  # 9. Common 服务
+  common:
+    image: baseimg:common
+    container_name: common-service
+    environment:
+      # Database
+      APP_DB_URL: ${APP_DB_URL}
+      APP_DB_USER: ${APP_DB_USER}
+      APP_DB_PWD: ${APP_DB_PWD}
+      APP_DB_PRO_URL: ${APP_DB_PRO_URL}
+      APP_DB_PRO_USER: ${APP_DB_PRO_USER}
+      APP_DB_PRO_PWD: ${APP_DB_PRO_PWD}
+      APP_DB_DRIVER: ${APP_DB_DRIVER}
+      DB_TYPE: ${DB_TYPE}
+      DB_DIALECT: ${DB_DIALECT}
+      # MinIO (使用内部服务)
+      MINIO_URL: ${MINIO_URL}
+      MINIO_USER: ${MINIO_USER}
+      MINIO_PWD: ${MINIO_PWD}
+      MINIO_BUCKET: ${MINIO_BUCKET}
+      # Redis (使用内部服务，兼容脚本 REDIS_INFO 格式)
+      REDIS_HOST: ${REDIS_HOST}
+      REDIS_PORT: ${REDIS_PORT}
+      REDIS_PASSWD: ${REDIS_PASSWD}
+      REDIS_INFO: "${REDIS_HOST}:${REDIS_PORT}"
+      # APISIX (使用内部服务)
+      APISIX_ADMIN_HOST: ${APISIX_ADMIN_HOST}
+      APISIX_GATEWAY_HOST: ${APISIX_GATEWAY_HOST}
+      APISIX_SECRET: ${APISIX_SECRET}
+      APISIX_UPSTREAM_NODES_EXPR: ${APISIX_UPSTREAM_NODES_EXPR}
+      # Links
+      LINKS_DSPATH: ${LINKS_DSPATH}
+      # Docker
+      DOCKER_USER: ${DOCKER_USER}
+      DOCKER_PWD: ${DOCKER_PWD}
+      # Service Specific (Common 特定)
+      DEPLOY_MODE: ${DEPLOY_MODE}
+      SERVER_PORT: ${COMMON_PORT}
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE}
+      APP_ID: common
+      APP_NAME: _common_
+      # Magic API (根据启动脚本配置)
+      MAGIC_API_PATH: /app/runtime/build/resources/magic-api
+    ports:
+      - "${COMMON_PORT}:${COMMON_PORT}"
+    volumes:
+      - ./app-logs:${LOG_PATH}
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      apisix:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    healthcheck:
+      disable: true
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - app-network
+
+  # 10. Links 服务
+  links:
+    build:
+      context: ./links
+      dockerfile: Dockerfile
+    image: baseimg:links
+    container_name: links-service
+    environment:
+      # Database (更新为内部 MySQL 统一账号)
+      APP_DB_URL: ${APP_DB_URL}
+      APP_DB_USER: ${APP_DB_USER}
+      APP_DB_PWD: ${LINKS_APP_DB_PWD}
+      APP_DB_PRO_URL: ${APP_DB_PRO_URL}
+      APP_DB_PRO_USER: ${APP_DB_PRO_USER}
+      APP_DB_PRO_PWD: ${LINKS_APP_DB_PRO_PWD}
+      APP_DB_DRIVER: ${APP_DB_DRIVER}
+      DB_TYPE: ${DB_TYPE}
+      DB_DIALECT: ${DB_DIALECT}
+      # MinIO (使用内部服务)
+      MINIO_URL: ${MINIO_URL}
+      MINIO_USER: ${MINIO_USER}
+      MINIO_PWD: ${MINIO_PWD}
+      MINIO_BUCKET: ${MINIO_BUCKET}
+      # Redis (使用内部服务)
+      REDIS_HOST: ${REDIS_HOST}
+      REDIS_PORT: ${REDIS_PORT}
+      REDIS_PASSWD: ${REDIS_PASSWD}
+      # APISIX (使用内部服务)
+      APISIX_ADMIN_HOST: ${APISIX_ADMIN_HOST}
+      APISIX_GATEWAY_HOST: ${APISIX_GATEWAY_HOST}
+      APISIX_SECRET: ${APISIX_SECRET}
+      APISIX_UPSTREAM_NODES_EXPR: ${APISIX_UPSTREAM_NODES_EXPR}
+      # Links
+      LINKS_DSPATH: ${LINKS_DSPATH}
+      # Docker
+      DOCKER_USER: ${DOCKER_USER}
+      DOCKER_PWD: ${DOCKER_PWD}
+      # Service Specific (Links 特定)
+      DEPLOY_MODE: ${DEPLOY_MODE}
+      SERVER_PORT: ${LINKS_PORT}
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE}
+      APP_ID: links
+      APP_NAME: links
+      # 脚本中涉及的插件路径 (假设容器内结构与脚本逻辑一致)
+      DSXPATH: /app/runtime/dsx-plugins
+      HADOOP_HOME: /app/runtime/dsx-plugins/hadoop/3.x
+    ports:
+      - "${LINKS_PORT}:${LINKS_PORT}"
+    volumes:
+      - ./app-logs:${LOG_PATH}
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      apisix:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+    healthcheck:
+      disable: true
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - app-network
+
+  # 11. Ontology Graph（Python，经 APISIX 访问 Backend 路由名 ontology_backend_server）
+  ontology-graph:
+    build:
+      context: ./ontology-graph
+      dockerfile: Dockerfile
+    image: ontology_graph:1.0
+    container_name: odlm-python
+    ports:
+      - "${ONTOLOGY_GRAPH_PORT}:5050"
+    environment:
+      # 与同 compose 内 APISIX 通信；若网关在外部，可设 ONTOLOGY_GRAPH_NET_GATE
+      - NET_GATE=${ONTOLOGY_GRAPH_NET_GATE:-http://apisix:9080}
+      - ONTOLOGY_BACKEND_SERVER=ontology_backend_server
+      - APP_WORKERS=1
+      - LOG_LEVEL=DEBUG
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./ontology-graph/logs:/app/logs
+    command: ["python", "app.py"]
+    restart: unless-stopped
+    depends_on:
+      apisix:
+        condition: service_healthy
+    networks:
+      - app-network
+
+  # 12. Ontology Backend（Python API）
+  ontology-backend:
+    build:
+      context: ./ontology-backend
+      dockerfile: Dockerfile
+    image: ontology_server:1.0
+    container_name: ontology_server
+    ports:
+      - "${ONTOLOGY_BACKEND_PORT}:5050"
+    environment:
+      - APP_ENVIRONMENT=development
+      - ONTOLOGY_MYSQL_PASSWORD=${APP_DB_PWD:-123}
+      - ONTOLOGY_MYSQL_HOST=${APP_DB_HOST:-10.19.95.33}
+      - ONTOLOGY_MYSQL_PORT=${APP_DB_PORT:-3306}
+      - ONTOLOGY_MYSQL_USER=${APP_DB_USER:-prd}
+      - ONTOLOGY_MYSQL_DATABASE=${APP_DB_DATABASE:-atlas_dev}
+      - APP_PORT=5050
+      - APP_RELOAD=false
+    volumes:
+      - ./ontology-backend/logs:/app/logs
+    command: ["python", "app.py"]
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  # 13. Ontology Sandbox — 生产沙箱（codercom/code-server，Web UI 8080 -> 8033，API 8000 -> 8034）
+  ontology-sandbox-pro:
+    build:
+      context: ./ontology-sandbox
+      dockerfile: Dockerfile
+      args:
+        SANDBOX_CODE_SERVER_IMAGE: ${SANDBOX_CODE_SERVER_IMAGE:-codercom/code-server:latest}
+    image: ontology_sandbox:1.2
+    container_name: py-sandbox_pro
+    ports:
+      - "${ONTOLOGY_SANDBOX_DEST_PORT_PRO}:8080"
+      - "${ONTOLOGY_SANDBOX_PORT_PRO}:8000"
+    environment:
+      TZ: Asia/Shanghai
+      PASSWORD: ${SANDBOX_CODE_SERVER_PASSWORD:-sandbox123}
+      PROXY_BASE_PATH: /ontology_test_pro
+      ROLE: pro
+      # 与同容器内 8000 端口的用户服务通信（原 docker run 使用主机 8034）
+      USER_SERVER: http://127.0.0.1:8000
+      NET_GATE: ${SANDBOX_NET_GATE:-http://apisix:9080}
+      ONTOLOGY_BACKEND_SERVER: ontology_backend_server
+      SIM_CALLBACK_URL: ${SANDBOX_SIM_CALLBACK_URL:-}
+    volumes:
+      - ${SANDBOX_PRO_ONTOLOGY_DIR:-./sandbox/ontology-sandbox/workspace/pro/ontology}:/home/coder/code_gen/core/ontology
+      - ${SANDBOX_PRO_ONTOLOGY_APIS_DIR:-./sandbox/ontology-sandbox/workspace/pro/ontology_apis}:/home/coder/code_gen/core/ontology_apis
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  # 14. Ontology Sandbox — 开发沙箱（codercom/code-server，Web UI 8080 -> 8031，API 8000 -> 8032）
+  ontology-sandbox-dev:
+    build:
+      context: ./ontology-sandbox
+      dockerfile: Dockerfile
+      args:
+        SANDBOX_CODE_SERVER_IMAGE: ${SANDBOX_CODE_SERVER_IMAGE:-codercom/code-server:latest}
+    image: ontology_sandbox:1.2
+    container_name: py-sandbox
+    ports:
+      - "${ONTOLOGY_SANDBOX_PORT}:8000"
+      - "${ONTOLOGY_SANDBOX_DEST_PORT}:8080"
+    environment:
+      TZ: Asia/Shanghai
+      PASSWORD: ${SANDBOX_CODE_SERVER_PASSWORD:-sandbox123}
+      PROXY_BASE_PATH: /ontology_test_dev
+      ROLE: dev
+      USER_SERVER: http://ontology-sandbox-pro:${ONTOLOGY_SANDBOX_PORT_PRO}
+      NET_GATE: ${SANDBOX_NET_GATE:-http://apisix:9080}
+      ONTOLOGY_BACKEND_SERVER: ontology_backend_server
+      SIM_CALLBACK_URL: ${SANDBOX_SIM_CALLBACK_URL:-}
+    volumes:
+      - ${SANDBOX_DEV_ONTOLOGY_DIR:-./sandbox/ontology-sandbox/workspace/dev/ontology}:/home/coder/code_gen/core/ontology
+      - ${SANDBOX_DEV_ONTOLOGY_APIS_DIR:-./sandbox/ontology-sandbox/workspace/dev/ontology_apis}:/home/coder/code_gen/core/ontology_apis
+    depends_on:
+      ontology-sandbox-pro:
+        condition: service_started
+    restart: unless-stopped
+    networks:
+      - app-network
+
+volumes:
+  redis-data:
+  etcd-data:
+  apisix-logs:
+  mysql-data:
+  minio-data:
+
+networks:
+  app-network:
+    driver: bridge
+

@@ -1,0 +1,271 @@
+.relation-source-container{
+.datasource-content{
+  .datasource-head{
+    box-sizing: border-box;
+    line-height: 20px;
+    margin: 20px 0 12px;
+    font-size: 12px;
+    font-weight: 600;
+    .dot{
+      display: inline-block;
+      width: 3px;
+      height: 10px;
+      margin-right: 5px;
+      border-radius: 2px;
+      background: var(--color-primary-6, #3261CE);
+    }
+    .arco-typography{
+      font-weight: 400;
+      margin-left: 6px;
+    }
+  }
+  .datasource-body{
+    display: flex ;
+    padding: 20px var(--size-5, 20px);
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid var(--color-border-2, #E3E9EF);
+    flex-direction: column;
+    img{
+      width: 100%;
+    }
+    .obj-attr-select{
+      width: 100%;
+      margin-top: 20px;
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      .select-form{
+        flex: 1;
+        form .arco-form-item{
+          width: 100%;
+          margin: 4px 0;
+        }
+      }
+      &.link-type-2{
+        .select-form{
+          flex: 0 1 48%;
+        }
+      }
+    }
+    .change{
+      margin: 4px 16px;
+      /*border-radius: var(--border-radius-circle, 50%);
+      background: var(--color-fill-2, #EFF4F9);
+      color: var(--color-text-2);
+      width: 28px;
+      height: 28px;
+      box-sizing: border-box;
+      line-height: 28px;
+      text-align: center;*/
+    }
+    .attr-content {
+      border-radius: var(--border-radius-small, 2px);
+      border: 1px solid var(--color-border-2, #E3E9EF);
+      min-height: 28px;
+      padding: 4px 12px;
+      box-sizing: border-box;
+
+    }
+    .dataset-choose{
+      display: inline-flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      .dataset-content{
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--color-text-4);
+        .dataset-icon{
+          display: inline-block;
+          border-radius: var(---border-radius-medium, 4px);
+          background: var(--color-fill-2, #EFF4F9);
+          color: var(--color-primary-light-3);
+          height: 36px;
+          width: 36px;
+          padding: 8px;
+          box-sizing: border-box;
+          margin-right: 10px;
+          svg{
+            height: 20px;
+            width: 20px;
+          }
+        }
+        &.active{
+          color: var(--color-text-1);
+          .dataset-icon{
+            color: var(--color-primary-6);
+          }
+          .dataset-info{
+            display: inline-flex;
+            flex-direction: column;
+            vertical-align: bottom;
+            span{
+              color: var(--color-text-2);
+              font-size: 12px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+  .datasource-content{
+    padding-top:10px;
+    .obj-content {
+      border-radius: var(--border-radius-small, 2px);
+      border: 1px solid var(--color-border-2, #E3E9EF);
+      height: 28px;
+      padding: 4px 12px;
+      box-sizing: border-box;
+
+    }
+    .arco-col-6{
+      .arco-form-item{
+        margin: 0 10px;
+       // width: 100%;
+        .arco-form-item-wrapper{
+          width: 100%;
+        }
+      }
+    }
+    .arco-form-vertical{
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .arco-form-item{
+        width: 48%;
+      }
+    }
+  }
+}
+}
+.relation-step-modal{
+  .relation-dataset-container{
+    height: 630px;
+    padding: 16px 20px;
+    box-sizing: border-box;
+  }
+  .dataset-form{
+    justify-content:space-between;
+    flex-direction: row;
+    // margin: 20px 0;
+    .arco-form-item{
+      width: 48%;
+    }
+  }
+  .dataset-container{
+    height: calc(100% - 80px);
+    display: flex;
+    .dataset-head{
+      box-sizing: border-box;
+      height: 36px;
+      line-height: 20px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .dataset-left{
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      width: 188px;
+      border-radius: 4px;
+      border: 1px solid var(--color-border-2, #E3E9EF);
+      .search-input{
+        width: 164px;
+        padding: 6px 12px;
+      }
+      .arco-spin{
+        flex: 1;
+        height: calc(100% - 36px);
+        .arco-spin-children{
+          height: 100%;
+          .arco-list-wrapper{
+            height: calc(100% - 40px);
+          }
+        }
+      }
+      .dataset-list{
+        height: 100%;
+        border: none;
+        overflow-y: auto;
+        .list-item{
+          height: 20px;
+          margin: 6px 0;
+          padding: 0px 12px;
+          border: none;
+          font-size: 12px;
+          font-weight: 400;
+          cursor: pointer;
+          display: inline-block;
+          width: 100%;
+          box-sizing: border-box;
+          span{
+            display: inline-block;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          &.active,&:hover{
+            color:var(--color-link-6,#3261CE);
+            font-weight: 600;
+          }
+        }
+      }
+      .arco-pagination{
+        height: 36px;
+        line-height: 36px;
+        width: 100%;
+        float: right;
+        justify-content: flex-end;
+        border-top: 1px solid var(--color-border-2, #E3E9EF);
+      }
+    }
+    .dataset-arrow{
+      width: 24px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 10px;
+      padding-right: 10px;
+      .right-icon{
+        height: 12px;
+        line-height: 12px;
+        width: 12px;
+        padding: 6px;
+        border-radius: 2px;
+        background: var(--color-fill-2, #EFF4F9);
+        color: var(--color-text-2);
+        &.empty{
+          border-radius: var(---border-radius-small, 2px);
+          background: var(--color-fill-2, #EFF4F9);
+          color: var(--color-text-4);
+        }
+      }
+    }
+    .dataset-right{
+      height: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      border-radius: 4px;
+      border: 1px solid var(--color-border-2, #E3E9EF);
+      .dataset-content{
+        flex: 1;
+        .arco-spin,.arco-spin-children{
+          height: 100%;
+        }
+        .arco-table-container{
+          height: calc(100% - 38px);
+        }
+      }
+    }
+    .arco-empty .arco-empty-wrapper img{
+      height: 48px;
+    }
+  }
+ }
+

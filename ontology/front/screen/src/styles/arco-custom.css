@@ -1,0 +1,166 @@
+.arco-modal {
+  border-radius: 30px;
+  background: linear-gradient(151deg, rgba(17, 19, 38, 0.9) 0%, rgba(41, 46, 86, 0.7) 100%);
+  border: 1px solid #535c8f;
+}
+.arco-modal .arco-modal-close-icon {
+  background: linear-gradient(167deg, #6861d1 0%, #8a9fe3 100%);
+  box-shadow: inset 0px -4px 10px 0px rgba(171, 168, 227, 0.2);
+  border-radius: 22px;
+  border: 1px solid #535c8f;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  top: 12px;
+}
+.arco-modal-header {
+  height: 64px;
+  background: rgba(44, 50, 98, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 30px 30px 0px 0px;
+  border-bottom: none;
+}
+.arco-modal-header .arco-modal-title {
+  text-align: left;
+}
+.arco-modal-footer {
+  border-top-color: #535c8f;
+}
+
+.arco-btn-secondary:not(.arco-btn-disabled) {
+  background: rgba(44, 50, 98, 0.4);
+  box-shadow: inset 0px -4px 10px 0px rgba(171, 168, 227, 0.2);
+  border: 1px solid #535c8f;
+  opacity: 0.8;
+}
+.arco-btn-size-default {
+  border-radius: 12px;
+  padding: 0 30px;
+  height: 44px;
+}
+.arco-btn-primary:not(.arco-btn-disabled) {
+  background: linear-gradient(90deg, #1d4bff 0%, #df23fe 100%);
+  border: none;
+}
+
+.arco-input-group > :last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.arco-input-group > :first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.arco-input-inner-wrapper {
+  border-radius: 12px;
+  border: 1px solid #535c8f;
+  background: rgba(44, 50, 98, 0.4);
+  box-shadow: inset 0px -4px 10px 0px rgba(171, 168, 227, 0.2);
+  height: 45px;
+}
+
+.arco-drawer {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background: linear-gradient(151deg, rgba(17, 19, 38, 0.9) 0%, rgba(41, 46, 86, 0.7) 100%);
+  border: 1px solid #535c8f;
+}
+.arco-drawer-content {
+  padding: 0;
+}
+.arco-drawer .arco-drawer-close-icon {
+  background: linear-gradient(167deg, #6861d1 0%, #8a9fe3 100%);
+  box-shadow: inset 0px -4px 10px 0px rgba(171, 168, 227, 0.2);
+  border-radius: 22px;
+  border: 1px solid #535c8f;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  top: 12px;
+}
+.arco-drawer-header {
+  height: 64px;
+  background: rgba(44, 50, 98, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 30px 0px 0px 0px;
+  border-bottom: none;
+}
+
+.arco-form-item-control-children .arco-input {
+  border-radius: 12px;
+  border: 1px solid #535c8f;
+  background: rgba(44, 50, 98, 0.4);
+  box-shadow: inset 0px -4px 10px 0px rgba(171, 168, 227, 0.2);
+  height: 45px;
+}
+.arco-form-item-control-children .arco-select .arco-select-view {
+  height: 45px;
+  background: rgba(44, 50, 98, 0.4);
+  box-shadow: inset 0px -4px 10px 0px rgba(171, 168, 227, 0.2);
+  border-radius: 10px;
+  border: 1px solid #535c8f;
+}
+.arco-form-item-control-children .arco-textarea {
+  background: rgba(44, 50, 98, 0.4);
+  box-shadow: inset 0px -4px 10px 0px rgba(171, 168, 227, 0.2);
+  border-radius: 10px;
+  border: 1px solid #535c8f;
+}
+.arco-form-label-item .arco-form-item-symbol {
+  color: #62cde7;
+}
+
+.arco-table-border .arco-table-container {
+  border-right: 1px solid #535c8f;
+  border-top: 1px solid #535c8f;
+}
+.arco-table-border .arco-table-th:first-child,
+.arco-table-border .arco-table-td:first-child {
+  border-left: 1px solid #535c8f;
+}
+thead > .arco-table-tr > .arco-table-th {
+  border-bottom: 1px solid #535c8f;
+}
+.arco-table-th {
+  background: rgba(57, 62, 97, 0.3);
+  color: #aeafc1;
+}
+.arco-table-td {
+  background: transparent;
+  color: #aeafc1;
+}
+.arco-table-header {
+  background: transparent;
+}
+.arco-table-body {
+  background: transparent;
+}
+
+.arco-checkbox-checked .arco-checkbox-mask {
+  background-color: #a457eb;
+  svg {
+    display: none;
+  }
+}
+
+.arco-descriptions-item-label-inline {
+  color: #cecfff;
+}
+
+.arco-radio-checked .arco-radio-mask {
+  background-color: #6d58c5;
+  border-color: #6d58c5;
+}
+.arco-radio-checked .arco-radio-mask::after {
+  display: none;
+}
+
+.arco-spin {
+  width: 100%;
+}

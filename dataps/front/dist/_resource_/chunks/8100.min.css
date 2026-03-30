@@ -1,0 +1,5505 @@
+pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#abb2bf;background:#282c34}.hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#c678dd}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#e06c75}.hljs-literal{color:#56b6c2}.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#98c379}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#d19a66}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#61aeee}.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_{color:#e6c07b}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}
+/*light*/
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  color: #1F2328;
+  background-color: #ffffff;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 version=%271.1%27 aria-hidden=%27true%27><path fill-rule=%27evenodd%27 d=%27M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z%27></path></svg>");
+  mask-image: url("data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 version=%271.1%27 aria-hidden=%27true%27><path fill-rule=%27evenodd%27 d=%27M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z%27></path></svg>");
+}
+
+.markdown-body details,
+.markdown-body figcaption,
+.markdown-body figure {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body [hidden] {
+  display: none !important;
+}
+
+.markdown-body a {
+  background-color: transparent;
+  color: #0969da;
+  text-decoration: none;
+}
+
+.markdown-body abbr[title] {
+  border-bottom: none;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body dfn {
+  font-style: italic;
+}
+
+.markdown-body h1 {
+  margin: .67em 0;
+  font-weight: 600;
+  padding-bottom: .3em;
+  font-size: 2em;
+  border-bottom: 1px solid hsla(210,18%,87%,1);
+}
+
+.markdown-body mark {
+  background-color: #fff8c5;
+  color: #1F2328;
+}
+
+.markdown-body small {
+  font-size: 90%;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body sup {
+  top: -0.5em;
+}
+
+.markdown-body img {
+  border-style: none;
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #ffffff;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+.markdown-body figure {
+  margin: 1em 40px;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  overflow: hidden;
+  background: transparent;
+  border-bottom: 1px solid hsla(210,18%,87%,1);
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #d0d7de;
+  border: 0;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body [type=button],
+.markdown-body [type=reset],
+.markdown-body [type=submit] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+.markdown-body [type=checkbox],
+.markdown-body [type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body [type=number]::-webkit-inner-spin-button,
+.markdown-body [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.markdown-body [type=search]::-webkit-search-cancel-button,
+.markdown-body [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body ::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+.markdown-body ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body ::placeholder {
+  color: #6e7781;
+  opacity: 1;
+}
+
+.markdown-body hr::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body details:not([open])>*:not(summary) {
+  display: none !important;
+}
+
+.markdown-body a:focus,
+.markdown-body [role=button]:focus,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=checkbox]:focus {
+  outline: 2px solid #0969da;
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:focus:not(:focus-visible),
+.markdown-body [role=button]:focus:not(:focus-visible),
+.markdown-body input[type=radio]:focus:not(:focus-visible),
+.markdown-body input[type=checkbox]:focus:not(:focus-visible) {
+  outline: solid 1px transparent;
+}
+
+.markdown-body a:focus-visible,
+.markdown-body [role=button]:focus-visible,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline: 2px solid #0969da;
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.markdown-body a:not([class]):focus,
+.markdown-body a:not([class]):focus-visible,
+.markdown-body input[type=radio]:focus,
+.markdown-body input[type=radio]:focus-visible,
+.markdown-body input[type=checkbox]:focus,
+.markdown-body input[type=checkbox]:focus-visible {
+  outline-offset: 0;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  line-height: 10px;
+  color: #1F2328;
+  vertical-align: middle;
+  background-color: #f6f8fa;
+  border: solid 1px rgba(175,184,193,0.2);
+  border-bottom-color: rgba(175,184,193,0.2);
+  border-radius: 6px;
+  box-shadow: inset 0 -1px 0 rgba(175,184,193,0.2);
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h2 {
+  font-weight: 600;
+  padding-bottom: .3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid hsla(210,18%,87%,1);
+}
+
+.markdown-body h3 {
+  font-weight: 600;
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-weight: 600;
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  font-weight: 600;
+  font-size: .85em;
+  color: #656d76;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: #656d76;
+  border-left: .25em solid #d0d7de;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body tt,
+.markdown-body code,
+.markdown-body samp {
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-size: 12px;
+  word-wrap: normal;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-body input::-webkit-outer-spin-button,
+.markdown-body input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body .mr-2 {
+  margin-right: 8px !important;
+}
+
+.markdown-body::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .absent {
+  color: #d1242f;
+}
+
+.markdown-body .anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body details {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1F2328;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 tt,
+.markdown-body h1 code,
+.markdown-body h2 tt,
+.markdown-body h2 code,
+.markdown-body h3 tt,
+.markdown-body h3 code,
+.markdown-body h4 tt,
+.markdown-body h4 code,
+.markdown-body h5 tt,
+.markdown-body h5 code,
+.markdown-body h6 tt,
+.markdown-body h6 code {
+  padding: 0 .2em;
+  font-size: inherit;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2,
+.markdown-body summary h3,
+.markdown-body summary h4,
+.markdown-body summary h5,
+.markdown-body summary h6 {
+  display: inline-block;
+}
+
+.markdown-body summary h1 .anchor,
+.markdown-body summary h2 .anchor,
+.markdown-body summary h3 .anchor,
+.markdown-body summary h4 .anchor,
+.markdown-body summary h5 .anchor,
+.markdown-body summary h6 .anchor {
+  margin-left: -40px;
+}
+
+.markdown-body summary h1,
+.markdown-body summary h2 {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.markdown-body ul.no-list,
+.markdown-body ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.markdown-body ol[type="a s"] {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body ol[type="A s"] {
+  list-style-type: upper-alpha;
+}
+
+.markdown-body ol[type="i s"] {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol[type="I s"] {
+  list-style-type: upper-roman;
+}
+
+.markdown-body ol[type="1"] {
+  list-style-type: decimal;
+}
+
+.markdown-body div>ol:not([type]) {
+  list-style-type: decimal;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #d0d7de;
+}
+
+.markdown-body table td>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table tr {
+  background-color: #ffffff;
+  border-top: 1px solid hsla(210,18%,87%,1);
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body table img {
+  background-color: transparent;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body .emoji {
+  max-width: none;
+  vertical-align: text-top;
+  background-color: transparent;
+}
+
+.markdown-body span.frame {
+  display: block;
+  overflow: hidden;
+}
+
+.markdown-body span.frame>span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid #d0d7de;
+}
+
+.markdown-body span.frame span img {
+  display: block;
+  float: left;
+}
+
+.markdown-body span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: #1F2328;
+}
+
+.markdown-body span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-center>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.markdown-body span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.markdown-body span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.markdown-body span.align-right>span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+
+.markdown-body span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-left span {
+  margin: 13px 0 0;
+}
+
+.markdown-body span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+
+.markdown-body span.float-right>span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+
+.markdown-body code,
+.markdown-body tt {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  white-space: break-spaces;
+  background-color: rgba(175,184,193,0.2);
+  border-radius: 6px;
+}
+
+.markdown-body code br,
+.markdown-body tt br {
+  display: none;
+}
+
+.markdown-body del code {
+  text-decoration: inherit;
+}
+
+.markdown-body samp {
+  font-size: 85%;
+}
+
+.markdown-body pre code {
+  font-size: 100%;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  color: #1F2328;
+  background-color: #f6f8fa;
+  border-radius: 6px;
+}
+
+.markdown-body pre code,
+.markdown-body pre tt {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body .csv-data td,
+.markdown-body .csv-data th {
+  padding: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.markdown-body .csv-data .blob-num {
+  padding: 10px 8px 9px;
+  text-align: right;
+  background: #ffffff;
+  border: 0;
+}
+
+.markdown-body .csv-data tr {
+  border-top: 0;
+}
+
+.markdown-body .csv-data th {
+  font-weight: 600;
+  background: #f6f8fa;
+  border-top: 0;
+}
+
+.markdown-body [data-footnote-ref]::before {
+  content: "[";
+}
+
+.markdown-body [data-footnote-ref]::after {
+  content: "]";
+}
+
+.markdown-body .footnotes {
+  font-size: 12px;
+  color: #656d76;
+  border-top: 1px solid #d0d7de;
+}
+
+.markdown-body .footnotes ol {
+  padding-left: 16px;
+}
+
+.markdown-body .footnotes ol ul {
+  display: inline-block;
+  padding-left: 16px;
+  margin-top: 16px;
+}
+
+.markdown-body .footnotes li {
+  position: relative;
+}
+
+.markdown-body .footnotes li:target::before {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -24px;
+  pointer-events: none;
+  content: "";
+  border: 2px solid #0969da;
+  border-radius: 6px;
+}
+
+.markdown-body .footnotes li:target {
+  color: #1F2328;
+}
+
+.markdown-body .footnotes .data-footnote-backref g-emoji {
+  font-family: monospace;
+}
+
+.markdown-body .pl-c {
+  color: #57606a;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0550ae;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6639ba;
+}
+
+.markdown-body .pl-smi,
+.markdown-body .pl-s .pl-s1 {
+  color: #24292f;
+}
+
+.markdown-body .pl-ent {
+  color: #116329;
+}
+
+.markdown-body .pl-k {
+  color: #cf222e;
+}
+
+.markdown-body .pl-s,
+.markdown-body .pl-pds,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sre,
+.markdown-body .pl-sr .pl-sra {
+  color: #0a3069;
+}
+
+.markdown-body .pl-v,
+.markdown-body .pl-smw {
+  color: #953800;
+}
+
+.markdown-body .pl-bu {
+  color: #82071e;
+}
+
+.markdown-body .pl-ii {
+  color: #f6f8fa;
+  background-color: #82071e;
+}
+
+.markdown-body .pl-c2 {
+  color: #f6f8fa;
+  background-color: #cf222e;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  font-weight: bold;
+  color: #116329;
+}
+
+.markdown-body .pl-ml {
+  color: #3b2300;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  font-weight: bold;
+  color: #0550ae;
+}
+
+.markdown-body .pl-mi {
+  font-style: italic;
+  color: #24292f;
+}
+
+.markdown-body .pl-mb {
+  font-weight: bold;
+  color: #24292f;
+}
+
+.markdown-body .pl-md {
+  color: #82071e;
+  background-color: #ffebe9;
+}
+
+.markdown-body .pl-mi1 {
+  color: #116329;
+  background-color: #dafbe1;
+}
+
+.markdown-body .pl-mc {
+  color: #953800;
+  background-color: #ffd8b5;
+}
+
+.markdown-body .pl-mi2 {
+  color: #eaeef2;
+  background-color: #0550ae;
+}
+
+.markdown-body .pl-mdr {
+  font-weight: bold;
+  color: #8250df;
+}
+
+.markdown-body .pl-ba {
+  color: #57606a;
+}
+
+.markdown-body .pl-sg {
+  color: #8c959f;
+}
+
+.markdown-body .pl-corl {
+  text-decoration: underline;
+  color: #0a3069;
+}
+
+.markdown-body g-emoji {
+  display: inline-block;
+  min-width: 1ch;
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1em;
+  font-style: normal !important;
+  font-weight: 400;
+  line-height: 1;
+  vertical-align: -0.075em;
+}
+
+.markdown-body g-emoji img {
+  width: 1em;
+  height: 1em;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item label {
+  font-weight: 400;
+}
+
+.markdown-body .task-list-item.enabled label {
+  cursor: pointer;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 4px;
+}
+
+.markdown-body .task-list-item .handle {
+  display: none;
+}
+
+.markdown-body .task-list-item-checkbox {
+  margin: 0 .2em .25em -1.4em;
+  vertical-align: middle;
+}
+
+.markdown-body .contains-task-list:dir(rtl) .task-list-item-checkbox {
+  margin: 0 -1.6em .25em .2em;
+}
+
+.markdown-body .contains-task-list {
+  position: relative;
+}
+
+.markdown-body .contains-task-list:hover .task-list-item-convert-container,
+.markdown-body .contains-task-list:focus-within .task-list-item-convert-container {
+  display: block;
+  width: auto;
+  height: 24px;
+  overflow: visible;
+  clip: auto;
+}
+
+.markdown-body ::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+}
+
+.markdown-body .markdown-alert {
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #d0d7de;
+}
+
+.markdown-body .markdown-alert>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body .markdown-alert>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body .markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1;
+}
+
+.markdown-body .markdown-alert.markdown-alert-note {
+  border-left-color: #0969da;
+}
+
+.markdown-body .markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: #0969da;
+}
+
+.markdown-body .markdown-alert.markdown-alert-important {
+  border-left-color: #8250df;
+}
+
+.markdown-body .markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: #8250df;
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning {
+  border-left-color: #9a6700;
+}
+
+.markdown-body .markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: #9a6700;
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip {
+  border-left-color: #1f883d;
+}
+
+.markdown-body .markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: #1a7f37;
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution {
+  border-left-color: #cf222e;
+}
+
+.markdown-body .markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: #d1242f;
+}
+
+@charset "UTF-8";
+/*!
+ * Copyright (c) HANDSONCODE sp. z o. o.
+ * 
+ * HANDSONTABLE is a software distributed by HANDSONCODE sp. z o. o., a Polish corporation based in
+ * Gdynia, Poland, at Aleja Zwycięstwa 96-98, registered by the District Court in Gdansk under number
+ * 538651, EU tax ID number: PL5862294002, share capital: PLN 62,800.00.
+ * 
+ * This software is protected by applicable copyright laws, including international treaties, and dual-
+ * licensed – depending on whether your use for commercial purposes, meaning intended for or
+ * resulting in commercial advantage or monetary compensation, or not.
+ * 
+ * If your use is strictly personal or solely for evaluation purposes, meaning for the purposes of testing
+ * the suitability, performance, and usefulness of this software outside the production environment,
+ * you agree to be bound by the terms included in the "handsontable-non-commercial-license.pdf" file.
+ * 
+ * Your use of this software for commercial purposes is subject to the terms included in an applicable
+ * license agreement.
+ * 
+ * In any case, you must not make any such use of this software as to develop software which may be
+ * considered competitive with this software.
+ * 
+ * UNLESS EXPRESSLY AGREED OTHERWISE, HANDSONCODE PROVIDES THIS SOFTWARE ON AN "AS IS"
+ * BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, AND IN NO EVENT AND UNDER NO
+ * LEGAL THEORY, SHALL HANDSONCODE BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY DIRECT,
+ * INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY CHARACTER ARISING FROM
+ * USE OR INABILITY TO USE THIS SOFTWARE.
+ * 
+ * Version: 12.1.3
+ * Release date: 22/09/2022 (built at 22/09/2022 09:54:54)
+ */.handsontable .table td,.handsontable .table th{border-top:none}.handsontable tr{background:#fff}.handsontable td{background-color:inherit}.handsontable .table caption+thead tr:first-child td,.handsontable .table caption+thead tr:first-child th,.handsontable .table colgroup+thead tr:first-child td,.handsontable .table colgroup+thead tr:first-child th,.handsontable .table thead:first-child tr:first-child td,.handsontable .table thead:first-child tr:first-child th{border-top:1px solid #ccc}.handsontable .table-bordered{border:0;border-collapse:separate}.handsontable .table-bordered td,.handsontable .table-bordered th{border-left:none}.handsontable .table-bordered td:first-child,.handsontable .table-bordered th:first-child{border-left:1px solid #ccc}.handsontable .table>tbody>tr>td,.handsontable .table>tbody>tr>th,.handsontable .table>tfoot>tr>td,.handsontable .table>tfoot>tr>th,.handsontable .table>thead>tr>td,.handsontable .table>thead>tr>th{line-height:21px;padding:0}.col-lg-1.handsontable,.col-lg-2.handsontable,.col-lg-3.handsontable,.col-lg-4.handsontable,.col-lg-5.handsontable,.col-lg-6.handsontable,.col-lg-7.handsontable,.col-lg-8.handsontable,.col-lg-9.handsontable,.col-lg-10.handsontable,.col-lg-11.handsontable,.col-lg-12.handsontable,.col-md-1.handsontable,.col-md-2.handsontable,.col-md-3.handsontable,.col-md-4.handsontable,.col-md-5.handsontable,.col-md-6.handsontable,.col-md-7.handsontable,.col-md-8.handsontable,.col-md-9.handsontable .col-sm-1.handsontable,.col-md-10.handsontable,.col-md-11.handsontable,.col-md-12.handsontable,.col-sm-2.handsontable,.col-sm-3.handsontable,.col-sm-4.handsontable,.col-sm-5.handsontable,.col-sm-6.handsontable,.col-sm-7.handsontable,.col-sm-8.handsontable,.col-sm-9.handsontable .col-xs-1.handsontable,.col-sm-10.handsontable,.col-sm-11.handsontable,.col-sm-12.handsontable,.col-xs-2.handsontable,.col-xs-3.handsontable,.col-xs-4.handsontable,.col-xs-5.handsontable,.col-xs-6.handsontable,.col-xs-7.handsontable,.col-xs-8.handsontable,.col-xs-9.handsontable,.col-xs-10.handsontable,.col-xs-11.handsontable,.col-xs-12.handsontable{padding-left:0;padding-right:0}.handsontable .table-striped>tbody>tr:nth-of-type(2n){background-color:#fff}.handsontable{position:relative}.handsontable .hide{display:none}.handsontable .relative{position:relative}.handsontable .wtHider{width:0}.handsontable .wtSpreader{position:relative;width:0;height:auto}.handsontable div,.handsontable input,.handsontable table,.handsontable tbody,.handsontable td,.handsontable textarea,.handsontable th,.handsontable thead{box-sizing:content-box;-webkit-box-sizing:content-box;-moz-box-sizing:content-box}.handsontable input,.handsontable textarea{min-height:0}.handsontable table.htCore{border-collapse:separate;border-spacing:0;margin:0;border-width:0;table-layout:fixed;width:0;outline-width:0;cursor:default;max-width:none;max-height:none}.handsontable col,.handsontable col.rowHeader{width:50px}.handsontable td,.handsontable th{border-top-width:0;border-left-width:0;border-right:1px solid #ccc;border-bottom:1px solid #ccc;height:22px;empty-cells:show;line-height:21px;padding:0 4px;background-color:#fff;vertical-align:top;overflow:hidden;outline-width:0;white-space:pre-wrap}[dir=rtl].handsontable td,[dir=rtl].handsontable th{border-right-width:0;border-left:1px solid #ccc}.handsontable th:last-child{border-left:none;border-right:1px solid #ccc;border-bottom:1px solid #ccc}[dir=rtl].handsontable th:last-child{border-right:none;border-left:1px solid #ccc}.handsontable td:first-of-type,.handsontable th:first-child,.handsontable th:nth-child(2){border-left:1px solid #ccc}[dir=rtl].handsontable td:first-of-type,[dir=rtl].handsontable th:first-child,[dir=rtl].handsontable th:nth-child(2){border-right:1px solid #ccc}.handsontable .ht_clone_top th:nth-child(2){border-left-width:0;border-right:1px solid #ccc}[dir=rtl].handsontable .ht_clone_top th:nth-child(2){border-right-width:0;border-left:1px solid #ccc}.handsontable.htRowHeaders thead tr th:nth-child(2){border-left:1px solid #ccc}[dir=rtl].handsontable.htRowHeaders thead tr th:nth-child(2){border-right:1px solid #ccc}.handsontable tr:first-child td,.handsontable tr:first-child th{border-top:1px solid #ccc}.ht_master:not(.innerBorderInlineStart):not(.emptyColumns)~.handsontable:not(.ht_clone_top) thead tr th:first-child,.ht_master:not(.innerBorderInlineStart):not(.emptyColumns)~.handsontable tbody tr th{border-right-width:0;border-left:1px solid #ccc}[dir=rtl].ht_master:not(.innerBorderInlineStart):not(.emptyColumns)~.handsontable:not(.ht_clone_top) thead tr th:first-child,[dir=rtl].ht_master:not(.innerBorderInlineStart):not(.emptyColumns)~.handsontable tbody tr th{border-left-width:0;border-right:1px solid #ccc}.ht_master:not(.innerBorderTop):not(.innerBorderBottom) thead tr.lastChild th,.ht_master:not(.innerBorderTop):not(.innerBorderBottom) thead tr:last-child th,.ht_master:not(.innerBorderTop):not(.innerBorderBottom)~.handsontable thead tr.lastChild th,.ht_master:not(.innerBorderTop):not(.innerBorderBottom)~.handsontable thead tr:last-child th{border-bottom-width:0}.handsontable th{background-color:#f0f0f0;color:#222;text-align:center;font-weight:400;white-space:nowrap}.handsontable thead th{padding:0}.handsontable th.active{background-color:#ccc}.handsontable thead th .relative{padding:2px 4px}.handsontable span.colHeader{display:inline-block;line-height:1.1}.handsontable .wtBorder{position:absolute;font-size:0}.handsontable .wtBorder.hidden{display:none!important}.handsontable .wtBorder.current{z-index:10}.handsontable .wtBorder.area{z-index:8}.handsontable .wtBorder.fill{z-index:6}.handsontable .wtBorder.corner{font-size:0;cursor:crosshair}.ht_clone_master{z-index:100}.ht_clone_inline_start{z-index:120}.ht_clone_bottom{z-index:130}.ht_clone_bottom_inline_start_corner{z-index:150}.ht_clone_top{z-index:160}.ht_clone_top_inline_start_corner{z-index:180}.handsontable col.hidden{width:0!important}.handsontable tr.hidden,.handsontable tr.hidden td,.handsontable tr.hidden th{display:none}.ht_clone_bottom,.ht_clone_inline_start,.ht_clone_top,.ht_master{overflow:hidden}.ht_master .wtHolder{overflow:auto}.handsontable .ht_clone_inline_start thead,.handsontable .ht_master thead,.handsontable .ht_master tr th{visibility:hidden}.ht_clone_bottom .wtHolder,.ht_clone_inline_start .wtHolder,.ht_clone_top .wtHolder{overflow:hidden}.handsontable{touch-action:manipulation;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Helvetica Neue,Arial,sans-serif;font-size:13px;font-weight:400;color:#373737}.handsontable a{color:#104acc}.handsontable.htAutoSize{visibility:hidden;left:-99000px;position:absolute;top:-99000px}.handsontable td.htInvalid{background-color:#ff4c42!important}.handsontable td.htNoWrap{white-space:nowrap}#hot-display-license-info{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Helvetica Neue,Arial,sans-serif;font-size:10px;font-weight:400;color:#373737;padding:5px 0 3px;text-align:left}#hot-display-license-info a{color:#104acc;font-size:10px}.handsontable .manualColumnResizer{position:absolute;top:0;cursor:col-resize;z-index:210;width:5px;height:25px}.handsontable .manualRowResizer{position:absolute;left:0;cursor:row-resize;z-index:210;height:5px;width:50px}.handsontable .manualColumnResizer.active,.handsontable .manualColumnResizer:hover,.handsontable .manualRowResizer.active,.handsontable .manualRowResizer:hover{background-color:#34a9db}.handsontable .manualColumnResizerGuide{position:absolute;right:unset;top:0;background-color:#34a9db;display:none;width:0;border-right:1px dashed #777;border-left:none;margin-left:5px;margin-right:unset}[dir=rtl].handsontable .manualColumnResizerGuide{left:unset;border-left:1px dashed #777;border-right:none;margin-right:5px;margin-left:unset}.handsontable .manualRowResizerGuide{position:absolute;left:0;bottom:0;background-color:#34a9db;display:none;height:0;border-bottom:1px dashed #777;margin-top:5px}.handsontable .manualColumnResizerGuide.active,.handsontable .manualRowResizerGuide.active{display:block;z-index:209}.handsontable .columnSorting{position:relative}.handsontable .columnSorting.sortAction:hover{text-decoration:underline;cursor:pointer}.handsontable span.colHeader.columnSorting:before{top:50%;margin-top:-6px;padding-left:8px;padding-right:0;position:absolute;right:-9px;left:unset;content:"";height:10px;width:5px;background-size:contain;background-repeat:no-repeat;background-position-x:right}[dir=rtl].handsontable span.colHeader.columnSorting:before{padding-right:8px;padding-left:0;left:-9px;right:unset;background-position-x:left}.handsontable span.colHeader.columnSorting.ascending:before{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAMAAADJ7yrpAAAAKlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKE86IAAAADXRSTlMABBEmRGprlJW72e77tTkTKwAAAFNJREFUeAHtzjkSgCAUBNHPgsoy97+ulGXRqJE5L+xkxoYt2UdsLb5bqFINz+aLuuLn5rIu2RkO3fZpWENimNgiw6iBYRTPMLJjGFxQZ1hxxb/xBI1qC8k39CdKAAAAAElFTkSuQmCC)}.handsontable span.colHeader.columnSorting.descending:before{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAMAAADJ7yrpAAAAKlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKE86IAAAADXRSTlMABBEmRGprlJW72e77tTkTKwAAAFJJREFUeAHtzjkSgCAQRNFmQYUZ7n9dKUvru0TmvPAn3br0QfgdZ5xx6x+rQn23GqTYnq1FDcnuzZIO2WmedVqIRVxgGKEyjNgYRjKGkZ1hFIZ3I70LyM0VtU8AAAAASUVORK5CYII=)}.htGhostTable .htCore span.colHeader.columnSorting:not(.indicatorDisabled):after{content:"*";display:inline-block;position:relative;padding-right:20px}.handsontable td.area,.handsontable td.area-1,.handsontable td.area-2,.handsontable td.area-3,.handsontable td.area-4,.handsontable td.area-5,.handsontable td.area-6,.handsontable td.area-7{position:relative}.handsontable td.area-1:before,.handsontable td.area-2:before,.handsontable td.area-3:before,.handsontable td.area-4:before,.handsontable td.area-5:before,.handsontable td.area-6:before,.handsontable td.area-7:before,.handsontable td.area:before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;bottom:-100%\9;background:#005eff}@media (-ms-high-contrast:none),screen and (-ms-high-contrast:active){.handsontable td.area-1:before,.handsontable td.area-2:before,.handsontable td.area-3:before,.handsontable td.area-4:before,.handsontable td.area-5:before,.handsontable td.area-6:before,.handsontable td.area-7:before,.handsontable td.area:before{bottom:-100%}}.handsontable td.area:before{opacity:.1}.handsontable td.area-1:before{opacity:.2}.handsontable td.area-2:before{opacity:.27}.handsontable td.area-3:before{opacity:.35}.handsontable td.area-4:before{opacity:.41}.handsontable td.area-5:before{opacity:.47}.handsontable td.area-6:before{opacity:.54}.handsontable td.area-7:before{opacity:.58}.handsontable tbody th.ht__highlight,.handsontable thead th.ht__highlight{background-color:#dcdcdc}.handsontable tbody th.ht__active_highlight,.handsontable thead th.ht__active_highlight{background-color:#8eb0e7;color:#000}.handsontableInput{border:none;outline-width:0;margin:0;padding:1px 5px 0;font-family:inherit;line-height:21px;font-size:inherit;box-shadow:inset 0 0 0 2px #5292f7;resize:none;display:block;color:#000;border-radius:0;background-color:#fff}.handsontableInput:focus{outline:none}.handsontableInputHolder{position:absolute;top:0;left:0}.htSelectEditor{-webkit-appearance:menulist-button!important;position:absolute;width:auto}.htSelectEditor:focus{outline:none}.handsontable .htDimmed{color:#777}.handsontable .htSubmenu{position:relative}.handsontable .htSubmenu :after{content:"▶";color:#777;position:absolute;right:5px;font-size:9px}[dir=rtl].handsontable .htSubmenu :after{content:""}[dir=rtl].handsontable .htSubmenu :before{content:"◀";color:#777;position:absolute;left:5px;font-size:9px}.handsontable .htLeft{text-align:left}.handsontable .htCenter{text-align:center}.handsontable .htRight{text-align:right}.handsontable .htJustify{text-align:justify}.handsontable .htTop{vertical-align:top}.handsontable .htMiddle{vertical-align:middle}.handsontable .htBottom{vertical-align:bottom}.handsontable .htPlaceholder{color:#999}.handsontable.listbox{margin:0}.handsontable.listbox .ht_master table{border:1px solid #ccc;border-collapse:separate;background:#fff}.handsontable.listbox td,.handsontable.listbox th,.handsontable.listbox tr:first-child td,.handsontable.listbox tr:first-child th,.handsontable.listbox tr:last-child th{border-color:transparent!important}.handsontable.listbox td,.handsontable.listbox th{white-space:nowrap;text-overflow:ellipsis}.handsontable.listbox td.htDimmed{cursor:default;color:inherit;font-style:inherit}.handsontable.listbox .wtBorder{visibility:hidden}.handsontable.listbox tr:hover td,.handsontable.listbox tr td.current{background:#eee}.ht_editor_hidden{z-index:-1}.ht_editor_visible{z-index:200}.handsontable td.htSearchResult{background:#fcedd9;color:#583707}.handsontable .collapsibleIndicator{position:absolute;top:50%;transform:translateY(-50%);left:unset;right:5px;border:1px solid #a6a6a6;line-height:8px;color:#222;border-radius:10px;font-size:10px;width:10px;height:10px;cursor:pointer;-webkit-box-shadow:0 0 0 6px #eee;-moz-box-shadow:0 0 0 6px #eee;box-shadow:0 0 0 6px #eee;background:#eee;text-align:center}[dir=rtl].handsontable .collapsibleIndicator{right:unset;left:5px}.handsontable.mobile,.handsontable.mobile .wtHolder{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-overflow-scrolling:touch}.handsontable.mobile .handsontableInput:focus{-webkit-box-shadow:0 0 0 2px #5292f7 inset;-moz-box-shadow:0 0 0 2px #5292f7 inset;box-shadow:inset 0 0 0 2px #5292f7;-webkit-appearance:none}.topSelectionHandle-HitArea:not(.ht_master .topSelectionHandle-HitArea),.topSelectionHandle:not(.ht_master .topSelectionHandle){z-index:9999}.handsontable .bottomSelectionHandle,.handsontable .bottomSelectionHandle-HitArea,.handsontable .topSelectionHandle,.handsontable .topSelectionHandle-HitArea{left:-10000px;right:unset;top:-10000px}[dir=rtl].handsontable .bottomSelectionHandle,[dir=rtl].handsontable .bottomSelectionHandle-HitArea,[dir=rtl].handsontable .topSelectionHandle,[dir=rtl].handsontable .topSelectionHandle-HitArea{right:-10000px;left:unset}.handsontable.hide-tween{-webkit-animation:opacity-hide .3s;animation:opacity-hide .3s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards}.handsontable.show-tween{-webkit-animation:opacity-show .3s;animation:opacity-show .3s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards}.handsontable .htAutocompleteArrow{float:right;font-size:10px;color:#eee;cursor:default;width:16px;text-align:center}[dir=rtl].handsontable .htAutocompleteArrow{float:left}.handsontable td .htAutocompleteArrow:hover{color:#777}.handsontable td.area .htAutocompleteArrow{color:#d3d3d3}.handsontable .htCheckboxRendererInput{display:inline-block}.handsontable .htCheckboxRendererInput.noValue{opacity:.5}.handsontable .htCheckboxRendererLabel{font-size:inherit;vertical-align:middle;cursor:pointer;display:inline-block}.handsontable .htCheckboxRendererLabel.fullWidth{width:100%}.handsontable .htCommentCell{position:relative}.handsontable .htCommentCell:after{content:"";position:absolute;top:0;right:0;left:unset;border-left:6px solid transparent;border-right:none;border-top:6px solid #000}[dir=rtl].handsontable .htCommentCell:after{left:0;right:unset;border-right:6px solid transparent;border-left:none}.htCommentsContainer .htComments{display:none;z-index:1059;position:absolute}.htCommentsContainer .htCommentTextArea{box-shadow:0 1px 3px rgba(0,0,0,.117647),0 1px 2px rgba(0,0,0,.239216);-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border:none;border-left:3px solid #ccc;background-color:#fff;width:215px;height:90px;font-size:12px;padding:5px;outline:0!important;-webkit-appearance:none}[dir=rtl].htCommentsContainer .htCommentTextArea{border-right:3px solid #ccc;border-left:none}.htCommentsContainer .htCommentTextArea:focus{box-shadow:0 1px 3px rgba(0,0,0,.117647),0 1px 2px rgba(0,0,0,.239216),inset 0 0 0 1px #5292f7;border-left:3px solid #5292f7;border-right:none}[dir=rtl].htCommentsContainer .htCommentTextArea:focus{border-right:3px solid #5292f7;border-left:none}
+/*!
+ * Handsontable ContextMenu
+ */.htContextMenu:not(.htGhostTable){display:none;position:absolute;z-index:1060}.htContextMenu .ht_clone_bottom,.htContextMenu .ht_clone_bottom_inline_start_corner,.htContextMenu .ht_clone_inline_start,.htContextMenu .ht_clone_top,.htContextMenu .ht_clone_top_inline_start_corner{display:none}.htContextMenu .ht_master table.htCore{border-color:#ccc;border-style:solid;border-width:1px 2px 2px 1px}[dir=rtl].htContextMenu .ht_master table.htCore{border-right-width:1px;border-left-width:2px}.htContextMenu .wtBorder{visibility:hidden}.htContextMenu table tbody tr td{background:#fff;border-width:0;padding:4px 6px 0;cursor:pointer;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.htContextMenu table tbody tr td:first-child{border-width:0}[dir=rtl].htContextMenu table tbody tr td:first-child{border-right-width:0;border-left-width:0}.htContextMenu table tbody tr td.htDimmed{font-style:normal;color:#323232}.htContextMenu table tbody tr td.current,.htContextMenu table tbody tr td.zeroclipboard-is-hover{background:#f3f3f3}.htContextMenu table tbody tr td.htSeparator{border-top:1px solid #e6e6e6;height:0;padding:0;cursor:default}.htContextMenu table tbody tr td.htDisabled{color:#999;cursor:default}.htContextMenu table tbody tr td.htDisabled:hover{background:#fff;color:#999;cursor:default}.htContextMenu table tbody tr.htHidden{display:none}.htContextMenu table tbody tr td .htItemWrapper{margin-left:10px;margin-right:6px}.htContextMenu table tbody tr td div span.selected{margin-top:-2px;position:absolute;left:4px}.htContextMenu .ht_master .wtHolder{overflow:hidden}textarea.HandsontableCopyPaste{position:fixed!important;top:0!important;right:100%!important;overflow:hidden;opacity:0;outline:0 none!important}
+/*!
+ * Handsontable DropdownMenu
+ */.handsontable .changeType{background:#eee;border-radius:2px;border:1px solid #bbb;color:#bbb;font-size:9px;line-height:9px;padding:2px;margin:3px 1px 0 5px;float:right}[dir=rtl].handsontable .changeType{float:left}.handsontable .changeType:before{content:"▼ "}.handsontable .changeType:hover{border:1px solid #777;color:#777;cursor:pointer}.htDropdownMenu:not(.htGhostTable){display:none;position:absolute;z-index:1060}.htDropdownMenu .ht_clone_bottom,.htDropdownMenu .ht_clone_bottom_inline_start_corner,.htDropdownMenu .ht_clone_inline_start,.htDropdownMenu .ht_clone_top,.htDropdownMenu .ht_clone_top_inline_start_corner{display:none}.htDropdownMenu table.htCore{border-color:#ccc;border-style:solid;border-width:1px 2px 2px 1px}[dir=rtl].htDropdownMenu table.htCore{border-right-width:1px;border-left-width:2px}.htDropdownMenu .wtBorder{visibility:hidden}.htDropdownMenu table tbody tr td{background:#fff;border-width:0;padding:4px 6px 0;cursor:pointer;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.htDropdownMenu table tbody tr td:first-child{border-width:0}[dir=rtl].htDropdownMenu table tbody tr td:first-child{border-left-width:0;border-right-width:0}.htDropdownMenu table tbody tr td.htDimmed{font-style:normal;color:#323232}.htDropdownMenu table tbody tr td.current,.htDropdownMenu table tbody tr td.zeroclipboard-is-hover{background:#e9e9e9}.htDropdownMenu table tbody tr td.htSeparator{border-top:1px solid #e6e6e6;height:0;padding:0;cursor:default}.htDropdownMenu table tbody tr td.htDisabled{color:#999}.htDropdownMenu table tbody tr td.htDisabled:hover{background:#fff;color:#999;cursor:default}.htDropdownMenu:not(.htGhostTable) table tbody tr.htHidden{display:none}.htDropdownMenu table tbody tr td .htItemWrapper{margin-left:10px;margin-right:10px}.htDropdownMenu table tbody tr td div span.selected{margin-top:-2px;position:absolute;left:4px}.htDropdownMenu .ht_master .wtHolder{overflow:hidden}
+/*!
+ * Handsontable Filters
+ */.htFiltersConditionsMenu:not(.htGhostTable){display:none;position:absolute;z-index:1070}.htFiltersConditionsMenu .ht_clone_corner,.htFiltersConditionsMenu .ht_clone_inline_start,.htFiltersConditionsMenu .ht_clone_top{display:none}.htFiltersConditionsMenu table.htCore{border-color:#bbb;border-style:solid;border-width:1px 2px 2px 1px}.htFiltersConditionsMenu .wtBorder{visibility:hidden}.htFiltersConditionsMenu table tbody tr td{background:#fff;border-width:0;padding:4px 6px 0;cursor:pointer;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.htFiltersConditionsMenu table tbody tr td:first-child{border-width:0}[dir=rtl].htFiltersConditionsMenu table tbody tr td:first-child{border-left-width:0;border-right-width:0}.htFiltersConditionsMenu table tbody tr td.htDimmed{font-style:normal;color:#323232}.htFiltersConditionsMenu table tbody tr td.current,.htFiltersConditionsMenu table tbody tr td.zeroclipboard-is-hover{background:#e9e9e9}.htFiltersConditionsMenu table tbody tr td.htSeparator{border-top:1px solid #e6e6e6;height:0;padding:0}.htFiltersConditionsMenu table tbody tr td.htDisabled{color:#999}.htFiltersConditionsMenu table tbody tr td.htDisabled:hover{background:#fff;color:#999;cursor:default}.htFiltersConditionsMenu table tbody tr td .htItemWrapper{margin-left:10px;margin-right:10px}.htFiltersConditionsMenu table tbody tr td div span.selected{margin-top:-2px;position:absolute;left:4px}.htFiltersConditionsMenu .ht_master .wtHolder{overflow:hidden}.handsontable .htMenuFiltering{border-bottom:1px dotted #ccc;height:135px;overflow:hidden}.handsontable .ht_master table td.htCustomMenuRenderer{background-color:#fff;cursor:auto}.handsontable .htFiltersMenuLabel{font-size:.75em}.handsontable .htFiltersMenuActionBar{text-align:center;padding-top:10px;padding-bottom:3px}.handsontable .htFiltersMenuCondition.border{border-bottom:1px dotted #ccc!important}.handsontable .htFiltersMenuCondition .htUIInput{padding:0 0 5px}.handsontable .htFiltersMenuValue{border-bottom:1px dotted #ccc!important}.handsontable .htFiltersMenuValue .htUIMultipleSelectSearch{padding:0}.handsontable .htFiltersMenuCondition .htUIInput input,.handsontable .htFiltersMenuValue .htUIMultipleSelectSearch input{font-family:inherit;font-size:.75em;padding:4px;box-sizing:border-box;width:100%}.htUIMultipleSelect .ht_master .wtHolder{overflow-y:scroll}.handsontable .htFiltersActive .changeType{border:1px solid #509272;color:#18804e;background-color:#d2e0d9}.handsontable .htUISelectAll{margin-left:0;margin-right:10px}[dir=rtl].handsontable .htUISelectAll{margin-right:0;margin-left:10px}.handsontable .htUIClearAll,.handsontable .htUISelectAll{display:inline-block}.handsontable .htUIClearAll a,.handsontable .htUISelectAll a{font-size:.75em}.handsontable .htUISelectionControls{text-align:right}[dir=rtl].handsontable .htUISelectionControls{text-align:left}.handsontable .htCheckboxRendererInput{margin:0 5px 0 0;vertical-align:middle;height:1em}[dir=rtl].handsontable .htCheckboxRendererInput{margin-left:5px;margin-right:0}.handsontable .htUIInput{padding:3px 0 7px;position:relative;text-align:center}.handsontable .htUIInput input{border-radius:2px;border:1px solid #d2d1d1}.handsontable .htUIInput input:focus{outline:0}.handsontable .htUIInputIcon{position:absolute}.handsontable .htUIInput.htUIButton{cursor:pointer;display:inline-block}.handsontable .htUIInput.htUIButton input{background-color:#eee;color:#000;cursor:pointer;font-family:inherit;font-size:.75em;font-weight:700;height:19px;min-width:64px}.handsontable .htUIInput.htUIButton input:hover{border-color:#b9b9b9}.handsontable .htUIInput.htUIButtonOK{margin-left:0;margin-right:10px}[dir=rtl].handsontable .htUIInput.htUIButtonOK{margin-right:0;margin-left:10px}.handsontable .htUIInput.htUIButtonOK input{background-color:#0f9d58;border-color:#18804e;color:#fff}.handsontable .htUIInput.htUIButtonOK input:hover{border-color:#1a6f46}.handsontable .htUISelect{cursor:pointer;margin-bottom:7px;position:relative}.handsontable .htUISelectCaption{background-color:#e8e8e8;border-radius:2px;border:1px solid #d2d1d1;font-family:inherit;font-size:.75em;font-weight:700;padding:3px 20px 3px 10px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}.handsontable .htUISelectCaption:hover{background-color:#e8e8e8;border:1px solid #b9b9b9}.handsontable .htUISelectDropdown:after{content:"▲";font-size:7px;position:absolute;right:10px;top:0}.handsontable .htUISelectDropdown:before{content:"▼";font-size:7px;position:absolute;right:10px;top:8px}.handsontable .htUIMultipleSelect .handsontable .htCore{border:none}.handsontable .htUIMultipleSelect .handsontable .htCore td:hover{background-color:#f5f5f5}.handsontable .htUIMultipleSelectSearch input{border-radius:2px;border:1px solid #d2d1d1;padding:3px}.handsontable .htUIRadio{display:inline-block;margin-left:0;margin-right:5px;height:100%}[dir=rtl].handsontable .htUIRadio{margin-right:0;margin-left:5px}.handsontable .htUIRadio:last-child{margin-right:0}.handsontable .htUIRadio>input[type=radio]{margin-left:0;margin-right:.5ex}[dir=rtl].handsontable .htUIRadio>input[type=radio]{margin-right:0;margin-left:.5ex}.handsontable .htUIRadio label{vertical-align:middle}.handsontable .htFiltersMenuOperators{padding-bottom:5px}.handsontable th.beforeHiddenColumn{position:relative}.handsontable th.afterHiddenColumn:before,.handsontable th.beforeHiddenColumn:after{color:#bbb;position:absolute;top:50%;font-size:5pt;transform:translateY(-50%)}.handsontable th.afterHiddenColumn{position:relative}.handsontable th.beforeHiddenColumn:after{right:1px;content:"◀"}[dir=rtl].handsontable th.beforeHiddenColumn:after{right:auto;left:1px;content:"▶"}.handsontable th.afterHiddenColumn:before{left:1px;content:"▶"}[dir=rtl].handsontable th.afterHiddenColumn:before{right:1px;left:auto;content:"◀"}
+/*!
+ * Handsontable HiddenRows
+ */.handsontable th.afterHiddenRow:after,.handsontable th.beforeHiddenRow:before{color:#bbb;font-size:6pt;line-height:6pt;position:absolute;left:2px}.handsontable th.afterHiddenRow,.handsontable th.beforeHiddenRow{position:relative}.handsontable th.beforeHiddenRow:before{content:"▲";bottom:2px}.handsontable th.afterHiddenRow:after{content:"▼";top:2px}.handsontable.ht__selection--rows tbody th.afterHiddenRow.ht__highlight:after,.handsontable.ht__selection--rows tbody th.beforeHiddenRow.ht__highlight:before{color:#eee}.handsontable td.afterHiddenRow.firstVisibleRow,.handsontable th.afterHiddenRow.firstVisibleRow{border-top:1px solid #ccc}.htRowHeaders .ht_master.innerBorderInlineStart~.ht_clone_inline_start td:first-of-type,.htRowHeaders .ht_master.innerBorderInlineStart~.ht_clone_top_inline_start_corner th:nth-child(2){border-left:0}.handsontable.ht__manualColumnMove.after-selection--columns thead th.ht__highlight{cursor:move;cursor:-moz-grab;cursor:-webkit-grab;cursor:grab}.handsontable.ht__manualColumnMove.on-moving--columns,.handsontable.ht__manualColumnMove.on-moving--columns thead th.ht__highlight{cursor:move;cursor:-moz-grabbing;cursor:-webkit-grabbing;cursor:grabbing}.handsontable.ht__manualColumnMove.on-moving--columns .manualColumnResizer{display:none}.handsontable .ht__manualColumnMove--backlight,.handsontable .ht__manualColumnMove--guideline{position:absolute;height:100%;display:none}.handsontable .ht__manualColumnMove--guideline{background:#757575;width:2px;top:0;margin-inline-start:-1px;margin-inline-end:0;z-index:205}.handsontable .ht__manualColumnMove--backlight{background:#343434;background:rgba(52,52,52,.25);display:none;z-index:205;pointer-events:none}.handsontable.on-moving--columns .ht__manualColumnMove--backlight,.handsontable.on-moving--columns.show-ui .ht__manualColumnMove--guideline{display:block}.handsontable .wtHider{position:relative}.handsontable.ht__manualRowMove.after-selection--rows tbody th.ht__highlight{cursor:move;cursor:-moz-grab;cursor:-webkit-grab;cursor:grab}.handsontable.ht__manualRowMove.on-moving--rows,.handsontable.ht__manualRowMove.on-moving--rows tbody th.ht__highlight{cursor:move;cursor:-moz-grabbing;cursor:-webkit-grabbing;cursor:grabbing}.handsontable.ht__manualRowMove.on-moving--rows .manualRowResizer{display:none}.handsontable .ht__manualRowMove--backlight,.handsontable .ht__manualRowMove--guideline{position:absolute;width:100%;display:none}.handsontable .ht__manualRowMove--guideline{background:#757575;height:2px;left:0;margin-top:-1px;z-index:205}.handsontable .ht__manualRowMove--backlight{background:#343434;background:rgba(52,52,52,.25);display:none;z-index:205;pointer-events:none}.handsontable.on-moving--rows .ht__manualRowMove--backlight,.handsontable.on-moving--rows.show-ui .ht__manualRowMove--guideline{display:block}.handsontable tbody td[rowspan][class*=area][class*=highlight]:not([class*=fullySelectedMergedCell]):before{opacity:0}.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-0]:before,.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-multiple]:before{opacity:.1}.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-1]:before{opacity:.2}.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-2]:before{opacity:.27}.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-3]:before{opacity:.35}.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-4]:before{opacity:.41}.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-5]:before{opacity:.47}.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-6]:before{opacity:.54}.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-7]:before{opacity:.58}.handsontable span.colHeader.columnSorting:after{top:50%;margin-top:-2px;position:absolute;right:-15px;left:unset;padding-left:5px;padding-right:unset;font-size:8px;height:8px;line-height:1.1;text-decoration:underline}[dir=rtl].handsontable span.colHeader.columnSorting:after{left:-15px;right:unset;padding-right:5px;padding-left:unset}.handsontable span.colHeader.columnSorting:after{text-decoration:none}.handsontable span.colHeader.columnSorting[class*=" sort-"]:after,.handsontable span.colHeader.columnSorting[class^=sort-]:after{content:"+"}.handsontable span.colHeader.columnSorting.sort-1:after{content:"1"}.handsontable span.colHeader.columnSorting.sort-2:after{content:"2"}.handsontable span.colHeader.columnSorting.sort-3:after{content:"3"}.handsontable span.colHeader.columnSorting.sort-4:after{content:"4"}.handsontable span.colHeader.columnSorting.sort-5:after{content:"5"}.handsontable span.colHeader.columnSorting.sort-6:after{content:"6"}.handsontable span.colHeader.columnSorting.sort-7:after{content:"7"}.htGhostTable th div button.changeType+span.colHeader.columnSorting:not(.indicatorDisabled){padding-right:5px}.handsontable thead th.hiddenHeader:not(:first-of-type){display:none}.handsontable th.ht_nestingLevels{text-align:left;padding-left:7px}[dir=rtl].handsontable th.ht_nestingLevels{text-align:right;padding-right:7px}.handsontable th div.ht_nestingLevels{display:inline-block;position:absolute;left:11px;right:unset}[dir=rtl].handsontable th div.ht_nestingLevels{right:11px;left:unset}.handsontable.innerBorderInlineStart th div.ht_nestingLevels,.handsontable.innerBorderInlineStart~.handsontable th div.ht_nestingLevels{right:10px;left:unset}[dir=rtl].handsontable.innerBorderInlineStart th div.ht_nestingLevels,[dir=rtl].handsontable.innerBorderInlineStart~.handsontable th div.ht_nestingLevels{left:10px;right:unset}.handsontable th span.ht_nestingLevel{display:inline-block}.handsontable th span.ht_nestingLevel_empty{display:inline-block;width:10px;height:1px;float:left}[dir=rtl].handsontable th span.ht_nestingLevel_empty{float:right}.handsontable th span.ht_nestingLevel:after{content:"┐";font-size:9px;display:inline-block;position:relative;bottom:3px}.handsontable th div.ht_nestingButton{display:inline-block;position:absolute;right:-2px;left:unset;cursor:pointer}[dir=rtl].handsontable th div.ht_nestingButton{left:-2px;right:unset}.handsontable th div.ht_nestingButton.ht_nestingExpand:after{content:"+"}.handsontable th div.ht_nestingButton.ht_nestingCollapse:after{content:"-"}.handsontable.innerBorderInlineStart th div.ht_nestingButton,.handsontable.innerBorderInlineStart~.handsontable th div.ht_nestingButton{right:0;left:unset}[dir=rtl].handsontable.innerBorderInlineStart th div.ht_nestingButton,[dir=rtl].handsontable.innerBorderInlineStart~.handsontable th div.ht_nestingButton{left:0;right:unset}
+/*!
+ * Copyright (c) HANDSONCODE sp. z o. o.
+ * 
+ * HANDSONTABLE is a software distributed by HANDSONCODE sp. z o. o., a Polish corporation based in
+ * Gdynia, Poland, at Aleja Zwycięstwa 96-98, registered by the District Court in Gdansk under number
+ * 538651, EU tax ID number: PL5862294002, share capital: PLN 62,800.00.
+ * 
+ * This software is protected by applicable copyright laws, including international treaties, and dual-
+ * licensed – depending on whether your use for commercial purposes, meaning intended for or
+ * resulting in commercial advantage or monetary compensation, or not.
+ * 
+ * If your use is strictly personal or solely for evaluation purposes, meaning for the purposes of testing
+ * the suitability, performance, and usefulness of this software outside the production environment,
+ * you agree to be bound by the terms included in the "handsontable-non-commercial-license.pdf" file.
+ * 
+ * Your use of this software for commercial purposes is subject to the terms included in an applicable
+ * license agreement.
+ * 
+ * In any case, you must not make any such use of this software as to develop software which may be
+ * considered competitive with this software.
+ * 
+ * UNLESS EXPRESSLY AGREED OTHERWISE, HANDSONCODE PROVIDES THIS SOFTWARE ON AN "AS IS"
+ * BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, AND IN NO EVENT AND UNDER NO
+ * LEGAL THEORY, SHALL HANDSONCODE BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY DIRECT,
+ * INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY CHARACTER ARISING FROM
+ * USE OR INABILITY TO USE THIS SOFTWARE.
+ * 
+ * Version: 12.1.3
+ * Release date: 22/09/2022 (built at 22/09/2022 09:54:40)
+ */
+/**
+ * Fix for bootstrap styles
+ */
+.handsontable .table th, .handsontable .table td {
+  border-top: none;
+}
+
+.handsontable tr {
+  background: #fff;
+}
+
+.handsontable td {
+  background-color: inherit;
+}
+
+.handsontable .table caption + thead tr:first-child th,
+.handsontable .table caption + thead tr:first-child td,
+.handsontable .table colgroup + thead tr:first-child th,
+.handsontable .table colgroup + thead tr:first-child td,
+.handsontable .table thead:first-child tr:first-child th,
+.handsontable .table thead:first-child tr:first-child td {
+  border-top: 1px solid #CCCCCC;
+}
+
+/* table-bordered */
+.handsontable .table-bordered {
+  border: 0;
+  border-collapse: separate;
+}
+
+.handsontable .table-bordered th,
+.handsontable .table-bordered td {
+  border-left: none;
+}
+
+.handsontable .table-bordered th:first-child,
+.handsontable .table-bordered td:first-child {
+  border-left: 1px solid #CCCCCC;
+}
+
+.handsontable .table > tbody > tr > td,
+.handsontable .table > tbody > tr > th,
+.handsontable .table > tfoot > tr > td,
+.handsontable .table > tfoot > tr > th,
+.handsontable .table > thead > tr > td,
+.handsontable .table > thead > tr > th {
+  line-height: 21px;
+  padding: 0;
+}
+
+.col-lg-1.handsontable, .col-lg-10.handsontable, .col-lg-11.handsontable, .col-lg-12.handsontable,
+.col-lg-2.handsontable, .col-lg-3.handsontable, .col-lg-4.handsontable, .col-lg-5.handsontable, .col-lg-6.handsontable, .col-lg-7.handsontable, .col-lg-8.handsontable, .col-lg-9.handsontable,
+.col-md-1.handsontable, .col-md-10.handsontable, .col-md-11.handsontable, .col-md-12.handsontable,
+.col-md-2.handsontable, .col-md-3.handsontable, .col-md-4.handsontable, .col-md-5.handsontable, .col-md-6.handsontable, .col-md-7.handsontable, .col-md-8.handsontable, .col-md-9.handsontable .col-sm-1.handsontable,
+.col-sm-10.handsontable, .col-sm-11.handsontable, .col-sm-12.handsontable,
+.col-sm-2.handsontable, .col-sm-3.handsontable, .col-sm-4.handsontable, .col-sm-5.handsontable, .col-sm-6.handsontable, .col-sm-7.handsontable, .col-sm-8.handsontable, .col-sm-9.handsontable .col-xs-1.handsontable,
+.col-xs-10.handsontable, .col-xs-11.handsontable, .col-xs-12.handsontable,
+.col-xs-2.handsontable, .col-xs-3.handsontable, .col-xs-4.handsontable, .col-xs-5.handsontable, .col-xs-6.handsontable, .col-xs-7.handsontable, .col-xs-8.handsontable, .col-xs-9.handsontable {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.handsontable .table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #FFF;
+}
+.handsontable {
+  position: relative;
+}
+
+.handsontable .hide {
+  display: none;
+}
+
+.handsontable .relative {
+  position: relative;
+}
+
+.handsontable .wtHider {
+  width: 0;
+}
+
+.handsontable .wtSpreader {
+  position: relative;
+  /*must be 0, otherwise blank space appears in scroll demo after scrolling max to the right */
+  width: 0;
+  height: auto;
+}
+
+.handsontable table,
+.handsontable tbody,
+.handsontable thead,
+.handsontable td,
+.handsontable th,
+.handsontable input,
+.handsontable textarea,
+.handsontable div {
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+}
+
+.handsontable input,
+.handsontable textarea {
+  min-height: initial;
+}
+
+.handsontable table.htCore {
+  border-collapse: separate;
+  /* it must be separate, otherwise there are offset miscalculations in WebKit: http://stackoverflow.com/questions/2655987/border-collapse-differences-in-ff-and-webkit */
+  /* this actually only changes appearance of user selection - does not make text unselectable */
+  /* -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none; // no browser supports unprefixed version
+  */
+  border-spacing: 0;
+  margin: 0;
+  border-width: 0;
+  table-layout: fixed;
+  width: 0;
+  outline-width: 0;
+  cursor: default;
+  /* reset bootstrap table style. for more info see: https://github.com/handsontable/handsontable/issues/224 */
+  max-width: none;
+  max-height: none;
+}
+
+.handsontable col {
+  width: 50px;
+}
+
+.handsontable col.rowHeader {
+  width: 50px;
+}
+
+.handsontable th,
+.handsontable td {
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  height: 22px;
+  empty-cells: show;
+  line-height: 21px;
+  padding: 0 4px 0 4px;
+  /* top, bottom padding different than 0 is handled poorly by FF with HTML5 doctype */
+  background-color: #fff;
+  vertical-align: top;
+  overflow: hidden;
+  outline-width: 0;
+  white-space: pre-wrap;
+}
+
+[dir=rtl].handsontable th, [dir=rtl].handsontable td {
+  border-right-width: 0;
+  border-left: 1px solid #ccc;
+}
+
+.handsontable th:last-child {
+  /*Foundation framework fix*/
+  border-left: none;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+[dir=rtl].handsontable th:last-child {
+  /*Foundation framework fix*/
+  border-right: none;
+  border-left: 1px solid #ccc;
+}
+
+.handsontable th:first-child,
+.handsontable th:nth-child(2),
+.handsontable td:first-of-type {
+  border-left: 1px solid #ccc;
+}
+
+[dir=rtl].handsontable th:first-child, [dir=rtl].handsontable th:nth-child(2), [dir=rtl].handsontable td:first-of-type {
+  border-right: 1px solid #ccc;
+}
+
+/* It removes double right border from first column header when row headers are disabled */
+.handsontable .ht_clone_top th:nth-child(2) {
+  border-left-width: 0;
+  border-right: 1px solid #ccc;
+}
+
+[dir=rtl].handsontable .ht_clone_top th:nth-child(2) {
+  border-right-width: 0;
+  border-left: 1px solid #ccc;
+}
+
+.handsontable.htRowHeaders thead tr th:nth-child(2) {
+  border-left: 1px solid #ccc;
+}
+
+[dir=rtl].handsontable.htRowHeaders thead tr th:nth-child(2) {
+  border-right: 1px solid #ccc;
+}
+
+.handsontable tr:first-child th,
+.handsontable tr:first-child td {
+  border-top: 1px solid #ccc;
+}
+
+.ht_master:not(.innerBorderInlineStart):not(.emptyColumns) ~ .handsontable tbody tr th,
+.ht_master:not(.innerBorderInlineStart):not(.emptyColumns) ~ .handsontable:not(.ht_clone_top) thead tr th:first-child {
+  border-right-width: 0;
+  border-left: 1px solid #ccc;
+}
+
+[dir=rtl].ht_master:not(.innerBorderInlineStart):not(.emptyColumns) ~ .handsontable tbody tr th, [dir=rtl].ht_master:not(.innerBorderInlineStart):not(.emptyColumns) ~ .handsontable:not(.ht_clone_top) thead tr th:first-child {
+  border-left-width: 0;
+  border-right: 1px solid #ccc;
+}
+
+/*
+innerBorderTop - Property controlled by top overlay
+innerBorderBottom - Property controlled by bottom overlay
+ */
+.ht_master:not(.innerBorderTop):not(.innerBorderBottom) thead tr:last-child th,
+.ht_master:not(.innerBorderTop):not(.innerBorderBottom) ~ .handsontable thead tr:last-child th,
+.ht_master:not(.innerBorderTop):not(.innerBorderBottom) thead tr.lastChild th,
+.ht_master:not(.innerBorderTop):not(.innerBorderBottom) ~ .handsontable thead tr.lastChild th {
+  border-bottom-width: 0;
+}
+
+.handsontable th {
+  background-color: #f0f0f0;
+  color: #222;
+  text-align: center;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.handsontable thead th {
+  padding: 0;
+}
+
+.handsontable th.active {
+  background-color: #ccc;
+}
+
+.handsontable thead th .relative {
+  padding: 2px 4px;
+}
+
+.handsontable span.colHeader {
+  display: inline-block;
+  line-height: 1.1;
+}
+
+/* Selection */
+.handsontable .wtBorder {
+  position: absolute;
+  font-size: 0;
+}
+
+.handsontable .wtBorder.hidden {
+  display: none !important;
+}
+
+/* A layer order of the selection types */
+.handsontable .wtBorder.current {
+  z-index: 10;
+}
+
+.handsontable .wtBorder.area {
+  z-index: 8;
+}
+
+.handsontable .wtBorder.fill {
+  z-index: 6;
+}
+
+/* fill handle */
+.handsontable .wtBorder.corner {
+  font-size: 0;
+  cursor: crosshair;
+}
+
+.ht_clone_master {
+  z-index: 100;
+}
+
+.ht_clone_inline_start {
+  z-index: 120;
+}
+
+.ht_clone_bottom {
+  z-index: 130;
+}
+
+.ht_clone_bottom_inline_start_corner {
+  z-index: 150;
+}
+
+.ht_clone_top {
+  z-index: 160;
+}
+
+.ht_clone_top_inline_start_corner {
+  z-index: 180;
+}
+
+.handsontable col.hidden {
+  width: 0 !important;
+}
+
+.handsontable tr.hidden,
+.handsontable tr.hidden td,
+.handsontable tr.hidden th {
+  display: none;
+}
+
+.ht_master,
+.ht_clone_inline_start,
+.ht_clone_top,
+.ht_clone_bottom {
+  overflow: hidden;
+}
+
+.ht_master .wtHolder {
+  overflow: auto;
+}
+
+.handsontable .ht_master thead,
+.handsontable .ht_master tr th,
+.handsontable .ht_clone_inline_start thead {
+  visibility: hidden;
+}
+
+.ht_clone_top .wtHolder,
+.ht_clone_inline_start .wtHolder,
+.ht_clone_bottom .wtHolder {
+  overflow: hidden;
+}
+@charset "UTF-8";
+.handsontable {
+  touch-action: manipulation;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  color: #373737;
+}
+
+.handsontable a {
+  color: #104acc;
+}
+
+.handsontable.htAutoSize {
+  visibility: hidden;
+  left: -99000px;
+  position: absolute;
+  top: -99000px;
+}
+
+.handsontable td.htInvalid {
+  /*gives priority over td.area selection background*/
+  background-color: #ff4c42 !important;
+}
+
+.handsontable td.htNoWrap {
+  white-space: nowrap;
+}
+
+#hot-display-license-info {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  color: #373737;
+  padding: 5px 0 3px 0;
+  text-align: left;
+}
+
+#hot-display-license-info a {
+  color: #104acc;
+  font-size: 10px;
+}
+
+/* plugins */
+/* row + column resizer*/
+.handsontable .manualColumnResizer {
+  position: absolute;
+  top: 0;
+  cursor: col-resize;
+  z-index: 210;
+  width: 5px;
+  height: 25px;
+}
+
+.handsontable .manualRowResizer {
+  position: absolute;
+  left: 0;
+  cursor: row-resize;
+  z-index: 210;
+  height: 5px;
+  width: 50px;
+}
+
+.handsontable .manualColumnResizer:hover,
+.handsontable .manualColumnResizer.active,
+.handsontable .manualRowResizer:hover,
+.handsontable .manualRowResizer.active {
+  background-color: #34a9db;
+}
+
+.handsontable .manualColumnResizerGuide {
+  position: absolute;
+  right: unset;
+  top: 0;
+  background-color: #34a9db;
+  display: none;
+  width: 0;
+  border-right: 1px dashed #777;
+  border-left: none;
+  margin-left: 5px;
+  margin-right: unset;
+}
+
+[dir=rtl].handsontable .manualColumnResizerGuide {
+  left: unset;
+  border-left: 1px dashed #777;
+  border-right: none;
+  margin-right: 5px;
+  margin-left: unset;
+}
+
+.handsontable .manualRowResizerGuide {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #34a9db;
+  display: none;
+  height: 0;
+  border-bottom: 1px dashed #777;
+  margin-top: 5px;
+}
+
+.handsontable .manualColumnResizerGuide.active,
+.handsontable .manualRowResizerGuide.active {
+  display: block;
+  z-index: 209;
+}
+
+.handsontable .columnSorting {
+  position: relative;
+}
+
+.handsontable .columnSorting.sortAction:hover {
+  text-decoration: underline;
+  cursor: pointer;
+} /* Arrow position */
+.handsontable span.colHeader.columnSorting::before {
+  /* Centering start */
+  top: 50%;
+  /* One extra pixel for purpose of proper positioning of sorting arrow, when `font-size` set to default */
+  margin-top: -6px;
+  /* Centering end */
+  /* For purpose of continuous mouse over experience, when moving between the `span` and the `::before` elements */
+  padding-left: 8px;
+  padding-right: 0;
+  position: absolute;
+  right: -9px;
+  left: unset;
+  content: "";
+  height: 10px;
+  width: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+[dir=rtl].handsontable span.colHeader.columnSorting::before {
+  /* Centering end */
+  /* For purpose of continuous mouse over experience, when moving between the `span` and the `::before` elements */
+  padding-right: 8px;
+  padding-left: 0;
+  left: -9px;
+  right: unset;
+  background-position-x: left;
+}
+
+.handsontable span.colHeader.columnSorting.ascending::before {
+  /* arrow up; 20 x 40 px, scaled to 5 x 10 px; base64 size: 0.3kB */
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAMAAADJ7yrpAAAAKlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKE86IAAAADXRSTlMABBEmRGprlJW72e77tTkTKwAAAFNJREFUeAHtzjkSgCAUBNHPgsoy97+ulGXRqJE5L+xkxoYt2UdsLb5bqFINz+aLuuLn5rIu2RkO3fZpWENimNgiw6iBYRTPMLJjGFxQZ1hxxb/xBI1qC8k39CdKAAAAAElFTkSuQmCC);
+}
+
+.handsontable span.colHeader.columnSorting.descending::before {
+  /* arrow down; 20 x 40 px, scaled to 5 x 10 px; base64 size: 0.3kB */
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAMAAADJ7yrpAAAAKlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKE86IAAAADXRSTlMABBEmRGprlJW72e77tTkTKwAAAFJJREFUeAHtzjkSgCAQRNFmQYUZ7n9dKUvru0TmvPAn3br0QfgdZ5xx6x+rQn23GqTYnq1FDcnuzZIO2WmedVqIRVxgGKEyjNgYRjKGkZ1hFIZ3I70LyM0VtU8AAAAASUVORK5CYII=);
+}
+
+.htGhostTable .htCore span.colHeader.columnSorting:not(.indicatorDisabled)::after {
+  content: "*";
+  display: inline-block;
+  position: relative;
+  /* The multi-line header and header with longer text need more padding to not hide arrow,
+  we make header wider in `GhostTable` to make some space for arrow which is positioned absolutely in the main table */
+  padding-right: 20px;
+}
+
+.handsontable td.area,
+.handsontable td.area-1,
+.handsontable td.area-2,
+.handsontable td.area-3,
+.handsontable td.area-4,
+.handsontable td.area-5,
+.handsontable td.area-6,
+.handsontable td.area-7 {
+  position: relative;
+}
+
+.handsontable td.area:before,
+.handsontable td.area-1:before,
+.handsontable td.area-2:before,
+.handsontable td.area-3:before,
+.handsontable td.area-4:before,
+.handsontable td.area-5:before,
+.handsontable td.area-6:before,
+.handsontable td.area-7:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Fix for IE9 to spread the ":before" pseudo element to 100% height of the parent element */
+  bottom: -100% \9 ;
+  background: #005eff;
+}
+
+/* Fix for IE10 and IE11 to spread the ":before" pseudo element to 100% height of the parent element */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .handsontable td.area:before,
+.handsontable td.area-1:before,
+.handsontable td.area-2:before,
+.handsontable td.area-3:before,
+.handsontable td.area-4:before,
+.handsontable td.area-5:before,
+.handsontable td.area-6:before,
+.handsontable td.area-7:before {
+    bottom: -100%;
+  }
+}
+.handsontable td.area:before {
+  opacity: 0.1;
+}
+
+.handsontable td.area-1:before {
+  opacity: 0.2;
+}
+
+.handsontable td.area-2:before {
+  opacity: 0.27;
+}
+
+.handsontable td.area-3:before {
+  opacity: 0.35;
+}
+
+.handsontable td.area-4:before {
+  opacity: 0.41;
+}
+
+.handsontable td.area-5:before {
+  opacity: 0.47;
+}
+
+.handsontable td.area-6:before {
+  opacity: 0.54;
+}
+
+.handsontable td.area-7:before {
+  opacity: 0.58;
+}
+
+.handsontable tbody th.ht__highlight,
+.handsontable thead th.ht__highlight {
+  background-color: #dcdcdc;
+}
+
+.handsontable tbody th.ht__active_highlight,
+.handsontable thead th.ht__active_highlight {
+  background-color: #8eb0e7;
+  color: #000;
+}
+
+.handsontableInput {
+  border: none;
+  outline-width: 0;
+  margin: 0;
+  padding: 1px 5px 0 5px;
+  font-family: inherit;
+  line-height: 21px;
+  font-size: inherit;
+  box-shadow: 0 0 0 2px #5292F7 inset;
+  resize: none;
+  /*below are needed to overwrite stuff added by jQuery UI Bootstrap theme*/
+  display: block;
+  color: #000;
+  border-radius: 0;
+  background-color: #FFF;
+  /*overwrite styles potentionally made by a framework*/
+}
+
+.handsontableInput:focus {
+  outline: none;
+}
+
+.handsontableInputHolder {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.htSelectEditor {
+  -webkit-appearance: menulist-button !important;
+  position: absolute;
+  width: auto;
+}
+
+.htSelectEditor:focus {
+  outline: none;
+}
+
+/*
+TextRenderer readOnly cell
+*/
+.handsontable .htDimmed {
+  color: #777;
+}
+
+.handsontable .htSubmenu {
+  position: relative;
+}
+
+.handsontable .htSubmenu :after {
+  content: "▶";
+  color: #777;
+  position: absolute;
+  right: 5px;
+  font-size: 9px;
+}
+
+[dir=rtl].handsontable .htSubmenu :after {
+  content: "";
+}
+
+[dir=rtl].handsontable .htSubmenu :before {
+  content: "◀";
+  color: #777;
+  position: absolute;
+  left: 5px;
+  font-size: 9px;
+}
+
+/*
+TextRenderer horizontal alignment
+*/
+.handsontable .htLeft {
+  text-align: left;
+}
+
+.handsontable .htCenter {
+  text-align: center;
+}
+
+.handsontable .htRight {
+  text-align: right;
+}
+
+.handsontable .htJustify {
+  text-align: justify;
+}
+
+/*
+TextRenderer vertical alignment
+*/
+.handsontable .htTop {
+  vertical-align: top;
+}
+
+.handsontable .htMiddle {
+  vertical-align: middle;
+}
+
+.handsontable .htBottom {
+  vertical-align: bottom;
+}
+
+/*
+TextRenderer placeholder value
+*/
+.handsontable .htPlaceholder {
+  color: #999;
+}
+
+/**
+ * Handsontable listbox theme
+ */
+.handsontable.listbox {
+  margin: 0;
+}
+
+.handsontable.listbox .ht_master table {
+  border: 1px solid #ccc;
+  border-collapse: separate;
+  background: white;
+}
+
+.handsontable.listbox th,
+.handsontable.listbox tr:first-child th,
+.handsontable.listbox tr:last-child th,
+.handsontable.listbox tr:first-child td,
+.handsontable.listbox td {
+  border-color: transparent !important;
+}
+
+.handsontable.listbox th,
+.handsontable.listbox td {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.handsontable.listbox td.htDimmed {
+  cursor: default;
+  color: inherit;
+  font-style: inherit;
+}
+
+.handsontable.listbox .wtBorder {
+  visibility: hidden;
+}
+
+.handsontable.listbox tr td.current,
+.handsontable.listbox tr:hover td {
+  background: #eee;
+}
+
+.ht_editor_hidden {
+  z-index: -1;
+}
+
+.ht_editor_visible {
+  z-index: 200;
+}
+
+.handsontable td.htSearchResult {
+  background: #fcedd9;
+  color: #583707;
+}
+
+.handsontable .collapsibleIndicator {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  left: unset;
+  right: 5px;
+  border: 1px solid #A6A6A6;
+  line-height: 8px;
+  color: #222;
+  border-radius: 10px;
+  font-size: 10px;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 0 6px rgb(238, 238, 238);
+  -moz-box-shadow: 0 0 0 6px rgb(238, 238, 238);
+  box-shadow: 0 0 0 6px rgb(238, 238, 238);
+  background: #eee;
+  text-align: center;
+}
+
+[dir=rtl].handsontable .collapsibleIndicator {
+  right: unset;
+  left: 5px;
+}
+/*
+
+ Handsontable Mobile Text Editor stylesheet
+
+ */
+.handsontable.mobile,
+.handsontable.mobile .wtHolder {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-overflow-scrolling: touch;
+}
+
+.handsontable.mobile .handsontableInput:focus {
+  -webkit-box-shadow: 0 0 0 2px #5292f7 inset;
+  -moz-box-shadow: 0 0 0 2px #5292f7 inset;
+  box-shadow: 0 0 0 2px #5292f7 inset;
+  -webkit-appearance: none;
+}
+
+.topSelectionHandle:not(.ht_master .topSelectionHandle),
+.topSelectionHandle-HitArea:not(.ht_master .topSelectionHandle-HitArea) {
+  z-index: 9999;
+}
+
+/* Initial left/top coordinates - overwritten when actual position is set */
+.handsontable .topSelectionHandle,
+.handsontable .topSelectionHandle-HitArea,
+.handsontable .bottomSelectionHandle,
+.handsontable .bottomSelectionHandle-HitArea {
+  left: -10000px;
+  right: unset;
+  top: -10000px;
+}
+
+[dir=rtl].handsontable .topSelectionHandle, [dir=rtl].handsontable .topSelectionHandle-HitArea, [dir=rtl].handsontable .bottomSelectionHandle, [dir=rtl].handsontable .bottomSelectionHandle-HitArea {
+  right: -10000px;
+  left: unset;
+}
+
+.handsontable.hide-tween {
+  -webkit-animation: opacity-hide 0.3s;
+  animation: opacity-hide 0.3s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.handsontable.show-tween {
+  -webkit-animation: opacity-show 0.3s;
+  animation: opacity-show 0.3s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+@charset "UTF-8";
+/*!
+ * Pikaday
+ * Copyright © 2014 David Bushell | BSD & MIT license | https://dbushell.com/
+ */
+.pika-single {
+  z-index: 9999;
+  display: block;
+  position: relative;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom-color: #bbb;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*
+clear child float (pika-lendar), using the famous micro clearfix hack
+http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+.pika-single:before,
+.pika-single:after {
+  content: " ";
+  display: table;
+}
+
+.pika-single:after {
+  clear: both;
+}
+
+.pika-single.is-hidden {
+  display: none;
+}
+
+.pika-single.is-bound {
+  position: absolute;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+.pika-lendar {
+  float: left;
+  width: 240px;
+  margin: 8px;
+}
+
+.pika-title {
+  position: relative;
+  text-align: center;
+}
+
+.pika-label {
+  display: inline-block;
+  position: relative;
+  z-index: 9999;
+  overflow: hidden;
+  margin: 0;
+  padding: 5px 3px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.pika-title select {
+  cursor: pointer;
+  position: absolute;
+  z-index: 9998;
+  margin: 0;
+  left: 0;
+  top: 5px;
+  opacity: 0;
+}
+
+.pika-prev,
+.pika-next {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: 0;
+  padding: 0;
+  width: 20px;
+  height: 30px;
+  /* hide text using text-indent trick, using width value (it's enough) */
+  text-indent: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+  opacity: 0.5;
+}
+
+.pika-prev:hover,
+.pika-next:hover {
+  opacity: 1;
+}
+
+.pika-prev,
+.is-rtl .pika-next {
+  float: left;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==);
+}
+
+.pika-next,
+.is-rtl .pika-prev {
+  float: right;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=);
+}
+
+.pika-prev.is-disabled,
+.pika-next.is-disabled {
+  cursor: default;
+  opacity: 0.2;
+}
+
+.pika-select {
+  display: inline-block;
+}
+
+.pika-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+}
+
+.pika-table th,
+.pika-table td {
+  width: 14.2857142857%;
+  padding: 0;
+}
+
+.pika-table th {
+  color: #999;
+  font-size: 12px;
+  line-height: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pika-button {
+  cursor: pointer;
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  padding: 5px;
+  color: #666;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  background: #f5f5f5;
+  height: initial;
+}
+
+.pika-week {
+  font-size: 11px;
+  color: #999;
+}
+
+.is-today .pika-button {
+  color: #33aaff;
+  font-weight: bold;
+}
+
+.is-selected .pika-button,
+.has-event .pika-button {
+  color: #fff;
+  font-weight: bold;
+  background: #33aaff;
+  box-shadow: inset 0 1px 3px #178fe5;
+  border-radius: 3px;
+}
+
+.has-event .pika-button {
+  background: #005da9;
+  box-shadow: inset 0 1px 3px #0076c9;
+}
+
+.is-disabled .pika-button,
+.is-inrange .pika-button {
+  background: #D5E9F7;
+}
+
+.is-startrange .pika-button {
+  color: #fff;
+  background: #6CB31D;
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+.is-endrange .pika-button {
+  color: #fff;
+  background: #33aaff;
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+.is-disabled .pika-button {
+  pointer-events: none;
+  cursor: default;
+  color: #999;
+  opacity: 0.3;
+}
+
+.is-outside-current-month .pika-button {
+  color: #999;
+  opacity: 0.3;
+}
+
+.is-selection-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.pika-button:hover,
+.pika-row.pick-whole-week:hover .pika-button {
+  color: #fff;
+  background: #ff8000;
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+/* styling for abbr */
+.pika-table abbr {
+  border-bottom: none;
+  cursor: help;
+}
+/*
+AutocompleteRenderer down arrow
+*/
+.handsontable .htAutocompleteArrow {
+  float: right;
+  font-size: 10px;
+  color: #EEE;
+  cursor: default;
+  width: 16px;
+  text-align: center;
+}
+
+[dir=rtl].handsontable .htAutocompleteArrow {
+  float: left;
+}
+
+.handsontable td .htAutocompleteArrow:hover {
+  color: #777;
+}
+
+.handsontable td.area .htAutocompleteArrow {
+  color: #d3d3d3;
+}
+/*
+CheckboxRenderer
+*/
+.handsontable .htCheckboxRendererInput {
+  display: inline-block;
+}
+
+.handsontable .htCheckboxRendererInput.noValue {
+  opacity: 0.5;
+}
+
+.handsontable .htCheckboxRendererLabel {
+  font-size: inherit;
+  vertical-align: middle;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.handsontable .htCheckboxRendererLabel.fullWidth {
+  width: 100%;
+}
+.handsontable .htCommentCell {
+  position: relative;
+}
+
+.handsontable .htCommentCell:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: unset;
+  border-left: 6px solid transparent;
+  border-right: none;
+  border-top: 6px solid black;
+}
+
+[dir=rtl].handsontable .htCommentCell:after {
+  left: 0;
+  right: unset;
+  border-right: 6px solid transparent;
+  border-left: none;
+}
+
+.htCommentsContainer .htComments {
+  display: none;
+  z-index: 1059;
+  position: absolute;
+}
+
+.htCommentsContainer .htCommentTextArea {
+  box-shadow: rgba(0, 0, 0, 0.117647) 0 1px 3px, rgba(0, 0, 0, 0.239216) 0 1px 2px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  border-left: 3px solid #ccc;
+  border-right: none;
+  background-color: #fff;
+  width: 215px;
+  height: 90px;
+  font-size: 12px;
+  padding: 5px;
+  outline: 0px !important;
+  -webkit-appearance: none;
+}
+
+[dir=rtl].htCommentsContainer .htCommentTextArea {
+  border-right: 3px solid #ccc;
+  border-left: none;
+}
+
+.htCommentsContainer .htCommentTextArea:focus {
+  box-shadow: rgba(0, 0, 0, 0.117647) 0 1px 3px, rgba(0, 0, 0, 0.239216) 0 1px 2px, inset 0 0 0 1px #5292f7;
+  border-left: 3px solid #5292f7;
+  border-right: none;
+}
+
+[dir=rtl].htCommentsContainer .htCommentTextArea:focus {
+  border-right: 3px solid #5292f7;
+  border-left: none;
+}
+/*!
+ * Handsontable ContextMenu
+ */
+.htContextMenu:not(.htGhostTable) {
+  display: none;
+  position: absolute;
+  /* needs to be higher than 1050 - z-index for Twitter Bootstrap modal (#1569) */
+  z-index: 1060;
+}
+
+.htContextMenu .ht_clone_top,
+.htContextMenu .ht_clone_bottom,
+.htContextMenu .ht_clone_inline_start,
+.htContextMenu .ht_clone_top_inline_start_corner,
+.htContextMenu .ht_clone_bottom_inline_start_corner {
+  display: none;
+}
+
+.htContextMenu .ht_master table.htCore {
+  border-color: #ccc;
+  border-style: solid;
+  border-top-width: 1px;
+  border-bottom-width: 2px;
+  border-left-width: 1px;
+  border-right-width: 2px;
+}
+
+[dir=rtl].htContextMenu .ht_master table.htCore {
+  border-right-width: 1px;
+  border-left-width: 2px;
+}
+
+.htContextMenu .wtBorder {
+  visibility: hidden;
+}
+
+.htContextMenu table tbody tr td {
+  background: white;
+  border-width: 0;
+  padding: 4px 6px 0 6px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.htContextMenu table tbody tr td:first-child {
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+[dir=rtl].htContextMenu table tbody tr td:first-child {
+  border-right-width: 0;
+  border-left-width: 0;
+}
+
+.htContextMenu table tbody tr td.htDimmed {
+  font-style: normal;
+  color: #323232;
+}
+
+.htContextMenu table tbody tr td.current,
+.htContextMenu table tbody tr td.zeroclipboard-is-hover {
+  background: #f3f3f3;
+}
+
+.htContextMenu table tbody tr td.htSeparator {
+  border-top: 1px solid #e6e6e6;
+  height: 0;
+  padding: 0;
+  cursor: default;
+}
+
+.htContextMenu table tbody tr td.htDisabled {
+  color: #999;
+  cursor: default;
+}
+
+.htContextMenu table tbody tr td.htDisabled:hover {
+  background: #fff;
+  color: #999;
+  cursor: default;
+}
+
+.htContextMenu table tbody tr.htHidden {
+  display: none;
+}
+
+.htContextMenu table tbody tr td .htItemWrapper {
+  margin-left: 10px;
+  margin-right: 6px;
+}
+
+.htContextMenu table tbody tr td div span.selected {
+  margin-top: -2px;
+  position: absolute;
+  left: 4px;
+}
+
+.htContextMenu .ht_master .wtHolder {
+  overflow: hidden;
+}
+textarea.HandsontableCopyPaste {
+  position: fixed !important;
+  top: 0 !important;
+  right: 100% !important;
+  overflow: hidden;
+  opacity: 0;
+  outline: 0 none !important;
+}
+@charset "UTF-8";
+/*!
+ * Handsontable DropdownMenu
+ */
+.handsontable .changeType {
+  background: #eee;
+  border-radius: 2px;
+  border: 1px solid #bbb;
+  color: #bbb;
+  font-size: 9px;
+  line-height: 9px;
+  padding: 2px;
+  margin: 3px 1px 0 5px;
+  float: right;
+}
+
+[dir=rtl].handsontable .changeType {
+  float: left;
+}
+
+.handsontable .changeType:before {
+  content: "▼ ";
+}
+
+.handsontable .changeType:hover {
+  border: 1px solid #777;
+  color: #777;
+  cursor: pointer;
+}
+
+.htDropdownMenu:not(.htGhostTable) {
+  display: none;
+  position: absolute;
+  /* needs to be higher than 1050 - z-index for Twitter Bootstrap modal (#1569) */
+  z-index: 1060;
+}
+
+.htDropdownMenu .ht_clone_top,
+.htDropdownMenu .ht_clone_bottom,
+.htDropdownMenu .ht_clone_inline_start,
+.htDropdownMenu .ht_clone_top_inline_start_corner,
+.htDropdownMenu .ht_clone_bottom_inline_start_corner {
+  display: none;
+}
+
+.htDropdownMenu table.htCore {
+  border-color: #ccc;
+  border-style: solid;
+  border-top-width: 1px;
+  border-bottom-width: 2px;
+  border-left-width: 1px;
+  border-right-width: 2px;
+}
+
+[dir=rtl].htDropdownMenu table.htCore {
+  border-right-width: 1px;
+  border-left-width: 2px;
+}
+
+.htDropdownMenu .wtBorder {
+  visibility: hidden;
+}
+
+.htDropdownMenu table tbody tr td {
+  background: white;
+  border-width: 0;
+  padding: 4px 6px 0 6px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.htDropdownMenu table tbody tr td:first-child {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+
+[dir=rtl].htDropdownMenu table tbody tr td:first-child {
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+.htDropdownMenu table tbody tr td.htDimmed {
+  font-style: normal;
+  color: #323232;
+}
+
+.htDropdownMenu table tbody tr td.current,
+.htDropdownMenu table tbody tr td.zeroclipboard-is-hover {
+  background: #e9e9e9;
+}
+
+.htDropdownMenu table tbody tr td.htSeparator {
+  border-top: 1px solid #e6e6e6;
+  height: 0;
+  padding: 0;
+  cursor: default;
+}
+
+.htDropdownMenu table tbody tr td.htDisabled {
+  color: #999;
+}
+
+.htDropdownMenu table tbody tr td.htDisabled:hover {
+  background: #fff;
+  color: #999;
+  cursor: default;
+}
+
+.htDropdownMenu:not(.htGhostTable) table tbody tr.htHidden {
+  display: none;
+}
+
+.htDropdownMenu table tbody tr td .htItemWrapper {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.htDropdownMenu table tbody tr td div span.selected {
+  margin-top: -2px;
+  position: absolute;
+  left: 4px;
+}
+
+.htDropdownMenu .ht_master .wtHolder {
+  overflow: hidden;
+}
+@charset "UTF-8";
+/*!
+ * Handsontable Filters
+ */
+/* Conditions menu */
+.htFiltersConditionsMenu:not(.htGhostTable) {
+  display: none;
+  position: absolute;
+  z-index: 1070;
+}
+
+.htFiltersConditionsMenu .ht_clone_top,
+.htFiltersConditionsMenu .ht_clone_inline_start,
+.htFiltersConditionsMenu .ht_clone_corner {
+  display: none;
+}
+
+.htFiltersConditionsMenu table.htCore {
+  border: 1px solid #bbb;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}
+
+.htFiltersConditionsMenu .wtBorder {
+  visibility: hidden;
+}
+
+.htFiltersConditionsMenu table tbody tr td {
+  background: white;
+  border-width: 0;
+  padding: 4px 6px 0 6px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.htFiltersConditionsMenu table tbody tr td:first-child {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+
+[dir=rtl].htFiltersConditionsMenu table tbody tr td:first-child {
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+.htFiltersConditionsMenu table tbody tr td.htDimmed {
+  font-style: normal;
+  color: #323232;
+}
+
+.htFiltersConditionsMenu table tbody tr td.current,
+.htFiltersConditionsMenu table tbody tr td.zeroclipboard-is-hover {
+  background: #e9e9e9;
+}
+
+.htFiltersConditionsMenu table tbody tr td.htSeparator {
+  border-top: 1px solid #e6e6e6;
+  height: 0;
+  padding: 0;
+}
+
+.htFiltersConditionsMenu table tbody tr td.htDisabled {
+  color: #999;
+}
+
+.htFiltersConditionsMenu table tbody tr td.htDisabled:hover {
+  background: #fff;
+  color: #999;
+  cursor: default;
+}
+
+.htFiltersConditionsMenu table tbody tr td .htItemWrapper {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.htFiltersConditionsMenu table tbody tr td div span.selected {
+  margin-top: -2px;
+  position: absolute;
+  left: 4px;
+}
+
+.htFiltersConditionsMenu .ht_master .wtHolder {
+  overflow: hidden;
+}
+
+.handsontable .htMenuFiltering {
+  border-bottom: 1px dotted #ccc;
+  height: 135px;
+  overflow: hidden;
+}
+
+.handsontable .ht_master table td.htCustomMenuRenderer {
+  background-color: #fff;
+  cursor: auto;
+}
+
+/* Menu label */
+.handsontable .htFiltersMenuLabel {
+  font-size: 0.75em;
+}
+
+/* Component action bar */
+.handsontable .htFiltersMenuActionBar {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 3px;
+}
+
+/* Component filter by conditional */
+.handsontable .htFiltersMenuCondition.border {
+  border-bottom: 1px dotted #ccc !important;
+}
+
+.handsontable .htFiltersMenuCondition .htUIInput {
+  padding: 0 0 5px 0;
+}
+
+/* Component filter by value */
+.handsontable .htFiltersMenuValue {
+  border-bottom: 1px dotted #ccc !important;
+}
+
+.handsontable .htFiltersMenuValue .htUIMultipleSelectSearch {
+  padding: 0;
+}
+
+.handsontable .htFiltersMenuCondition .htUIInput input,
+.handsontable .htFiltersMenuValue .htUIMultipleSelectSearch input {
+  font-family: inherit;
+  font-size: 0.75em;
+  padding: 4px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.htUIMultipleSelect .ht_master .wtHolder {
+  overflow-y: scroll;
+}
+
+.handsontable .htFiltersActive .changeType {
+  border: 1px solid #509272;
+  color: #18804e;
+  background-color: #d2e0d9;
+}
+
+.handsontable .htUISelectAll {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+[dir=rtl].handsontable .htUISelectAll {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.handsontable .htUIClearAll, .handsontable .htUISelectAll {
+  display: inline-block;
+}
+
+.handsontable .htUIClearAll a, .handsontable .htUISelectAll a {
+  font-size: 0.75em;
+}
+
+.handsontable .htUISelectionControls {
+  text-align: right;
+}
+
+[dir=rtl].handsontable .htUISelectionControls {
+  text-align: left;
+}
+
+.handsontable .htCheckboxRendererInput {
+  margin-top: 0;
+  margin-right: 5px;
+  margin-bottom: 0;
+  margin-left: 0;
+  vertical-align: middle;
+  height: 1em;
+}
+
+[dir=rtl].handsontable .htCheckboxRendererInput {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+/* UI elements */
+/* Input */
+.handsontable .htUIInput {
+  padding: 3px 0 7px 0;
+  position: relative;
+  text-align: center;
+}
+
+.handsontable .htUIInput input {
+  border-radius: 2px;
+  border: 1px solid #d2d1d1;
+}
+
+.handsontable .htUIInput input:focus {
+  outline: 0;
+}
+
+.handsontable .htUIInputIcon {
+  position: absolute;
+}
+
+/* Button */
+.handsontable .htUIInput.htUIButton {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.handsontable .htUIInput.htUIButton input {
+  background-color: #eee;
+  color: #000;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.75em;
+  font-weight: bold;
+  height: 19px;
+  min-width: 64px;
+}
+
+.handsontable .htUIInput.htUIButton input:hover {
+  border-color: #b9b9b9;
+}
+
+.handsontable .htUIInput.htUIButtonOK {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+[dir=rtl].handsontable .htUIInput.htUIButtonOK {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.handsontable .htUIInput.htUIButtonOK input {
+  background-color: #0f9d58;
+  border-color: #18804e;
+  color: #fff;
+}
+
+.handsontable .htUIInput.htUIButtonOK input:hover {
+  border-color: #1a6f46;
+}
+
+/* Select */
+.handsontable .htUISelect {
+  cursor: pointer;
+  margin-bottom: 7px;
+  position: relative;
+}
+
+.handsontable .htUISelectCaption {
+  background-color: #e8e8e8;
+  border-radius: 2px;
+  border: 1px solid #d2d1d1;
+  font-family: inherit;
+  font-size: 0.75em;
+  font-weight: bold;
+  padding: 3px 20px 3px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.handsontable .htUISelectCaption:hover {
+  background-color: #e8e8e8;
+  border: 1px solid #b9b9b9;
+}
+
+.handsontable .htUISelectDropdown:after {
+  content: "▲";
+  font-size: 7px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+
+.handsontable .htUISelectDropdown:before {
+  content: "▼";
+  font-size: 7px;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+
+/* SelectMultiple */
+.handsontable .htUIMultipleSelect .handsontable .htCore {
+  border: none;
+}
+
+.handsontable .htUIMultipleSelect .handsontable .htCore td:hover {
+  background-color: #F5F5F5;
+}
+
+.handsontable .htUIMultipleSelectSearch input {
+  border-radius: 2px;
+  border: 1px solid #d2d1d1;
+  padding: 3px;
+}
+
+.handsontable .htUIRadio {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 5px;
+  height: 100%;
+}
+
+[dir=rtl].handsontable .htUIRadio {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+.handsontable .htUIRadio:last-child {
+  margin-right: 0;
+}
+
+.handsontable .htUIRadio > input[type=radio] {
+  margin-left: 0;
+  margin-right: 0.5ex;
+}
+
+[dir=rtl].handsontable .htUIRadio > input[type=radio] {
+  margin-right: 0;
+  margin-left: 0.5ex;
+}
+
+.handsontable .htUIRadio label {
+  vertical-align: middle;
+}
+
+.handsontable .htFiltersMenuOperators {
+  padding-bottom: 5px;
+}
+@charset "UTF-8";
+/*
+ * Handsontable HiddenColumns
+ */
+.handsontable th.beforeHiddenColumn {
+  position: relative;
+}
+
+.handsontable th.beforeHiddenColumn::after,
+.handsontable th.afterHiddenColumn::before {
+  color: #bbb;
+  position: absolute;
+  top: 50%;
+  font-size: 5pt;
+  transform: translateY(-50%);
+}
+
+.handsontable th.afterHiddenColumn {
+  position: relative;
+}
+
+.handsontable th.beforeHiddenColumn::after {
+  right: 1px;
+  content: "◀"; /* left arrow */
+}
+
+[dir=rtl].handsontable th.beforeHiddenColumn::after {
+  right: initial;
+  left: 1px;
+  content: "▶"; /* right arrow */
+}
+
+.handsontable th.afterHiddenColumn::before {
+  left: 1px;
+  content: "▶"; /* right arrow */
+}
+
+[dir=rtl].handsontable th.afterHiddenColumn::before {
+  right: 1px;
+  left: initial;
+  content: "◀"; /* left arrow */
+}
+@charset "UTF-8";
+/*!
+ * Handsontable HiddenRows
+ */
+.handsontable th.beforeHiddenRow::before,
+.handsontable th.afterHiddenRow::after {
+  color: #bbb;
+  font-size: 6pt;
+  line-height: 6pt;
+  position: absolute;
+  left: 2px;
+}
+
+.handsontable th.beforeHiddenRow,
+.handsontable th.afterHiddenRow {
+  position: relative;
+}
+
+.handsontable th.beforeHiddenRow::before {
+  content: "▲";
+  bottom: 2px;
+}
+
+.handsontable th.afterHiddenRow::after {
+  content: "▼";
+  top: 2px;
+}
+
+.handsontable.ht__selection--rows tbody th.beforeHiddenRow.ht__highlight:before,
+.handsontable.ht__selection--rows tbody th.afterHiddenRow.ht__highlight:after {
+  color: #eee;
+}
+
+.handsontable td.afterHiddenRow.firstVisibleRow,
+.handsontable th.afterHiddenRow.firstVisibleRow {
+  border-top: 1px solid #CCC;
+}
+.htRowHeaders .ht_master.innerBorderInlineStart ~ .ht_clone_top_inline_start_corner th:nth-child(2),
+.htRowHeaders .ht_master.innerBorderInlineStart ~ .ht_clone_inline_start td:first-of-type {
+  border-left: 0 none;
+}
+.handsontable .wtHider {
+  position: relative;
+}
+
+.handsontable.ht__manualColumnMove.after-selection--columns thead th.ht__highlight {
+  cursor: move;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.handsontable.ht__manualColumnMove.on-moving--columns,
+.handsontable.ht__manualColumnMove.on-moving--columns thead th.ht__highlight {
+  cursor: move;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.handsontable.ht__manualColumnMove.on-moving--columns .manualColumnResizer {
+  display: none;
+}
+
+.handsontable .ht__manualColumnMove--guideline,
+.handsontable .ht__manualColumnMove--backlight {
+  position: absolute;
+  height: 100%;
+  display: none;
+}
+
+.handsontable .ht__manualColumnMove--guideline {
+  background: #757575;
+  width: 2px;
+  top: 0;
+  margin-inline-start: -1px;
+  margin-inline-end: 0;
+  z-index: 205;
+}
+
+.handsontable .ht__manualColumnMove--backlight {
+  background: #343434;
+  background: rgba(52, 52, 52, 0.25);
+  display: none;
+  z-index: 205;
+  pointer-events: none;
+}
+
+.handsontable.on-moving--columns.show-ui .ht__manualColumnMove--guideline,
+.handsontable.on-moving--columns .ht__manualColumnMove--backlight {
+  display: block;
+}
+.handsontable .wtHider {
+  position: relative;
+}
+
+.handsontable.ht__manualRowMove.after-selection--rows tbody th.ht__highlight {
+  cursor: move;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.handsontable.ht__manualRowMove.on-moving--rows,
+.handsontable.ht__manualRowMove.on-moving--rows tbody th.ht__highlight {
+  cursor: move;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.handsontable.ht__manualRowMove.on-moving--rows .manualRowResizer {
+  display: none;
+}
+
+.handsontable .ht__manualRowMove--guideline,
+.handsontable .ht__manualRowMove--backlight {
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+
+.handsontable .ht__manualRowMove--guideline {
+  background: #757575;
+  height: 2px;
+  left: 0;
+  margin-top: -1px;
+  z-index: 205;
+}
+
+.handsontable .ht__manualRowMove--backlight {
+  background: #343434;
+  background: rgba(52, 52, 52, 0.25);
+  display: none;
+  z-index: 205;
+  pointer-events: none;
+}
+
+.handsontable.on-moving--rows.show-ui .ht__manualRowMove--guideline,
+.handsontable.on-moving--rows .ht__manualRowMove--backlight {
+  display: block;
+}
+.handsontable tbody td[rowspan][class*=area][class*=highlight]:not([class*=fullySelectedMergedCell]):before {
+  opacity: 0;
+}
+
+.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-multiple]:before {
+  opacity: 0.1;
+}
+
+.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-0]:before {
+  opacity: 0.1;
+}
+
+.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-1]:before {
+  opacity: 0.2;
+}
+
+.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-2]:before {
+  opacity: 0.27;
+}
+
+.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-3]:before {
+  opacity: 0.35;
+}
+
+.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-4]:before {
+  opacity: 0.41;
+}
+
+.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-5]:before {
+  opacity: 0.47;
+}
+
+.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-6]:before {
+  opacity: 0.54;
+}
+
+.handsontable tbody td[rowspan][class*=area][class*=highlight][class*=fullySelectedMergedCell-7]:before {
+  opacity: 0.58;
+}
+/* Column's number position */
+.handsontable span.colHeader.columnSorting::after {
+  /* Centering start */
+  top: 50%;
+  /* Two extra pixels (-2 instead of -4) for purpose of proper positioning of numeric indicators, when `font-size` set to default */
+  margin-top: -2px;
+  /* Centering end */
+  position: absolute;
+  right: -15px;
+  left: unset;
+  /* For purpose of continuous mouse over experience, when moving between the `::before` and the `::after` elements */
+  padding-left: 5px;
+  padding-right: unset;
+  font-size: 8px;
+  height: 8px;
+  line-height: 1.1;
+  /* Workaround for IE9 - IE11 */
+  text-decoration: underline;
+}
+
+[dir=rtl].handsontable span.colHeader.columnSorting::after {
+  left: -15px;
+  right: unset;
+  /* For purpose of continuous mouse over experience, when moving between the `::before` and the `::after` elements */
+  padding-right: 5px;
+  padding-left: unset;
+}
+
+/* Workaround for IE9 - IE11, https://stackoverflow.com/a/21902566, https://stackoverflow.com/a/32120247 */
+.handsontable span.colHeader.columnSorting::after {
+  text-decoration: none;
+}
+
+/* We support up to 7 numeric indicators, describing order of column in sorted columns queue */
+.handsontable span.colHeader.columnSorting[class^=sort-]::after,
+.handsontable span.colHeader.columnSorting[class*=" sort-"]::after {
+  content: "+";
+}
+
+.handsontable span.colHeader.columnSorting.sort-1::after {
+  content: "1";
+}
+
+.handsontable span.colHeader.columnSorting.sort-2::after {
+  content: "2";
+}
+
+.handsontable span.colHeader.columnSorting.sort-3::after {
+  content: "3";
+}
+
+.handsontable span.colHeader.columnSorting.sort-4::after {
+  content: "4";
+}
+
+.handsontable span.colHeader.columnSorting.sort-5::after {
+  content: "5";
+}
+
+.handsontable span.colHeader.columnSorting.sort-6::after {
+  content: "6";
+}
+
+.handsontable span.colHeader.columnSorting.sort-7::after {
+  content: "7";
+}
+
+/* Drop-down menu widens header by 5 pixels, sort sequence numbers won't overlap the icon; mainly for the IE9+ */
+.htGhostTable th div button.changeType + span.colHeader.columnSorting:not(.indicatorDisabled) {
+  padding-right: 5px;
+}
+.handsontable thead th.hiddenHeader:not(:first-of-type) {
+  display: none;
+}
+@charset "UTF-8";
+.handsontable th.ht_nestingLevels {
+  text-align: left;
+  padding-left: 7px;
+}
+
+[dir=rtl].handsontable th.ht_nestingLevels {
+  text-align: right;
+  padding-right: 7px;
+}
+
+.handsontable th div.ht_nestingLevels {
+  display: inline-block;
+  position: absolute;
+  left: 11px;
+  right: unset;
+}
+
+[dir=rtl].handsontable th div.ht_nestingLevels {
+  right: 11px;
+  left: unset;
+}
+
+.handsontable.innerBorderInlineStart th div.ht_nestingLevels,
+.handsontable.innerBorderInlineStart ~ .handsontable th div.ht_nestingLevels {
+  right: 10px;
+  left: unset;
+}
+
+[dir=rtl].handsontable.innerBorderInlineStart th div.ht_nestingLevels, [dir=rtl].handsontable.innerBorderInlineStart ~ .handsontable th div.ht_nestingLevels {
+  left: 10px;
+  right: unset;
+}
+
+.handsontable th span.ht_nestingLevel {
+  display: inline-block;
+}
+
+.handsontable th span.ht_nestingLevel_empty {
+  display: inline-block;
+  width: 10px;
+  height: 1px;
+  float: left;
+}
+
+[dir=rtl].handsontable th span.ht_nestingLevel_empty {
+  float: right;
+}
+
+.handsontable th span.ht_nestingLevel::after {
+  content: "┐";
+  font-size: 9px;
+  display: inline-block;
+  position: relative;
+  bottom: 3px;
+}
+
+.handsontable th div.ht_nestingButton {
+  display: inline-block;
+  position: absolute;
+  right: -2px;
+  left: unset;
+  cursor: pointer;
+}
+
+[dir=rtl].handsontable th div.ht_nestingButton {
+  left: -2px;
+  right: unset;
+}
+
+.handsontable th div.ht_nestingButton.ht_nestingExpand::after {
+  content: "+";
+}
+
+.handsontable th div.ht_nestingButton.ht_nestingCollapse::after {
+  content: "-";
+}
+
+.handsontable.innerBorderInlineStart th div.ht_nestingButton,
+.handsontable.innerBorderInlineStart ~ .handsontable th div.ht_nestingButton {
+  right: 0;
+  left: unset;
+}
+
+[dir=rtl].handsontable.innerBorderInlineStart th div.ht_nestingButton, [dir=rtl].handsontable.innerBorderInlineStart ~ .handsontable th div.ht_nestingButton {
+  left: 0;
+  right: unset;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+@font-face {
+	font-family: "codicon";
+	src: url(/dataps/_file/ext/dataps/dist/_resource_/59002d8cc9a0e78be5b7.ttf?079de8c801b399d4f7f8bf15e6901389) format("truetype");
+}
+
+.codicon[class*='codicon-'] {
+	font: normal normal normal 16px/1 codicon;
+	display: block;
+	text-decoration: none;
+	text-rendering: auto;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+
+.codicon-add:before { content: "\ea60" }
+.codicon-plus:before { content: "\ea60" }
+.codicon-gist-new:before { content: "\ea60" }
+.codicon-repo-create:before { content: "\ea60" }
+.codicon-lightbulb:before { content: "\ea61" }
+.codicon-light-bulb:before { content: "\ea61" }
+.codicon-repo:before { content: "\ea62" }
+.codicon-repo-delete:before { content: "\ea62" }
+.codicon-gist-fork:before { content: "\ea63" }
+.codicon-repo-forked:before { content: "\ea63" }
+.codicon-git-pull-request:before { content: "\ea64" }
+.codicon-git-pull-request-abandoned:before { content: "\ea64" }
+.codicon-record-keys:before { content: "\ea65" }
+.codicon-keyboard:before { content: "\ea65" }
+.codicon-tag:before { content: "\ea66" }
+.codicon-tag-add:before { content: "\ea66" }
+.codicon-tag-remove:before { content: "\ea66" }
+.codicon-person:before { content: "\ea67" }
+.codicon-person-follow:before { content: "\ea67" }
+.codicon-person-outline:before { content: "\ea67" }
+.codicon-person-filled:before { content: "\ea67" }
+.codicon-git-branch:before { content: "\ea68" }
+.codicon-git-branch-create:before { content: "\ea68" }
+.codicon-git-branch-delete:before { content: "\ea68" }
+.codicon-source-control:before { content: "\ea68" }
+.codicon-mirror:before { content: "\ea69" }
+.codicon-mirror-public:before { content: "\ea69" }
+.codicon-star:before { content: "\ea6a" }
+.codicon-star-add:before { content: "\ea6a" }
+.codicon-star-delete:before { content: "\ea6a" }
+.codicon-star-empty:before { content: "\ea6a" }
+.codicon-comment:before { content: "\ea6b" }
+.codicon-comment-add:before { content: "\ea6b" }
+.codicon-alert:before { content: "\ea6c" }
+.codicon-warning:before { content: "\ea6c" }
+.codicon-search:before { content: "\ea6d" }
+.codicon-search-save:before { content: "\ea6d" }
+.codicon-log-out:before { content: "\ea6e" }
+.codicon-sign-out:before { content: "\ea6e" }
+.codicon-log-in:before { content: "\ea6f" }
+.codicon-sign-in:before { content: "\ea6f" }
+.codicon-eye:before { content: "\ea70" }
+.codicon-eye-unwatch:before { content: "\ea70" }
+.codicon-eye-watch:before { content: "\ea70" }
+.codicon-circle-filled:before { content: "\ea71" }
+.codicon-primitive-dot:before { content: "\ea71" }
+.codicon-close-dirty:before { content: "\ea71" }
+.codicon-debug-breakpoint:before { content: "\ea71" }
+.codicon-debug-breakpoint-disabled:before { content: "\ea71" }
+.codicon-debug-hint:before { content: "\ea71" }
+.codicon-primitive-square:before { content: "\ea72" }
+.codicon-edit:before { content: "\ea73" }
+.codicon-pencil:before { content: "\ea73" }
+.codicon-info:before { content: "\ea74" }
+.codicon-issue-opened:before { content: "\ea74" }
+.codicon-gist-private:before { content: "\ea75" }
+.codicon-git-fork-private:before { content: "\ea75" }
+.codicon-lock:before { content: "\ea75" }
+.codicon-mirror-private:before { content: "\ea75" }
+.codicon-close:before { content: "\ea76" }
+.codicon-remove-close:before { content: "\ea76" }
+.codicon-x:before { content: "\ea76" }
+.codicon-repo-sync:before { content: "\ea77" }
+.codicon-sync:before { content: "\ea77" }
+.codicon-clone:before { content: "\ea78" }
+.codicon-desktop-download:before { content: "\ea78" }
+.codicon-beaker:before { content: "\ea79" }
+.codicon-microscope:before { content: "\ea79" }
+.codicon-vm:before { content: "\ea7a" }
+.codicon-device-desktop:before { content: "\ea7a" }
+.codicon-file:before { content: "\ea7b" }
+.codicon-file-text:before { content: "\ea7b" }
+.codicon-more:before { content: "\ea7c" }
+.codicon-ellipsis:before { content: "\ea7c" }
+.codicon-kebab-horizontal:before { content: "\ea7c" }
+.codicon-mail-reply:before { content: "\ea7d" }
+.codicon-reply:before { content: "\ea7d" }
+.codicon-organization:before { content: "\ea7e" }
+.codicon-organization-filled:before { content: "\ea7e" }
+.codicon-organization-outline:before { content: "\ea7e" }
+.codicon-new-file:before { content: "\ea7f" }
+.codicon-file-add:before { content: "\ea7f" }
+.codicon-new-folder:before { content: "\ea80" }
+.codicon-file-directory-create:before { content: "\ea80" }
+.codicon-trash:before { content: "\ea81" }
+.codicon-trashcan:before { content: "\ea81" }
+.codicon-history:before { content: "\ea82" }
+.codicon-clock:before { content: "\ea82" }
+.codicon-folder:before { content: "\ea83" }
+.codicon-file-directory:before { content: "\ea83" }
+.codicon-symbol-folder:before { content: "\ea83" }
+.codicon-logo-github:before { content: "\ea84" }
+.codicon-mark-github:before { content: "\ea84" }
+.codicon-github:before { content: "\ea84" }
+.codicon-terminal:before { content: "\ea85" }
+.codicon-console:before { content: "\ea85" }
+.codicon-repl:before { content: "\ea85" }
+.codicon-zap:before { content: "\ea86" }
+.codicon-symbol-event:before { content: "\ea86" }
+.codicon-error:before { content: "\ea87" }
+.codicon-stop:before { content: "\ea87" }
+.codicon-variable:before { content: "\ea88" }
+.codicon-symbol-variable:before { content: "\ea88" }
+.codicon-array:before { content: "\ea8a" }
+.codicon-symbol-array:before { content: "\ea8a" }
+.codicon-symbol-module:before { content: "\ea8b" }
+.codicon-symbol-package:before { content: "\ea8b" }
+.codicon-symbol-namespace:before { content: "\ea8b" }
+.codicon-symbol-object:before { content: "\ea8b" }
+.codicon-symbol-method:before { content: "\ea8c" }
+.codicon-symbol-function:before { content: "\ea8c" }
+.codicon-symbol-constructor:before { content: "\ea8c" }
+.codicon-symbol-boolean:before { content: "\ea8f" }
+.codicon-symbol-null:before { content: "\ea8f" }
+.codicon-symbol-numeric:before { content: "\ea90" }
+.codicon-symbol-number:before { content: "\ea90" }
+.codicon-symbol-structure:before { content: "\ea91" }
+.codicon-symbol-struct:before { content: "\ea91" }
+.codicon-symbol-parameter:before { content: "\ea92" }
+.codicon-symbol-type-parameter:before { content: "\ea92" }
+.codicon-symbol-key:before { content: "\ea93" }
+.codicon-symbol-text:before { content: "\ea93" }
+.codicon-symbol-reference:before { content: "\ea94" }
+.codicon-go-to-file:before { content: "\ea94" }
+.codicon-symbol-enum:before { content: "\ea95" }
+.codicon-symbol-value:before { content: "\ea95" }
+.codicon-symbol-ruler:before { content: "\ea96" }
+.codicon-symbol-unit:before { content: "\ea96" }
+.codicon-activate-breakpoints:before { content: "\ea97" }
+.codicon-archive:before { content: "\ea98" }
+.codicon-arrow-both:before { content: "\ea99" }
+.codicon-arrow-down:before { content: "\ea9a" }
+.codicon-arrow-left:before { content: "\ea9b" }
+.codicon-arrow-right:before { content: "\ea9c" }
+.codicon-arrow-small-down:before { content: "\ea9d" }
+.codicon-arrow-small-left:before { content: "\ea9e" }
+.codicon-arrow-small-right:before { content: "\ea9f" }
+.codicon-arrow-small-up:before { content: "\eaa0" }
+.codicon-arrow-up:before { content: "\eaa1" }
+.codicon-bell:before { content: "\eaa2" }
+.codicon-bold:before { content: "\eaa3" }
+.codicon-book:before { content: "\eaa4" }
+.codicon-bookmark:before { content: "\eaa5" }
+.codicon-debug-breakpoint-conditional-unverified:before { content: "\eaa6" }
+.codicon-debug-breakpoint-conditional:before { content: "\eaa7" }
+.codicon-debug-breakpoint-conditional-disabled:before { content: "\eaa7" }
+.codicon-debug-breakpoint-data-unverified:before { content: "\eaa8" }
+.codicon-debug-breakpoint-data:before { content: "\eaa9" }
+.codicon-debug-breakpoint-data-disabled:before { content: "\eaa9" }
+.codicon-debug-breakpoint-log-unverified:before { content: "\eaaa" }
+.codicon-debug-breakpoint-log:before { content: "\eaab" }
+.codicon-debug-breakpoint-log-disabled:before { content: "\eaab" }
+.codicon-briefcase:before { content: "\eaac" }
+.codicon-broadcast:before { content: "\eaad" }
+.codicon-browser:before { content: "\eaae" }
+.codicon-bug:before { content: "\eaaf" }
+.codicon-calendar:before { content: "\eab0" }
+.codicon-case-sensitive:before { content: "\eab1" }
+.codicon-check:before { content: "\eab2" }
+.codicon-checklist:before { content: "\eab3" }
+.codicon-chevron-down:before { content: "\eab4" }
+.codicon-chevron-left:before { content: "\eab5" }
+.codicon-chevron-right:before { content: "\eab6" }
+.codicon-chevron-up:before { content: "\eab7" }
+.codicon-chrome-close:before { content: "\eab8" }
+.codicon-chrome-maximize:before { content: "\eab9" }
+.codicon-chrome-minimize:before { content: "\eaba" }
+.codicon-chrome-restore:before { content: "\eabb" }
+.codicon-circle-outline:before { content: "\eabc" }
+.codicon-debug-breakpoint-unverified:before { content: "\eabc" }
+.codicon-circle-slash:before { content: "\eabd" }
+.codicon-circuit-board:before { content: "\eabe" }
+.codicon-clear-all:before { content: "\eabf" }
+.codicon-clippy:before { content: "\eac0" }
+.codicon-close-all:before { content: "\eac1" }
+.codicon-cloud-download:before { content: "\eac2" }
+.codicon-cloud-upload:before { content: "\eac3" }
+.codicon-code:before { content: "\eac4" }
+.codicon-collapse-all:before { content: "\eac5" }
+.codicon-color-mode:before { content: "\eac6" }
+.codicon-comment-discussion:before { content: "\eac7" }
+.codicon-credit-card:before { content: "\eac9" }
+.codicon-dash:before { content: "\eacc" }
+.codicon-dashboard:before { content: "\eacd" }
+.codicon-database:before { content: "\eace" }
+.codicon-debug-continue:before { content: "\eacf" }
+.codicon-debug-disconnect:before { content: "\ead0" }
+.codicon-debug-pause:before { content: "\ead1" }
+.codicon-debug-restart:before { content: "\ead2" }
+.codicon-debug-start:before { content: "\ead3" }
+.codicon-debug-step-into:before { content: "\ead4" }
+.codicon-debug-step-out:before { content: "\ead5" }
+.codicon-debug-step-over:before { content: "\ead6" }
+.codicon-debug-stop:before { content: "\ead7" }
+.codicon-debug:before { content: "\ead8" }
+.codicon-device-camera-video:before { content: "\ead9" }
+.codicon-device-camera:before { content: "\eada" }
+.codicon-device-mobile:before { content: "\eadb" }
+.codicon-diff-added:before { content: "\eadc" }
+.codicon-diff-ignored:before { content: "\eadd" }
+.codicon-diff-modified:before { content: "\eade" }
+.codicon-diff-removed:before { content: "\eadf" }
+.codicon-diff-renamed:before { content: "\eae0" }
+.codicon-diff:before { content: "\eae1" }
+.codicon-discard:before { content: "\eae2" }
+.codicon-editor-layout:before { content: "\eae3" }
+.codicon-empty-window:before { content: "\eae4" }
+.codicon-exclude:before { content: "\eae5" }
+.codicon-extensions:before { content: "\eae6" }
+.codicon-eye-closed:before { content: "\eae7" }
+.codicon-file-binary:before { content: "\eae8" }
+.codicon-file-code:before { content: "\eae9" }
+.codicon-file-media:before { content: "\eaea" }
+.codicon-file-pdf:before { content: "\eaeb" }
+.codicon-file-submodule:before { content: "\eaec" }
+.codicon-file-symlink-directory:before { content: "\eaed" }
+.codicon-file-symlink-file:before { content: "\eaee" }
+.codicon-file-zip:before { content: "\eaef" }
+.codicon-files:before { content: "\eaf0" }
+.codicon-filter:before { content: "\eaf1" }
+.codicon-flame:before { content: "\eaf2" }
+.codicon-fold-down:before { content: "\eaf3" }
+.codicon-fold-up:before { content: "\eaf4" }
+.codicon-fold:before { content: "\eaf5" }
+.codicon-folder-active:before { content: "\eaf6" }
+.codicon-folder-opened:before { content: "\eaf7" }
+.codicon-gear:before { content: "\eaf8" }
+.codicon-gift:before { content: "\eaf9" }
+.codicon-gist-secret:before { content: "\eafa" }
+.codicon-gist:before { content: "\eafb" }
+.codicon-git-commit:before { content: "\eafc" }
+.codicon-git-compare:before { content: "\eafd" }
+.codicon-compare-changes:before { content: "\eafd" }
+.codicon-git-merge:before { content: "\eafe" }
+.codicon-github-action:before { content: "\eaff" }
+.codicon-github-alt:before { content: "\eb00" }
+.codicon-globe:before { content: "\eb01" }
+.codicon-grabber:before { content: "\eb02" }
+.codicon-graph:before { content: "\eb03" }
+.codicon-gripper:before { content: "\eb04" }
+.codicon-heart:before { content: "\eb05" }
+.codicon-home:before { content: "\eb06" }
+.codicon-horizontal-rule:before { content: "\eb07" }
+.codicon-hubot:before { content: "\eb08" }
+.codicon-inbox:before { content: "\eb09" }
+.codicon-issue-reopened:before { content: "\eb0b" }
+.codicon-issues:before { content: "\eb0c" }
+.codicon-italic:before { content: "\eb0d" }
+.codicon-jersey:before { content: "\eb0e" }
+.codicon-json:before { content: "\eb0f" }
+.codicon-kebab-vertical:before { content: "\eb10" }
+.codicon-key:before { content: "\eb11" }
+.codicon-law:before { content: "\eb12" }
+.codicon-lightbulb-autofix:before { content: "\eb13" }
+.codicon-link-external:before { content: "\eb14" }
+.codicon-link:before { content: "\eb15" }
+.codicon-list-ordered:before { content: "\eb16" }
+.codicon-list-unordered:before { content: "\eb17" }
+.codicon-live-share:before { content: "\eb18" }
+.codicon-loading:before { content: "\eb19" }
+.codicon-location:before { content: "\eb1a" }
+.codicon-mail-read:before { content: "\eb1b" }
+.codicon-mail:before { content: "\eb1c" }
+.codicon-markdown:before { content: "\eb1d" }
+.codicon-megaphone:before { content: "\eb1e" }
+.codicon-mention:before { content: "\eb1f" }
+.codicon-milestone:before { content: "\eb20" }
+.codicon-mortar-board:before { content: "\eb21" }
+.codicon-move:before { content: "\eb22" }
+.codicon-multiple-windows:before { content: "\eb23" }
+.codicon-mute:before { content: "\eb24" }
+.codicon-no-newline:before { content: "\eb25" }
+.codicon-note:before { content: "\eb26" }
+.codicon-octoface:before { content: "\eb27" }
+.codicon-open-preview:before { content: "\eb28" }
+.codicon-package:before { content: "\eb29" }
+.codicon-paintcan:before { content: "\eb2a" }
+.codicon-pin:before { content: "\eb2b" }
+.codicon-play:before { content: "\eb2c" }
+.codicon-run:before { content: "\eb2c" }
+.codicon-plug:before { content: "\eb2d" }
+.codicon-preserve-case:before { content: "\eb2e" }
+.codicon-preview:before { content: "\eb2f" }
+.codicon-project:before { content: "\eb30" }
+.codicon-pulse:before { content: "\eb31" }
+.codicon-question:before { content: "\eb32" }
+.codicon-quote:before { content: "\eb33" }
+.codicon-radio-tower:before { content: "\eb34" }
+.codicon-reactions:before { content: "\eb35" }
+.codicon-references:before { content: "\eb36" }
+.codicon-refresh:before { content: "\eb37" }
+.codicon-regex:before { content: "\eb38" }
+.codicon-remote-explorer:before { content: "\eb39" }
+.codicon-remote:before { content: "\eb3a" }
+.codicon-remove:before { content: "\eb3b" }
+.codicon-replace-all:before { content: "\eb3c" }
+.codicon-replace:before { content: "\eb3d" }
+.codicon-repo-clone:before { content: "\eb3e" }
+.codicon-repo-force-push:before { content: "\eb3f" }
+.codicon-repo-pull:before { content: "\eb40" }
+.codicon-repo-push:before { content: "\eb41" }
+.codicon-report:before { content: "\eb42" }
+.codicon-request-changes:before { content: "\eb43" }
+.codicon-rocket:before { content: "\eb44" }
+.codicon-root-folder-opened:before { content: "\eb45" }
+.codicon-root-folder:before { content: "\eb46" }
+.codicon-rss:before { content: "\eb47" }
+.codicon-ruby:before { content: "\eb48" }
+.codicon-save-all:before { content: "\eb49" }
+.codicon-save-as:before { content: "\eb4a" }
+.codicon-save:before { content: "\eb4b" }
+.codicon-screen-full:before { content: "\eb4c" }
+.codicon-screen-normal:before { content: "\eb4d" }
+.codicon-search-stop:before { content: "\eb4e" }
+.codicon-server:before { content: "\eb50" }
+.codicon-settings-gear:before { content: "\eb51" }
+.codicon-settings:before { content: "\eb52" }
+.codicon-shield:before { content: "\eb53" }
+.codicon-smiley:before { content: "\eb54" }
+.codicon-sort-precedence:before { content: "\eb55" }
+.codicon-split-horizontal:before { content: "\eb56" }
+.codicon-split-vertical:before { content: "\eb57" }
+.codicon-squirrel:before { content: "\eb58" }
+.codicon-star-full:before { content: "\eb59" }
+.codicon-star-half:before { content: "\eb5a" }
+.codicon-symbol-class:before { content: "\eb5b" }
+.codicon-symbol-color:before { content: "\eb5c" }
+.codicon-symbol-constant:before { content: "\eb5d" }
+.codicon-symbol-enum-member:before { content: "\eb5e" }
+.codicon-symbol-field:before { content: "\eb5f" }
+.codicon-symbol-file:before { content: "\eb60" }
+.codicon-symbol-interface:before { content: "\eb61" }
+.codicon-symbol-keyword:before { content: "\eb62" }
+.codicon-symbol-misc:before { content: "\eb63" }
+.codicon-symbol-operator:before { content: "\eb64" }
+.codicon-symbol-property:before { content: "\eb65" }
+.codicon-wrench:before { content: "\eb65" }
+.codicon-wrench-subaction:before { content: "\eb65" }
+.codicon-symbol-snippet:before { content: "\eb66" }
+.codicon-tasklist:before { content: "\eb67" }
+.codicon-telescope:before { content: "\eb68" }
+.codicon-text-size:before { content: "\eb69" }
+.codicon-three-bars:before { content: "\eb6a" }
+.codicon-thumbsdown:before { content: "\eb6b" }
+.codicon-thumbsup:before { content: "\eb6c" }
+.codicon-tools:before { content: "\eb6d" }
+.codicon-triangle-down:before { content: "\eb6e" }
+.codicon-triangle-left:before { content: "\eb6f" }
+.codicon-triangle-right:before { content: "\eb70" }
+.codicon-triangle-up:before { content: "\eb71" }
+.codicon-twitter:before { content: "\eb72" }
+.codicon-unfold:before { content: "\eb73" }
+.codicon-unlock:before { content: "\eb74" }
+.codicon-unmute:before { content: "\eb75" }
+.codicon-unverified:before { content: "\eb76" }
+.codicon-verified:before { content: "\eb77" }
+.codicon-versions:before { content: "\eb78" }
+.codicon-vm-active:before { content: "\eb79" }
+.codicon-vm-outline:before { content: "\eb7a" }
+.codicon-vm-running:before { content: "\eb7b" }
+.codicon-watch:before { content: "\eb7c" }
+.codicon-whitespace:before { content: "\eb7d" }
+.codicon-whole-word:before { content: "\eb7e" }
+.codicon-window:before { content: "\eb7f" }
+.codicon-word-wrap:before { content: "\eb80" }
+.codicon-zoom-in:before { content: "\eb81" }
+.codicon-zoom-out:before { content: "\eb82" }
+.codicon-list-filter:before { content: "\eb83" }
+.codicon-list-flat:before { content: "\eb84" }
+.codicon-list-selection:before { content: "\eb85" }
+.codicon-selection:before { content: "\eb85" }
+.codicon-list-tree:before { content: "\eb86" }
+.codicon-debug-breakpoint-function-unverified:before { content: "\eb87" }
+.codicon-debug-breakpoint-function:before { content: "\eb88" }
+.codicon-debug-breakpoint-function-disabled:before { content: "\eb88" }
+.codicon-debug-stackframe-active:before { content: "\eb89" }
+.codicon-debug-stackframe-dot:before { content: "\eb8a" }
+.codicon-debug-stackframe:before { content: "\eb8b" }
+.codicon-debug-stackframe-focused:before { content: "\eb8b" }
+.codicon-debug-breakpoint-unsupported:before { content: "\eb8c" }
+.codicon-symbol-string:before { content: "\eb8d" }
+.codicon-debug-reverse-continue:before { content: "\eb8e" }
+.codicon-debug-step-back:before { content: "\eb8f" }
+.codicon-debug-restart-frame:before { content: "\eb90" }
+.codicon-debug-alt:before { content: "\eb91" }
+.codicon-call-incoming:before { content: "\eb92" }
+.codicon-call-outgoing:before { content: "\eb93" }
+.codicon-menu:before { content: "\eb94" }
+.codicon-expand-all:before { content: "\eb95" }
+.codicon-feedback:before { content: "\eb96" }
+.codicon-group-by-ref-type:before { content: "\eb97" }
+.codicon-ungroup-by-ref-type:before { content: "\eb98" }
+.codicon-account:before { content: "\eb99" }
+.codicon-bell-dot:before { content: "\eb9a" }
+.codicon-debug-console:before { content: "\eb9b" }
+.codicon-library:before { content: "\eb9c" }
+.codicon-output:before { content: "\eb9d" }
+.codicon-run-all:before { content: "\eb9e" }
+.codicon-sync-ignored:before { content: "\eb9f" }
+.codicon-pinned:before { content: "\eba0" }
+.codicon-github-inverted:before { content: "\eba1" }
+.codicon-server-process:before { content: "\eba2" }
+.codicon-server-environment:before { content: "\eba3" }
+.codicon-pass:before { content: "\eba4" }
+.codicon-issue-closed:before { content: "\eba4" }
+.codicon-stop-circle:before { content: "\eba5" }
+.codicon-play-circle:before { content: "\eba6" }
+.codicon-record:before { content: "\eba7" }
+.codicon-debug-alt-small:before { content: "\eba8" }
+.codicon-vm-connect:before { content: "\eba9" }
+.codicon-cloud:before { content: "\ebaa" }
+.codicon-merge:before { content: "\ebab" }
+.codicon-export:before { content: "\ebac" }
+.codicon-graph-left:before { content: "\ebad" }
+.codicon-magnet:before { content: "\ebae" }
+.codicon-notebook:before { content: "\ebaf" }
+.codicon-redo:before { content: "\ebb0" }
+.codicon-check-all:before { content: "\ebb1" }
+.codicon-pinned-dirty:before { content: "\ebb2" }
+.codicon-pass-filled:before { content: "\ebb3" }
+.codicon-circle-large-filled:before { content: "\ebb4" }
+.codicon-circle-large-outline:before { content: "\ebb5" }
+.codicon-combine:before { content: "\ebb6" }
+.codicon-gather:before { content: "\ebb6" }
+.codicon-table:before { content: "\ebb7" }
+.codicon-variable-group:before { content: "\ebb8" }
+.codicon-type-hierarchy:before { content: "\ebb9" }
+.codicon-type-hierarchy-sub:before { content: "\ebba" }
+.codicon-type-hierarchy-super:before { content: "\ebbb" }
+.codicon-git-pull-request-create:before { content: "\ebbc" }
+.codicon-run-above:before { content: "\ebbd" }
+.codicon-run-below:before { content: "\ebbe" }
+.codicon-notebook-template:before { content: "\ebbf" }
+.codicon-debug-rerun:before { content: "\ebc0" }
+.codicon-workspace-trusted:before { content: "\ebc1" }
+.codicon-workspace-untrusted:before { content: "\ebc2" }
+.codicon-workspace-unknown:before { content: "\ebc3" }
+.codicon-terminal-cmd:before { content: "\ebc4" }
+.codicon-terminal-debian:before { content: "\ebc5" }
+.codicon-terminal-linux:before { content: "\ebc6" }
+.codicon-terminal-powershell:before { content: "\ebc7" }
+.codicon-terminal-tmux:before { content: "\ebc8" }
+.codicon-terminal-ubuntu:before { content: "\ebc9" }
+.codicon-terminal-bash:before { content: "\ebca" }
+.codicon-arrow-swap:before { content: "\ebcb" }
+.codicon-copy:before { content: "\ebcc" }
+.codicon-person-add:before { content: "\ebcd" }
+.codicon-filter-filled:before { content: "\ebce" }
+.codicon-wand:before { content: "\ebcf" }
+.codicon-debug-line-by-line:before { content: "\ebd0" }
+.codicon-inspect:before { content: "\ebd1" }
+.codicon-layers:before { content: "\ebd2" }
+.codicon-layers-dot:before { content: "\ebd3" }
+.codicon-layers-active:before { content: "\ebd4" }
+.codicon-compass:before { content: "\ebd5" }
+.codicon-compass-dot:before { content: "\ebd6" }
+.codicon-compass-active:before { content: "\ebd7" }
+.codicon-azure:before { content: "\ebd8" }
+.codicon-issue-draft:before { content: "\ebd9" }
+.codicon-git-pull-request-closed:before { content: "\ebda" }
+.codicon-git-pull-request-draft:before { content: "\ebdb" }
+.codicon-debug-all:before { content: "\ebdc" }
+.codicon-debug-coverage:before { content: "\ebdd" }
+.codicon-run-errors:before { content: "\ebde" }
+.codicon-folder-library:before { content: "\ebdf" }
+.codicon-debug-continue-small:before { content: "\ebe0" }
+.codicon-beaker-stop:before { content: "\ebe1" }
+.codicon-graph-line:before { content: "\ebe2" }
+.codicon-graph-scatter:before { content: "\ebe3" }
+.codicon-pie-chart:before { content: "\ebe4" }
+.codicon-bracket:before { content: "\eb0f" }
+.codicon-bracket-dot:before { content: "\ebe5" }
+.codicon-bracket-error:before { content: "\ebe6" }
+.codicon-lock-small:before { content: "\ebe7" }
+.codicon-azure-devops:before { content: "\ebe8" }
+.codicon-verified-filled:before { content: "\ebe9" }
+
+.rc-tooltip.rc-tooltip-zoom-appear,
+.rc-tooltip.rc-tooltip-zoom-enter {
+  opacity: 0;
+}
+.rc-tooltip.rc-tooltip-zoom-enter,
+.rc-tooltip.rc-tooltip-zoom-leave {
+  display: block;
+}
+.rc-tooltip-zoom-enter,
+.rc-tooltip-zoom-appear {
+  opacity: 0;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  animation-play-state: paused;
+}
+.rc-tooltip-zoom-leave {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);
+  animation-play-state: paused;
+}
+.rc-tooltip-zoom-enter.rc-tooltip-zoom-enter-active,
+.rc-tooltip-zoom-appear.rc-tooltip-zoom-appear-active {
+  animation-name: rcToolTipZoomIn;
+  animation-play-state: running;
+}
+.rc-tooltip-zoom-leave.rc-tooltip-zoom-leave-active {
+  animation-name: rcToolTipZoomOut;
+  animation-play-state: running;
+}
+@keyframes rcToolTipZoomIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+  }
+}
+@keyframes rcToolTipZoomOut {
+  0% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+  }
+}
+.rc-tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  visibility: visible;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+.rc-tooltip-hidden {
+  display: none;
+}
+.rc-tooltip-placement-top,
+.rc-tooltip-placement-topLeft,
+.rc-tooltip-placement-topRight {
+  padding: 5px 0 9px 0;
+}
+.rc-tooltip-placement-right,
+.rc-tooltip-placement-rightTop,
+.rc-tooltip-placement-rightBottom {
+  padding: 0 5px 0 9px;
+}
+.rc-tooltip-placement-bottom,
+.rc-tooltip-placement-bottomLeft,
+.rc-tooltip-placement-bottomRight {
+  padding: 9px 0 5px 0;
+}
+.rc-tooltip-placement-left,
+.rc-tooltip-placement-leftTop,
+.rc-tooltip-placement-leftBottom {
+  padding: 0 9px 0 5px;
+}
+.rc-tooltip-inner {
+  padding: 8px 10px;
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+  background-color: #373737;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
+  min-height: 34px;
+}
+.rc-tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.rc-tooltip-placement-top .rc-tooltip-arrow,
+.rc-tooltip-placement-topLeft .rc-tooltip-arrow,
+.rc-tooltip-placement-topRight .rc-tooltip-arrow {
+  bottom: 4px;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #373737;
+}
+.rc-tooltip-placement-top .rc-tooltip-arrow {
+  left: 50%;
+}
+.rc-tooltip-placement-topLeft .rc-tooltip-arrow {
+  left: 15%;
+}
+.rc-tooltip-placement-topRight .rc-tooltip-arrow {
+  right: 15%;
+}
+.rc-tooltip-placement-right .rc-tooltip-arrow,
+.rc-tooltip-placement-rightTop .rc-tooltip-arrow,
+.rc-tooltip-placement-rightBottom .rc-tooltip-arrow {
+  left: 4px;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #373737;
+}
+.rc-tooltip-placement-right .rc-tooltip-arrow {
+  top: 50%;
+}
+.rc-tooltip-placement-rightTop .rc-tooltip-arrow {
+  top: 15%;
+  margin-top: 0;
+}
+.rc-tooltip-placement-rightBottom .rc-tooltip-arrow {
+  bottom: 15%;
+}
+.rc-tooltip-placement-left .rc-tooltip-arrow,
+.rc-tooltip-placement-leftTop .rc-tooltip-arrow,
+.rc-tooltip-placement-leftBottom .rc-tooltip-arrow {
+  right: 4px;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #373737;
+}
+.rc-tooltip-placement-left .rc-tooltip-arrow {
+  top: 50%;
+}
+.rc-tooltip-placement-leftTop .rc-tooltip-arrow {
+  top: 15%;
+  margin-top: 0;
+}
+.rc-tooltip-placement-leftBottom .rc-tooltip-arrow {
+  bottom: 15%;
+}
+.rc-tooltip-placement-bottom .rc-tooltip-arrow,
+.rc-tooltip-placement-bottomLeft .rc-tooltip-arrow,
+.rc-tooltip-placement-bottomRight .rc-tooltip-arrow {
+  top: 4px;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #373737;
+}
+.rc-tooltip-placement-bottom .rc-tooltip-arrow {
+  left: 50%;
+}
+.rc-tooltip-placement-bottomLeft .rc-tooltip-arrow {
+  left: 15%;
+}
+.rc-tooltip-placement-bottomRight .rc-tooltip-arrow {
+  right: 15%;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-editor .selection-anchor {
+	background-color: #007ACC;
+	width: 2px !important;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-editor .bracket-match {
+	box-sizing: border-box;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-editor .monaco-editor-overlaymessage {
+	padding-bottom: 8px;
+	z-index: 10000;
+}
+
+.monaco-editor .monaco-editor-overlaymessage.below {
+	padding-bottom: 0;
+	padding-top: 8px;
+	z-index: 10000;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+.monaco-editor .monaco-editor-overlaymessage.fadeIn {
+	animation: fadeIn 150ms ease-out;
+}
+
+@keyframes fadeOut {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+.monaco-editor .monaco-editor-overlaymessage.fadeOut {
+	animation: fadeOut 100ms ease-out;
+}
+
+.monaco-editor .monaco-editor-overlaymessage .message {
+	padding: 1px 4px;
+}
+
+.monaco-editor .monaco-editor-overlaymessage .anchor {
+	width: 0 !important;
+	height: 0 !important;
+	border-color: transparent;
+	border-style: solid;
+	z-index: 1000;
+	border-width: 8px;
+	position: absolute;
+}
+
+.monaco-editor .monaco-editor-overlaymessage:not(.below) .anchor.top,
+.monaco-editor .monaco-editor-overlaymessage.below .anchor.below {
+	display: none;
+}
+
+.monaco-editor .monaco-editor-overlaymessage.below .anchor.top {
+	display: inherit;
+	top: -8px;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-editor .contentWidgets .codicon-light-bulb,
+.monaco-editor .contentWidgets .codicon-lightbulb-autofix {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.monaco-editor .contentWidgets .codicon-light-bulb:hover,
+.monaco-editor .contentWidgets .codicon-lightbulb-autofix:hover {
+	cursor: pointer;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-editor .codelens-decoration {
+	overflow: hidden;
+	display: inline-block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.monaco-editor .codelens-decoration > span,
+.monaco-editor .codelens-decoration > a {
+	user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	white-space: nowrap;
+	vertical-align: sub;
+}
+
+.monaco-editor .codelens-decoration > a {
+	text-decoration: none;
+}
+
+.monaco-editor .codelens-decoration > a:hover {
+	cursor: pointer;
+}
+
+.monaco-editor .codelens-decoration .codicon {
+	vertical-align: middle;
+	color: currentColor !important;
+}
+
+.monaco-editor .codelens-decoration > a:hover .codicon::before {
+	cursor: pointer;
+}
+
+@keyframes fadein {
+	0% { opacity: 0; visibility: visible;}
+	100% { opacity: 1; }
+}
+
+.monaco-editor .codelens-decoration.fadein {
+	animation: fadein 0.1s linear;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-editor .goto-definition-link {
+	text-decoration: underline;
+	cursor: pointer;
+}
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-editor .peekview-widget .head {
+	box-sizing: border-box;
+	display: flex;
+}
+
+.monaco-editor .peekview-widget .head .peekview-title {
+	display: flex;
+	align-items: center;
+	font-size: 13px;
+	margin-left: 20px;
+	min-width: 0;
+}
+
+.monaco-editor .peekview-widget .head .peekview-title.clickable {
+	cursor: pointer;
+}
+
+.monaco-editor .peekview-widget .head .peekview-title .dirname:not(:empty) {
+	font-size: 0.9em;
+	margin-left: 0.5em;
+}
+
+.monaco-editor .peekview-widget .head .peekview-title .meta {
+	white-space: nowrap;
+}
+
+.monaco-editor .peekview-widget .head .peekview-title .dirname {
+	white-space: nowrap;
+}
+
+.monaco-editor .peekview-widget .head .peekview-title .filename {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.monaco-editor .peekview-widget .head .peekview-title .meta:not(:empty)::before {
+	content: '-';
+	padding: 0 0.3em;
+}
+
+.monaco-editor .peekview-widget .head .peekview-actions {
+	flex: 1;
+	text-align: right;
+	padding-right: 2px;
+}
+
+.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar {
+	display: inline-block;
+}
+
+.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar,
+.monaco-editor .peekview-widget .head .peekview-actions > .monaco-action-bar > .actions-container {
+	height: 100%;
+}
+
+.monaco-editor .peekview-widget > .body {
+	border-top: 1px solid;
+	position: relative;
+}
+
+.monaco-editor .peekview-widget .head .peekview-title .codicon {
+	margin-right: 4px;
+}
+
+.monaco-editor .peekview-widget .monaco-list .monaco-list-row.focused .codicon {
+	color: inherit !important;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+.monaco-editor .zone-widget {
+	position: absolute;
+	z-index: 10;
+}
+
+
+.monaco-editor .zone-widget .zone-widget-container {
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-width: 0;
+	border-bottom-width: 0;
+	position: relative;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-dropdown {
+	height: 100%;
+	padding: 0;
+}
+
+.monaco-dropdown > .dropdown-label {
+	cursor: pointer;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.monaco-dropdown > .dropdown-label > .action-label.disabled {
+	cursor: default;
+}
+
+.monaco-dropdown-with-primary {
+	display: flex !important;
+	flex-direction: row;
+	border-radius: 5px;
+}
+
+.monaco-dropdown-with-primary > .action-container > .action-label {
+	margin-right: 0;
+}
+
+.monaco-dropdown-with-primary > .dropdown-action-container > .monaco-dropdown > .dropdown-label .codicon[class*='codicon-'] {
+	font-size: 12px;
+	padding-left: 0px;
+	padding-right: 0px;
+	line-height: 16px;
+	margin-left: -3px;
+}
+
+.monaco-dropdown-with-primary > .dropdown-action-container > .monaco-dropdown > .dropdown-label > .action-label {
+	display: block;
+	background-size: 16px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-action-bar .action-item.menu-entry .action-label.icon {
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 16px;
+}
+
+.monaco-action-bar .action-item.menu-entry .action-label {
+	background-image: var(--menu-entry-icon-light);
+}
+
+.vs-dark .monaco-action-bar .action-item.menu-entry .action-label,
+.hc-black .monaco-action-bar .action-item.menu-entry .action-label {
+	background-image: var(--menu-entry-icon-dark);
+}
+
+
+.monaco-dropdown-with-default {
+	display: flex !important;
+	flex-direction: row;
+	border-radius: 5px;
+}
+
+.monaco-dropdown-with-default > .action-container > .action-label {
+	margin-right: 0;
+}
+
+.monaco-dropdown-with-default > .action-container.menu-entry > .action-label.icon {
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 16px;
+}
+
+.monaco-dropdown-with-default > .action-container.menu-entry > .action-label {
+	background-image: var(--menu-entry-icon-light);
+}
+
+.vs-dark .monaco-dropdown-with-default > .action-container.menu-entry > .action-label,
+.hc-black .monaco-dropdown-with-default > .action-container.menu-entry > .action-label {
+	background-image: var(--menu-entry-icon-dark);
+}
+
+.monaco-dropdown-with-default > .dropdown-action-container > .monaco-dropdown > .dropdown-label .codicon[class*='codicon-'] {
+	font-size: 12px;
+	padding-left: 0px;
+	padding-right: 0px;
+	line-height: 16px;
+	margin-left: -3px;
+}
+
+.monaco-dropdown-with-default > .dropdown-action-container > .monaco-dropdown > .dropdown-label > .action-label {
+	display: block;
+	background-size: 16px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+/* -- zone widget */
+.monaco-editor .zone-widget .zone-widget-container.reference-zone-widget {
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+}
+
+.monaco-editor .reference-zone-widget .inline {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.monaco-editor .reference-zone-widget .messages {
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	padding: 3em 0;
+}
+
+.monaco-editor .reference-zone-widget .ref-tree {
+	line-height: 23px;
+}
+
+.monaco-editor .reference-zone-widget .ref-tree .reference {
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.monaco-editor .reference-zone-widget .ref-tree .reference-file {
+	display: inline-flex;
+	width: 100%;
+	height: 100%;
+}
+
+.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .selected .reference-file {
+	color: inherit !important;
+}
+
+.monaco-editor .reference-zone-widget .ref-tree .reference-file .count {
+	margin-right: 12px;
+	margin-left: auto;
+}
+
+/* High Contrast Theming */
+
+.monaco-editor.hc-black .reference-zone-widget .ref-tree .reference-file {
+	font-weight: bold;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-hover {
+	cursor: default;
+	position: absolute;
+	overflow: hidden;
+	z-index: 50;
+	user-select: text;
+	-webkit-user-select: text;
+	-ms-user-select: text;
+	box-sizing: initial;
+	animation: fadein 100ms linear;
+	line-height: 1.5em;
+}
+
+.monaco-hover.hidden {
+	display: none;
+}
+
+.monaco-hover .hover-contents:not(.html-hover-contents) {
+	padding: 4px 8px;
+}
+
+.monaco-hover .markdown-hover > .hover-contents:not(.code-hover-contents) {
+	max-width: 500px;
+	word-wrap: break-word;
+}
+
+.monaco-hover .markdown-hover > .hover-contents:not(.code-hover-contents) hr {
+	min-width: 100%;
+}
+
+.monaco-hover p,
+.monaco-hover .code,
+.monaco-hover ul {
+	margin: 8px 0;
+}
+
+.monaco-hover code {
+	font-family: var(--monaco-monospace-font);
+}
+
+.monaco-hover hr {
+	box-sizing: border-box;
+	border-left: 0px;
+	border-right: 0px;
+	margin-top: 4px;
+	margin-bottom: -4px;
+	margin-left: -8px;
+	margin-right: -8px;
+	height: 1px;
+}
+
+.monaco-hover p:first-child,
+.monaco-hover .code:first-child,
+.monaco-hover ul:first-child {
+	margin-top: 0;
+}
+
+.monaco-hover p:last-child,
+.monaco-hover .code:last-child,
+.monaco-hover ul:last-child {
+	margin-bottom: 0;
+}
+
+/* MarkupContent Layout */
+.monaco-hover ul {
+	padding-left: 20px;
+}
+.monaco-hover ol {
+	padding-left: 20px;
+}
+
+.monaco-hover li > p {
+	margin-bottom: 0;
+}
+
+.monaco-hover li > ul {
+	margin-top: 0;
+}
+
+.monaco-hover code {
+	border-radius: 3px;
+	padding: 0 0.4em;
+}
+
+.monaco-hover .monaco-tokenized-source {
+	white-space: pre-wrap;
+}
+
+.monaco-hover .hover-row.status-bar {
+	font-size: 12px;
+	line-height: 22px;
+}
+
+.monaco-hover .hover-row.status-bar .actions {
+	display: flex;
+	padding: 0px 8px;
+}
+
+.monaco-hover .hover-row.status-bar .actions .action-container {
+	margin-right: 16px;
+	cursor: pointer;
+}
+
+.monaco-hover .hover-row.status-bar .actions .action-container .action .icon {
+	padding-right: 4px;
+}
+
+.monaco-hover .markdown-hover .hover-contents .codicon {
+	color: inherit;
+	font-size: inherit;
+	vertical-align: middle;
+}
+
+.monaco-hover .hover-contents a.code-link:hover,
+.monaco-hover .hover-contents a.code-link {
+	color: inherit;
+}
+
+.monaco-hover .hover-contents a.code-link:before {
+	content: '(';
+}
+
+.monaco-hover .hover-contents a.code-link:after {
+	content: ')';
+}
+
+.monaco-hover .hover-contents a.code-link > span {
+	text-decoration: underline;
+	/** Hack to force underline to show **/
+	border-bottom: 1px solid transparent;
+	text-underline-position: under;
+}
+
+/** Spans in markdown hovers need a margin-bottom to avoid looking cramped: https://github.com/microsoft/vscode/issues/101496 **/
+.monaco-hover .markdown-hover .hover-contents:not(.code-hover-contents):not(.html-hover-contents) span {
+	margin-bottom: 4px;
+	display: inline-block;
+}
+
+.monaco-hover-content .action-container a {
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.monaco-hover-content .action-container.disabled {
+	pointer-events: none;
+	opacity: 0.4;
+	cursor: default;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.colorpicker-widget {
+	height: 190px;
+	user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.monaco-editor .colorpicker-hover:focus {
+	outline: none;
+}
+
+
+/* Header */
+
+.colorpicker-header {
+	display: flex;
+	height: 24px;
+	position: relative;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTZEaa/1AAAAHUlEQVQYV2PYvXu3JAi7uLiAMaYAjAGTQBPYLQkAa/0Zef3qRswAAAAASUVORK5CYII=);
+	background-size: 9px 9px;
+	image-rendering: pixelated;
+}
+
+.colorpicker-header .picked-color {
+	width: 216px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 24px;
+	cursor: pointer;
+	color: white;
+	flex: 1;
+}
+
+.colorpicker-header .picked-color .codicon {
+	color: inherit;
+	font-size: 14px;
+	position: absolute;
+	left: 8px;
+}
+
+.colorpicker-header .picked-color.light {
+	color: black;
+}
+
+.colorpicker-header .original-color {
+	width: 74px;
+	z-index: inherit;
+	cursor: pointer;
+}
+
+
+/* Body */
+
+.colorpicker-body {
+	display: flex;
+	padding: 8px;
+	position: relative;
+}
+
+.colorpicker-body .saturation-wrap {
+	overflow: hidden;
+	height: 150px;
+	position: relative;
+	min-width: 220px;
+	flex: 1;
+}
+
+.colorpicker-body .saturation-box {
+	height: 150px;
+	position: absolute;
+}
+
+.colorpicker-body .saturation-selection {
+	width: 9px;
+	height: 9px;
+	margin: -5px 0 0 -5px;
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 100%;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
+	position: absolute;
+}
+
+.colorpicker-body .strip {
+	width: 25px;
+	height: 150px;
+}
+
+.colorpicker-body .hue-strip {
+	position: relative;
+	margin-left: 8px;
+	cursor: grab;
+	background: linear-gradient(to bottom, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);
+}
+
+.colorpicker-body .opacity-strip {
+	position: relative;
+	margin-left: 8px;
+	cursor: grab;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTZEaa/1AAAAHUlEQVQYV2PYvXu3JAi7uLiAMaYAjAGTQBPYLQkAa/0Zef3qRswAAAAASUVORK5CYII=);
+	background-size: 9px 9px;
+	image-rendering: pixelated;
+}
+
+.colorpicker-body .strip.grabbing {
+	cursor: grabbing;
+}
+
+.colorpicker-body .slider {
+	position: absolute;
+	top: 0;
+	left: -2px;
+	width: calc(100% + 4px);
+	height: 4px;
+	box-sizing: border-box;
+	border: 1px solid rgba(255, 255, 255, 0.71);
+	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.85);
+}
+
+.colorpicker-body .strip .overlay {
+	height: 150px;
+	pointer-events: none;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+/* marker zone */
+
+.monaco-editor .peekview-widget .head .peekview-title .severity-icon {
+	display: inline-block;
+	vertical-align: text-top;
+	margin-right: 4px;
+}
+
+.monaco-editor .marker-widget {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.monaco-editor .marker-widget > .stale {
+	opacity: 0.6;
+	font-style: italic;
+}
+
+.monaco-editor .marker-widget .title {
+	display: inline-block;
+	padding-right: 5px;
+}
+
+.monaco-editor .marker-widget .descriptioncontainer {
+	position: absolute;
+	white-space: pre;
+	user-select: text;
+	-webkit-user-select: text;
+	-ms-user-select: text;
+	padding: 8px 12px 0 20px;
+}
+
+.monaco-editor .marker-widget .descriptioncontainer .message {
+	display: flex;
+	flex-direction: column;
+}
+
+.monaco-editor .marker-widget .descriptioncontainer .message .details {
+	padding-left: 6px;
+}
+
+.monaco-editor .marker-widget .descriptioncontainer .message .source,
+.monaco-editor .marker-widget .descriptioncontainer .message span.code {
+	opacity: 0.6;
+}
+
+.monaco-editor .marker-widget .descriptioncontainer .message a.code-link {
+	opacity: 0.6;
+	color: inherit;
+}
+
+.monaco-editor .marker-widget .descriptioncontainer .message a.code-link:before {
+	content: '(';
+}
+
+.monaco-editor .marker-widget .descriptioncontainer .message a.code-link:after {
+	content: ')';
+}
+
+.monaco-editor .marker-widget .descriptioncontainer .message a.code-link > span {
+	text-decoration: underline;
+	/** Hack to force underline to show **/
+	border-bottom: 1px solid transparent;
+	text-underline-position: under;
+}
+
+.monaco-editor .marker-widget .descriptioncontainer .filename {
+	cursor: pointer;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-editor .snippet-placeholder {
+	min-width: 2px;
+	outline-style: solid;
+	outline-width: 1px;
+}
+
+.monaco-editor .finish-snippet-placeholder {
+	outline-style: solid;
+	outline-width: 1px;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+/* Suggest widget*/
+
+.monaco-editor .suggest-widget {
+	width: 430px;
+	z-index: 40;
+	display: flex;
+	flex-direction: column;
+}
+
+.monaco-editor .suggest-widget.message {
+	flex-direction: row;
+	align-items: center;
+}
+
+.monaco-editor .suggest-widget,
+.monaco-editor .suggest-details {
+	flex: 0 1 auto;
+	width: 100%;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.monaco-editor.hc-black .suggest-widget,
+.monaco-editor.hc-black .suggest-details {
+	border-width: 2px;
+}
+
+/* Styles for status bar part */
+
+
+.monaco-editor .suggest-widget .suggest-status-bar {
+	box-sizing: border-box;
+	display: none;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	width: 100%;
+	font-size: 80%;
+	padding: 0 4px 0 4px;
+	border-top: 1px solid transparent;
+	overflow: hidden;
+}
+
+.monaco-editor .suggest-widget.with-status-bar .suggest-status-bar {
+	display: flex;
+}
+
+.monaco-editor .suggest-widget .suggest-status-bar .left {
+	padding-right: 8px;
+}
+
+.monaco-editor .suggest-widget.with-status-bar .suggest-status-bar .action-label {
+	opacity: 0.5;
+	color: inherit;
+}
+
+.monaco-editor .suggest-widget.with-status-bar .suggest-status-bar .action-item:not(:last-of-type) .action-label {
+	margin-right: 0;
+}
+
+.monaco-editor .suggest-widget.with-status-bar .suggest-status-bar .action-item:not(:last-of-type) .action-label::after {
+	content: ', ';
+	margin-right: 0.3em;
+}
+
+.monaco-editor .suggest-widget.with-status-bar .monaco-list .monaco-list-row>.contents>.main>.right>.readMore,
+.monaco-editor .suggest-widget.with-status-bar .monaco-list .monaco-list-row.focused.string-label>.contents>.main>.right>.readMore {
+	display: none;
+}
+
+.monaco-editor .suggest-widget.with-status-bar:not(.docs-side) .monaco-list .monaco-list-row:hover>.contents>.main>.right.can-expand-details>.details-label {
+	width: 100%;
+}
+
+/* Styles for Message element for when widget is loading or is empty */
+
+.monaco-editor .suggest-widget>.message {
+	padding-left: 22px;
+}
+
+/** Styles for the list element **/
+
+.monaco-editor .suggest-widget>.tree {
+	height: 100%;
+	width: 100%;
+}
+
+.monaco-editor .suggest-widget .monaco-list {
+	user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+/** Styles for each row in the list element **/
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row {
+	display: flex;
+	-mox-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-right: 10px;
+	background-repeat: no-repeat;
+	background-position: 2px 2px;
+	white-space: nowrap;
+	cursor: pointer;
+	touch-action: none;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row>.contents {
+	flex: 1;
+	height: 100%;
+	overflow: hidden;
+	padding-left: 2px;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row>.contents>.main {
+	display: flex;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: pre;
+	justify-content: space-between;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row>.contents>.main>.left, .monaco-editor .suggest-widget .monaco-list .monaco-list-row>.contents>.main>.right {
+	display: flex;
+}
+
+.monaco-editor .suggest-widget:not(.frozen) .monaco-highlighted-label .highlight {
+	font-weight: bold;
+}
+
+/** ReadMore Icon styles **/
+
+.monaco-editor .suggest-details>.monaco-scrollable-element>.body>.header>.codicon-close,
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row>.contents>.main>.right>.readMore::before {
+	color: inherit;
+	opacity: 1;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.monaco-editor .suggest-details>.monaco-scrollable-element>.body>.header>.codicon-close {
+	position: absolute;
+	top: 6px;
+	right: 2px;
+}
+
+.monaco-editor .suggest-details>.monaco-scrollable-element>.body>.header>.codicon-close:hover,
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row>.contents>.main>.right>.readMore:hover {
+	opacity: 1;
+}
+
+/** signature, qualifier, type/details opacity **/
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row>.contents>.main>.right>.details-label {
+	opacity: 0.7;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row>.contents>.main>.left>.signature-label {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	opacity: 0.6;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row>.contents>.main>.left>.qualifier-label {
+	margin-left: 12px;
+	opacity: 0.4;
+	font-size: 85%;
+	line-height: initial;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	align-self: center;
+}
+
+/** Type Info and icon next to the label in the focused completion item **/
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row>.contents>.main>.right>.details-label {
+	font-size: 85%;
+	margin-left: 1.1em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row>.contents>.main>.right>.details-label>.monaco-tokenized-source {
+	display: inline;
+}
+
+/** Details: if using CompletionItem#details, show on focus **/
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row>.contents>.main>.right>.details-label {
+	display: none;
+}
+
+.monaco-editor .suggest-widget:not(.shows-details) .monaco-list .monaco-list-row.focused>.contents>.main>.right>.details-label {
+	display: inline;
+}
+
+/** Details: if using CompletionItemLabel#details, always show **/
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row:not(.string-label)>.contents>.main>.right>.details-label,
+.monaco-editor .suggest-widget.docs-side .monaco-list .monaco-list-row.focused:not(.string-label)>.contents>.main>.right>.details-label {
+	display: inline;
+}
+
+/** Ellipsis on hover **/
+
+.monaco-editor .suggest-widget:not(.docs-side) .monaco-list .monaco-list-row:hover>.contents>.main>.right.can-expand-details>.details-label {
+	width: calc(100% - 26px);
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row>.contents>.main>.left {
+	flex-shrink: 1;
+	flex-grow: 1;
+	overflow: hidden;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row>.contents>.main>.left>.monaco-icon-label {
+	flex-shrink: 0;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row:not(.string-label)>.contents>.main>.left>.monaco-icon-label {
+	max-width: 100%;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row.string-label>.contents>.main>.left>.monaco-icon-label {
+	flex-shrink: 1;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row>.contents>.main>.right {
+	overflow: hidden;
+	flex-shrink: 4;
+	max-width: 70%;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row>.contents>.main>.right>.readMore {
+	display: inline-block;
+	position: absolute;
+	right: 10px;
+	width: 18px;
+	height: 18px;
+	visibility: hidden;
+}
+
+/** Do NOT display ReadMore when docs is side/below **/
+
+.monaco-editor .suggest-widget.docs-side .monaco-list .monaco-list-row>.contents>.main>.right>.readMore, .monaco-editor .suggest-widget.docs-below .monaco-list .monaco-list-row>.contents>.main>.right>.readMore {
+	display: none !important;
+}
+
+/** Do NOT display ReadMore when using plain CompletionItemLabel (details/documentation might not be resolved) **/
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row.string-label>.contents>.main>.right>.readMore {
+	display: none;
+}
+
+/** Focused item can show ReadMore, but can't when docs is side/below **/
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row.focused.string-label>.contents>.main>.right>.readMore {
+	display: inline-block;
+}
+
+.monaco-editor .suggest-widget.docs-side .monaco-list .monaco-list-row>.contents>.main>.right>.readMore,
+.monaco-editor .suggest-widget.docs-below .monaco-list .monaco-list-row>.contents>.main>.right>.readMore {
+	display: none;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row:hover>.contents>.main>.right>.readMore {
+	visibility: visible;
+}
+
+/** Styles for each row in the list **/
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-icon-label.deprecated {
+	opacity: 0.66;
+	text-decoration: unset;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-icon-label.deprecated>.monaco-icon-label-container>.monaco-icon-name-container {
+	text-decoration: line-through;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-icon-label::before {
+	height: 100%;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row .icon {
+	display: block;
+	height: 16px;
+	width: 16px;
+	margin-left: 2px;
+	background-repeat: no-repeat;
+	background-size: 80%;
+	background-position: center;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row .icon.hide {
+	display: none;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row .suggest-icon {
+	display: flex;
+	align-items: center;
+	margin-right: 4px;
+}
+
+.monaco-editor .suggest-widget.no-icons .monaco-list .monaco-list-row .icon, .monaco-editor .suggest-widget.no-icons .monaco-list .monaco-list-row .suggest-icon::before {
+	display: none;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row .icon.customcolor .colorspan {
+	margin: 0 0 0 0.3em;
+	border: 0.1em solid #000;
+	width: 0.7em;
+	height: 0.7em;
+	display: inline-block;
+}
+
+/** Styles for the docs of the completion item in focus **/
+
+.monaco-editor .suggest-details-container {
+	z-index: 41;
+}
+
+.monaco-editor .suggest-details {
+	display: flex;
+	flex-direction: column;
+	cursor: default;
+}
+
+.monaco-editor .suggest-details.no-docs {
+	display: none;
+}
+
+.monaco-editor .suggest-details>.monaco-scrollable-element {
+	flex: 1;
+}
+
+.monaco-editor .suggest-details>.monaco-scrollable-element>.body {
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+}
+
+.monaco-editor .suggest-details>.monaco-scrollable-element>.body>.header>.type {
+	flex: 2;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	opacity: 0.7;
+	white-space: pre;
+	margin: 0 24px 0 0;
+	padding: 4px 0 12px 5px;
+}
+
+.monaco-editor .suggest-details>.monaco-scrollable-element>.body>.header>.type.auto-wrap {
+	white-space: normal;
+	word-break: break-all;
+}
+
+
+.monaco-editor .suggest-details>.monaco-scrollable-element>.body>.docs {
+	margin: 0;
+	padding: 4px 5px;
+	white-space: pre-wrap;
+}
+
+.monaco-editor .suggest-details.no-type>.monaco-scrollable-element>.body>.docs {
+	margin-right: 24px;
+}
+
+.monaco-editor .suggest-details>.monaco-scrollable-element>.body>.docs.markdown-docs {
+	padding: 0;
+	white-space: initial;
+	min-height: calc(1rem + 8px);
+}
+
+.monaco-editor .suggest-details>.monaco-scrollable-element>.body>.docs.markdown-docs>div,
+.monaco-editor .suggest-details>.monaco-scrollable-element>.body>.docs.markdown-docs>span:not(:empty) {
+	padding: 4px 5px;
+}
+
+.monaco-editor .suggest-details>.monaco-scrollable-element>.body>.docs.markdown-docs>div>p:first-child {
+	margin-top: 0;
+}
+
+.monaco-editor .suggest-details>.monaco-scrollable-element>.body>.docs.markdown-docs>div>p:last-child {
+	margin-bottom: 0;
+}
+
+.monaco-editor .suggest-details>.monaco-scrollable-element>.body>.docs.markdown-docs .monaco-tokenized-source {
+	white-space: pre;
+}
+
+.monaco-editor .suggest-details>.monaco-scrollable-element>.body>.docs .code {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+.monaco-editor .suggest-details>.monaco-scrollable-element>.body>.docs.markdown-docs .codicon {
+	vertical-align: sub;
+}
+
+.monaco-editor .suggest-details>.monaco-scrollable-element>.body>p:empty {
+	display: none;
+}
+
+.monaco-editor .suggest-details code {
+	border-radius: 3px;
+	padding: 0 0.4em;
+}
+
+.monaco-editor .suggest-details ul {
+	padding-left: 20px;
+}
+
+.monaco-editor .suggest-details ol {
+	padding-left: 20px;
+}
+
+.monaco-editor .suggest-details p code {
+	font-family: var(--monaco-monospace-font);
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-editor .suggest-preview-additional-widget {
+	white-space: nowrap;
+}
+
+.monaco-editor .suggest-preview-additional-widget .content-spacer {
+	color: transparent;
+	white-space: pre;
+}
+
+.monaco-editor .suggest-preview-additional-widget .button {
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: underline;
+	text-underline-position: under;
+}
+
+.monaco-editor .ghost-text-hidden {
+	opacity: 0;
+	font-size: 0;
+}
+
+.monaco-editor .ghost-text-decoration {
+	font-style: italic;
+}
+
+.monaco-editor .suggest-preview-text {
+	font-style: italic;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-editor.vs .dnd-target {
+	border-right: 2px dotted black;
+	color: white; /* opposite of black */
+}
+.monaco-editor.vs-dark .dnd-target {
+	border-right: 2px dotted #AEAFAD;
+	color: #51504f; /* opposite of #AEAFAD */
+}
+.monaco-editor.hc-black .dnd-target {
+	border-right: 2px dotted #fff;
+	color: #000; /* opposite of #fff */
+}
+
+.monaco-editor.mouse-default .view-lines,
+.monaco-editor.vs-dark.mac.mouse-default .view-lines,
+.monaco-editor.hc-black.mac.mouse-default .view-lines {
+	cursor: default;
+}
+.monaco-editor.mouse-copy .view-lines,
+.monaco-editor.vs-dark.mac.mouse-copy .view-lines,
+.monaco-editor.hc-black.mac.mouse-copy .view-lines {
+	cursor: copy;
+}
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-editor .margin-view-overlays .codicon-folding-expanded,
+.monaco-editor .margin-view-overlays .codicon-folding-collapsed {
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 0.5s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 140%;
+	margin-left: 2px;
+}
+
+.monaco-editor .margin-view-overlays:hover .codicon,
+.monaco-editor .margin-view-overlays .codicon.codicon-folding-collapsed,
+.monaco-editor .margin-view-overlays .codicon.alwaysShowFoldIcons {
+	opacity: 1;
+}
+
+.monaco-editor .inline-folded:after {
+	color: grey;
+	margin: 0.1em 0.2em 0 0.2em;
+	content: "⋯";
+	display: inline;
+	line-height: 1em;
+	cursor: pointer;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+.monaco-editor .detected-link,
+.monaco-editor .detected-link-active {
+	text-decoration: underline;
+	text-underline-position: under;
+}
+
+.monaco-editor .detected-link-active {
+	cursor: pointer;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-editor .parameter-hints-widget {
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	line-height: 1.5em;
+}
+
+.monaco-editor .parameter-hints-widget > .phwrapper {
+	max-width: 440px;
+	display: flex;
+	flex-direction: row;
+}
+
+.monaco-editor .parameter-hints-widget.multiple {
+	min-height: 3.3em;
+	padding: 0;
+}
+
+.monaco-editor .parameter-hints-widget.visible {
+	transition: left .05s ease-in-out;
+}
+
+.monaco-editor .parameter-hints-widget p,
+.monaco-editor .parameter-hints-widget ul {
+	margin: 8px 0;
+}
+
+.monaco-editor .parameter-hints-widget .monaco-scrollable-element,
+.monaco-editor .parameter-hints-widget .body {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.monaco-editor .parameter-hints-widget .signature {
+	padding: 4px 5px;
+}
+
+.monaco-editor .parameter-hints-widget .docs {
+	padding: 0 10px 0 5px;
+	white-space: pre-wrap;
+}
+
+.monaco-editor .parameter-hints-widget .docs.empty {
+	display: none;
+}
+
+.monaco-editor .parameter-hints-widget .docs .markdown-docs {
+	white-space: initial;
+}
+
+.monaco-editor .parameter-hints-widget .docs .markdown-docs code {
+	font-family: var(--monaco-monospace-font);
+}
+
+.monaco-editor .parameter-hints-widget .docs .code {
+	white-space: pre-wrap;
+}
+
+.monaco-editor .parameter-hints-widget .docs code {
+	border-radius: 3px;
+	padding: 0 0.4em;
+}
+
+.monaco-editor .parameter-hints-widget .controls {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	min-width: 22px;
+	justify-content: flex-end;
+}
+
+.monaco-editor .parameter-hints-widget.multiple .controls {
+	display: flex;
+	padding: 0 2px;
+}
+
+.monaco-editor .parameter-hints-widget.multiple .button {
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.monaco-editor .parameter-hints-widget .button.previous {
+	bottom: 24px;
+}
+
+.monaco-editor .parameter-hints-widget .overloads {
+	text-align: center;
+	height: 12px;
+	line-height: 12px;
+	opacity: 0.5;
+	font-family: var(--monaco-monospace-font);
+}
+
+.monaco-editor .parameter-hints-widget .signature .parameter.active {
+	font-weight: bold;
+}
+
+.monaco-editor .parameter-hints-widget .documentation-parameter > .parameter {
+	font-weight: bold;
+	margin-right: 0.5em;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-editor .rename-box {
+	z-index: 100;
+	color: inherit;
+}
+
+.monaco-editor .rename-box.preview {
+	padding: 3px 3px 0 3px;
+}
+
+.monaco-editor .rename-box .rename-input {
+	padding: 3px;
+	width: calc(100% - 6px);
+}
+
+.monaco-editor .rename-box .rename-label {
+	display: none;
+	opacity: .8;
+}
+
+.monaco-editor .rename-box.preview .rename-label {
+	display: inherit;
+}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-editor .accessibilityHelpWidget {
+	padding: 10px;
+	vertical-align: middle;
+	overflow: scroll;
+}
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-editor .iPadShowKeyboard {
+	width: 58px;
+	min-width: 0;
+	height: 36px;
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	resize: none;
+	overflow: hidden;
+	background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTMiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCA1MyAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNDguMDM2NCA0LjAxMDQySDQuMDA3NzlMNC4wMDc3OSAzMi4wMjg2SDQ4LjAzNjRWNC4wMTA0MlpNNC4wMDc3OSAwLjAwNzgxMjVDMS43OTcyMSAwLjAwNzgxMjUgMC4wMDUxODc5OSAxLjc5OTg0IDAuMDA1MTg3OTkgNC4wMTA0MlYzMi4wMjg2QzAuMDA1MTg3OTkgMzQuMjM5MiAxLjc5NzIxIDM2LjAzMTIgNC4wMDc3OSAzNi4wMzEySDQ4LjAzNjRDNTAuMjQ3IDM2LjAzMTIgNTIuMDM5IDM0LjIzOTIgNTIuMDM5IDMyLjAyODZWNC4wMTA0MkM1Mi4wMzkgMS43OTk4NCA1MC4yNDcgMC4wMDc4MTI1IDQ4LjAzNjQgMC4wMDc4MTI1SDQuMDA3NzlaTTguMDEwNDIgOC4wMTMwMkgxMi4wMTNWMTIuMDE1Nkg4LjAxMDQyVjguMDEzMDJaTTIwLjAxODIgOC4wMTMwMkgxNi4wMTU2VjEyLjAxNTZIMjAuMDE4MlY4LjAxMzAyWk0yNC4wMjA4IDguMDEzMDJIMjguMDIzNFYxMi4wMTU2SDI0LjAyMDhWOC4wMTMwMlpNMzYuMDI4NiA4LjAxMzAySDMyLjAyNlYxMi4wMTU2SDM2LjAyODZWOC4wMTMwMlpNNDAuMDMxMiA4LjAxMzAySDQ0LjAzMzlWMTIuMDE1Nkg0MC4wMzEyVjguMDEzMDJaTTE2LjAxNTYgMTYuMDE4Mkg4LjAxMDQyVjIwLjAyMDhIMTYuMDE1NlYxNi4wMTgyWk0yMC4wMTgyIDE2LjAxODJIMjQuMDIwOFYyMC4wMjA4SDIwLjAxODJWMTYuMDE4MlpNMzIuMDI2IDE2LjAxODJIMjguMDIzNFYyMC4wMjA4SDMyLjAyNlYxNi4wMTgyWk00NC4wMzM5IDE2LjAxODJWMjAuMDIwOEgzNi4wMjg2VjE2LjAxODJINDQuMDMzOVpNMTIuMDEzIDI0LjAyMzRIOC4wMTA0MlYyOC4wMjZIMTIuMDEzVjI0LjAyMzRaTTE2LjAxNTYgMjQuMDIzNEgzNi4wMjg2VjI4LjAyNkgxNi4wMTU2VjI0LjAyMzRaTTQ0LjAzMzkgMjQuMDIzNEg0MC4wMzEyVjI4LjAyNkg0NC4wMzM5VjI0LjAyMzRaIiBmaWxsPSIjNDI0MjQyIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDAiPgo8cmVjdCB3aWR0aD0iNTMiIGhlaWdodD0iMzYiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==) center center no-repeat;
+	border: 4px solid #F6F6F6;
+	border-radius: 4px;
+}
+
+.monaco-editor.vs-dark .iPadShowKeyboard {
+	background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTMiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCA1MyAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNDguMDM2NCA0LjAxMDQySDQuMDA3NzlMNC4wMDc3OSAzMi4wMjg2SDQ4LjAzNjRWNC4wMTA0MlpNNC4wMDc3OSAwLjAwNzgxMjVDMS43OTcyMSAwLjAwNzgxMjUgMC4wMDUxODc5OSAxLjc5OTg0IDAuMDA1MTg3OTkgNC4wMTA0MlYzMi4wMjg2QzAuMDA1MTg3OTkgMzQuMjM5MiAxLjc5NzIxIDM2LjAzMTIgNC4wMDc3OSAzNi4wMzEySDQ4LjAzNjRDNTAuMjQ3IDM2LjAzMTIgNTIuMDM5IDM0LjIzOTIgNTIuMDM5IDMyLjAyODZWNC4wMTA0MkM1Mi4wMzkgMS43OTk4NCA1MC4yNDcgMC4wMDc4MTI1IDQ4LjAzNjQgMC4wMDc4MTI1SDQuMDA3NzlaTTguMDEwNDIgOC4wMTMwMkgxMi4wMTNWMTIuMDE1Nkg4LjAxMDQyVjguMDEzMDJaTTIwLjAxODIgOC4wMTMwMkgxNi4wMTU2VjEyLjAxNTZIMjAuMDE4MlY4LjAxMzAyWk0yNC4wMjA4IDguMDEzMDJIMjguMDIzNFYxMi4wMTU2SDI0LjAyMDhWOC4wMTMwMlpNMzYuMDI4NiA4LjAxMzAySDMyLjAyNlYxMi4wMTU2SDM2LjAyODZWOC4wMTMwMlpNNDAuMDMxMiA4LjAxMzAySDQ0LjAzMzlWMTIuMDE1Nkg0MC4wMzEyVjguMDEzMDJaTTE2LjAxNTYgMTYuMDE4Mkg4LjAxMDQyVjIwLjAyMDhIMTYuMDE1NlYxNi4wMTgyWk0yMC4wMTgyIDE2LjAxODJIMjQuMDIwOFYyMC4wMjA4SDIwLjAxODJWMTYuMDE4MlpNMzIuMDI2IDE2LjAxODJIMjguMDIzNFYyMC4wMjA4SDMyLjAyNlYxNi4wMTgyWk00NC4wMzM5IDE2LjAxODJWMjAuMDIwOEgzNi4wMjg2VjE2LjAxODJINDQuMDMzOVpNMTIuMDEzIDI0LjAyMzRIOC4wMTA0MlYyOC4wMjZIMTIuMDEzVjI0LjAyMzRaTTE2LjAxNTYgMjQuMDIzNEgzNi4wMjg2VjI4LjAyNkgxNi4wMTU2VjI0LjAyMzRaTTQ0LjAzMzkgMjQuMDIzNEg0MC4wMzEyVjI4LjAyNkg0NC4wMzM5VjI0LjAyMzRaIiBmaWxsPSIjQzVDNUM1Ii8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDAiPgo8cmVjdCB3aWR0aD0iNTMiIGhlaWdodD0iMzYiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==) center center no-repeat;
+	border: 4px solid #252526;
+}
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.monaco-editor .tokens-inspect-widget {
+	z-index: 50;
+	user-select: text;
+	-webkit-user-select: text;
+	-ms-user-select: text;
+	padding: 10px;
+}
+
+.tokens-inspect-separator {
+	height: 1px;
+	border: 0;
+}
+
+.monaco-editor .tokens-inspect-widget .tm-token {
+	font-family: var(--monaco-monospace-font);
+}
+
+.monaco-editor .tokens-inspect-widget .tm-token-length {
+	font-weight: normal;
+	font-size: 60%;
+	float: right;
+}
+
+.monaco-editor .tokens-inspect-widget .tm-metadata-table {
+	width: 100%;
+}
+
+.monaco-editor .tokens-inspect-widget .tm-metadata-value {
+	font-family: var(--monaco-monospace-font);
+	text-align: right;
+}
+
+.monaco-editor .tokens-inspect-widget .tm-token-type {
+	font-family: var(--monaco-monospace-font);
+}
+

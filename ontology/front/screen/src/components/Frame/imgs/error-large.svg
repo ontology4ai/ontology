@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>失败-大</title>
+    <defs>
+        <linearGradient x1="-0.793650794%" y1="50%" x2="100.793651%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#FF381D" offset="0%"></stop>
+            <stop stop-color="#DF9019" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="9.50238095%" y1="-0.793654743%" x2="111.289841%" y2="11.1205079%" id="linearGradient-2">
+            <stop stop-color="#FF5656" offset="0%"></stop>
+            <stop stop-color="#FF9431" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-495.000000, -36.000000)" fill-rule="nonzero">
+            <g id="失败-大" transform="translate(495.000000, 36.000000)">
+                <rect id="矩形" stroke="url(#linearGradient-2)" fill-opacity="0.25" fill="url(#linearGradient-1)" x="0.5" y="0.5" width="63" height="63" rx="31.5"></rect>
+                <path d="M32,28.445 L42.6675,17.7775 C43.6492,16.7958 45.2408,16.7958 46.2225,17.7775 L46.2225,17.7775 C47.2042,18.7592 47.2042,20.3508 46.2225,21.3325 L35.555,32 L46.2225,42.6675 C47.2042,43.6492 47.2042,45.2408 46.2225,46.2225 L46.2225,46.2225 C45.2408,47.2042 43.6492,47.2042 42.6675,46.2225 L32,35.555 L21.3325,46.2225 C20.3508,47.2042 18.7592,47.2042 17.7775,46.2225 L17.7775,46.2225 C16.7958,45.2408 16.7958,43.6492 17.7775,42.6675 L28.445,32 L17.7775,21.3325 C16.7958,20.3508 16.7958,18.7592 17.7775,17.7775 L17.7775,17.7775 C18.7592,16.7958 20.3508,16.7958 21.3325,17.7775 L32,28.445 Z" id="路径" fill="#FA471D"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,127 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <http://asiainfo.com/example-owl#> .
+
+##################################
+# 基础抽象类与通用语义（禁止变动）
+##################################
+ex:Entity a owl:Class ; rdfs:subClassOf prov:Entity ; rdfs:label "实体"@zh .
+ex:Object a owl:Class ; rdfs:subClassOf ex:Entity ; rdfs:label "本体对象"@zh .
+ex:Action a owl:Class ; rdfs:subClassOf prov:Activity ; rdfs:label "行动"@zh .
+ex:Logic a owl:Class ; rdfs:subClassOf prov:Activity ; rdfs:label "决策/逻辑函数"@zh .
+ex:hasPrimaryKey a owl:AnnotationProperty ; rdfs:label "主键属性"@zh ; rdfs:comment "在类级别声明该对象的主键数据属性"@zh .
+ex:hasTitle a owl:AnnotationProperty ; rdfs:label "标题属性"@zh ; rdfs:comment "在类级别声明该对象的标题数据属性"@zh .
+ex:bindAction a owl:ObjectProperty ; rdfs:label "本体对象关联行动"@zh ; rdfs:domain ex:Object ; rdfs:range ex:Action .
+ex:bindLogic a owl:ObjectProperty ; rdfs:label "本体对象关联函数"@zh ; rdfs:domain ex:Object ; rdfs:range ex:Logic .
+ex:custom_relation a owl:ObjectProperty ; rdfs:label "自定义对象与对象之间的关系"@zh .
+ex:Parameter a owl:Class ; rdfs:label "函数参数"@zh .
+ex:hasParameter a owl:ObjectProperty ; rdfs:label "有参数"@zh ; rdfs:domain ex:Logic ; rdfs:range ex:Parameter .
+ex:paramName a owl:DatatypeProperty ; rdfs:label "参数名"@zh ; rdfs:domain ex:Parameter ; rdfs:range xsd:string .
+ex:paramType a owl:DatatypeProperty ; rdfs:label "参数类型"@zh ; rdfs:domain ex:Parameter ; rdfs:range xsd:string .
+ex:paramTypeNode a owl:ObjectProperty ; rdfs:label "参数类型节点"@zh ; rdfs:domain ex:Parameter .
+ex:ListType a owl:Class ; rdfs:label "列表类型"@zh .
+ex:DictType a owl:Class ; rdfs:label "字典类型"@zh .
+ex:itemType a owl:DatatypeProperty ; rdfs:label "元素类型"@zh .
+ex:keyType a owl:DatatypeProperty ; rdfs:label "键类型"@zh .
+ex:valueType a owl:DatatypeProperty ; rdfs:label "值类型"@zh .
+ex:isOptional a owl:DatatypeProperty ; rdfs:label "是否可选"@zh ; rdfs:domain ex:Parameter ; rdfs:range xsd:boolean .
+ex:defaultValue a owl:DatatypeProperty ; rdfs:label "默认值"@zh ; rdfs:domain ex:Parameter ; rdfs:range xsd:string .
+ex:ontologyName a owl:Class ; rdfs:label "本体名称"@zh .
+ex:domainAttribute a owl:AnnotationProperty ; rdfs:label "域属性"@zh ; rdfs:comment "指定对象属性的域端使用哪个数据属性建立关联"@zh .
+ex:rangeAttribute a owl:AnnotationProperty ; rdfs:label "值域属性"@zh ; rdfs:comment "指定对象属性的值域端使用哪个数据属性建立关联"@zh .
+ex:relationLabel a owl:AnnotationProperty ; rdfs:label "关系标签"@zh ; rdfs:comment "表示关系的语义标签名称（如hasOrder、isPartOf等），用于标识关系类型"@zh .
+ex:hasMiddleObject a owl:ObjectProperty ; rdfs:label "中间对象"@zh ; rdfs:comment "用来描述多对多关系的情况下，两个对象所使用到的中间对象"@zh .
+##################################
+# 本体名称
+##################################
+ex:sample_ontology a ex:ontologyName ;
+  rdfs:label "样例本体"@zh .
+
+##################################
+# 可用函数
+##################################
+ex:test_logic a ex:Logic ;
+  rdfs:label "样例逻辑"@zh ;
+  rdfs:comment "示例逻辑"@zh ;
+  ex:hasParameter [ a ex:Parameter ; ex:paramName "name" ; ex:paramType "string" ; ex:isOptional false ], [ a ex:Parameter ; ex:paramName "id" ; ex:paramType "xsd:integer" ; ex:isOptional true ] .
+
+##################################
+# Action动作定义
+##################################
+ex:test_action a ex:Action ;
+  rdfs:label "样例动作"@zh ;
+  rdfs:comment "示例动作"@zh ;
+  ex:hasParameter [ a ex:Parameter ; ex:paramName "name" ; ex:paramType "string" ; ex:isOptional false ], [ a ex:Parameter ; ex:paramName "id" ; ex:paramType "xsd:integer" ; ex:isOptional true ] .
+
+ex:order ex:bindAction ex:test_action .
+
+##################################
+# 对象定义(必须继承ex:Object)
+##################################
+ex:order a owl:Class ;
+  rdfs:subClassOf ex:Object ;
+  rdfs:label "样例对象，订单"@zh ;
+  rdfs:label "order"@en ;
+  ex:hasPrimaryKey ex:order_id ;
+  ex:hasTitle ex:order_id ;
+  rdfs:comment "样例对象基础属性数据"@zh .
+
+ex:customer a owl:Class ;
+  rdfs:subClassOf ex:Object ;
+  rdfs:label "样例对象，客户"@zh ;
+  rdfs:label "customer"@en ;
+  ex:hasPrimaryKey ex:customer_id ;
+  ex:hasTitle ex:customer_id ;
+  rdfs:comment "样例对象基础属性数据"@zh .
+
+
+##################################
+# 数据属性定义
+# 每个对象的属性里，只能拥有一个primarykey
+# IRI命名规则：ex:{ObjectType}_{AttributeName}
+# AttributeName优先使用英文名(attribute_label)，如无则使用中文名(attribute_name)
+##################################
+ex:order_id a owl:DatatypeProperty ;
+  rdfs:domain ex:order ;
+  rdfs:range xsd:string ;
+  rdfs:comment "订单ID"@zh ;
+  rdfs:label "订单ID"@zh ;
+  rdfs:label "order_id"@en .
+
+ex:customer_id a owl:DatatypeProperty ;
+  rdfs:domain ex:customer ;
+  rdfs:range xsd:decimal ;
+  rdfs:comment "客户ID"@zh ;
+  rdfs:label "客户ID"@zh ;
+  rdfs:label "customer_id"@en .
+
+##################################
+# 关系定义
+# 必须继承ex:custom_relation
+# 有正向关系就需定义一个反向关系
+# IRI命名规则：ex:{domain}_{relationLabel}_{range}
+# 这样可以支持多组对象对使用相同的关系标签
+##################################
+ex:order_was_owned_customer a owl:ObjectProperty ;
+  rdfs:subPropertyOf ex:custom_relation ;
+  rdfs:domain ex:order ;
+  rdfs:range ex:customer ;
+  rdfs:label "被拥有"@zh ;
+  ex:relationLabel "was_owned"@zh ;
+  ex:domainAttribute ex:order_id ;
+  ex:rangeAttribute ex:customer_id ;
+  rdfs:comment ""@zh .
+
+ex:customer_has_order a owl:ObjectProperty ;
+  rdfs:subPropertyOf ex:custom_relation ;
+  rdfs:domain ex:customer ;
+  rdfs:range ex:order ;
+  rdfs:label "拥有"@zh ;
+  ex:relationLabel "has"@zh ;
+  ex:domainAttribute ex:customer_id ;
+  ex:rangeAttribute ex:order_id ;
+  rdfs:comment ""@zh .

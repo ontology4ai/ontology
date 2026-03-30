@@ -1,0 +1,52 @@
+.modo-designer-header-panel {
+	height: 100%;
+	padding: 9.5px 10px;
+	line-height: 30px;
+	display: flex;
+	.pos-left {
+		flex: 1;
+	}
+	.logo {
+		height: 30px;
+		vertical-align: middle;
+	}
+}
+.arco-drawer-footer {
+	padding: 10px 15px;
+}
+.arco-drawer {
+	transition: all 0.3s cubic-bezier(0.34, 0.69, 0.1, 1);
+	.drawer-resize-container {
+		margin-left: 10px;
+		cursor: pointer;
+	}
+}
+.full-loading {
+	display: none;
+	&.loading {
+		width: 100%;
+	    height: 100%;
+	    display: block;
+	    position: fixed;
+	    z-index: 3000;
+	    background-color: var(--color-spin-layer-bg);
+	    top: 0px;
+	    left: 0px;
+	    .arco-spin-icon {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-10px, -15px);
+		}
+		.arco-spin-tip {
+		    margin-top: 6px;
+		    font-size: 12px;
+		    font-weight: 500;
+		    color: rgb(var(--primary-6));
+		    position: absolute;
+		    top: calc(50% + 30px);
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		}
+	}
+}

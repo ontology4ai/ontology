@@ -1,0 +1,119 @@
+.attrConfig-extend-container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  font-family: "PingFang SC";
+  .attr-form{
+    justify-content:space-between;
+    flex-direction: row;
+    margin-top: 20px;
+    .arco-form-item{
+      width: 48%;
+    }
+  }
+  .attr-extend-setting-container{
+    // flex: 1;
+    display: flex;
+    flex-direction: column;
+    .arco-alert{
+      padding: 6px 12px;
+      margin: 12px 0;
+    }
+    .attr-list{
+      overflow: auto;
+      max-height: 600px;
+      .attr-list-li{
+        width: 100%;
+        height: 36px;
+        display: flex;
+        border-bottom: 1px solid var(--color-border-1, #EFF4F9);
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .tag-list{
+          width: 100px;
+        }
+        .interface-attr{
+          flex: 1;
+        }
+        .attr-content{
+          display: inline-flex;
+          align-items: center;
+          width: 100%;
+          .attr-name{
+            display: inline-block;
+            width: 130px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+        .map-arrow{
+          width: 100px;
+          text-align: center;
+          font-size: 18px;
+          color: var(--color-text-2);
+        }
+        .attr-select{
+          width: 440px;
+        }
+      }
+    }
+  }
+  .map-btn{
+    position: absolute;
+    right: 0;
+    top: -32px;
+    width: 100px;
+    margin: 5px 5px;
+    color: var(--color-link-6, #3261CE);
+    border: 1px dashed var(--color-border-2, #E3E9EF);
+    background: var(--color-fill-2, #EFF4F9);
+  }
+}
+.map-select{
+  max-height: 220px!important;
+  .arco-select-option{
+    padding: 10px 12px;
+    border-top: 1px solid var(--color-border-1);
+    .select-name{
+      font-weight: 600;
+    }
+    div{
+      height: 22px;
+      line-height: 22px;
+    }
+  }
+}
+.attr-map-menu{
+  width: 420px;
+  .arco-dropdown-menu-item{
+    height: auto;
+  }
+  &.arco-dropdown-menu .menu-label{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2px 0;
+    border-top: 1px solid var(--color-border-1);
+    .select-name{
+      font-weight: 600;
+    }
+    div{
+      height: 22px;
+      line-height: 22px;
+    }
+  }
+}
+.arco-select-option {
+  .arco-typography.attr-li {
+    width: 100%;
+  }
+  &.arco-select-option-disabled{
+    .arco-typography.attr-li {
+      color: var(--color-text-4);
+    }
+  }
+
+}

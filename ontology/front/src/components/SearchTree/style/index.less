@@ -1,0 +1,96 @@
+.searchTree{
+    .head{
+        height: 40px;
+        // background: #F7F8FA;
+        font-size: 14px;
+        font-weight: 500;
+        color: #1D2129;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px 0 20px;
+        .title{
+            display: flex;
+            align-items: center;
+        }
+        .oper{
+            .arco-btn-text.arco-btn-size-mini{
+                padding: 0 5px;
+            }
+        }
+        .text{
+            color:#1D2129;
+            margin-left: 4px;
+            font-size: 14px;
+        }
+
+    }
+    .addRoot {
+        width: calc(100% - 36px);
+        margin: 18px;
+    }
+    .arco-tree {
+        padding: 0 10px 10px;
+        /* .arco-tree-node{
+            height: 25px;
+            line-height: 25px;
+            align-items: center;
+            &>span{
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .arco-tree-node-title{
+                white-space: nowrap;
+            }
+        } */
+        .num{
+            font-weight: 500;
+            color: #1D2129;
+            margin-left: 4px;
+        }
+        .disabled-tree-node-item{
+            color: var(--color-text-4);
+        }
+    }
+    .arco-input {
+        margin-bottom: 0 !important;
+    }
+
+}
+.treeMenu{
+    .moda-icon{
+        margin-right: 5px;
+    }
+}
+.fade-in {
+    animation: fadeIn 0.083s linear;
+}
+.fade-out {
+    animation: fadeOut 0.083s linear;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+

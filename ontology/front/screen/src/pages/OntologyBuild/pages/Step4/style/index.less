@@ -1,0 +1,302 @@
+.build-step-4{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    width: 1554px;
+    height: 938px;
+    border-radius: 30px;
+   
+    display: flex;
+    flex-direction: column;
+    .build-step-4-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 0;
+        pointer-events: none;
+    }
+    .build-step-4-header {
+        height: 82px;
+        position: relative;
+        z-index: 1;
+        .build-step-4-header-content {
+            height: 82px;
+            display: flex;
+            padding: 24px;
+            column-gap: 16px;
+            overflow: hidden;
+            .info{
+                display: inline-flex;
+                height: 34px;
+                align-items: center;
+                .label{
+                    color: #FFF;
+                    font-size: 28px;
+                    font-family: 'DingTalk JinBuTi';
+                    margin-right: 10px;
+                    font-weight: 400; 
+                }
+                .descr{
+                    overflow: hidden;
+                    color: rgba(255, 255, 255, 0.50);
+                    text-overflow: ellipsis;
+                    font-family: "HarmonyOS Sans SC";
+                    font-size: 16px;
+                    font-weight: 400; 
+                }
+            }
+        }
+        .border-bottom {
+            vertical-align: top;
+        }
+    }
+    .build-step-4-main {
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+        .build-step-4-tab{
+            height: 84px;
+            display: flex;
+            flex-direction: column;
+            .tab-list{
+                display: flex;
+                flex-direction: row;
+                height: 100%;
+                width: 100%;
+                .tab-item{
+                    display: flex;
+                    align-items: center;
+                    margin: 0 24px;
+                    position: relative;
+                    .tab-line{
+                        position: absolute;
+                        width: 100%;
+                        bottom: 0px;
+                        height: 3px;
+                        border-radius: 0.2px;
+                        background: linear-gradient(105deg, #4598FF 10.34%, #983DFF 43.63%, #EC7DFF 68.27%, #FFB096 89.66%);
+                        backdrop-filter: blur(13.591408729553223px);
+                    }
+                    .tab-item-content{
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                    }
+                    .text{
+                        margin-left: 8px;
+                        color: rgba(255, 255, 255, 0.50);
+                        font-family: "PingFang SC";
+                        font-size: 18px; 
+                        font-weight: 400; 
+                        &.active{
+                            font-weight: 500;
+                            background: linear-gradient(
+                                110deg, #4598FF 0.3%, #983DFF 13.63%, #EC7DFF 68.27%, #FFB096 80.66%);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+        .build-step-4-content{
+            .tab-ontology-knowledge{
+                padding: 24px;
+                .title-content{
+                    color: #FFF;
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                }
+                .tab-ontology-knowledge-content{
+                    border-radius: 10px;
+                    background: rgba(255, 255, 255, 0.06);
+                    padding: 24px;
+                    height: 678px;
+                    overflow: auto;
+                    
+                    // 一级标题样式 (# 开头)
+                    .markdown-h1 {
+                        color: #FFF;
+                        font-family: "HarmonyOS Sans SC";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 30px;
+                        margin: 0;
+                        margin-top: 16px;
+                        margin-bottom: 8px;
+                        
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                    }
+                    
+                    // 二级标题样式 (## 开头)
+                    .markdown-h2 {
+                        color: #FFF;
+                        font-family: "HarmonyOS Sans SC";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 30px;
+                        margin: 0;
+                        margin-top: 16px;
+                        margin-bottom: 8px;
+                    }
+                    
+                    // 列表项样式
+                    .markdown-list-item {
+                        color: rgba(255, 255, 255, 0.65);
+                        font-family: "HarmonyOS Sans SC";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 30px;
+                        margin: 0;
+                    }
+                    
+                    // 普通文本样式
+                    .markdown-text {
+                        color: rgba(255, 255, 255, 0.65);
+                        font-family: "HarmonyOS Sans SC";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 30px;
+                        margin: 0;
+                    }
+                }
+            }
+            .tab-mcp-server{
+                padding: 24px;
+                .title-content{
+                    color: #FFF;
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                    font-family: "HarmonyOS Sans SC";
+                }
+                .tab-mcp-server-content{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    height: 678px;
+                    overflow: auto;
+                    
+                    .mcp-tool-card{
+                        display: flex;
+                        flex-direction: column;
+                        border-radius: 10px;
+                        border: 1px solid rgba(255, 255, 255, 0.30);
+                        backdrop-filter: blur(10px);
+                        .tool-name-bg{
+                            position: absolute;
+                            width: 100%;
+                            overflow: hidden;
+                        }
+                        .tool-header{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            height: 51px;
+                            padding: 0 24px;
+                            z-index: 1;
+                            .tool-name{
+                                color: #FFF;
+                                font-family: "PingFang SC";
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: normal;
+                            }
+                            
+                            .tool-description{
+                                color: #CECFFF;
+                                font-family: "PingFang SC";
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                            }
+                        }
+                        
+                        .tool-body{
+                            display: flex;
+                            padding: 24px;
+                            
+                            .tool-params{
+                                flex: 1;
+                                display: flex;
+                                flex-direction: column;
+                                border-radius: 10px;
+                                background: rgba(255, 255, 255, 0.06);
+                                padding: 20px 24px;
+                                 
+                                .params-title{
+                                    color: #FFF;
+                                    font-family: "PingFang SC";
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: normal;
+                                    margin-bottom: 16px;
+                                }
+                                
+                                .param-item{
+                                    color: rgba(255, 255, 255, 0.65);
+                                    font-family: "HarmonyOS Sans SC";
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    line-height: 30px;
+                                }
+                            }
+                            
+                            .tool-example{
+                                flex: 1;
+                                display: flex;
+                                flex-direction: column;
+                                border-radius: 10px;
+                                background: rgba(255, 255, 255, 0.06);
+                                padding: 20px 24px;
+                                margin-left: 24px;
+                                .example-title{
+                                    color: #FFF;
+                                    font-family: "PingFang SC";
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: normal;
+                                    margin-bottom: 16px; 
+                                }
+                                
+                                .example-json{ 
+                                    pre{
+                                        margin: 0;
+                                        color: rgba(255, 255, 255, 0.65);
+                                        font-family: "HarmonyOS Sans SC";
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        line-height: 24px;
+                                        white-space: pre-wrap;
+                                        word-wrap: break-word;
+                                    }
+                                }
+                            }
+                            .tool-params .params-content,.tool-example .example-json{
+                                height: 122px;
+                                overflow: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

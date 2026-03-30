@@ -1,0 +1,39 @@
+{
+  "id": "276391883398959104",
+  "name": "checkUserHasRoles",
+  "label": "检查用户是否包含指定角色列表",
+  "descr": "检查用户是否包含指定角色列表",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"730\" y\u003d\"190\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "172665357969428480",
+  "respContentType": "application/json",
+  "url": "check/user/has/roles",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\n    \"headers\": [],\n    \"query\": [\n        {\n            \"id\": \"86a79414-3303-42ac-9c9e-93a4b394f5a8\",\n            \"name\": \"roles\",\n            \"required\": \"1\",\n            \"example\": \"\",\n            \"desc\": \"\"\n        }\n    ]\n}",
+  "apiOutputParams": "{\n    \"mockJson\": \"\",\n    \"responseBody\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ]\n}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "8a7499568fc78ab0018fe91943ec0014",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "276391883398959104",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.app.web.ModoWebUtils;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.apache.commons.lang3.StringUtils;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\nimport org.springframework.web.context.request.RequestContextHolder;\\nimport org.springframework.web.context.request.ServletRequestAttributes;\\n\\nimport java.util.Arrays;\\nimport java.util.Map;\\n\\n\\n    public Object check(Map\u003cString, Object\u003e params) {\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        String roles \u003d MapUtils.getString(params, \\\"roles\\\", \\\"\\\");\\n        if (StringUtils.isBlank(roles)) {\\n            return 0;\\n        }\\n        ServletRequestAttributes requestAttributes \u003d (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();\\n        ModoWebUtils.CookieIdentity identity \u003d ModoWebUtils.getCookieIdentity(requestAttributes.getRequest());\\n        params.put(\\\"userId\\\", identity.getUserId());\\n        params.put(\\\"roleList\\\", Arrays.asList(roles.split(\\\",\\\")));\\n        return jt.queryForObject(\\\"select count(*) from modo_user_role_rela where user_id\u003d:userId and role_id in (:roleList) \\\", params, Integer.class)+jt.queryForObject(\\\"select count(*) from modo_team_member where role_name in (:roleList) and user_id\u003d:userId \\\", params, Integer.class);\\n    }\\n\\nreturn check(params);\",\"label\":\"2.执行脚本\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.app.web.ModoWebUtils;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.apache.commons.lang3.StringUtils;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\nimport org.springframework.web.context.request.RequestContextHolder;\nimport org.springframework.web.context.request.ServletRequestAttributes;\n\nimport java.util.Arrays;\nimport java.util.Map;\n\n\n    public Object check(Map\u003cString, Object\u003e params) {\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        String roles \u003d MapUtils.getString(params, \"roles\", \"\");\n        if (StringUtils.isBlank(roles)) {\n            return 0;\n        }\n        ServletRequestAttributes requestAttributes \u003d (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();\n        ModoWebUtils.CookieIdentity identity \u003d ModoWebUtils.getCookieIdentity(requestAttributes.getRequest());\n        params.put(\"userId\", identity.getUserId());\n        params.put(\"roleList\", Arrays.asList(roles.split(\",\")));\n        return jt.queryForObject(\"select count(*) from modo_user_role_rela where user_id\u003d:userId and role_id in (:roleList) \", params, Integer.class)+jt.queryForObject(\"select count(*) from modo_team_member where role_name in (:roleList) and user_id\u003d:userId \", params, Integer.class);\n    }\n\nreturn check(params);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

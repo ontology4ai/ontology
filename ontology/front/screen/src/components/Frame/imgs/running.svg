@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>运行中</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="画板" transform="translate(-106.000000, -221.000000)" fill="#9CCAFF" fill-rule="nonzero">
+            <g id="运行中" transform="translate(106.000000, 221.000000)">
+                <path d="M0.1209,8.09346 C-0.72642,3.51792 3.0018,-0.464493 7.4926,0.0439 C10.543,0.38283 13.0002,2.92479 13.2544,6.05989 C13.7628,10.5507 9.9498,14.1094 5.3743,13.2621 C2.7476,12.7537 0.62929,10.7202 0.1209,8.09346 Z M6.3064,4.19578 L4.61171,4.19578 L4.61171,9.2797 L6.3064,9.2797 L6.3064,4.19578 Z M8.8483,4.19578 L7.1537,4.19578 L7.1537,9.2797 L8.8483,9.2797 L8.8483,4.19578 Z" id="形状结合"></path>
+            </g>
+        </g>
+    </g>
+</svg>

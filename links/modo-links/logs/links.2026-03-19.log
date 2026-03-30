@@ -1,0 +1,1 @@
+2026-03-19 16:43:30.899 [http-nio-8333-exec-36] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@66722674 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.

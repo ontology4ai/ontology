@@ -1,0 +1,40 @@
+{
+  "id": "198126411761795072",
+  "name": "batchGetLogicModelDetail",
+  "label": "批量获取逻辑模型详情",
+  "descr": "批量获取逻辑模型详情",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" parent\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" vertex\u003d\"1\" parent\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"360\" y\u003d\"100\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236063466669670400",
+  "respContentType": "application/json",
+  "url": "batch/get/logic/model/detail",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "198126412281888768",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "198126411761795072",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport java.util.Arrays;\\nimport java.util.HashMap;\\nimport java.util.List;\\nimport java.util.Map;\\n\\n\\n\\n    public Object getDetail(Map\u003cString, Object\u003e params) {\\n        Map\u003cString, Object\u003e pars \u003d new HashMap\u003c\u003e();\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        String tabIdStr \u003d MapUtils.getString(params, \\\"ids\\\");\\n        List\u003cString\u003e tabIds \u003d Arrays.asList(tabIdStr.split(\\\",\\\"));\\n        pars.put(\\\"tabIds\\\", tabIds);\\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d jt.queryForList(\\\"select ds.ds_label,ms.label as state_name,t.* from dataps_logic_model_draft t left join (select e.name,e.label from dataps_sys_enums e inner join dataps_sys_enums_def d on d.id\u003de.def_id where d.name\u003d\u0027modelState\u0027) ms on ms.name\u003dt.state left join modo_datasource ds on ds.ds_name\u003dt.ds_name where id in (:tabIds)\\\", pars);\\n        return DatapsHumpHelper.lineToHump(list);\\n    }\\n\\n\\n\\nreturn getDetail(params);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport java.util.Arrays;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\n\n\n    public Object getDetail(Map\u003cString, Object\u003e params) {\n        Map\u003cString, Object\u003e pars \u003d new HashMap\u003c\u003e();\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        String tabIdStr \u003d MapUtils.getString(params, \"ids\");\n        List\u003cString\u003e tabIds \u003d Arrays.asList(tabIdStr.split(\",\"));\n        pars.put(\"tabIds\", tabIds);\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d jt.queryForList(\"select ds.ds_label,ms.label as state_name,t.* from dataps_logic_model_draft t left join (select e.name,e.label from dataps_sys_enums e inner join dataps_sys_enums_def d on d.id\u003de.def_id where d.name\u003d\u0027modelState\u0027) ms on ms.name\u003dt.state left join modo_datasource ds on ds.ds_name\u003dt.ds_name where id in (:tabIds)\", pars);\n        return DatapsHumpHelper.lineToHump(list);\n    }\n\n\n\nreturn getDetail(params);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

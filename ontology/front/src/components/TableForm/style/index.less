@@ -1,0 +1,79 @@
+.modo-table-form {
+	.table-form-header {
+		display: flex;
+    	justify-content: flex-end;
+	}
+	&.empty {
+		.arco-table-body {
+			min-height: 120px;
+			.arco-table-no-data {
+				height: auto;
+			}
+		}
+	}
+	.arco-table {
+		.arco-table-td,
+		.arco-table-th-item {
+		    padding: 0px 6px;
+		}
+	}
+	.arco-form-item.arco-form-item-error {
+		position: relative;
+	}
+	.arco-form-item.arco-form-item-error:hover {
+		.arco-form-message {
+			display: block;
+		}
+	}
+	.arco-form-message {
+		display: none;
+		position: absolute;
+	    bottom: 0px;
+	    left: 0px;
+	    line-height: 24px;
+	    transform: translateY(100%);
+	    border-radius: 2px;
+	    z-index: 10;
+	    background: var( --color-white);
+	    padding: 0px 4px;
+	    box-shadow: 0px 0px 5px #d3d3d3;
+	    animation: none;
+	}
+	
+}
+.modo-table-form .editable-row .editable-cell {
+	display: inline-block;
+	padding: 5px 11px;
+	.arco-table-td {
+		padding: 0px 5px;
+	}
+}
+
+.modo-table-form .editable-row .editable-cell:hover {
+	border-radius: 4px;
+	border: 1px solid var(--color-border);
+	padding: 4px 10px;
+	.arco-table-th-item {
+		// white-space: pre;
+	}
+}
+/* .modo-table-form {
+	.arco-table-td {
+		padding: 0px 5px;
+	}
+	.arco-table-th-item {
+		padding: 0px 10px;
+		white-space: pre;
+		overflow: hidden;
+	    text-overflow: ellipsis;
+	}
+} */
+.arco-table-td {
+	padding: 0px 5px;
+}
+.arco-table-th-item {
+	padding: 0px 10px;
+	white-space: pre;
+	overflow: hidden;
+    text-overflow: ellipsis;
+}

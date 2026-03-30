@@ -1,0 +1,38 @@
+{
+  "id": "8a7499668f6737ac018f767c5b4c0008",
+  "name": "getGptInputRequirement",
+  "label": "解析需求",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"320\" y\u003d\"210\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "8a7494bd8f51c770018f51cab8ac0001",
+  "respContentType": "application/json",
+  "url": "getGptInputRequirement",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\n    \"body\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ],\n    \"headers\": [],\n    \"query\": []\n}",
+  "apiOutputParams": "{\n    \"mockJson\": \"\",\n    \"responseBody\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ]\n}",
+  "createUser": "dinghui3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "8a7499668f6737ac018f7697e0e1000d",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "8a7499668f6737ac018f767c5b4c0008",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import java.util.*;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.lang3.StringUtils;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport io.github.suanchou.utils.JsonUtil;\\nimport java.util.concurrent.Executor;\\nimport java.util.concurrent.Executors;\\n\\n\\n\\n\\n\\n    public Object getInfo(Map\u003cString, Object\u003e body) {\\n         Executor asyncSearchExecutor \u003d Executors.newFixedThreadPool(8);\\n         String taskId\u003dMapUtils.getString(body, \\\"taskId\\\");\\n         def execGptRequirementService \u003d SpringContextUtil.getBean(\\\"execGptRequirementService\\\");\\n          asyncSearchExecutor.execute(() -\u003e {\\n            try {\\n               execGptRequirementService.getGptTabName(taskId,body);\\n            } catch (Exception e) {\\n                DatapsModoDevLogHelper.error(\\\"智能补全元数据异常:{}\\\", ExceptionUtils.getStackTrace(e));\\n            }\\n        });\\n        return taskId;\\n    }\\n\\n  \\n\\nreturn getInfo(body);\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import java.util.*;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.lang3.StringUtils;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport org.apache.commons.collections.MapUtils;\nimport io.github.suanchou.utils.JsonUtil;\nimport java.util.concurrent.Executor;\nimport java.util.concurrent.Executors;\n\n\n\n\n\n    public Object getInfo(Map\u003cString, Object\u003e body) {\n         Executor asyncSearchExecutor \u003d Executors.newFixedThreadPool(8);\n         String taskId\u003dMapUtils.getString(body, \"taskId\");\n         def execGptRequirementService \u003d SpringContextUtil.getBean(\"execGptRequirementService\");\n          asyncSearchExecutor.execute(() -\u003e {\n            try {\n               execGptRequirementService.getGptTabName(taskId,body);\n            } catch (Exception e) {\n                DatapsModoDevLogHelper.error(\"智能补全元数据异常:{}\", ExceptionUtils.getStackTrace(e));\n            }\n        });\n        return taskId;\n    }\n\n  \n\nreturn getInfo(body);"
+      }
+    }
+  ]
+}

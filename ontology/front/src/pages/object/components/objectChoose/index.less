@@ -1,0 +1,32 @@
+.obj-extend-container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "PingFang SC";
+  .obj-extend-setting-container{
+    // flex: 1;
+    display: flex;
+    flex-direction: column;
+    .arco-alert{
+      padding: 6px 12px;
+      margin: 12px 0;
+    }
+    .obj-setting-head{
+      position: relative;
+      box-sizing: border-box;
+      height: 36px;
+      line-height: 20px;
+      padding: 8px 0px;
+      font-size: 12px;
+      font-weight: 600;
+      .dot{
+        display: inline-block;
+        width: 3px;
+        height: 10px;
+        margin-right: 5px;
+        border-radius: 2px;
+        background: var(--color-primary-6, #3261CE);
+      }
+    }
+  }
+}

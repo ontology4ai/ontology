@@ -1,0 +1,39 @@
+{
+  "id": "176053281901219840",
+  "name": "saveSysDataArchWithMap",
+  "label": "保存系统数据编目（带模型映射）",
+  "descr": "保存系统数据编目（带模型映射）",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"130\" y\u003d\"170\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "",
+  "respContentType": "application/json",
+  "url": "save/sys/data/arch/with/map",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\n    \"body\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ],\n    \"headers\": [],\n    \"query\": []\n}",
+  "apiOutputParams": "{\n    \"mockJson\": \"\",\n    \"responseBody\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ]\n}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "8a7427e29633fa4801963418363e0003",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "176053281901219840",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.app.web.TapeController;\\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport com.asiainfo.modo.dataps.SaveSysDataArchWithMapTransactional;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport io.github.suanchou.web.Response;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.apache.commons.lang3.StringUtils;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport java.util.HashMap;\\nimport java.util.List;\\nimport java.util.Map;\\n\\nSaveSysDataArchWithMapTransactional targetBean \u003d SpringContextUtil.getBean(SaveSysDataArchWithMapTransactional.class);\\nresult \u003d targetBean.saveDataArch(body);\\nreturn result;\\n// syncParams \u003d getSyncEsParams();\\n\\n\\n    private Map\u003cString, Object\u003e getSyncEsParams() {\\n        Map\u003cString, Object\u003e binding \u003d new HashMap();\\n        Map\u003cString, Object\u003e body \u003d new HashMap();\\n        binding.put(\\\"body\\\", body);\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        String esHost \u003d \\\"\\\";\\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select prop_label from dacp_meta_property where prop_name\u003d\u0027tabArchEsSyncHost\u0027\\\", body));\\n        for (Map\u003cString, Object\u003e map : list) {\\n            esHost \u003d MapUtils.getString(map, \\\"propLabel\\\");\\n        }\\n        body.put(\\\"host\\\", esHost);\\n        body.put(\\\"index\\\", \\\"index-dataform\\\");\\n        String userInfo \u003d \\\"\\\";\\n        list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select prop_label from dacp_meta_property where prop_name\u003d\u0027tabArchEsSyncUserInfo\u0027\\\", body));\\n        for (Map\u003cString, Object\u003e map : list) {\\n            userInfo \u003d MapUtils.getString(map, \\\"propLabel\\\");\\n        }\\n        if (StringUtils.isNotBlank(userInfo) \u0026\u0026 userInfo.indexOf(\\\":\\\") \u003e -1) {\\n            body.put(\\\"username\\\", userInfo.split(\\\":\\\")[0]);\\n            body.put(\\\"password\\\", userInfo.split(\\\":\\\")[1]);\\n        }\\n        return body;\\n    }\\n\",\"label\":\"2.执行脚本\"}",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.app.web.TapeController;\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport com.asiainfo.modo.dataps.SaveSysDataArchWithMapTransactional;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport io.github.suanchou.web.Response;\nimport org.apache.commons.collections.MapUtils;\nimport org.apache.commons.lang3.StringUtils;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\nSaveSysDataArchWithMapTransactional targetBean \u003d SpringContextUtil.getBean(SaveSysDataArchWithMapTransactional.class);\nresult \u003d targetBean.saveDataArch(body);\nreturn result;\n// syncParams \u003d getSyncEsParams();\n\n\n    private Map\u003cString, Object\u003e getSyncEsParams() {\n        Map\u003cString, Object\u003e binding \u003d new HashMap();\n        Map\u003cString, Object\u003e body \u003d new HashMap();\n        binding.put(\"body\", body);\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        String esHost \u003d \"\";\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select prop_label from dacp_meta_property where prop_name\u003d\u0027tabArchEsSyncHost\u0027\", body));\n        for (Map\u003cString, Object\u003e map : list) {\n            esHost \u003d MapUtils.getString(map, \"propLabel\");\n        }\n        body.put(\"host\", esHost);\n        body.put(\"index\", \"index-dataform\");\n        String userInfo \u003d \"\";\n        list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select prop_label from dacp_meta_property where prop_name\u003d\u0027tabArchEsSyncUserInfo\u0027\", body));\n        for (Map\u003cString, Object\u003e map : list) {\n            userInfo \u003d MapUtils.getString(map, \"propLabel\");\n        }\n        if (StringUtils.isNotBlank(userInfo) \u0026\u0026 userInfo.indexOf(\":\") \u003e -1) {\n            body.put(\"username\", userInfo.split(\":\")[0]);\n            body.put(\"password\", userInfo.split(\":\")[1]);\n        }\n        return body;\n    }\n",
+        "label": "2.执行脚本"
+      }
+    }
+  ],
+  "operLogConf": "{\"objType\":\"\",\"operType\":\"\",\"objIdConf\":{\"from\":\"\",\"argName\":\"\",\"jsonPath\":\"\"},\"objNameConf\":{\"from\":\"\",\"argName\":\"\",\"jsonPath\":\"\"}}"
+}

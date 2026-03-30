@@ -1,0 +1,40 @@
+{
+  "id": "178924936824807424",
+  "name": "getModelPhysicCommonSubjects",
+  "label": "获取物理模型通用参考数据",
+  "descr": "获取物理模型通用参考数据",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"330\" y\u003d\"90\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "235831935786856448",
+  "respContentType": "application/json",
+  "url": "get/model/physic/common/subjects",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "232522541500424192",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "178924936824807424",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport java.util.ArrayList;\\nimport java.util.HashMap;\\nimport java.util.List;\\nimport java.util.Map;\\n\\n\\n\\n    public Object get(Map\u003cString, Object\u003e params) {\\n        Map\u003cString, List\u003cMap\u003cString, Object\u003e\u003e\u003e result \u003d new HashMap\u003c\u003e();\\n        String dsType \u003d MapUtils.getString(params, \\\"dsType\\\");\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        params.put(\\\"dsTypeKeyWord\\\", dsType + \\\"%\\\");\\n        Map\u003cString, String\u003e defIdMap \u003d new HashMap\u003c\u003e();\\n        jt.queryForList(\\\"select id,name,label from dataps_sys_enums_def where name like :dsTypeKeyWord\\\", params).forEach(map -\u003e {\\n            defIdMap.put(MapUtils.getString(map, \\\"id\\\"), MapUtils.getString(map, \\\"name\\\"));\\n        });\\n        if (defIdMap.isEmpty()) {\\n            return result;\\n        }\\n        params.put(\\\"defIds\\\", new ArrayList\u003c\u003e(defIdMap.keySet()));\\n        jt.queryForList(\\\"select name,label,descr,def_id,parent_id from dataps_sys_enums where def_id in (:defIds)\\\", params).forEach(map -\u003e {\\n            Map\u003cString, Object\u003e targetMap \u003d DatapsHumpHelper.lineToHump(map);\\n            String defId \u003d MapUtils.getString(targetMap, \\\"defId\\\");\\n            String parent \u003d MapUtils.getString(targetMap, \\\"parentId\\\");\\n            targetMap.put(\\\"parent\\\", parent);\\n            result.computeIfAbsent(defIdMap.get(defId), key -\u003e new ArrayList\u003c\u003e()).add(targetMap);\\n        });\\n        return result;\\n    }\\n\\n\\nreturn get(params);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport java.util.ArrayList;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\n\n\n    public Object get(Map\u003cString, Object\u003e params) {\n        Map\u003cString, List\u003cMap\u003cString, Object\u003e\u003e\u003e result \u003d new HashMap\u003c\u003e();\n        String dsType \u003d MapUtils.getString(params, \"dsType\");\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        params.put(\"dsTypeKeyWord\", dsType + \"%\");\n        Map\u003cString, String\u003e defIdMap \u003d new HashMap\u003c\u003e();\n        jt.queryForList(\"select id,name,label from dataps_sys_enums_def where name like :dsTypeKeyWord\", params).forEach(map -\u003e {\n            defIdMap.put(MapUtils.getString(map, \"id\"), MapUtils.getString(map, \"name\"));\n        });\n        if (defIdMap.isEmpty()) {\n            return result;\n        }\n        params.put(\"defIds\", new ArrayList\u003c\u003e(defIdMap.keySet()));\n        jt.queryForList(\"select name,label,descr,def_id,parent_id from dataps_sys_enums where def_id in (:defIds)\", params).forEach(map -\u003e {\n            Map\u003cString, Object\u003e targetMap \u003d DatapsHumpHelper.lineToHump(map);\n            String defId \u003d MapUtils.getString(targetMap, \"defId\");\n            String parent \u003d MapUtils.getString(targetMap, \"parentId\");\n            targetMap.put(\"parent\", parent);\n            result.computeIfAbsent(defIdMap.get(defId), key -\u003e new ArrayList\u003c\u003e()).add(targetMap);\n        });\n        return result;\n    }\n\n\nreturn get(params);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

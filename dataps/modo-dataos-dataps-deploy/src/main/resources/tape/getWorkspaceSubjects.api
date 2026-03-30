@@ -1,0 +1,18 @@
+{
+  "id": "90019170187710464",
+  "name": "getWorkspaceSubjects",
+  "label": "获取工作空间参考数据",
+  "descr": "获取工作空间参考数据",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"260\" y\u003d\"120\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "54562613908180992",
+  "respContentType": "application/json",
+  "url": "get/workspace/subjects",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[{\"id\":\"a239b5f7-69f5-4d30-92bc-6fd79d935f04\",\"name\":\"workspaceId\",\"required\":\"1\",\"example\":\"\",\"desc\":\"\"},{\"id\":\"12eebb6a-ba29-4b1c-b224-d912a0bf474c\",\"name\":\"subjectName\",\"required\":\"1\",\"example\":\"\",\"desc\":\"\"}]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": []
+}

@@ -1,0 +1,40 @@
+{
+  "id": "dataps-139382560752111616",
+  "name": "fetchModelSubjectBySql",
+  "label": "通过Sql查询模型参考数据",
+  "descr": "通过Sql查询模型参考数据",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"270\" y\u003d\"130\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "235831935786856448",
+  "respContentType": "application/json",
+  "url": "fetch/model/subject/bySql",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "dataps-139382560777277440",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "dataps-139382560752111616",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import io.github.suanchou.driver.repo.AbstractRepository;\\nimport io.github.suanchou.utils.JsonUtil;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.apache.commons.lang3.StringUtils;\\nimport org.springframework.dao.EmptyResultDataAccessException;\\nimport org.springframework.dao.IncorrectResultSizeDataAccessException;\\nimport org.springframework.data.jpa.domain.Specification;\\nimport org.springframework.jdbc.core.JdbcTemplate;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\nimport org.springframework.jdbc.datasource.DataSourceUtils;\\nimport org.springframework.stereotype.Service;\\n\\nimport javax.persistence.criteria.CriteriaBuilder;\\nimport javax.persistence.criteria.Predicate;\\nimport javax.sql.DataSource;\\nimport java.sql.Connection;\\nimport java.sql.DatabaseMetaData;\\nimport java.sql.SQLException;\\nimport java.util.*;\\nimport java.util.regex.Matcher;\\nimport java.util.regex.Pattern;\\n\\npublic List\u003cMap\u003cString, Object\u003e\u003e fetchData(Map\u003cString, Object\u003e params) {\\n    String sql \u003d MapUtils.getString(params, \\\"sql\\\");\\n    if (containsSqlInjection(sql)) {\\n        throw new RuntimeException(\\\"SQL脚本存在注入风险！\\\");\\n    }\\n    JdbcTemplate jt \u003d SpringJdbcUtil.getJdbcTemplate();\\n    return jt.queryForList(sql);\\n}\\n\\nprivate boolean containsSqlInjection(String obj) {\\n    Pattern pattern \u003d Pattern.compile(\\\"\\\\b(and|exec|insert|select|drop|grant|alter|delete|update|count|chr|mid|master|truncate|char|declare|or)\\\\b|(\\\\\\\\*|;|\\\\\\\\+|\u0027|%)\\\");\\n    Matcher matcher \u003d pattern.matcher(obj);\\n    return matcher.find();\\n}\\n\\nreturn fetchData(params);\"}",
+      "createUser": "xiacj3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import io.github.suanchou.driver.repo.AbstractRepository;\nimport io.github.suanchou.utils.JsonUtil;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.apache.commons.lang3.StringUtils;\nimport org.springframework.dao.EmptyResultDataAccessException;\nimport org.springframework.dao.IncorrectResultSizeDataAccessException;\nimport org.springframework.data.jpa.domain.Specification;\nimport org.springframework.jdbc.core.JdbcTemplate;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\nimport org.springframework.jdbc.datasource.DataSourceUtils;\nimport org.springframework.stereotype.Service;\n\nimport javax.persistence.criteria.CriteriaBuilder;\nimport javax.persistence.criteria.Predicate;\nimport javax.sql.DataSource;\nimport java.sql.Connection;\nimport java.sql.DatabaseMetaData;\nimport java.sql.SQLException;\nimport java.util.*;\nimport java.util.regex.Matcher;\nimport java.util.regex.Pattern;\n\npublic List\u003cMap\u003cString, Object\u003e\u003e fetchData(Map\u003cString, Object\u003e params) {\n    String sql \u003d MapUtils.getString(params, \"sql\");\n    if (containsSqlInjection(sql)) {\n        throw new RuntimeException(\"SQL脚本存在注入风险！\");\n    }\n    JdbcTemplate jt \u003d SpringJdbcUtil.getJdbcTemplate();\n    return jt.queryForList(sql);\n}\n\nprivate boolean containsSqlInjection(String obj) {\n    Pattern pattern \u003d Pattern.compile(\"\\b(and|exec|insert|select|drop|grant|alter|delete|update|count|chr|mid|master|truncate|char|declare|or)\\b|(\\\\*|;|\\\\+|\u0027|%)\");\n    Matcher matcher \u003d pattern.matcher(obj);\n    return matcher.find();\n}\n\nreturn fetchData(params);"
+      }
+    }
+  ]
+}

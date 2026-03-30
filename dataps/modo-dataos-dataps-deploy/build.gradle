@@ -1,0 +1,139 @@
+plugins {
+    id 'java'
+    id 'java-library'
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+}
+
+group = 'com.asiainfo.modo'
+version = '1.0.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenLocal()
+    maven { url "https://maven.aliyun.com/nexus/content/repositories/central/" }
+    mavenCentral()
+    maven {
+        url "https://raw.githubusercontent.com/ontology4ai/maven-repo/master/repository"
+    }
+}
+
+dependencies {
+    implementation "com.asiainfo.modo:modo-dataos-dataps:1.0.0"
+    implementation "com.asiainfo.modo:modo-dataos-dataps-requirement:1.0.0"
+    implementation "com.asiainfo.modo:modo-k8s-helper:1.0.12:plain@jar"
+    implementation "com.asiainfo.modo:modo-git-helper:1.0.0"
+    implementation "com.asiainfo.modo:modo-dataos-dataps-mini:1.0.0"
+    compileOnly 'org.projectlombok:lombok:1.18.24' // 版本号根据实际情况
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    
+    
+}
+
+
+
+tasks.register('copyConfigFile', Copy) {
+    // 清除目标目录
+    delete "$buildDir/dataps/build/resources/frontend"
+    // 从 src/main/resources/frontend 复制文件
+    from('src/main/resources/frontend')
+    // 复制到 build/dataps/build/resources/frontend
+    into "$buildDir/dataps/build/resources/frontend"
+}
+
+
+tasks.register('copyViewFile', Copy) {
+    // 清除目标目录
+    delete "$buildDir/dataps/build/resources/view"
+    from ("/src/main/resources/view")
+    into "$buildDir/dataps/build/resources/view"
+}
+tasks.register('copyTapeFile', Copy) {
+
+    // 清除目标目录
+    delete "$buildDir/dataps/build/resources/tape"
+    from ("/src/main/resources/tape")
+    into "$buildDir/dataps/build/resources/tape"
+}
+tasks.register('copyMagicApiFile', Copy) {
+    // 清除目标目录
+    delete "$buildDir/dataps/build/resources/magic-api"
+    from ("/src/main/resources/magic-api")
+    into "$buildDir/dataps/build/resources/magic-api"
+}
+
+tasks.register('copyConfigYaml', Copy) {
+    //delete "$buildDir/dataps"
+    from('src/main/resources/application-prod.yaml')
+    into "$buildDir/dataps"
+
+    from('src/main/resources/application.yaml')
+    into "$buildDir/dataps"
+
+    from('src/main/resources/start.sh')
+    into "$buildDir/dataps"
+
+}
+
+tasks.register('copyConfigApp', Copy) {
+    delete "$buildDir/dataps/build/resources/application"
+    from('src/main/resources/application')
+    into "$buildDir/dataps/build/resources/application"
+}
+
+tasks.register('copyModoJar', Copy) {
+    from configurations.runtimeClasspath
+    // 指定目标目录
+    into "${buildDir}/dataps/lib"
+}
+
+
+Set<File> getThirdPartJars() {
+    configurations.runtimeClasspath.files.findAll { it-> true/*!(it.name.startsWith('data_supply-') && it.name.endsWith('.jar'))*/ }
+}
+
+jar{
+    // 指定 JAR 包的输出目录
+    destinationDirectory.set(file("${buildDir}/dataps"))
+}
+bootJar {
+    // 排除 src/main/resources/frontend 文件夹
+    //excludes = ["**/frontend/**"]
+    excludes = ["**/frontend/**","**/application/**","*.yaml","*.sh","*.jar"]
+    // 依赖 copyConfigFile 任务
+    //   dependsOn unjarTask
+    dependsOn copyConfigYaml
+    dependsOn copyConfigFile
+    dependsOn copyConfigApp
+    dependsOn copyModoJar
+    dependsOn copyViewFile
+    dependsOn copyTapeFile
+    dependsOn copyMagicApiFile
+
+//    exclude { details ->
+//        // 使用正则表达式匹配文件名,排除所有jar
+//        def pattern = ~/.*\.jar$/
+//
+//        return details.file.name ==~ pattern
+//    }
+    //META-INFO
+    manifest.attributes.put('Class-Path',getThirdPartJars().collect { "lib/$it.name" }.join(' '))
+    // 指定 JAR 包的输出目录
+    destinationDirectory.set(file("${buildDir}/dataps"))
+
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

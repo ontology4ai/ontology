@@ -1,0 +1,308 @@
+.data-prepare {
+	transform: scale(0.5);
+	.data-prepare-content {
+		transform: scale(2.0);
+		* {
+			pointer-events: none;
+		}
+	}
+	.tooltip {
+		position: absolute;
+		width: 288px;
+		height: max-content;
+		border-radius: 16px;
+		background: rgba(39, 59, 108, 0.85);
+		z-index: 1000;
+		pointer-events: all;
+		transition: all .2s;
+		.tooltip-bg {
+			position: absolute;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			border-radius: 20px;
+		}
+		* {
+			pointer-events: all;
+		}
+		.ontology-build-tooltip-spin {
+			width: 100%;
+			padding: 24px 24px 0px 24px;
+			.arco-spin-children {
+				width: 100%;
+				padding: 24px 38px 0px 24px;
+				&:after {
+					display: none;
+					border-radius: 16px;
+				}
+			}
+		}
+		.tooltip-content {
+			position: relative;
+			.close-btn {
+				position: absolute;
+				top: -5px;
+				right: 0px;
+				cursor: pointer;
+				color: #fff;
+				z-index: 2;
+				&:hover {
+					color: #2349FE
+				}
+			}
+			.label {
+				font-size: 14px;
+				line-height: 22px;
+				margin-bottom: 6px;
+				color: #fff;
+				position: relative;
+				color: rgba(255, 255, 255, 0.65);
+				font-family: "HarmonyOS Sans SC";
+				padding-left: 8px;
+				&:before {
+					content: '';
+					width: 6px;
+					height: 6px;
+					border-radius: 12px;
+					background: #01FEE1;
+					display: block;
+				    position: absolute;
+				    top: 8px;
+				    left: -10px;
+				}
+			}
+			.value {
+				line-height: 20px;
+				font-weight: 500;
+				margin-bottom: 24px;
+				color: #FFF;
+				font-family: "HarmonyOS Sans SC";
+				font-size: 16px;
+				padding-left: 8px;
+
+			}
+		}
+	}
+	.event-layer {
+		width: 998px;
+	    height: 610px;
+	    background: red;
+	    position: absolute;
+	    top: 200px;
+	}
+	.ground {
+		width: 998px;
+		position: absolute;
+	    top: 0px;
+	    left: 0px;
+	    display: none;
+	}
+	.ground-top {
+		width: 998px;
+		position: absolute;
+		top: 200px;
+		left: 0px;
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.ground-bottom {
+		width: 998px;
+		position: absolute;
+		top: 494px;
+		left: 0px;
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.road {
+		width: 697px;
+		position: absolute;
+		top: 139px;
+		left: 146px;
+	}
+	.road-arrow-1 {
+		width: 51.5px;
+		position: absolute;
+		top: 376px;
+		left: 318px;
+	}
+	.road-arrow-2 {
+		width: 51.5px;
+		position: absolute;
+		top: 547px;
+		left: 284px;
+	}
+	.road-arrow-3 {
+		width: 51.5px;
+		position: absolute;
+		top: 560px;
+		left: 630px;
+	}
+	.road-arrow-4 {
+		width: 51.5px;
+		position: absolute;
+		top: 373px;
+		left: 615px;
+	}
+	.road-box-1 {
+		width: 39px;
+		position: absolute;
+		top: 319px;
+		left: 392px;
+	}
+	.road-box-2 {
+		width: 39px;
+		position: absolute;
+		top: 385px;
+		left: 277px;
+	}
+	.road-box-3 {
+		width: 39px;
+		position: absolute;
+		top: 509px;
+		left: 255px;
+	}
+	.road-box-4 {
+		width: 39px;
+		position: absolute;
+		top: 566px;
+		left: 352px;
+	}
+	.road-box-5 {
+		width: 39px;
+		position: absolute;
+		top: 580px;
+		left: 571px;
+	}
+	.road-box-6 {
+		width: 39px;
+		position: absolute;
+		top: 387px;
+		left: 674px;
+	}
+	.road-box-7 {
+		width: 39px;
+		position: absolute;
+		top: 330px;
+		left: 579px;
+	}
+	.road-title-1 {
+		width: 72px;
+		position: absolute;
+		top: 342px;
+		left: 293px;
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.road-title-2 {
+		width: 72px;
+		position: absolute;
+		top: 552px;
+		left: 284px;
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.road-title-3 {
+		width: 72px;
+		position: absolute;
+		top: 547px;
+		left: 650px;
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.road-title-4 {
+		width: 72px;
+		position: absolute;
+		top: 342px;
+		left: 632px;
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.icon-1 {
+		width: 156px;
+		position: absolute;
+		top: 181px;
+		left: 409px;
+		pointer-events: all;
+	}
+	.icon-2 {
+		width: 156px;
+		position: absolute;
+		top: 364px;
+		left: 105px;
+		pointer-events: all;
+	}
+	.icon-3 {
+		width: 156px;
+		position: absolute;
+		top: 543px;
+		left: 409px;
+		pointer-events: all;
+	}
+	.icon-4 {
+		width: 156px;
+		position: absolute;
+		top: 364px;
+		left: 724px;
+		pointer-events: all;
+	}
+	.title {
+		width: 120px;
+		position: absolute;
+		top: 570px;
+		left: 203px;
+	}
+	.car-1 {
+		width: 71px;
+		position: absolute;
+		top: 291px;
+		left: 357px;
+	}
+	.car-2 {
+		width: 98px;
+		position: absolute;
+		top: 449px;
+		left: 305px;
+	}
+	.car-3 {
+		width: 74px;
+		position: absolute;
+		top: 427px;
+		left: 609px;
+	}
+	.car-4 {
+		width: 49px;
+		position: absolute;
+		top: 330px;
+		left: 559px;
+	}
+}
+.data-prepare.en {
+	.title {
+		width: 201px;
+		position: absolute;
+		top: 544px;
+		left: 165px;
+	}
+	.road-title-1 {
+		width: 100px;
+		top: 326px;
+		left: 254px;
+	}
+	.road-title-2 {
+		width: 132px;
+		top: 549px;
+		left: 244px;
+	}
+	.road-title-3 {
+		width: 140px;
+		top: 546px;
+		left: 639px;
+	}
+	.road-title-4 {
+		width: 140px;
+		top: 321px;
+		left: 629px;
+	}
+}

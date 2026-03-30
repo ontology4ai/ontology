@@ -1,0 +1,60 @@
+{
+	"requestId": "c5384e9aebab4a6ba282502f18f6ec9e",
+	"code": "200",
+	"data": [
+		{
+			"title": "Trunk 0-0",
+			"key": "0-0",
+			"icon": "IconFolderFill",
+			"color": "red",
+			"children": [
+				{
+					"title": "Branch 0-0-1",
+					"key": "0-0-1",
+					"icon": "IconFolderFill",
+					"color": "#4080FF",
+					"children": [
+						{
+							"title": "Leaf 0-0-1-1",
+							"key": "0-0-1-1"
+						},
+						{
+							"title": "Leaf 0-0-1-2",
+							"key": "0-0-1-2"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Trunk 0-1",
+			"key": "0-1",
+			"children": [
+				{
+					"title": "Branch 0-1-1",
+					"key": "0-1-1",
+					"children": [
+						{
+							"title": "Leaf 0-1-1-0",
+							"key": "0-1-1-0"
+						}
+					]
+				},
+				{
+					"title": "Branch 0-1-2",
+					"key": "0-1-2",
+					"children": [
+						{
+							"title": "Leaf 0-1-2-0",
+							"key": "0-1-2-0"
+						}
+					]
+				}
+			]
+		}
+	],
+	"success": true,
+	"message": null,
+	"devMsg": null,
+	"hasPrivilege": true
+}

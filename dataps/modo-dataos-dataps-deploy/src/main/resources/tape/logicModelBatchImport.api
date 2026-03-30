@@ -1,0 +1,40 @@
+{
+  "id": "184994901170294784",
+  "name": "logicModelBatchImport",
+  "label": "逻辑模型批量导入",
+  "descr": "逻辑模型批量导入",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"300\" y\u003d\"120\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236063614770544640",
+  "respContentType": "application/json",
+  "url": "logic/model/batch/import",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\"body\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}],\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "236134945037529088",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "184994901170294784",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.dataps.LogicModelBatchImportTransactional;\\nimport com.asiainfo.modo.dataps.DatapsOperLogHelper;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport liquibase.util.StringUtil;\\nimport org.apache.commons.collections.MapUtils;\\n\\nimport java.util.List;\\nimport java.util.Map;\\n\\n\\n\\n    public Object batchImport(Map\u003cString, Object\u003e body) {\\n        DatapsOperLogHelper logger \u003d SpringContextUtil.getBean(DatapsOperLogHelper.class);\\n        try {\\n            LogicModelBatchImportTransactional targetBean \u003d SpringContextUtil.getBean(LogicModelBatchImportTransactional.class);\\n            Map\u003cString, Object\u003e result \u003d targetBean.batchImport(body);\\n            logger.log(\\\"导入\\\", \\\"模型\\\", MapUtils.getString(result, \\\"ids\\\"), MapUtils.getString(result, \\\"names\\\"), true);\\n            return result;\\n        } catch (Exception e) {\\n            Object idsObj \u003d body.get(\\\"ids\\\");\\n            List\u003cString\u003e ids \u003d (List\u003cString\u003e) idsObj;\\n            logger.log(\\\"导入\\\", \\\"模型\\\", StringUtil.join(ids, \\\",\\\"), StringUtil.join(ids, \\\",\\\"), false);\\n            throw new RuntimeException(e);\\n        }\\n    }\\n\\n\\nreturn batchImport(body);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.dataps.LogicModelBatchImportTransactional;\nimport com.asiainfo.modo.dataps.DatapsOperLogHelper;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport liquibase.util.StringUtil;\nimport org.apache.commons.collections.MapUtils;\n\nimport java.util.List;\nimport java.util.Map;\n\n\n\n    public Object batchImport(Map\u003cString, Object\u003e body) {\n        DatapsOperLogHelper logger \u003d SpringContextUtil.getBean(DatapsOperLogHelper.class);\n        try {\n            LogicModelBatchImportTransactional targetBean \u003d SpringContextUtil.getBean(LogicModelBatchImportTransactional.class);\n            Map\u003cString, Object\u003e result \u003d targetBean.batchImport(body);\n            logger.log(\"导入\", \"模型\", MapUtils.getString(result, \"ids\"), MapUtils.getString(result, \"names\"), true);\n            return result;\n        } catch (Exception e) {\n            Object idsObj \u003d body.get(\"ids\");\n            List\u003cString\u003e ids \u003d (List\u003cString\u003e) idsObj;\n            logger.log(\"导入\", \"模型\", StringUtil.join(ids, \",\"), StringUtil.join(ids, \",\"), false);\n            throw new RuntimeException(e);\n        }\n    }\n\n\nreturn batchImport(body);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

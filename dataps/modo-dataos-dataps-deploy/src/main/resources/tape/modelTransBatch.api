@@ -1,0 +1,39 @@
+{
+  "id": "8a7427fb92030934019203f1fb140000",
+  "name": "modelTransBatch",
+  "label": "模型批量移交",
+  "descr": "模型批量移交",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"260\" y\u003d\"180\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "",
+  "respContentType": "application/json",
+  "url": "model/transto/batch",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\n    \"body\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ],\n    \"headers\": [],\n    \"query\": []\n}",
+  "apiOutputParams": "{\n    \"mockJson\": \"\",\n    \"responseBody\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ]\n}",
+  "createUser": "chenxiang8",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "8a7427d8922346a601922d9f38f90000",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "8a7427fb92030934019203f1fb140000",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import java.util.*;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.lang3.StringUtils;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport io.github.suanchou.utils.JsonUtil;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\n        System.out.println(body);\\n        NamedParameterJdbcTemplate runtimeJt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();      \\n        NamedParameterJdbcTemplate proJt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate(\\\"METADBS\\\");\\n        //更新开发库\\n        runtimeJt.batchUpdate(\\\"update dataps_logic_model set workspace_id\u003d:workspaceId,team_name\u003d:teamName,member_name\u003d:memberName,dir_id\u003d:dirId,lastupd\u003d:lastupd where id\u003d:id\\\", body.toArray(new Map[body.size()]));\\n        runtimeJt.batchUpdate(\\\"update dataps_logic_model_draft set workspace_id\u003d:workspaceId,team_name\u003d:teamName,member_name\u003d:memberName,dir_id\u003d:dirId,lastupd\u003d:lastupd where id\u003d:id\\\", body.toArray(new Map[body.size()]));\\n        runtimeJt.batchUpdate(\\\"update dataps_logic_model_ver set workspace_id\u003d:workspaceId,team_name\u003d:teamName,member_name\u003d:memberName,dir_id\u003d:dirId,lastupd\u003d:lastupd where id\u003d:id\\\", body.toArray(new Map[body.size()]));\\n        //更新生产库\\n        proJt.batchUpdate(\\\"update dataps_logic_model set workspace_id\u003d:workspaceId,team_name\u003d:teamName,member_name\u003d:memberName,dir_id\u003d:dirId,lastupd\u003d:lastupd where id\u003d:id\\\", body.toArray(new Map[body.size()]));\\n        proJt.batchUpdate(\\\"update dataps_logic_model_draft set workspace_id\u003d:workspaceId,team_name\u003d:teamName,member_name\u003d:memberName,dir_id\u003d:dirId,lastupd\u003d:lastupd where id\u003d:id\\\", body.toArray(new Map[body.size()]));\\n        proJt.batchUpdate(\\\"update dataps_logic_model_ver set workspace_id\u003d:workspaceId,team_name\u003d:teamName,member_name\u003d:memberName,dir_id\u003d:dirId,lastupd\u003d:lastupd where id\u003d:id\\\", body.toArray(new Map[body.size()]));\\n\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import java.util.*;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.lang3.StringUtils;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport org.apache.commons.collections.MapUtils;\nimport io.github.suanchou.utils.JsonUtil;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\n        System.out.println(body);\n        NamedParameterJdbcTemplate runtimeJt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();      \n        NamedParameterJdbcTemplate proJt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate(\"METADBS\");\n        //更新开发库\n        runtimeJt.batchUpdate(\"update dataps_logic_model set workspace_id\u003d:workspaceId,team_name\u003d:teamName,member_name\u003d:memberName,dir_id\u003d:dirId,lastupd\u003d:lastupd where id\u003d:id\", body.toArray(new Map[body.size()]));\n        runtimeJt.batchUpdate(\"update dataps_logic_model_draft set workspace_id\u003d:workspaceId,team_name\u003d:teamName,member_name\u003d:memberName,dir_id\u003d:dirId,lastupd\u003d:lastupd where id\u003d:id\", body.toArray(new Map[body.size()]));\n        runtimeJt.batchUpdate(\"update dataps_logic_model_ver set workspace_id\u003d:workspaceId,team_name\u003d:teamName,member_name\u003d:memberName,dir_id\u003d:dirId,lastupd\u003d:lastupd where id\u003d:id\", body.toArray(new Map[body.size()]));\n        //更新生产库\n        proJt.batchUpdate(\"update dataps_logic_model set workspace_id\u003d:workspaceId,team_name\u003d:teamName,member_name\u003d:memberName,dir_id\u003d:dirId,lastupd\u003d:lastupd where id\u003d:id\", body.toArray(new Map[body.size()]));\n        proJt.batchUpdate(\"update dataps_logic_model_draft set workspace_id\u003d:workspaceId,team_name\u003d:teamName,member_name\u003d:memberName,dir_id\u003d:dirId,lastupd\u003d:lastupd where id\u003d:id\", body.toArray(new Map[body.size()]));\n        proJt.batchUpdate(\"update dataps_logic_model_ver set workspace_id\u003d:workspaceId,team_name\u003d:teamName,member_name\u003d:memberName,dir_id\u003d:dirId,lastupd\u003d:lastupd where id\u003d:id\", body.toArray(new Map[body.size()]));\n"
+      }
+    }
+  ]
+}

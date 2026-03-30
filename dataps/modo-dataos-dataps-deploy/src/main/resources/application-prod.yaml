@@ -1,0 +1,87 @@
+spring:
+  datasource:
+    config-local-h2:
+      mode: -1
+    main:
+      jdbcUrl: ${APP_DB_URL:jdbc:mysql://10.1.2.2:5506/dataos_dev?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false}
+      username: ${APP_DB_USER:modo}
+      password: ${APP_DB_PWD:rlk==}
+      driverClassName: ${APP_DB_DRIVER:com.mysql.jdbc.Driver}
+      maximumPoolSize: ${APP_DB_POOL_SIZE:10}
+      connectionTimeout: ${APP_DB_CONNECTION_TIMEOUT:30000}
+      dataSource:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+        useLocalSessionState: true
+        rewriteBatchedStatements: true
+        cacheResultSetMetadata: true
+        cacheServerConfiguration: true
+        elideSetAutoCommits: true
+        maintainTimeStats: false
+    config:
+      jdbcUrl: ${spring.datasource.main.jdbcUrl}
+      username: ${spring.datasource.main.username}
+      password: ${spring.datasource.main.password}
+      driverClassName: ${spring.datasource.main.driverClassName}
+      maximumPoolSize: 2
+      connectionTimeout: ${APP_DB_CONNECTION_TIMEOUT:30000}
+      dataSource:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+        useLocalSessionState: true
+        rewriteBatchedStatements: true
+        cacheResultSetMetadata: true
+        cacheServerConfiguration: true
+        elideSetAutoCommits: true
+        maintainTimeStats: false
+    metadbs:
+      jdbcUrl: ${APP_DB_PRO_URL:jdbc:mysql://10.1.2.2:5506/dataos_pro?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false}
+      username: ${APP_DB_PRO_USER:modo}
+      password: ${APP_DB_PRO_PWD:rlkrQ==}
+      driverClassName: ${spring.datasource.main.driverClassName}
+      maximumPoolSize: ${APP_DB_POOL_SIZE:10}
+      connectionTimeout: ${APP_DB_CONNECTION_TIMEOUT:30000}
+      dataSource:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+        useLocalSessionState: true
+        rewriteBatchedStatements: true
+        cacheResultSetMetadata: true
+        cacheServerConfiguration: true
+        elideSetAutoCommits: true
+        maintainTimeStats: false
+  jpa:
+    database: ${DB_TYPE:mysql}
+    database-platform: ${DB_DIALECT:org.hibernate.dialect.MySQL5InnoDBDialect}
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  servlet:
+    multipart:
+      enabled: true #开启文件上传
+      max-file-size: 1GB #限制文件上传大小为1G
+      max-request-size: 1GB #限制文件上传大小为1G
+  main:
+    allow-bean-definition-overriding: true
+  groovy:
+    template:
+      check-template-location: false
+  redis:
+# 单点
+    host: ${REDIS_HOST:10.19.28.149}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PASSWD:redis123aB}
+# 哨兵
+#    sentinel:
+#      master: ${REDIS_SENTINEL_MASTER:mymaster}
+#      nodes: ${REDIS_HOST:host1:port1,host2:port2,host3:port3}
+#    password: ${REDIS_PASSWD:redispassword}

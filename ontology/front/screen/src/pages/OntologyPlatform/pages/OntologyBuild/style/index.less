@@ -1,0 +1,343 @@
+.ontology-build {
+	.ontology-build-content {
+		transform: scale(2.0);
+		* {
+			pointer-events: none;
+		}
+		.tooltip-bg {
+			position: absolute;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			border-radius: 20px;
+		}
+	}
+	.link-tooltip {
+		position: absolute;
+		width: max-content;
+		height: max-content;
+		border-radius: 16px;
+		background: rgba(39, 59, 108, 0.85);
+		z-index: 1000;
+		pointer-events: all;
+		transition: all .2s;
+		padding: 24px 68px 0px 24px;
+		.tooltip-bg {
+			position: absolute;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			border-radius: 20px;
+		}
+		* {
+			pointer-events: all;
+		}
+		.tooltip-content {
+			position: relative;
+			.close-btn {
+				position: absolute;
+				top: -5px;
+				right: -45px;
+				cursor: pointer;
+				color: #fff;
+				z-index: 2;
+			}
+			.value {
+				line-height: 20px;
+				font-weight: 500;
+				margin-bottom: 24px;
+				color: #fff;
+				font-family: "HarmonyOS Sans SC";
+				font-size: 16px;
+				padding-left: 8px;
+			}
+		}
+	}
+	.tooltip {
+		position: absolute;
+		width: 288px;
+		height: max-content;
+		border-radius: 16px;
+		background: rgba(39, 59, 108, 0.85);
+		z-index: 1000;
+		pointer-events: all;
+		transition: all .2s;
+		* {
+			pointer-events: all;
+		}
+		.ontology-build-tooltip-spin {
+			width: 100%;
+			.arco-spin-children {
+				width: 100%;
+				padding: 24px 24px 0px 32px;
+				&:after {
+					display: none;
+					border-radius: 16px;
+				}
+			}
+
+		}
+		.tooltip-content {
+			position: relative;
+			.close-btn {
+				position: absolute;
+				top: -5px;
+				right: 0px;
+				cursor: pointer;
+				color: #fff;
+				z-index: 2;
+			}
+			.label {
+				font-size: 14px;
+				line-height: 22px;
+				margin-bottom: 6px;
+				color: rgba(255, 255, 255, 0.80);
+				position: relative;
+				padding-left: 8px;
+				&:before {
+					content: '';
+					width: 6px;
+					height: 6px;
+					border-radius: 12px;
+					background: #01FEE1;
+					display: block;
+				    position: absolute;
+				    top: 8px;
+				    left: -10px;
+				}
+			}
+			.value {
+				font-size: 14px;
+				line-height: 20px;
+				font-weight: 500;
+				margin-bottom: 24px;
+				color: #fff;
+				padding-left: 8px;
+			}
+		}
+	}
+	.event-layer {
+		width: 998px;
+	    height: 610px;
+	    background: red;
+	    position: absolute;
+	    top: 200px;
+	}
+	.ground {
+		width: 998px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	.ground-top {
+		width: 998px;
+		position: absolute;
+		top: 200px;
+		left: 0px;
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.ground-bottom {
+		width: 998px;
+		position: absolute;
+		top: 494px;
+		pointer-events: all;
+		left: 0px;
+		cursor: pointer;
+	}
+	.outer-line-1 {
+		width: 256.5px;
+		position: absolute;
+		top: 275px;
+		left: 533px;
+	}
+	.outer-line-2 {
+		width: 2.5px;
+		position: absolute;
+		top: 453px;
+		left: 765px;
+	}
+	.outer-line-3 {
+		width: 263.5px;
+		position: absolute;
+		top: 583px;
+		left: 470px;
+	}
+	.outer-line-4 {
+		width: 256.5px;
+		position: absolute;
+		top: 586px;
+		left: 256px;
+	}
+	.outer-line-5 {
+		width: 2.5px;
+		position: absolute;
+		top: 452.5px;
+		left: 223px;
+	}
+	.outer-line-6 {
+		width: 233px;
+		position: absolute;
+		top: 277px;
+		left: 226px;
+	}
+	.ani-line-1 {
+		position: absolute;
+		top: 277px;
+		left: 226px;
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.ani-line-2 {
+		position: absolute;
+		top: 586px;
+		left: 256px;
+	}
+	.ani-line-3 {
+		position: absolute;
+		top: 585px;
+		left: 470px;
+	}
+	.ani-line-4 {
+		position: absolute;
+		top: 275px;
+		left: 533px;
+	}
+	.line-1 {
+		width: 20px;
+		position: absolute;
+		top: 293px;
+		left: 484px;
+	}
+	.line-2 {
+		width: 225.5px;
+		position: absolute;
+		top: 417px;
+		left: 495px;
+	}
+	.line-3 {
+		width: 192px;
+		position: absolute;
+		top: 484.5px;
+		left: 509px;
+	}
+	.line-4 {
+		width: 192px;
+		position: absolute;
+		top: 484.5px;
+		left: 288.5px;
+	}
+	.line-5 {
+		width: 250px;
+		position: absolute;
+		top: 416.6px;
+		left: 248.5px;
+	}
+	.dash-line-1 {
+		width: 3.5px;
+		position: absolute;
+		top: 524px;
+		left: 492px;
+	}
+	.dash-line-5 {
+		width: 180px;
+		position: absolute;
+		top: 425px;
+		left: 274px;
+	}
+	.road-map {
+		position: absolute;
+		top: 256px;
+		left: 220px;
+		width: 570px;
+	}
+	.building {
+		width: 207px;
+		position: absolute;
+		top: 370px;
+		left: 390px;
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.icon {
+		width: 130px;
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.icon-1 {
+		position: absolute;
+		top: 196px;
+		left: 429px;
+	}
+	.icon-2 {
+		position: absolute;
+		top: 292px;
+		left: 701px;
+	}
+	.icon-3 {
+		position: absolute;
+		top: 475px;
+		left: 701px;
+	}
+	.icon-4 {
+		position: absolute;
+		top: 657px;
+		left: 429px;
+	}
+	.icon-5 {
+		position: absolute;
+		top: 484px;
+		left: 160px;
+	}
+	.icon-6 {
+		position: absolute;
+		top: 310.6px;
+		left: 160px;
+	}
+	.car-1 {
+		width: 56px;
+		position: absolute;
+		top: 407px;
+		left: 288px;
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.car-2 {
+		width: 33px;
+		position: absolute;
+		top: 569px;
+		left: 478px;
+	}
+	.airplane {
+		width: 118px;
+		position: absolute;
+		top: 364px;
+		left: 548px;
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.airplane-line {
+		width: 200px;
+		position: absolute;
+		top: 387px;
+		left: 518.5px;
+	}
+	.title {
+		position: absolute;
+		top: 578px;
+		left: 202px;
+		width: 120px;
+	}
+}
+.ontology-build.en {
+	.title {
+		position: absolute;
+		top: 546px;
+		left: 159px;
+		width: 223px;
+	}
+}

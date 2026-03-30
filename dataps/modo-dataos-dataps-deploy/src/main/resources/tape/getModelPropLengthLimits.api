@@ -1,0 +1,40 @@
+{
+  "id": "277528132696395776",
+  "name": "getModelPropLengthLimits",
+  "label": "获取模型属性长度限制",
+  "descr": "获取模型属性长度限制",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" parent\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" vertex\u003d\"1\" parent\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"230\" y\u003d\"160\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "172665357969428480",
+  "respContentType": "application/json",
+  "url": "get/model/prop/length/limits",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "277528132721561600",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "277528132696395776",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.apache.commons.lang3.StringUtils;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport java.util.HashMap;\\nimport java.util.Map;\\n\\n\\n\\n    public Object get(Map\u003cString, Object\u003e params) {\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        Map\u003cString, Integer\u003e propLengthLimits \u003d new HashMap\u003c\u003e();\\n        jt.queryForList(\\\"select e.name,e.label from dataps_sys_enums_def d left join dataps_sys_enums e on d.id\u003de.def_id where d.name \u003d \u0027logicModelFieldLengthLimits\u0027\\\", params).forEach(map -\u003e {\\n            String name \u003d MapUtils.getString(map, \\\"name\\\");\\n            String label \u003d MapUtils.getString(map, \\\"label\\\");\\n            if (StringUtils.isNotBlank(name) \u0026\u0026 StringUtils.isNotBlank(label)) {\\n                propLengthLimits.put(name, Integer.parseInt(label));\\n            }\\n        });\\n        return propLengthLimits;\\n    }\\n\\n\\nreturn get(params);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.apache.commons.lang3.StringUtils;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport java.util.HashMap;\nimport java.util.Map;\n\n\n\n    public Object get(Map\u003cString, Object\u003e params) {\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        Map\u003cString, Integer\u003e propLengthLimits \u003d new HashMap\u003c\u003e();\n        jt.queryForList(\"select e.name,e.label from dataps_sys_enums_def d left join dataps_sys_enums e on d.id\u003de.def_id where d.name \u003d \u0027logicModelFieldLengthLimits\u0027\", params).forEach(map -\u003e {\n            String name \u003d MapUtils.getString(map, \"name\");\n            String label \u003d MapUtils.getString(map, \"label\");\n            if (StringUtils.isNotBlank(name) \u0026\u0026 StringUtils.isNotBlank(label)) {\n                propLengthLimits.put(name, Integer.parseInt(label));\n            }\n        });\n        return propLengthLimits;\n    }\n\n\nreturn get(params);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

@@ -1,0 +1,467 @@
+.onto-step1 {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    color: #FFF;
+    display: flex;
+    flex-direction: column; 
+    .step1-header {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+        padding: 24px;
+        font-family: "DingTalk JinBuTi";
+        font-size: 28px;
+        flex-shrink: 0;
+    }
+    .step1-container {
+        height: calc(100% - 90px);
+        flex: 1;
+        flex-shrink: 0;
+        display: flex;
+        .left {
+            height: 100%;
+            width: 217px;
+            border-right: 1px solid rgba(255, 255, 255, 0.20);
+            flex-shrink: 0;
+            padding: 24px;
+            .menu {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                .menu-item {
+                    display: flex;
+                    gap: 12px;
+                    .menu-item-icon {
+                        width: 42px;
+                        flex-shrink: 0;
+                    }
+                    .menu-item-content {
+                        font-family: "HarmonyOS Sans SC";
+                        line-height: 20px; 
+                        .title {
+                            color: rgba(255, 255, 255, 0.80);
+                            font-size: 16px;
+                            font-weight: 500;
+                            margin-bottom: 5px;
+                        }
+                        .descr {
+                            color: rgba(255, 255, 255, 0.50);
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            .right-center {
+                flex: 1;
+                overflow: hidden;
+            }
+            .right-bottom {
+                display: flex;
+                justify-content: flex-end;
+                gap: 16px;
+                flex-shrink: 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.20);
+                padding: 24px;
+                .color-btn {
+                    background: linear-gradient(127deg, #0037FF 32.46%, #F974FB 90.5%);
+                    color: #FFF;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    
+    .graph {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow-y: auto;
+        padding: 24px;
+        // 添加一个伪元素作为底部填充
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            pointer-events: none; // 确保不影响交互
+        }
+    
+        .card {
+            width: 318px;
+            position: relative;
+            cursor: pointer;
+            
+            &:hover {
+                .light-card-bg {
+                    opacity: 1;
+                }
+            }
+            img {
+                width: 100%;
+            }
+            .card-bg,
+            .light-card-bg {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                opacity: 0.6;
+                transition: all .2s;
+            }
+            .card-icon {
+                position: absolute;
+                top: 10px;
+                left: 18px;
+                width: 44px;
+            }
+            .card-title {
+                position: absolute;
+                top: 20px;
+                left: 78px;
+                line-height: 25px;
+                color: rgba(249, 254, 255, 1);
+                font-size: 18px;
+                font-weight: 500;
+            }
+            .card-descr {
+                position: absolute;
+                top: 74px;
+                left: 25px;
+                width: calc(100% - 48px);
+                font-size: 16px;
+                line-height: 22px;
+                color: rgba(206, 207, 255, 1);
+                word-wrap: break-word;      
+                word-break: break-word;      
+                white-space: normal;        
+                overflow: hidden;          
+                display: -webkit-box;       
+                -webkit-box-orient: vertical;
+            }
+        }
+        
+        // 使用类名来控制每个卡片的位置
+        .card-1 {
+            top: 0;
+            left: 0;
+        }
+        .card-1-1 {
+            top: 0;
+            left: 388px;
+        }
+        .card-2 {
+            top: 154px; // 大约是 card-1 的高度 + 一定间距
+            left: 0;
+        }
+        .card-2-1 {
+            top: 154px;
+            left: 388px;
+        }
+        .card-3 {
+            top: 308px; // 大约是 card-2 的 top + card 高度 + 间距
+            left: 0;
+        }
+        .card-4 {
+            top: 462px;
+            left: 0;
+        }
+        .card-4-1 {
+            top: 462px;
+            left: 388px;
+        }
+        .card-5 {
+            top: 616px;
+            left: 0;
+        }
+        .card-6 {
+            top: 616px;
+            left: 0;
+        }
+        .card-7 {
+            top: 770px;
+            left: 0;
+        }
+        .card-8 {
+            position: absolute;
+            top: 930px;
+            left: 0;
+            height: 20px;
+            width: 100%;
+        }
+        .card-7-1 {
+            top: 770px;
+            left: 388px;
+        }
+       
+        .mini-card {
+            height: 120px;
+            img {
+                height: 100%;
+            }
+            position: absolute;
+            left: 780px;
+        }
+        .mini-card-1 {
+            top: 13px;
+            left: 808px;
+        }
+        .mini-card-2 {
+            top: 167px;
+            left: 808px;
+        }
+        .mini-card-3 {
+            top: 321px;
+        }
+        .mini-card-4 {
+            top: 475px;
+        }
+        .mini-card-6 {
+            top: 630px;
+        }
+        .mini-card-7 {
+            top: 784px;
+        }
+        
+        .line {
+            width: 70px;
+            img {
+                width: 100%;
+            }
+            position: absolute;
+        }
+        .line-1 {
+            top: 75px;
+            left: 341px;
+        }
+        .line-2 {
+            top: 75px;
+            left: 730px;
+        }
+        .line-3 {
+            top: 230px;
+            left: 342px;
+        }
+        .line-4 {
+            top: 230px;
+            left: 730px;
+        }
+        .line-5 {
+            top: 372px;
+            left: 398px;
+        }
+        .line-6 {
+            top: 514px;
+            left: 318px;        
+        }
+        .line-7 {
+            top: 514px;
+            left: 706px;
+        }
+        .line-8 {
+            top: 837px;
+            left: 398px;
+        }
+        .line-9 {
+            top: 822px;
+            left: 318px;
+        }
+        .line-10 {
+            top: 822px;
+            left: 706px;
+        }
+        
+        .curve-line-1 {
+            position: absolute;
+            top: 541px;
+            left: 398px;
+            img {
+                width: 84px;
+            }
+        }
+        
+        .long-line {
+            width: 458px;
+            img {
+                width: 100%;
+            }
+            position: absolute;
+        }
+        .long-line-1 {
+            top: 372px;
+            left: 398px;
+        }
+        .long-line-2 {
+            top: 668px;
+            left: 318px;
+        }
+    }
+}
+.node-info-container-spin {
+    height: 0px;
+    overflow: hidden;
+    transition: all .2s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    &.expand {
+        height: 390px;
+        position: absolute;
+    }
+    .arco-spin-children::after {
+        width: calc(100% - 150px);
+        border-radius: 30px;
+        display: none;
+    }
+}
+.node-info-container {
+    width: 100%;
+    height: 0px;
+    border-radius: 30px;
+    // border: 1px solid rgba(210, 111, 255, 0.5);
+    transition: all .2s;
+    overflow: hidden;
+    &.expand {
+        height: 395px;
+    }
+    .node-info-header {
+        width: 100%;
+        height: 64px;
+        border-radius: 10px 10px 0px 0px;
+        display: flex;
+        column-gap: 24px;
+        align-items: center;
+        padding: 10px 24px;
+        .header-bg {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 64px;
+            z-index: -1;
+        }
+        .icon {
+            img {
+                width: 44px;
+            }
+        }
+        .name-label {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25px;
+            color: rgba(249, 254, 255, 1);
+        }
+        .descr {
+            flex: 1;
+            font-size: 16px;
+            line-height: 22px;
+            color: rgba(206, 207, 255, 1)
+        }
+        .expand {
+            cursor: pointer;
+            img {
+                width: 40px;
+                cursor: pointer;
+            }
+        }
+    }
+    .node-info-content {
+        height: calc(100% - 64px);
+        display: flex;
+        padding: 16px 16px 0px;
+        column-gap: 16px;
+        .pos-left {
+            width: 240px;
+            height: 100%;
+            .arco-input-group-wrapper .arco-input-inner-wrapper {
+                width: 240px;
+                height: 45px;
+                background: rgba(44, 50, 98, 0.4);
+                box-shadow: inset 0px -4px 10px 0px rgba(171, 168, 227, 0.2);
+                border-radius: 10px;
+                border: 1px solid #535C8F;
+                opacity: 0.8;
+                margin-bottom: 10px;
+            }
+            .arco-table-td {
+                padding: 10px 10px;
+                font-size: 16px;
+            }
+        }
+        .pos-right {
+            flex: 1;
+            height: 100%;
+            .table-bg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: -2;
+            }
+            .arco-table-header {
+                width: 100%;
+                height: 82px;
+                background: rgba(57,62,97,0.3);
+                border-radius: 10px;
+                backdrop-filter: blur(10px);
+                margin-bottom: 0px !important;
+                overflow: hidden !important;
+                .arco-table-th {
+                    border-bottom: 0px;
+                    text-align: center;
+                    line-height: 30px;
+                    font-size: 16px;
+                }
+                .arco-table-th-item-title {
+                    white-space: nowrap;
+                }
+            }
+            .arco-table-td {
+                text-align: center;
+            }
+            .arco-table-td {
+                padding: 20px 13px;
+                font-size: 16px;
+            }
+        }
+        .arco-table-th {
+            color: rgba(255, 255, 255, 0.65);
+            background-color: rgba(150, 152, 255, 0.10);
+            line-height: 1.5715;
+            font-weight: 500;
+            overflow: hidden;
+        }
+        .arco-table-td {
+            color: #fff;
+            background-color: transparent;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+            line-height: 1.5715;
+        }
+        .arco-table-body,
+        .arco-table-header {
+            background-color: transparent;
+        }
+    }
+}
+.onto-step1.en {
+    .graph .card .card-descr {
+        top: 73px;
+        left: 6px;
+        width: calc(100% - 9px);
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

@@ -1,0 +1,103 @@
+.elx-mapping{
+    .mapping-content{
+        .source-table{
+            .source-table-title{
+                text-align: center;
+                font-size: 12px;
+              }
+        }
+        .target-table{
+            .arco-table{
+                padding-top: 35px;
+            }
+        }
+        .table{
+            position: relative;
+            .source-table-title{
+                text-align: center;
+                font-size: 12px;
+                position: absolute;
+                left: 0px;
+                top: -10px;
+                h3{
+                    font-weight: normal;
+                    color:rgb(var(--color-gray-8));
+                  span{
+                    // font-weight: normal;
+                    display: inline-block;
+                    vertical-align: middle;
+                  }
+                  .space{
+                    border: 2px solid rgb(var(--primary-6)); 
+                    width: 1px;
+                    height: 5px;
+                    background-color: rgb(var(--primary-6));
+                    margin-right: 5px;
+                    display: inline-block;
+                  }
+                }
+            
+              }
+        }
+       
+        .line-box{
+            margin-top: 75px;
+            .line-add-none{
+              display: none;
+            }
+            .mapping-line-div{
+              height: 35px;
+              .mapping-line{
+                height:36px;
+                padding: 0px 5px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                .circle{
+                  width: 8px;
+                  // position: absolute;
+                  height: 8px;
+                  background: rgb(var(--color-fill-2));
+                  border-radius: 50px
+                }
+                .line{
+                  width: 90%;
+                  height: 1px;
+                  border-top: 1px dashed rgb(var(--color-fill-2));
+                }
+                .triangle{
+                  width: 0;
+                  // position: relative;
+                  // right: 36px;
+                  height: 0;
+                  transform: rotate(445deg);
+                  border-left: 4px solid transparent;
+                  border-right: 4px solid transparent;
+                  border-bottom: 8px solid rgb(var(--color-fill-2));
+        
+                }
+              }
+              .color-line{
+                .circle{
+                  background: rgb(var(--color-primary-6))!important;
+                }
+                .line{
+                  border-top: 1px dashed rgb(var(--color-primary-6))!important;
+                }
+                .triangle{
+                  border-bottom: 8px solid rgb(var(--color-primary-6))!important;
+                }
+        
+              }
+            }
+            .none-line{
+              display: none;
+            }
+          } 
+          .arco-table-no-data{
+            width: 100% !important;
+          }
+    }
+
+}

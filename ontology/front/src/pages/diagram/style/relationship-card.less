@@ -1,0 +1,78 @@
+.graph-relationship-card {
+    width: 208px;
+    max-height: 328px;
+    overflow: auto;
+    border-radius: 4px;
+    background: #FFF;
+    margin: -10px;
+   // box-shadow: 0 4px 10px 0 var(---color-shadow, rgba(36, 46, 67, 0.10));
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        border-bottom: 1px solid var(--color-border-2, #E3E9EF);
+        .moda-icon {
+            color: var(--color-text-2);
+        }
+        .tag {
+            display: flex;
+            gap: 2px;
+            padding: 0 6px;
+            max-width: 85px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        img {
+            flex-shrink: 0;
+        }
+    }
+    .main {
+        padding: 12px;
+        color: var(--color-text-1, #242E43);
+
+        .label {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--color-text-2, #4D5E7D);
+            line-height: 20px;
+            margin-bottom: 4px;
+            img {
+                width: 12px;
+                height: 12px;
+            }
+        }
+        .content {
+            margin-bottom: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            .attr {
+                display: flex;
+                align-items: center;
+                gap: 4px 12px;
+            }
+            .arco-tag{
+                height: auto;
+                .arco-tag-content{
+                    white-space: normal;
+                }
+            }
+
+        }
+        .content:last-child {
+            margin-bottom: 0;
+        }
+        .content.attr-list {
+            gap: 4px 4px;
+            .attr{
+                margin-right: 10px;
+                gap: unset;
+                svg{
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+}

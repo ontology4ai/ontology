@@ -1,0 +1,202 @@
+
+.proc-lable{
+    .label{
+        display: inline;
+
+    }
+    .help{
+        line-height: 30px;
+        margin: 0 2px;
+        color:#c9cdd4;
+    }
+    .arco-radio-group{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        line-height: 10px;
+    }
+}
+
+.expand{
+
+
+    .grid-two{
+        position: relative;
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(2, 1fr);
+        // padding: 15px 20px;
+        .arco-form-item-wrapper{
+            width: calc(100% - 20px);
+        }
+        &>div:last-child .arco-form-item-wrapper {
+            width: 100%;
+        }
+
+    }
+    // .grid-one{
+    //     padding: 0px 20px 15px  20px;
+    // }
+    .arco-form-label-item{
+        .label-item{
+            span{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .space{
+                border: 2px solid rgb(var(--primary-6));
+                width: 1px;
+                height: 5px;
+                background-color: rgb(var(--primary-6));
+                margin-right: 5px;
+            }
+            .help{
+                color:#c9cdd4;
+            }
+            .total{
+                color: rgb(var(--primary-6));
+                margin-left: 5px;
+            }
+        }
+
+    }
+    .arco-table .arco-empty{
+        padding: 0px;
+    }
+
+}
+.group-item{
+    // padding: 15px 20px;
+    .form-item-title{
+        span{
+            vertical-align: middle;
+        }
+        .space{
+            border: 2px solid rgb(var(--primary-6));
+            width: 1px;
+            height: 5px;
+            background-color: rgb(var(--primary-6));
+            margin-right: 5px;
+            display: inline-block;
+
+        }
+    }
+}
+
+// .elx-data-preview{
+//     .preview-content{
+//         text-align: right;
+//         margin: 10px 0px;
+//        .preview-btn{
+//         width: 10%;
+//        }
+
+//     }
+// }
+
+.form-item-title{
+    font-weight: 500;
+    color: #1D2129;
+    font-size: 14px;
+    height: 30px;
+    border-bottom: 1px solid rgb(var(--color-gray-2)) ;
+    margin-bottom: 10px;
+}
+.expand .elx-data-preview{
+    position: absolute;
+    right: 20px;
+    top: -2%;
+    height: 28px;
+
+}
+.expand .elx-data-soure{
+    position: absolute;
+    top: -2%;
+    height: 28px;
+    margin: 0px 10px;
+
+}
+.preview-modal{
+  .arco-spin{
+    width: 100%;
+    .arco-typography{
+      white-space: nowrap;
+    }
+  }
+  .noData{
+    text-align: center;
+    height: 200px;
+    line-height: 200px;
+    width: 100%;
+  }
+}
+.elx-field-list{
+    .field-list-content{
+        .arco-form-item-wrapper{
+            width: 100%!important;
+            flex: 0 0 100%!important;
+        }
+        .arco-form-label-item{
+            label{
+                display: flex;
+            }
+        }
+       .arco-table-no-data{
+            width: 100%!important;
+       }
+    }
+}
+.expand .elx-button-box{
+    position: absolute;
+    right: 40px;
+    top: -2%;
+    height: 28px;
+    .arco-btn{
+        padding:0px;
+    }
+    .arco-form-item-wrapper{
+        text-align: center;
+    }
+
+}
+.auto-modal{
+    .arco-checkbox{
+        margin-top: 10px;
+    }
+}
+.isTab {
+    .form-item.single {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .grid-two .isHidden {
+        display: none;
+    }
+    .grid-one.sql {
+        flex: 1;
+        overflow: auto;
+    }
+    .grid-one.sql .sql.Editor {
+        height: 100%;
+        display:flex;
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+    .grid-one.sql .sql.Editor .arco-form-label-item {
+        flex: 0 0 20px !important;
+    }
+    .grid-one.sql .sql.Editor .arco-form-item-wrapper {
+        flex: 1;
+        overflow: hidden;
+        width: 100%;
+    }
+    .grid-one.sql .sql.Editor .arco-form-item-control-wrapper,
+    .grid-one.sql .sql.Editor .arco-form-item-control,
+    .grid-one.sql .sql.Editor .arco-form-item-control-children,
+    .grid-one.sql .sql.Editor .modo-editor {
+        width: 100%;
+        height: 100% !important;
+    }
+}
+

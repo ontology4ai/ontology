@@ -1,0 +1,38 @@
+{
+  "id": "dataps-139382567018401792",
+  "name": "queryRelaDS",
+  "label": "查询关联数据源",
+  "descr": "查询关联数据源",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"360\" y\u003d\"300\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "respContentType": "application/json",
+  "url": "datasource/queryRelaDS",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "dataps-139382567056150528",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "dataps-139382567018401792",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import java.util.HashMap;\\nimport java.util.List;\\nimport java.util.Map;\\nimport java.util.regex.Pattern;\\nimport java.util.stream.Collectors;\\n\\nimport com.asiainfo.modo.app.datasource.ModoDatasourceRepo;\\nimport com.asiainfo.modo.app.datasource.ModoDatasource;\\nimport com.asiainfo.modo.app.web.ModoWebUtils;\\nimport io.github.suanchou.utils.SpringContextUtil;\\n\\n\\n\\n\\nModoDatasourceRepo datasourceRepo \u003d SpringContextUtil.getBean(ModoDatasourceRepo.class);\\nList\u003cModoDatasource\u003e list \u003d datasourceRepo.findAll();\\n// Pattern p \u003d Pattern.compile(\\\"\\\\\\\\$\\\\\\\\{([^}]+)}\\\");\\nPattern p \u003d Pattern.compile(\\\"\\\\\\\\{([^}]+)}\\\");\\n\\n\\n\\nList\u003cMap\u003cString, String\u003e\u003e result \u003d list.stream()\\n        .filter(ds -\u003e !p.matcher(ds.getName())\\n                .find())\\n        .map(ds -\u003e {\\n            Map\u003cString, String\u003e map \u003d new HashMap\u003c\u003e();\\n            map.put(\\\"value\\\", ds.getName());\\n            map.put(\\\"label\\\", ds.getLabel());\\n            return map;\\n        }).collect(Collectors.toList());\\n\\n\\n\\nreturn result;\\n\\n\"}",
+      "createUser": "xiacj3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\nimport java.util.regex.Pattern;\nimport java.util.stream.Collectors;\n\nimport com.asiainfo.modo.app.datasource.ModoDatasourceRepo;\nimport com.asiainfo.modo.app.datasource.ModoDatasource;\nimport com.asiainfo.modo.app.web.ModoWebUtils;\nimport io.github.suanchou.utils.SpringContextUtil;\n\n\n\n\nModoDatasourceRepo datasourceRepo \u003d SpringContextUtil.getBean(ModoDatasourceRepo.class);\nList\u003cModoDatasource\u003e list \u003d datasourceRepo.findAll();\n// Pattern p \u003d Pattern.compile(\"\\\\$\\\\{([^}]+)}\");\nPattern p \u003d Pattern.compile(\"\\\\{([^}]+)}\");\n\n\n\nList\u003cMap\u003cString, String\u003e\u003e result \u003d list.stream()\n        .filter(ds -\u003e !p.matcher(ds.getName())\n                .find())\n        .map(ds -\u003e {\n            Map\u003cString, String\u003e map \u003d new HashMap\u003c\u003e();\n            map.put(\"value\", ds.getName());\n            map.put(\"label\", ds.getLabel());\n            return map;\n        }).collect(Collectors.toList());\n\n\n\nreturn result;\n\n"
+      }
+    }
+  ]
+}

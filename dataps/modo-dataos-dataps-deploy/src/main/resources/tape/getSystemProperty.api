@@ -1,0 +1,87 @@
+{
+  "id": "242297720619843584",
+  "name": "getSystemProperty",
+  "label": "获取系统参数cmsh",
+  "descr": "获取系统参数cmsh",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-httpdiaoyong;title\u003d2.HTTP调用\" title\u003d\"HTTP调用\" modelData\u003d\"\" stepInst\u003d\"http\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"160\" y\u003d\"140\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"3\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-dayinxiaoxi;title\u003d3.消息打印\" title\u003d\"消息打印\" modelData\u003d\"\" stepInst\u003d\"print\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"320\" y\u003d\"140\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"4\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"2\" target\u003d\"3\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"5\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d5.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" vertex\u003d\"1\" parent\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"450\" y\u003d\"140\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"6\" value\u003d\"成功时\" edge\u003d\"1\" parent\u003d\"1\" source\u003d\"3\" target\u003d\"5\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236150763746426880",
+  "respContentType": "application/json",
+  "url": "_api/_/property/queryProperty",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[{\"id\":\"75522c90-6cb9-466c-8d31-00bb9d78a36d\",\"name\":\"name\",\"required\":\"1\",\"example\":\"com.asiainfo.cmsh.inter.url\",\"desc\":\"参数英文名\",\"value\":\"com.asiainfo.cmsh.inter.url\"}]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "hulin",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "242310394533810176",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.HTTP调用",
+      "graphId": "242297720619843584",
+      "stepInst": "http",
+      "preStepId": "-1",
+      "nextStepId": "3",
+      "successStepId": "3",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.HTTP调用\",\"method\":\"GET\",\"dataSource\":\"_common__http_service\",\"url\":\"_api/_/property/getPropByName\",\"reqContentType\":\"application/json\",\"variable\":\"data\",\"jsonHeaders\":\"{\\\"Content-Type\\\":\\\"application/json;charset\u003dUTF-8\\\"}\",\"jsonParams\":\"params\",\"socketTimeout\":\"30000\"}",
+      "createUser": "hulin",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.HTTP调用",
+        "method": "GET",
+        "dataSource": "_common__http_service",
+        "url": "_api/_/property/getPropByName",
+        "reqContentType": "application/json",
+        "variable": "data",
+        "jsonHeaders": "{\"Content-Type\":\"application/json;charset\u003dUTF-8\"}",
+        "jsonParams": "params",
+        "socketTimeout": "30000"
+      }
+    },
+    {
+      "id": "242310394533810177",
+      "stepSeq": "3",
+      "parentStepId": "-1",
+      "label": "3.消息打印",
+      "graphId": "242297720619843584",
+      "stepInst": "print",
+      "preStepId": "2",
+      "nextStepId": "5",
+      "successStepId": "5",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"3.消息打印\",\"text\":\"${data}\"}",
+      "createUser": "hulin",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "3.消息打印",
+        "text": "${data}"
+      }
+    },
+    {
+      "id": "242310394533810178",
+      "stepSeq": "5",
+      "parentStepId": "-1",
+      "label": "5.执行脚本",
+      "graphId": "242297720619843584",
+      "stepInst": "script",
+      "preStepId": "3",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"5.执行脚本\",\"scriptText\":\"System.out.println(\\\"propertyData:\\\"+data);\\nreturn data;\"}",
+      "createUser": "hulin",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "5.执行脚本",
+        "scriptText": "System.out.println(\"propertyData:\"+data);\nreturn data;"
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+.quick-menu-wrap {
+  background: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: height .2s cubic-bezier(.215,.61,.355,1),opacity .2s cubic-bezier(.215,.61,.355,1);
+  box-shadow: 0 12px 10px 0 rgb(0 0 0 / 7%);
+
+  .quick-menu-node {
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    cursor: pointer;
+
+    .active {
+      color: rgb(var(--primary-6));
+    }
+
+    .quick-menu-node-label {
+      height: 35px;
+      line-height: 35px;
+      font-weight: 700;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      .icon {
+        position: absolute;
+        left: 0;
+        top: 11px;
+      }
+
+      .line {
+        position: absolute;
+        border-bottom: 1px solid #000;
+        width: 0;
+        top: 34px;
+        left: 0;
+        transition: all .3s ease-in-out;
+
+        &-active {
+          width: 120px;
+          border-bottom-color: rgb(var(--primary-6));
+        }
+      }
+    }
+
+    .quick-menu-node-submenu {
+      &-label {
+        height: 35px;
+        line-height: 35px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+  }
+}

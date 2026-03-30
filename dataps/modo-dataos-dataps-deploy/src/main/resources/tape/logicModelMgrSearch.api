@@ -1,0 +1,40 @@
+{
+  "id": "73719409394552832",
+  "name": "logicModelMgrSearch",
+  "label": "逻辑模型管理查询服务",
+  "descr": "逻辑模型管理查询服务",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"290\" y\u003d\"130\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236063466669670400",
+  "respContentType": "application/json",
+  "url": "logic/model/mgr/search",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[{\"id\":\"46885695-20f3-4b12-b3de-f5055b525344\",\"name\":\"limit\",\"required\":\"1\",\"example\":\"\",\"desc\":\"\"},{\"id\":\"c811af19-c49b-465d-bc1c-4f97e0fc88aa\",\"name\":\"offset\",\"required\":\"1\",\"example\":\"\",\"desc\":\"\"},{\"id\":\"d42dd010-ec94-4e38-ae68-d2ac5b9d1915\",\"name\":\"teamName\",\"required\":\"1\",\"example\":\"\",\"desc\":\"\"},{\"id\":\"02f025cd-3476-4ec1-9df8-3cdefec3efff\",\"name\":\"workspaceId\",\"required\":\"0\",\"example\":\"\",\"desc\":\"\"},{\"id\":\"c2c01fd7-9549-45fd-a8ae-415d55c650ff\",\"name\":\"archNodeId\",\"required\":\"0\",\"example\":\"\",\"desc\":\"\"},{\"id\":\"59c19ba1-c996-4af4-9a16-0af74154957b\",\"name\":\"keyWord\",\"required\":\"0\",\"example\":\"\",\"desc\":\"\"},{\"id\":\"7221cc85-8bbe-4fa4-bd4e-4bf554420e2f\",\"name\":\"states\",\"required\":\"0\",\"example\":\"\",\"desc\":\"\"}]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "262929791346003968",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "73719409394552832",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport com.asiainfo.modo.dataps.DatapsJdbcQueryHelper;\\nimport com.asiainfo.modo.dataps.LogicModelService;\\nimport com.asiainfo.modo.dataps.DatapsMysql8Support;\\nimport com.asiainfo.modo.utils.DateHelper;\\nimport io.github.suanchou.utils.JsonUtil;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.apache.commons.lang3.StringUtils;\\nimport org.springframework.data.domain.Page;\\nimport org.springframework.data.domain.PageImpl;\\nimport org.springframework.data.domain.PageRequest;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\nimport java.util.*;\\n\\n\\n\\n\\n\\n    public Object search(Map\u003cString, Object\u003e params) {\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        String impl \u003d \\\"logicModelService\\\";\\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select prop_label from dacp_meta_property where prop_name\u003d\u0027useArchAsTag\u0027\\\", params));\\n        for (Map\u003cString, Object\u003e map : list) {\\n            if (\\\"true\\\".equals(MapUtils.getString(map, \\\"propLabel\\\"))) {\\n                impl \u003d \\\"archPropLogicModelService\\\";\\n            }\\n        }\\n        LogicModelService logicModelService \u003d (LogicModelService) SpringContextUtil.getBean(impl);\\n        return logicModelService.search(params);\\n    }\\n\\n\\n\\n\\nreturn search(params);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport com.asiainfo.modo.dataps.DatapsJdbcQueryHelper;\nimport com.asiainfo.modo.dataps.LogicModelService;\nimport com.asiainfo.modo.dataps.DatapsMysql8Support;\nimport com.asiainfo.modo.utils.DateHelper;\nimport io.github.suanchou.utils.JsonUtil;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.apache.commons.lang3.StringUtils;\nimport org.springframework.data.domain.Page;\nimport org.springframework.data.domain.PageImpl;\nimport org.springframework.data.domain.PageRequest;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\nimport java.util.*;\n\n\n\n\n\n    public Object search(Map\u003cString, Object\u003e params) {\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        String impl \u003d \"logicModelService\";\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select prop_label from dacp_meta_property where prop_name\u003d\u0027useArchAsTag\u0027\", params));\n        for (Map\u003cString, Object\u003e map : list) {\n            if (\"true\".equals(MapUtils.getString(map, \"propLabel\"))) {\n                impl \u003d \"archPropLogicModelService\";\n            }\n        }\n        LogicModelService logicModelService \u003d (LogicModelService) SpringContextUtil.getBean(impl);\n        return logicModelService.search(params);\n    }\n\n\n\n\nreturn search(params);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

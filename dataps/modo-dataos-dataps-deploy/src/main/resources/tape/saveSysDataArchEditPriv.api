@@ -1,0 +1,40 @@
+{
+  "id": "182122533602140160",
+  "name": "saveSysDataArchEditPriv",
+  "label": "保存系统架构编辑权限",
+  "descr": "保存系统架构编辑权限",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"310\" y\u003d\"140\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236137581396668416",
+  "respContentType": "application/json",
+  "url": "save/sys/data/arch/edit/priv",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\"body\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}],\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "236140352686567424",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "182122533602140160",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"import com.asiainfo.modo.dataps.SaveSysDataArchEditPrivTransactional;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nSaveSysDataArchEditPrivTransactional targetBean \u003d SpringContextUtil.getBean(SaveSysDataArchEditPrivTransactional.class);\\nreturn targetBean.save(body);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "import com.asiainfo.modo.dataps.SaveSysDataArchEditPrivTransactional;\nimport io.github.suanchou.utils.SpringContextUtil;\nSaveSysDataArchEditPrivTransactional targetBean \u003d SpringContextUtil.getBean(SaveSysDataArchEditPrivTransactional.class);\nreturn targetBean.save(body);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+	"id": "m112",
+	"type": "form",
+	"options": {
+		"labelAlign": "left",
+		"labelCol": {
+			"span": 1
+		},
+		"wrapperCol": {
+			"span": 23
+		}
+	},
+	"children": [
+		{
+			"id": "m1120",
+			"type": "formItem",
+			"options": {
+				"noStyle": true
+			},
+			"children": [
+				{
+					"id": "row1",
+					"type": "row",
+					"options": {
+						"gutter": 10
+					},
+					"children": [
+						{
+							"id": "col1",
+							"type": "col",
+							"options": {
+								"span": 12
+							},
+							"children": [
+								{
+									"id": "m11201",
+									"type": "formItem",
+									"options": {
+										"label": "表单项",
+										"labelCol": {
+											"span": 2
+										},
+										"wrapperCol": {
+											"span": 22
+										}
+									},
+									"children": [
+										{
+											"id": "m112011",
+											"type": "input",
+											"options": {
+												"placeholder": "please enter your post..."
+												
+											}
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "col2",
+							"type": "col",
+							"options": {
+								"span": 12
+							},
+							"children": [
+								{
+									"id": "m11201",
+									"type": "formItem",
+									"options": {
+										"label": "表单项",
+										"labelCol": {
+											"span": 2
+										},
+										"wrapperCol": {
+											"span": 22
+										}
+									},
+									"children": [
+										{
+											"id": "m112011",
+											"type": "input",
+											"options": {
+												"placeholder": "please enter your post..."
+												
+											}
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "m1121",
+			"type": "formItem",
+			"options": {
+				"label": "表单项"
+			},
+			"children": [
+				{
+					"id": "m11211",
+					"type": "input",
+					"options": {
+						"placeholder": "please enter your post..."
+						
+					}
+				}
+			]
+		},
+		{
+			"id": "m1122",
+			"type": "formItem",
+			"options": {
+				"wrapperCol": {
+					"offset": 1
+				}
+			},
+			"children": [
+				{
+					"id": "m11221",
+					"type": "button",
+					"label": "重置",
+					"options": {
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "dataps-77481900637392896",
+  "name": "loadOnlineProcs",
+  "label": "载入上线程序",
+  "descr": "载入上线程序",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"100\" y\u003d\"160\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"4\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-httpdiaoyong;title\u003d4.HTTP调用\" title\u003d\"HTTP调用\" modelData\u003d\"\" stepInst\u003d\"http\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"270\" y\u003d\"180\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"5\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d5.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"480\" y\u003d\"190\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"6\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"2\" target\u003d\"4\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"7\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"4\" target\u003d\"5\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "235831935786856448",
+  "respContentType": "application/json",
+  "url": "load/online/procs",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "dataps-77837423324925952",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "dataps-77481900637392896",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "4",
+      "successStepId": "4",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import java.util.*;\\nimport org.apache.commons.collections.MapUtils;\\n\\n\\nString procIds \u003d MapUtils.getString(params, \\\"procIds\\\");\\nconvertParams \u003d new HashMap\u003c\u003e();\\nconvertParams.put(\\\"ids\\\",procIds);\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import java.util.*;\nimport org.apache.commons.collections.MapUtils;\n\n\nString procIds \u003d MapUtils.getString(params, \"procIds\");\nconvertParams \u003d new HashMap\u003c\u003e();\nconvertParams.put(\"ids\",procIds);"
+      }
+    },
+    {
+      "id": "dataps-77837423324925953",
+      "stepSeq": "4",
+      "parentStepId": "-1",
+      "label": "4.HTTP调用",
+      "graphId": "dataps-77481900637392896",
+      "stepInst": "http",
+      "preStepId": "2",
+      "nextStepId": "5",
+      "successStepId": "5",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"4.HTTP调用\",\"method\":\"GET\",\"dataSource\":\"onePlusN_asiainfo_cloud\",\"url\":\"open/metamodel/outside/proc/detail\",\"jsonParams\":\"convertParams\",\"reqContentType\":\"application/json\",\"socketTimeout\":\"30000\",\"variable\":\"result\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "4.HTTP调用",
+        "method": "GET",
+        "dataSource": "onePlusN_asiainfo_cloud",
+        "url": "open/metamodel/outside/proc/detail",
+        "jsonParams": "convertParams",
+        "reqContentType": "application/json",
+        "socketTimeout": "30000",
+        "variable": "result"
+      }
+    },
+    {
+      "id": "dataps-77837423324925954",
+      "stepSeq": "5",
+      "parentStepId": "-1",
+      "label": "5.执行脚本",
+      "graphId": "dataps-77481900637392896",
+      "stepInst": "script",
+      "preStepId": "4",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"5.执行脚本\",\"scriptText\":\"return result;\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "5.执行脚本",
+        "scriptText": "return result;"
+      }
+    }
+  ]
+}

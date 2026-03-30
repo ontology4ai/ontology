@@ -1,0 +1,40 @@
+{
+  "id": "dataps-139382535200411648",
+  "name": "logicModelOnlineCheck",
+  "label": "逻辑模型上线检查",
+  "descr": "逻辑模型上线检查",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"220\" y\u003d\"130\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236064944930729984",
+  "respContentType": "application/json",
+  "url": "logic/model/online/check",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\"body\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}],\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "236078379895029760",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "dataps-139382535200411648",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport java.util.HashMap;\\nimport java.util.List;\\nimport java.util.Map;\\n\\n\\n\\n    public Map\u003cString, Map\u003cString, Object\u003e\u003e checkOnlineable(Map\u003cString, Object\u003e body) {\\n        List\u003cString\u003e tabIds \u003d (List\u003cString\u003e) body.get(\\\"tabIds\\\");\\n        Map\u003cString, Map\u003cString, Object\u003e\u003e result \u003d new HashMap\u003c\u003e();\\n        tabIds.forEach(tabId -\u003e {\\n            Map\u003cString, Object\u003e map \u003d new HashMap\u003c\u003e();\\n            map.put(\\\"onlineable\\\", true);\\n            result.put(tabId, map);\\n        });\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        Map\u003cString, Object\u003e params \u003d new HashMap\u003c\u003e();\\n        params.put(\\\"tabIds\\\", tabIds);\\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select id,state from model_logic_model_draft where state \u003d \u0027PUBLISHED\u0027 and id in (:tabIds)\\\", params));\\n        list.forEach(map -\u003e {\\n            String tabId \u003d MapUtils.getString(map, \\\"id\\\");\\n            if (result.containsKey(tabId)) {\\n                result.get(tabId).put(\\\"onlineable\\\", false);\\n                result.get(tabId).put(\\\"msg\\\", \\\"已发布\\\");\\n            }\\n        });\\n        list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select o.obj_id,p.state from model_flow_obj o inner join model_flow_inst i on o.flow_id\u003di.id and i.flow_type\u003d\u0027logicModelOnline\u0027 inner join modo_flowable_task_busiobj bo on bo.busiobj_type\u003d\u0027modelFlowInst\u0027 and bo.busiobj_id\u003do.flow_id inner join modo_flowable_procinst p on bo.procinst_id \u003d p.procinst_id where o.obj_id in (:tabIds) order by p.create_dt asc\\\", params));\\n        list.forEach(map -\u003e {\\n            String state \u003d MapUtils.getString(map, \\\"state\\\");\\n            String tabId \u003d MapUtils.getString(map, \\\"objId\\\");\\n            if (result.containsKey(tabId)) {\\n                boolean onlineable \u003d (boolean) result.get(tabId).get(\\\"onlineable\\\");\\n                if (onlineable) {\\n                    if (!(\\\"2\\\".equals(state) || \\\"5\\\".equals(state))) {\\n                        result.get(tabId).put(\\\"onlineable\\\", false);\\n                        result.get(tabId).put(\\\"msg\\\", \\\"待审批\\\");\\n                    }\\n                }\\n            }\\n        });\\n        return result;\\n    }\\n\\n\\n\\nreturn (params);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\n\n\n    public Map\u003cString, Map\u003cString, Object\u003e\u003e checkOnlineable(Map\u003cString, Object\u003e body) {\n        List\u003cString\u003e tabIds \u003d (List\u003cString\u003e) body.get(\"tabIds\");\n        Map\u003cString, Map\u003cString, Object\u003e\u003e result \u003d new HashMap\u003c\u003e();\n        tabIds.forEach(tabId -\u003e {\n            Map\u003cString, Object\u003e map \u003d new HashMap\u003c\u003e();\n            map.put(\"onlineable\", true);\n            result.put(tabId, map);\n        });\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        Map\u003cString, Object\u003e params \u003d new HashMap\u003c\u003e();\n        params.put(\"tabIds\", tabIds);\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select id,state from model_logic_model_draft where state \u003d \u0027PUBLISHED\u0027 and id in (:tabIds)\", params));\n        list.forEach(map -\u003e {\n            String tabId \u003d MapUtils.getString(map, \"id\");\n            if (result.containsKey(tabId)) {\n                result.get(tabId).put(\"onlineable\", false);\n                result.get(tabId).put(\"msg\", \"已发布\");\n            }\n        });\n        list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select o.obj_id,p.state from model_flow_obj o inner join model_flow_inst i on o.flow_id\u003di.id and i.flow_type\u003d\u0027logicModelOnline\u0027 inner join modo_flowable_task_busiobj bo on bo.busiobj_type\u003d\u0027modelFlowInst\u0027 and bo.busiobj_id\u003do.flow_id inner join modo_flowable_procinst p on bo.procinst_id \u003d p.procinst_id where o.obj_id in (:tabIds) order by p.create_dt asc\", params));\n        list.forEach(map -\u003e {\n            String state \u003d MapUtils.getString(map, \"state\");\n            String tabId \u003d MapUtils.getString(map, \"objId\");\n            if (result.containsKey(tabId)) {\n                boolean onlineable \u003d (boolean) result.get(tabId).get(\"onlineable\");\n                if (onlineable) {\n                    if (!(\"2\".equals(state) || \"5\".equals(state))) {\n                        result.get(tabId).put(\"onlineable\", false);\n                        result.get(tabId).put(\"msg\", \"待审批\");\n                    }\n                }\n            }\n        });\n        return result;\n    }\n\n\n\nreturn (params);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

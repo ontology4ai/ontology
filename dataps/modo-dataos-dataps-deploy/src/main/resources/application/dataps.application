@@ -1,0 +1,34 @@
+{
+    "name": "dataps",
+    "label": "数据开发",
+    "descr": null,
+    "extConf": {
+        "layout": "1",
+        "hasCopilot": true,
+        "leftTheme": "light",
+        "hasBreadcrumb": "0",
+        "hasQuickMenu": "1",
+        "loginUrl": "/_common_/login",
+        "loginTitle": "Data OS",
+        "langs": [
+            "zh-CN",
+            "en-US"
+        ],
+        "hasNav": "1",
+        "logoUrl": "/_file/ext/dataps/setting/logo+name.png?l=4675"
+    },
+    "createDate": null,
+    "version": null,
+    "createUser": "hulin",
+    "lastupd": 1719283138565,
+    "bucketName": "modo",
+    "tapePrefix": "api",
+    "state": null,
+    "pluginJar": null,
+    "commitMsg": null,
+    "webTermPort": null,
+    "contextPath": "dataps",
+    "appType": "0",
+    "baseAppName": null,
+    "baseAppLabel": null
+}

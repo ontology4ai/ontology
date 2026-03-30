@@ -1,0 +1,40 @@
+{
+  "id": "173830358444167168",
+  "name": "datapsResolveNamingLabels",
+  "label": "解析命名规则项目中文名",
+  "descr": "解析命名规则项目中文名",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" parent\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" vertex\u003d\"1\" parent\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"240\" y\u003d\"140\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "235831935786856448",
+  "respContentType": "application/json",
+  "url": "dataps/resolve/naming/labels",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\"body\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}],\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "173830358469332992",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "173830358444167168",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"\\n\\nimport org.apache.commons.collections.MapUtils;\\n\\nimport java.util.ArrayList;\\nimport java.util.Arrays;\\nimport java.util.List;\\nimport java.util.Map;\\nimport java.util.regex.Matcher;\\nimport java.util.regex.Pattern;\\n\\n\\n\\n    public Object resolve(Map\u003cString, Object\u003e body) {\\n        String rule \u003d MapUtils.getString(body, \\\"rule\\\");\\n        String itemReg \u003d \\\"\\\\\\\\[[\\\\\\\\u4E00-\\\\\\\\u9FA5a-zA-Z\\\\\\\\_\\\\\\\\(\\\\\\\\)]+\\\\\\\\]|\\\\\\\\\u003c[\\\\\\\\u4E00-\\\\\\\\u9FA5a-zA-Z\\\\\\\\_\\\\\\\\(\\\\\\\\)]+\\\\\\\\\u003e\\\";\\n        Pattern itemPt \u003d Pattern.compile(itemReg);\\n        Matcher itemMt \u003d itemPt.matcher(rule);\\n        String matchStr;\\n        List\u003cList\u003cString\u003e\u003e result \u003d new ArrayList\u003c\u003e();\\n        while (itemMt.find()) {\\n            matchStr \u003d itemMt.group(0);\\n            if (Pattern.matches(\\\"\\\\\\\\\u003c[\\\\\\\\u4E00-\\\\\\\\u9FA5a-zA-Z\\\\\\\\_\\\\\\\\(\\\\\\\\)]+\\\\\\\\\u003e\\\", matchStr)) {\\n                String recLabel \u003d matchStr.substring(1, matchStr.length() - 1);\\n                result.add(Arrays.asList(\\\"required\\\", recLabel+\\\"_required\\\"));\\n            } else if (Pattern.matches(\\\"\\\\\\\\[[\\\\\\\\u4E00-\\\\\\\\u9FA5a-zA-Z\\\\\\\\_\\\\\\\\(\\\\\\\\)]+\\\\\\\\]\\\", matchStr)) {\\n                String recLabel \u003d matchStr.substring(1, matchStr.length() - 1);\\n                result.add(Arrays.asList(\\\"notRequired\\\", recLabel+\\\"_notRequired\\\"));\\n            }\\n        }\\n        return result;\\n    }\\n\\n\\nreturn resolve(body);\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "\n\nimport org.apache.commons.collections.MapUtils;\n\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.List;\nimport java.util.Map;\nimport java.util.regex.Matcher;\nimport java.util.regex.Pattern;\n\n\n\n    public Object resolve(Map\u003cString, Object\u003e body) {\n        String rule \u003d MapUtils.getString(body, \"rule\");\n        String itemReg \u003d \"\\\\[[\\\\u4E00-\\\\u9FA5a-zA-Z\\\\_\\\\(\\\\)]+\\\\]|\\\\\u003c[\\\\u4E00-\\\\u9FA5a-zA-Z\\\\_\\\\(\\\\)]+\\\\\u003e\";\n        Pattern itemPt \u003d Pattern.compile(itemReg);\n        Matcher itemMt \u003d itemPt.matcher(rule);\n        String matchStr;\n        List\u003cList\u003cString\u003e\u003e result \u003d new ArrayList\u003c\u003e();\n        while (itemMt.find()) {\n            matchStr \u003d itemMt.group(0);\n            if (Pattern.matches(\"\\\\\u003c[\\\\u4E00-\\\\u9FA5a-zA-Z\\\\_\\\\(\\\\)]+\\\\\u003e\", matchStr)) {\n                String recLabel \u003d matchStr.substring(1, matchStr.length() - 1);\n                result.add(Arrays.asList(\"required\", recLabel+\"_required\"));\n            } else if (Pattern.matches(\"\\\\[[\\\\u4E00-\\\\u9FA5a-zA-Z\\\\_\\\\(\\\\)]+\\\\]\", matchStr)) {\n                String recLabel \u003d matchStr.substring(1, matchStr.length() - 1);\n                result.add(Arrays.asList(\"notRequired\", recLabel+\"_notRequired\"));\n            }\n        }\n        return result;\n    }\n\n\nreturn resolve(body);"
+      }
+    }
+  ]
+}

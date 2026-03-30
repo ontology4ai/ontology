@@ -1,0 +1,95 @@
+.logic-type-edit-modal {
+    .arco-modal-header {
+        height: 44px;
+        .arco-modal-title {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 22px;
+            color: var(--color-text-1);
+            text-align: left;
+        }
+    }
+    .arco-modal-content {
+        padding: 16px 20px;
+        .label {
+            color: var(--color-text-2, #4D5E7D);
+            line-height: 20px;
+            margin-bottom: 6px;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 9px;
+            .arco-radio {
+                border-radius: var(--border-radius-medium, 4px);
+                border: 1px solid var(--color-border-2, #E3E9EF);
+                padding: 10px 12px;
+                flex: 1;
+                margin-right: 0;
+            }
+            .arco-radio.arco-radio-checked {
+                border: 1px solid var(--color-primary-6);
+            }
+            .arco-radio.arco-radio-disabled {
+                background: var(--color-fill-1, #F9FBFD);
+            }
+        }
+       
+        .tips {
+            display: flex;
+            padding: 6px var(--size-3, 12px);
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            align-self: stretch;
+            border-radius: var(--border-radius-small, 2px);
+            background: var(--color-primary-light-1, #E8F3FF);
+            margin-bottom: 10px;
+            .icon {
+                flex-shrink: 0;
+                font-size: 14px;
+                color: var(--color-primary-6);
+            }
+            .text {
+                color: var(--color-text-1, #242E43);
+                line-height: 20px;
+            }
+        }
+
+        .no-file {
+            display: flex;
+            padding: var(--size-1, 4px) var(--size-3, 12px);
+            align-items: center;
+            gap: var(--size-2, 8px);
+            color: var(--color-text-3, #79879C);
+            line-height: 20px;
+        }
+        .add-file {
+            display: flex;
+            padding: var(--size-1, 4px) var(--size-3, 12px) 1px;
+            align-items: center;
+            color: var(---color-link-6, #3261CE);
+            font-size: 12px;
+            line-height: 20px;
+            &:hover {
+                background: none;   
+            }
+        }
+        .add-file-input {
+            .moda-icon {
+                font-size: 12px;
+            }
+            .arco-input {
+                padding-left: 8px;
+            }
+        }
+
+    }
+    .arco-modal-footer {
+        padding: 8px 20px;
+        button {
+            width: 72px;
+            margin-left: 8px;
+        }
+    }
+}

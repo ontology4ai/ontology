@@ -1,0 +1,25 @@
+.rule-oper {
+	cursor: pointer;
+}
+.row-divider .arco-col {
+	box-sizing: border-box;
+	position: relative;
+}
+.row-divider .arco-col:not(:last-child) {
+	padding-left: 6px !important;
+}
+.row-divider .arco-col:last-child {
+	padding-left: 6px !important;
+}
+.row-divider .arco-col:not(:last-child):before {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    display: block;
+    height: 14px;
+    width: 1px;
+    background-color: var(--color-fill-3);
+    content: '';
+    transition: all 0.2s cubic-bezier(0, 0, 1, 1);
+}

@@ -1,0 +1,84 @@
+// CardItem.less
+.card-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 1px solid var(--color-border-2, #E3E9EF);
+    background-color: #fff;
+    transition: all 0.2s;
+  
+    .card-item-left {
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      
+      .card-icon {
+        display: inline-flex;
+        padding: var(---size-2, 8px);
+        flex-direction: column;
+        align-items: center;
+        border-radius: var(--border-radius-medium, 4px);
+        background: var(--color-fill-2, #EFF4F9);
+        font-size: 20px;
+        color: var(--color-primary-6)
+      }
+    }
+  
+    .card-item-center {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; // 垂直居中
+      
+      .card-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--color-text-1, #242E43);
+        line-height: 22px;
+      }
+  
+      .card-subtitle {
+        color: var(--color-text-2, #4D5E7D);
+        font-size: 12px;
+        line-height: 20px;
+      }
+      
+      // 当只有一个文本时，确保垂直居中
+      .card-title:only-child,
+      .card-subtitle:only-child {
+        align-self: flex-start;
+      }
+    }
+  
+    .card-item-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-left: 10px;
+      justify-content: center; // 垂直居中
+  
+      .card-tag {
+        margin-bottom: 4px;
+      }
+  
+      .card-update-time {
+        font-size: 12px;
+        color: #86909c;
+      }
+      
+      // 当只有一个元素时，确保垂直居中
+      .card-tag:only-child,
+      .card-update-time:only-child {
+        margin-bottom: 0;
+        align-self: flex-end;
+      }
+    }
+    
+    // 当没有左侧图标时的布局调整
+    &:not(:has(.card-item-left)) {
+      .card-item-center {
+        margin-left: 0;
+      }
+    }
+  }

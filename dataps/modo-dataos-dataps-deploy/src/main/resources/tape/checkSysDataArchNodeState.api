@@ -1,0 +1,40 @@
+{
+  "id": "237982688712650752",
+  "name": "checkSysDataArchNodeState",
+  "label": "检查系统架构节点编辑状态",
+  "descr": "检查系统架构节点编辑状态",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"260\" y\u003d\"170\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236137972616593408",
+  "respContentType": "application/json",
+  "url": "check/sys/data/arch/node/state",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\"body\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}],\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "237984596294008832",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "237982688712650752",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.dataps.SysDataArchService;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport org.apache.commons.collections.MapUtils;\\n\\nimport java.util.ArrayList;\\nimport java.util.HashMap;\\nimport java.util.List;\\nimport java.util.Map;\\n\\n\\n\\n    public Object getFromCommonSubjects(Map\u003cString, Object\u003e body) {\\n        String isMgr \u003d MapUtils.getString(body, \\\"isMgr\\\");\\n        String privUser \u003d MapUtils.getString(body, \\\"privUser\\\");\\n        String archType \u003d MapUtils.getString(body, \\\"archType\\\");\\n        String impl \u003d MapUtils.getString(body, \\\"impl\\\", \\\"sysDataArchService\\\");\\n        SysDataArchService dataArchService \u003d (SysDataArchService) SpringContextUtil.getBean(impl);\\n        List\u003cMap\u003cString, Object\u003e\u003e result \u003d dataArchService.getPublishedArch(archType, privUser);\\n        Map\u003cString, Map\u003cString, Object\u003e\u003e idMap \u003d new HashMap\u003c\u003e();\\n        result.forEach(map -\u003e {\\n            map.put(\\\"changeState\\\", \\\"notChange\\\");\\n            String id \u003d MapUtils.getString(map, \\\"key\\\");\\n            idMap.put(id, map);\\n        });\\n        dataArchService.loadChangeStates(archType, new ArrayList\u003c\u003e(), result, idMap, privUser, isMgr);\\n        Map\u003cString, Object\u003e targetData \u003d (Map\u003cString, Object\u003e) body.get(\\\"archData\\\");\\n        String key \u003d MapUtils.getString(targetData, \\\"key\\\");\\n        if (idMap.containsKey(key)) {\\n            String changeState \u003d MapUtils.getString(idMap.get(key), \\\"changeState\\\");\\n            if (\\\"add\\\".equals(changeState)) {\\n                return \\\"add\\\";\\n            } else if (\\\"delete\\\".equals(changeState)) {\\n                return \\\"delete\\\";\\n            } else if (\\\"change\\\".equals(changeState)) {\\n                return \\\"change\\\";\\n            } else {\\n                return dataArchService.checkChange(targetData, idMap.get(key)) ? \\\"notChange\\\" : \\\"change\\\";\\n            }\\n        } else {\\n            return \\\"add\\\";\\n        }\\n    }\\n\\n\\n\\nreturn getFromCommonSubjects(body);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.dataps.SysDataArchService;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport org.apache.commons.collections.MapUtils;\n\nimport java.util.ArrayList;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\n\n\n    public Object getFromCommonSubjects(Map\u003cString, Object\u003e body) {\n        String isMgr \u003d MapUtils.getString(body, \"isMgr\");\n        String privUser \u003d MapUtils.getString(body, \"privUser\");\n        String archType \u003d MapUtils.getString(body, \"archType\");\n        String impl \u003d MapUtils.getString(body, \"impl\", \"sysDataArchService\");\n        SysDataArchService dataArchService \u003d (SysDataArchService) SpringContextUtil.getBean(impl);\n        List\u003cMap\u003cString, Object\u003e\u003e result \u003d dataArchService.getPublishedArch(archType, privUser);\n        Map\u003cString, Map\u003cString, Object\u003e\u003e idMap \u003d new HashMap\u003c\u003e();\n        result.forEach(map -\u003e {\n            map.put(\"changeState\", \"notChange\");\n            String id \u003d MapUtils.getString(map, \"key\");\n            idMap.put(id, map);\n        });\n        dataArchService.loadChangeStates(archType, new ArrayList\u003c\u003e(), result, idMap, privUser, isMgr);\n        Map\u003cString, Object\u003e targetData \u003d (Map\u003cString, Object\u003e) body.get(\"archData\");\n        String key \u003d MapUtils.getString(targetData, \"key\");\n        if (idMap.containsKey(key)) {\n            String changeState \u003d MapUtils.getString(idMap.get(key), \"changeState\");\n            if (\"add\".equals(changeState)) {\n                return \"add\";\n            } else if (\"delete\".equals(changeState)) {\n                return \"delete\";\n            } else if (\"change\".equals(changeState)) {\n                return \"change\";\n            } else {\n                return dataArchService.checkChange(targetData, idMap.get(key)) ? \"notChange\" : \"change\";\n            }\n        } else {\n            return \"add\";\n        }\n    }\n\n\n\nreturn getFromCommonSubjects(body);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

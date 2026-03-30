@@ -1,0 +1,90 @@
+.design-flow-container {
+    width: 1280px;
+    height: 857px;
+    // position: relative;
+    position: fixed;
+    top: 187px;
+    left: 604px;
+    z-index: 1;
+}
+.react-flow__attribution {
+    display: none;
+}
+.react-flow__background {
+    display: none;
+}
+.er-node {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    .node-bg {
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .node-icon {
+        width: 30px;
+        position: absolute;
+        top: 17px;
+        left: 30px;
+    }
+    .text {
+        width: 48px;
+        font-size: 16x;
+        font-weight: 500;
+        color: #F9FEFF;
+        line-height: 22px;
+        position: absolute;
+        top: 49px;
+        left: 21px;
+        text-align: center;
+    }
+    .react-flow__handle {
+        // border-color: transparent;
+        // background: transparent;
+    }
+    .node-point {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: -2.5px;
+        left: -2.5px;
+    }
+}
+.react-flow__node {
+    .node-point {
+        pointerEvents: none;
+        // opacity: 0;
+    }
+    &.selected,
+    &:hover {
+        .node-point {
+            // opacity: 1;
+        }
+    }
+}
+.button-edge__label {
+  position: absolute;
+  pointer-events: all;
+  transform-origin: center;
+}
+ 
+.button-edge__button {
+    width: 66px;
+    height: 34px;
+    background: rgba(44,50,98,0.4);
+    box-shadow: inset 0px -4px 10px 0px rgba(171,168,227,0.2);
+    border-radius: 8px;
+    border: 1px solid #535C8F;
+    opacity: 0.8;
+    backdrop-filter: blur(2px);
+    font-size: 16px;
+    color: #CECFFF
+}
+ 
+.button-edge__button:hover {
+  background-color: var(--xy-theme-hover);
+  color: #ffffff;
+}

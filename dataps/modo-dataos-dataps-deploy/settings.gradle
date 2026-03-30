@@ -1,0 +1,22 @@
+pluginManagement {
+//    repositories {
+        // 阿里云 Gradle 插件镜像 (解决 plugins.gradle.org 访问慢或失败的问题)
+//        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        // 阿里云公共仓库 (解决普通 Maven 依赖)
+//        maven { url 'https://maven.aliyun.com/repository/public' }
+        // 本地缓存
+//        mavenLocal()
+        // 原生仓库 (作为备选)
+//        gradlePluginPortal()
+//        mavenCentral()
+//    }
+
+    plugins {
+        id 'org.springframework.boot' version '2.7.18'
+        id 'io.spring.dependency-management' version '1.1.7'
+    }
+}
+
+rootProject.name = 'modo-dataos-dataps-deploy'
+
+includeFlat 'dataps'

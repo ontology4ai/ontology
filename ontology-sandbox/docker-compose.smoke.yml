@@ -1,0 +1,25 @@
+services:
+  ontology-sandbox-smoke:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SANDBOX_CODE_SERVER_IMAGE: ${SANDBOX_CODE_SERVER_IMAGE:-codercom/code-server:latest}
+    image: ontology_sandbox:smoke
+    container_name: ontology-sandbox-smoke
+    ports:
+      - "8031:8080"
+      - "8032:8000"
+    environment:
+      TZ: Asia/Shanghai
+      PASSWORD: ${SANDBOX_CODE_SERVER_PASSWORD:-sandbox123}
+      PROXY_BASE_PATH: /ontology_test_dev
+      ROLE: dev
+      USER_SERVER: http://127.0.0.1:8000
+      NET_GATE: ${SANDBOX_NET_GATE:-http://127.0.0.1:9080}
+      ONTOLOGY_BACKEND_SERVER: ontology_backend_server
+      SIM_CALLBACK_URL: ${SANDBOX_SIM_CALLBACK_URL:-}
+    volumes:
+      - ${SANDBOX_DEV_ONTOLOGY_DIR:-./workspace/dev/ontology}:/home/coder/code_gen/core/ontology
+      - ${SANDBOX_DEV_ONTOLOGY_APIS_DIR:-./workspace/dev/ontology_apis}:/home/coder/code_gen/core/ontology_apis
+    restart: unless-stopped

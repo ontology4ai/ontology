@@ -1,0 +1,81 @@
+.arco-table {
+	.moda-face .arco-avatar-circle {
+		flex-shrink: 0;
+	}
+	.column-id {
+		color: var(--color-gray-6);
+	}
+	div.arco-typography,
+	p.arco-typography {
+		margin-bottom: 0px;
+	    width: 100%;
+	    .arco-typography-simple-ellipsis {
+	    	width: 100%;
+	    	display: inline-block;
+	    	vertical-align: middle;
+	    }
+	}
+	.react-resizable {
+	    position: relative;
+	    background-clip: padding-box;
+	}
+
+    .react-resizable-handle {
+	    position: absolute;
+	    width: 10px;
+	    height: 100%;
+	    bottom: 0;
+	    right: -5px;
+	    cursor: col-resize;
+	    z-index: 1;
+	}
+	.arco-table-td,
+	.arco-table-th-item {
+	    padding: 0px 16px;
+	}
+	.arco-table-no-data {
+		min-height: 120px;
+	    width: 100% !important;
+	    padding: 0px;
+	    margin: 0px !important;
+	    border: 0px !important;
+	}
+	.arco-empty {
+	    width: 100%;
+	    padding: 10px 0;
+	    box-sizing: border-box;
+	    .arco-empty-wrapper {
+		    width: 100%;
+		    box-sizing: border-box;
+		    text-align: center;
+		    color: rgb(var(--gray-5));
+		    .arco-empty-image {
+			    font-size: 48px;
+			    line-height: 1;
+			    margin-bottom: 4px;
+			}
+		}
+		.arco-empty-description {
+		    color: rgb(var(--gray-5));
+		    font-size: 14px;
+		}
+	}
+	.arco-table-col-has-sorter .arco-table-cell-with-sorter {
+		padding: 0px;
+	}
+	&.automatic table {
+	    table-layout: auto;
+	}
+}
+.modo-table {
+	.table-title {
+	    line-height: 28px;
+	    font-family: SourceHanSansCN-Medium;
+	    font-size: 14px;
+	    color: var(--color-text-1);
+	    font-weight: 500;
+	}
+	.table-header {
+		min-height: 28px;
+	}
+}

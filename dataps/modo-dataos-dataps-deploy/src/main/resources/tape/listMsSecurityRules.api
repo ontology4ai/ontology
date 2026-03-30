@@ -1,0 +1,67 @@
+{
+  "id": "210409579380326400",
+  "name": "listMsSecurityRules",
+  "label": "获取脱敏规则列表",
+  "descr": "获取脱敏规则列表",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"3\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-httpdiaoyong;title\u003d3.HTTP调用\" title\u003d\"HTTP调用\" modelData\u003d\"\" stepInst\u003d\"http\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"140\" y\u003d\"190\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"4\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d4.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"320\" y\u003d\"190\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"5\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"3\" target\u003d\"4\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236063466669670400",
+  "respContentType": "application/json",
+  "url": "list/ms/security/rules",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "210436505132044288",
+      "stepSeq": "3",
+      "parentStepId": "-1",
+      "label": "3.HTTP调用",
+      "graphId": "210409579380326400",
+      "stepInst": "http",
+      "preStepId": "-1",
+      "nextStepId": "4",
+      "successStepId": "4",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"3.HTTP调用\",\"method\":\"GET\",\"dataSource\":\"_common__http_service\",\"url\":\"_api/dataosMsSecurityRule/list\",\"jsonHeaders\":\"{\\\"Content-Type\\\":\\\"application/json;charset\u003dUTF-8\\\"}\",\"jsonParams\":\"params\",\"reqContentType\":\"application/json\",\"socketTimeout\":\"30000\",\"variable\":\"result\"}",
+      "createUser": "liukun",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "3.HTTP调用",
+        "method": "GET",
+        "dataSource": "_common__http_service",
+        "url": "_api/dataosMsSecurityRule/list",
+        "jsonHeaders": "{\"Content-Type\":\"application/json;charset\u003dUTF-8\"}",
+        "jsonParams": "params",
+        "reqContentType": "application/json",
+        "socketTimeout": "30000",
+        "variable": "result"
+      }
+    },
+    {
+      "id": "210436505132044289",
+      "stepSeq": "4",
+      "parentStepId": "-1",
+      "label": "4.执行脚本",
+      "graphId": "210409579380326400",
+      "stepInst": "script",
+      "preStepId": "3",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"4.执行脚本\",\"scriptText\":\"return result.data;\"}",
+      "createUser": "liukun",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "4.执行脚本",
+        "scriptText": "return result.data;"
+      }
+    }
+  ]
+}

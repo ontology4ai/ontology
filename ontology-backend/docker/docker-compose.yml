@@ -1,0 +1,24 @@
+# Docker Compose for ODLM Python Application
+# This file demonstrates how to deploy the application with external configuration
+
+version: '3.8'
+
+services:
+  # Main application
+  odlm-app:
+    container_name: odlm-python
+    ports:
+      - "8000:8000"
+    environment:
+      # Environment configuration
+      - APP_ENVIRONMENT=development
+      # Logging configuration
+      - CONFIG_LOGGING__LEVEL=INFO
+      - CONFIG_LOGGING__FILE_PATH=/app/logs/app.log
+    
+    volumes:
+      - ./code:/app
+      # Mount logs directory
+      - ./logs:/app/logs
+    
+    restart: unless-stopped

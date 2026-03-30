@@ -1,0 +1,153 @@
+.import-ontology-modal {
+  background: transparent !important;
+  border: none !important;
+  .arco-modal-content {
+    padding: 0;
+  }
+  .import-ontology-modal-main {
+    z-index: 1;
+    position: relative;
+    .import-ontology-modal-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px;
+      overflow: hidden;
+      color: #FFF;
+      text-overflow: ellipsis;
+      font-family: "DingTalk JinBuTi";
+      font-size: 24px;
+      line-height: 24px;
+      img {
+        cursor: pointer;
+      }
+    }
+    .import-ontology-modal-content { 
+      color: #FFF;
+      font-family: "HarmonyOS Sans SC";
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .import-ontology-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      align-items: center;
+      padding: 20px 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+  }
+  .import-ontology-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+}
+
+.import-ontology {
+  &-header {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px 30px;
+    border-bottom: 1px solid #535c8f;
+    align-items: center;
+
+    &-icon {
+      padding: 0 6px;
+      display: flex;
+      gap: 30px;
+      svg {
+        cursor: pointer;
+        font-size: 20px;
+        color: #aeafc1;
+      }
+    }
+    &-title {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex: 1;
+      height: 45px;
+      background: rgba(44, 50, 98, 0.4);
+      box-shadow: inset 0px -4px 10px 0px rgba(171, 168, 227, 0.2);
+      border-radius: 10px;
+      border: 1px solid #535c8f;
+      padding: 10px 24px;
+      img {
+        height: 24px;
+      }
+      &-text {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 16px;
+        color: #aeafc1;
+        font-weight: 500;
+        flex: 1;
+      }
+      &-after {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        svg {
+          color: #aeafc1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &-main {
+    height: 524px;
+    display: flex;
+    flex-direction: row;
+
+    &-left {
+      padding: 0 20px;
+      width: 250px;
+      border-right: 1px solid #535c8f;
+
+      &-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 20px 14px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        cursor: pointer;
+        img {
+          height: 30px;
+        }
+      }
+    }
+
+    &-right {
+      padding: 33px 0 0 60px;
+    }
+  }
+  &-file {
+    width: 116px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+}
+.import-ontology-modal.en {
+  .import-ontology-file {
+    width: 170px;
+  }
+  .import-ontology-file.code {
+    width: 187px;
+  }
+
+}

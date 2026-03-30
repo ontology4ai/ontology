@@ -1,0 +1,54 @@
+.ds-overview-modal {
+    .arco-modal {
+        width: calc(100% - 480px);
+        height: calc(100% - 100px);
+        &>div:nth-child(2) {
+            height: 100%;
+            .arco-modal-content {
+                height: calc(100% - 44px);
+                .ds-overview {
+                    height: 100%;
+                }
+            }
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .arco-table-th-item {
+            height: 56px;
+            line-height: 20px;
+            padding: 8px 16px;
+            .column-title {
+                .descr {
+                    color: var(--color-text-3);
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .arco-modal-header {
+        height: 44px;
+        .arco-modal-title {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 22px;
+            color: var(--color-text-1);
+        }
+    }
+    .arco-modal-content {
+        padding: 0px;
+        padding-top: 16px;
+        .modo-table-column-setting {
+            display: none;
+        }
+        .arco-table-footer {
+            margin: 0px 16px;
+        }
+        .arco-table .arco-table-pagination {
+            background: var(--color-white);
+        }
+        .arco-table .arco-table-pagination .arco-pagination {
+            margin: 10px 16px 16px;
+        }
+    }
+}

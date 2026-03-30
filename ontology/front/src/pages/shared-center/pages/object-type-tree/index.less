@@ -1,0 +1,45 @@
+.object-dir-tree {
+  .arco-tree-node-title {
+    flex: 1;
+    margin-left: 1px;
+    // padding: 2.5px 0;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+  .arco-tree-node-icon {
+    margin-right: 4px;
+  }
+  .arco-tree-node-switcher {
+    width: auto;
+    margin: 0;
+  }
+  .arco-tree-node-switcher-icon {
+    width: 12px;
+    height: 12px;
+    display: inline-flex;
+    border-radius: var(--border-radius-small, 2px);
+    background: var(--color-fill-2, #eff4f9);
+    align-items: center;
+    justify-content: center;
+  }
+  .tree-node-content {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    .op-btns {
+      display: none;
+    }
+  }
+
+  .arco-tree-node {
+    &:hover {
+      .op-btns {
+        display: inline-flex;
+        position: absolute;
+        right: -10px;
+      }
+    }
+  }
+}

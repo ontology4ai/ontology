@@ -1,0 +1,1162 @@
+.resource-mng[data-v-b58c8f67] {
+  width: 100%;
+  height: 100%;
+  background: var(--color-gray-2);
+  padding: 10px 12px;
+  box-sizing: border-box;
+}
+.resource-mng *[data-v-b58c8f67] {
+  box-sizing: border-box;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  background: var(--color-white);
+  box-shadow: 0px 2px 5px 0px rgba(36, 46, 67, 0.1);
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .filter-container {
+  flex-shrink: 0;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .filter-container .modo-filter-form-content {
+  background: var(--color-fill-1);
+  padding-bottom: 10px !important;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .filter-container .more .modo-filter-form-content > div {
+  margin-top: -2px;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container {
+  flex: 1;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container .list {
+  background: #f9fbfd;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container .list .list-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: PingFang SC;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0%;
+  color: var(--color-text-1, #242e43);
+  padding: 0 16px;
+  height: 40px;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container .list .list-title .list-line {
+  width: 3px;
+  height: 12px;
+  border-radius: 4px;
+  background: var(---color-primary-6, #3261ce);
+  margin-right: 4px;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container .list .list-chart {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 16px;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container .list .list-chart .chart {
+  flex: 1;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list {
+  padding: 0 16px;
+  padding-top: 10px;
+  background: var(--color-white);
+  min-height: 152px;
+  display: flex;
+  flex-direction: column;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table {
+  height: 100%;
+  flex-direction: column;
+  min-height: 152px;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table > .arco-spin {
+  height: 100%;
+  flex-direction: column;
+  min-height: 152px;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table > .arco-spin > .arco-spin-children {
+  height: 100%;
+  flex-direction: column;
+  min-height: 152px;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table > .arco-spin > .arco-spin-children > .arco-table-container {
+  height: 100%;
+  flex-grow: 1;
+  min-height: 152px;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table > .arco-spin > .arco-spin-children > .arco-table-container > .arco-table-content-scroll {
+  height: 100%;
+  flex-grow: 1;
+  min-height: 152px;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table > .arco-spin > .arco-spin-children > .arco-table-container > .arco-table-content-scroll > .arco-table-content-inner {
+  height: 100%;
+  overflow: auto;
+  flex-grow: 1;
+  min-height: 270px;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table > .arco-spin > .arco-spin-children > .arco-table-container > .arco-table-content-scroll > .arco-table-content-inner > table {
+  width: max-content;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table > .arco-spin > .arco-spin-children > .arco-table-container > .arco-table-content-scroll > .arco-table-content-inner > table > thead {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table > .arco-spin > .arco-spin-children > .arco-table-container > .arco-table-content-scroll > .arco-table-content-inner > table .arco-table-col-fixed-right {
+  right: -1px !important;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table .modo-table-column-setting {
+  display: none;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table .moda-tag {
+  display: inline-block;
+  height: 20px;
+  line-height: 18px;
+  padding: 0 4px;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table .table-name-tags {
+  white-space: pre;
+  display: inline-block;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table .table-name-tags .arco-tag {
+  margin-right: 4px;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table .table-name-tags .arco-tag:last-child {
+  margin-right: 0px;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table .table-name-tags .moda-tag {
+  margin-right: 4px;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table .table-name-tags .moda-tag:last-child {
+  margin-right: 0px;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table .table-name-condition {
+  width: 140px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table .table-name-condition .condition-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.resource-mng .resource-mng-container[data-v-b58c8f67] .table-container-list > .arco-table .table-name-condition .condition-icon {
+  margin-left: 4px;
+}
+.resource-mng .resource-mng-container .pagination-container[data-v-b58c8f67] {
+  padding: 6px 16px;
+  background: var(--color-white);
+}
+
+.modo-tabs.editable {
+  background: var(--color-white);
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+.modo-tabs.editable .arco-tabs {
+  height: 100%;
+}
+.modo-tabs.editable.no-tabs .arco-tabs {
+  height: 40px;
+}
+.modo-tabs.editable .arco-tabs-header-scroll {
+  flex-direction: row-reverse;
+}
+.modo-tabs.editable .arco-tabs-header-nav {
+  padding: 8px 0px;
+  box-shadow: inset 0px -1px 0px 0px #f2f3f5;
+}
+.modo-tabs.editable .arco-tabs-header-nav::before {
+  display: none;
+}
+.modo-tabs.editable .arco-tabs-header-title {
+  background: var(--color-gray-3);
+  color: var(--color-text-2);
+  border-radius: 4px;
+  border: 0px;
+  height: 24px;
+  padding: 6px 8px !important;
+  margin-left: 6px !important;
+  margin-right: 0px !important;
+  width: 110px;
+  display: inline-flex;
+  transition: all 0.2s cubic-bezier(0, 0, 1, 1);
+}
+.modo-tabs.editable .arco-tabs-header-title span {
+  display: block;
+}
+.modo-tabs.editable .arco-tabs-header-title .arco-typography {
+  width: 100%;
+}
+.modo-tabs.editable .arco-tabs-header-title:first-of-type {
+  margin-left: 0px !important;
+}
+.modo-tabs.editable .arco-tabs-header-title .arco-tabs-header-title-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.modo-tabs.editable .arco-tabs-header-title .arco-tabs-header-title-text > .arco-typography {
+  margin-bottom: 0px;
+  color: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
+}
+.modo-tabs.editable .arco-tabs-header-title:hover .arco-tabs-close-icon {
+  width: 12px;
+}
+.modo-tabs.editable .arco-tabs-header-title:hover .arco-tabs-icon-hover {
+  opacity: 1;
+  transform: scale(1);
+}
+.modo-tabs.editable .arco-tabs-header-title .arco-tabs-close-icon {
+  width: 0px;
+  margin-left: 0px;
+  overflow: hidden;
+}
+.modo-tabs.editable .arco-tabs-header-title .arco-tabs-icon-hover {
+  color: var(--color-gray-8);
+  vertical-align: middle;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.1s;
+}
+.modo-tabs.editable .arco-tabs-header-title-active,
+.modo-tabs.editable .arco-tabs-header-title-active:hover {
+  background-color: var(--color-primary-6);
+  color: var(--color-white);
+  font-weight: 500;
+}
+.modo-tabs.editable .arco-tabs-header-title-active .arco-typography,
+.modo-tabs.editable .arco-tabs-header-title-active:hover .arco-typography {
+  color: var(--color-white);
+}
+.modo-tabs.editable .arco-tabs-header-title-active:hover .arco-tabs-icon-hover,
+.modo-tabs.editable .arco-tabs-header-title-active:hover:hover .arco-tabs-icon-hover {
+  opacity: 1;
+}
+.modo-tabs.editable .arco-tabs-header-title-active .arco-tabs-icon-hover,
+.modo-tabs.editable .arco-tabs-header-title-active:hover .arco-tabs-icon-hover {
+  color: var(--color-white);
+  vertical-align: middle;
+  opacity: 0;
+  transition: all 0.1s;
+}
+.modo-tabs.editable .arco-icon-hover:hover::before {
+  display: none;
+}
+.modo-tabs.editable .tab-title {
+  background: var(--color-white);
+  border-radius: 4px;
+  padding: 0px 10px;
+  height: 24px;
+  line-height: 24px;
+  cursor: pointer;
+}
+.modo-tabs.editable .tab-title svg {
+  color: var(--color-primary-6);
+  margin-right: 7.5px;
+}
+.modo-tabs.editable .tab-title span {
+  font-size: 14px;
+  color: var(--color-text-1);
+  font-weight: 600;
+  vertical-align: middle;
+}
+.modo-tabs.editable .arco-tabs-content {
+  border: 0px;
+  padding-top: 0px;
+  height: calc(100% - 40px);
+}
+.modo-tabs.editable .arco-tabs-content .arco-tabs-content-inner {
+  height: 100%;
+}
+.modo-tabs.editable .arco-tabs-content .arco-tabs-pane {
+  background: var(--color-white);
+  height: 100%;
+  border-radius: 0px 0px 6px 6px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.modo-tabs.editable .tab-placeholder {
+  background: var(--color-white);
+  height: calc(100% - 40px);
+  box-sizing: border-box;
+  overflow: auto;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.modo-tabs.editable .arco-tabs-header-ink {
+  display: none;
+}
+
+.modo-editor {
+  border: 1px solid var(--color-gray-2);
+  background: var(--color-white);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.modo-editor.fullscreen {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 5000;
+  width: 100%;
+  height: 100%;
+}
+.modo-editor > section {
+  left: -1px;
+}
+.modo-editor .margin-view-overlays {
+  background: var(--color-gray-2);
+}
+.modo-editor .modo-editor-header {
+  color: var(--color-gray-6);
+  display: flex;
+  padding-left: 10px;
+  line-height: 30px;
+  border-bottom: 1px solid var(--color-gray-2);
+}
+.modo-editor .modo-editor-header .pos-left {
+  flex: 1;
+}
+.modo-editor .modo-editor-header .arco-tag .moda-icon {
+  margin-right: 0px;
+}
+.modo-editor .modo-editor-header .moda-icon {
+  margin-right: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+.modo-editor .modo-editor-header .moda-icon:hover,
+.modo-editor .modo-editor-header .moda-icon .active {
+  color: var(--color-primary-6);
+}
+.modo-editor .mo-mainBench .monaco-scrollable-element > .scrollbar > .slider {
+  background: rgba(255, 255, 255, 0.2);
+}
+.modo-diff-editor .monaco-editor .margin-view-overlays .line-numbers {
+  padding-right: 8px;
+}
+.ds-container .example-info-container {
+  margin-top: 10px;
+  max-height: 500px;
+  overflow: auto;
+  background-color: var(--color-gray-2);
+  padding: 10px;
+  border-radius: var(--border-radius-small);
+}
+.ds-container .example-info-container .arco-spin-children {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.ds-container .example-info-container p {
+  margin-block-start: 0;
+  margin-block-end: 5px;
+  user-select: text;
+}
+.ds-container .example-info-container p .text-bracket {
+  color: var(--color-magenta-8);
+}
+.modo-editor-context-menu {
+  box-shadow: 0px 0px 5px #d3d3d3;
+  border-radius: 4px;
+}
+.modo-editor-context-menu-item {
+  height: 24px;
+  line-height: 24px !important;
+  padding: 0px 4px !important;
+  margin-bottom: 0px !important;
+}
+.modo-editor-context-menu-item.arco-dropdown-menu-item {
+  padding: 0px 10px !important;
+}
+.modo-editor-context-menu-item svg {
+  margin-right: 4px;
+  display: inline-block;
+  margin-bottom: 0px;
+}
+.modo-editor-context-menu-item .ai-btn-small {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  background: linear-gradient(90deg, #ff7636, #ffbf1b);
+  border-radius: 2px;
+  vertical-align: top;
+  text-align: center;
+  margin-right: 4px;
+  margin-top: 5px;
+}
+.modo-editor-context-menu-item .ai-btn-small img {
+  width: 10px;
+  height: 10px;
+  vertical-align: top;
+  margin-top: 1px;
+}
+
+.icon-list > div > div {
+  flex-direction: row !important;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 240px;
+}
+.icon-list > div > div > li {
+  width: 24px !important;
+  height: 24px !important;
+  text-align: center !important;
+  line-height: 24px !important;
+  padding: 0px !important;
+}
+
+.arco-drawer-header-title {
+  font-size: 12px;
+}
+.source-code .arco-drawer-header {
+  height: 30px;
+  padding: 0px 10px;
+}
+.source-code .arco-drawer-close-icon {
+  top: 8px;
+  right: 10px;
+}
+.source-code .arco-drawer-content {
+  padding: 0px;
+}
+.source-code .arco-drawer-footer {
+  padding: 5px 10px;
+}
+.source-code .arco-drawer-footer .arco-btn {
+  height: 22px;
+}
+
+.modo-designer-bind-var {
+  display: flex;
+}
+.modo-designer-bind-var .element {
+  flex: 1;
+}
+.modo-designer-bind-var .code {
+  background: var(--color-white);
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  color: var(--color-gray-6);
+  text-align: center;
+  transition: all 0.1s linear;
+  cursor: pointer;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.modo-designer-bind-var .code.mini {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+}
+.modo-designer-bind-var .code.small {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+}
+.modo-designer-bind-var .code.large {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+}
+.modo-designer-bind-var .code:hover {
+  background: var(--color-fill-2);
+}
+.modo-designer-bind-var .code:active {
+  background: var(--color-fill-3);
+}
+.modo-designer-bind-var .code.active {
+  background: var(--color-primary-6);
+  color: var(--color-white);
+}
+
+.modo-table-form .table-form-header {
+  display: flex;
+  justify-content: flex-end;
+}
+.modo-table-form.empty .arco-table-body {
+  min-height: 120px;
+}
+.modo-table-form.empty .arco-table-body .arco-table-no-data {
+  height: auto;
+}
+.modo-table-form .arco-table .arco-table-td,
+.modo-table-form .arco-table .arco-table-th-item {
+  padding: 0px 6px;
+}
+.modo-table-form .arco-form-item.arco-form-item-error {
+  position: relative;
+}
+.modo-table-form .arco-form-item.arco-form-item-error:hover .arco-form-message {
+  display: block;
+}
+.modo-table-form .arco-form-message {
+  display: none;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  line-height: 24px;
+  transform: translateY(100%);
+  border-radius: 2px;
+  z-index: 10;
+  background: var(--color-white);
+  padding: 0px 4px;
+  box-shadow: 0px 0px 5px #d3d3d3;
+  animation: none;
+}
+.modo-table-form .editable-row .editable-cell {
+  display: inline-block;
+  padding: 5px 11px;
+}
+.modo-table-form .editable-row .editable-cell .arco-table-td {
+  padding: 0px 5px;
+}
+.modo-table-form .editable-row .editable-cell:hover {
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  padding: 4px 10px;
+}
+/* .modo-table-form {
+	.arco-table-td {
+		padding: 0px 5px;
+	}
+	.arco-table-th-item {
+		padding: 0px 10px;
+		white-space: pre;
+		overflow: hidden;
+	    text-overflow: ellipsis;
+	}
+} */
+.arco-table-td {
+  padding: 0px 5px;
+}
+.arco-table-th-item {
+  padding: 0px 10px;
+  white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modo-cascader-panel {
+  width: 100%;
+  height: 200px;
+  box-shadow: none;
+  border-radius: 0px;
+}
+.modo-cascader-panel .arco-cascader-popup-inner {
+  height: 100%;
+}
+
+.modo-form-list {
+  width: 100%;
+}
+.modo-form-list .modo-form-list-container {
+  width: 100%;
+}
+.modo-form-list .modo-form-list-container .row {
+  display: flex;
+  margin-bottom: 10px;
+}
+.modo-form-list .modo-form-list-container .row .form-row {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+}
+.modo-form-list .modo-form-list-container .row .form-row .form-col {
+  margin-right: 10px;
+}
+.modo-form-list .modo-form-list-container .row .form-row .arco-radio-group-type-button {
+  white-space: nowrap;
+}
+
+
+.modo-filter-form {
+  position: relative;
+  transition: all 0.2s;
+  width: 100%;
+  height: 72px;
+}
+.modo-filter-form.full {
+  height: auto !important;
+}
+.modo-filter-form.full .modo-filter-form-content {
+  height: auto !important;
+}
+.modo-filter-form .modo-filter-form-content {
+  height: 74px !important;
+  padding: 10px 16px !important;
+  padding-bottom: 4px !important;
+  position: relative;
+  background: var(--color-gray-1) !important;
+  transition: all 0.2s;
+}
+.modo-filter-form .arco-form {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.modo-filter-form .oper-group {
+  white-space: pre;
+}
+.modo-filter-form.more .modo-filter-form-content {
+  height: auto !important;
+  padding: 10px 34px !important;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.modo-filter-form.more .arco-form-item {
+  width: 25%;
+}
+.modo-filter-form.more .oper-group {
+  position: absolute;
+  right: 34px;
+  bottom: 10px;
+}
+.modo-filter-form.more .filter-form-result {
+  margin-top: 10px;
+}
+.modo-filter-form .arco-form-item {
+  width: 33.333%;
+  margin-bottom: 6px;
+  flex-wrap: nowrap;
+}
+.modo-filter-form .arco-radio-group-type-button {
+  white-space: nowrap;
+}
+.modo-filter-form .arco-form-item > .arco-form-label-item {
+  padding-right: 12px;
+  vertical-align: middle;
+  display: inline-block;
+  width: 84px;
+  padding-left: 0;
+}
+.modo-filter-form .arco-form-layout-inline {
+  padding-right: 10px;
+  margin-right: 0px;
+  box-sizing: border-box;
+}
+.modo-filter-form .arco-form-item[span="2"] {
+  width: calc(100% / 12);
+}
+.modo-filter-form .arco-form-item[span="3"] {
+  width: calc(100% / 8);
+}
+.modo-filter-form .arco-form-item[span="4"] {
+  width: calc(100% / 6);
+}
+.modo-filter-form .arco-form-item[span="6"] {
+  width: calc(100% / 4);
+}
+.modo-filter-form .arco-form-item[span="8"] {
+  width: calc(100% / 3);
+}
+.modo-filter-form .arco-form-item[span="12"] {
+  width: calc(100% / 2);
+}
+.modo-filter-form .arco-form-item[span="16"] {
+  width: calc(100% * 2 / 3);
+}
+.modo-filter-form .arco-form-item[span="18"] {
+  width: calc(100% * 3 / 4);
+}
+.modo-filter-form .arco-form-item[span="20"] {
+  width: calc(100% * 5 / 6);
+}
+.modo-filter-form .arco-form-item[span="21"] {
+  width: calc(100% * 7 / 8);
+}
+.modo-filter-form .arco-form-item[span="22"] {
+  width: calc(100% * 11 / 12);
+}
+.modo-filter-form .arco-form-item[span="24"] {
+  width: 100%;
+}
+.modo-filter-form .arco-form-item.no-label > .arco-form-label-item {
+  padding-right: 0px;
+}
+.modo-filter-form .arco-form-item-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+}
+.modo-filter-form .group-check {
+  min-width: 0px !important;
+}
+.modo-filter-form .group-check label {
+  padding-left: 2px;
+}
+.modo-filter-form .arco-form-label-item > label {
+  white-space: nowrap;
+  width: 100%;
+  display: flex;
+  padding-left: 2px;
+}
+.modo-filter-form .arco-form-label-item > label .label {
+  flex: 1;
+  margin-bottom: 0px;
+  vertical-align: middle;
+  line-height: inherit;
+}
+.modo-filter-form .arco-picker {
+  width: 100%;
+}
+.modo-filter-form .arco-form-item.cascader > .arco-form-item-wrapper {
+  overflow: hidden;
+}
+.modo-filter-form .filter-form-result {
+  display: flex;
+}
+.modo-filter-form .tag-list {
+  flex: 1;
+  box-sizing: border-box;
+  margin-bottom: -6px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.modo-filter-form .tag-list .moda-tag {
+  max-width: 300px;
+  vertical-align: top;
+}
+.modo-filter-form .tag-list .moda-tag .result {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+}
+.modo-filter-form .tag-list .moda-tag .result > span {
+  flex: 1;
+  overflow: hidden;
+}
+.modo-filter-form .tag-list .moda-tag .result > span .value {
+  width: 100%;
+  overflow: hidden;
+  vertical-align: top;
+}
+.modo-filter-form .tag-list .moda-tag .result .label {
+  margin-right: 4px;
+  flex: none;
+}
+.modo-filter-form .tag-list .moda-tag .result div.arco-typography {
+  color: var(--color-primary);
+  margin-bottom: 0px;
+}
+
+.chart-container {
+  height: 100%;
+  width: 100%;
+}
+.chart-container .chart-main {
+  height: 100%;
+  width: 100%;
+}
+
+.detail-list .list-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0;
+  font-family: PingFang SC;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  color: var(--color-text-1, #242E43);
+}
+.detail-list .list-title .list-line {
+  width: 3px;
+  height: 12px;
+  border-radius: 4px;
+  background: var(---color-primary-6, #3261CE);
+  margin-right: 4px;
+}
+.detail-list .list-chart {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.detail-list .list-chart .chart {
+  flex: 1;
+}
+
+.chart-container {
+  height: 100%;
+  width: 100%;
+}
+.chart-container .chart-main {
+  height: 100%;
+  width: 100%;
+}
+
+.arco-table {
+  transition: padding opacity 0.5s;
+}
+.arco-table.table-size-large .arco-table-th-item {
+  height: 42px;
+  line-height: 42px;
+}
+.arco-table.table-size-large .arco-table-td {
+  height: 42px;
+}
+.arco-table.table-size-large .modo-table-column-setting {
+  height: 42px;
+  line-height: 42px;
+  width: 42px;
+}
+.arco-table .moda-face .arco-avatar-circle {
+  flex-shrink: 0;
+}
+.arco-table .column-id {
+  color: var(--color-gray-6);
+}
+.arco-table .arco-table-header {
+  background: var(--color-white);
+}
+.arco-table.arco-table-border .arco-table-container::before {
+  height: 0px !important;
+}
+.arco-table div.arco-typography,
+.arco-table p.arco-typography {
+  margin-bottom: 0px;
+  width: 100%;
+}
+.arco-table div.arco-typography .arco-typography-simple-ellipsis,
+.arco-table p.arco-typography .arco-typography-simple-ellipsis {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.arco-table .react-resizable {
+  position: relative;
+  background-clip: padding-box;
+}
+.arco-table .react-resizable-handle {
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  bottom: 0;
+  right: -5px;
+  cursor: col-resize;
+  z-index: 1;
+}
+.arco-table .arco-table-td,
+.arco-table .arco-table-th-item {
+  padding: 0px 16px;
+}
+.arco-table .arco-table-no-data {
+  min-height: 120px;
+  width: calc(100% - 2px) !important;
+  padding: 0px;
+  margin: 0px !important;
+  border: 0px !important;
+}
+.arco-table .arco-empty {
+  width: 100%;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+.arco-table .arco-empty .arco-empty-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  color: rgb(var(--gray-5));
+}
+.arco-table .arco-empty .arco-empty-wrapper .arco-empty-image {
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.arco-table .arco-empty .arco-empty-description {
+  color: rgb(var(--gray-5));
+  font-size: 14px;
+}
+.arco-table .arco-table-col-has-sorter .arco-table-cell-with-sorter {
+  padding: 0px;
+}
+.arco-table.automatic table {
+  table-layout: auto;
+}
+.arco-table .arco-table-container {
+  padding: 0px 16px;
+}
+.arco-table .arco-table-pagination {
+  background: var(--color-gray-1);
+}
+.arco-table .arco-table-pagination .arco-pagination {
+  margin: 6px 16px;
+}
+.arco-table .arco-table-th {
+  color: var(--color-text-1) !important;
+  background-color: var(--color-white) !important;
+  font-weight: 600 !important;
+}
+.arco-table.arco-table-border-cell .arco-table-th,
+.arco-table.arco-table-border-cell .arco-table-td {
+  border-left: 0px !important;
+}
+.arco-table.arco-table-border .arco-table-th:first-child,
+.arco-table.arco-table-border .arco-table-td:first-child {
+  border-left: 0px !important;
+}
+.arco-table.arco-table-border .arco-table-container {
+  border-right: 0px !important;
+  border-top: 0px !important;
+}
+.arco-table .arco-table-pagination {
+  justify-content: flex-start;
+}
+.arco-table .arco-table-header::-webkit-scrollbar,
+.arco-table .arco-table-header::-webkit-scrollbar-thumb,
+.arco-table .arco-table-header::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.arco-table .arco-table-footer {
+  height: auto;
+  padding: 0px;
+}
+.arco-table .arco-table-footer .modo-table-column-setting {
+  position: absolute;
+  top: 0px;
+  right: 16px;
+  height: 36px;
+  line-height: 36px;
+  width: 36px;
+  text-align: center;
+  background: var(--color-white);
+  color: var(--color-text-2);
+  font-size: 12px;
+  border-radius: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+.arco-table .arco-table-footer .modo-table-column-setting:hover {
+  color: var(--color-arcoblue-6);
+}
+.modo-table-column-setting-drawer {
+  width: 420px !important;
+  /*     background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.1));
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, .3); */
+}
+.modo-table-column-setting-drawer .arco-drawer-header-title span {
+  font-size: 14px;
+}
+.modo-table-column-setting-drawer .arco-drawer-content {
+  padding: 0px;
+  overflow-x: hidden;
+}
+.modo-table-column-setting-drawer .table-size-container {
+  display: flex;
+  width: 420px;
+  padding: 20px 18px;
+  background: var(--color-gray-2);
+}
+.modo-table-column-setting-drawer .table-size-container .table-size-title {
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 65px;
+}
+.modo-table-column-setting-drawer .table-size-container .table-size-content {
+  flex: 1;
+  overflow: hidden;
+}
+.modo-table-column-setting-drawer .table-size-container .table-size-content .group {
+  display: flex;
+}
+.modo-table-column-setting-drawer .table-size-container .table-size-content .item {
+  margin-left: 27px;
+  border-radius: 4px;
+  width: 122px;
+  height: 44px;
+  border: 1px solid var(--color-gray-3);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+.modo-table-column-setting-drawer .table-size-container .table-size-content .item .check-icon {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 16px;
+  height: 16px;
+  background: var(--color-primary-6);
+  border-radius: 0px 4px 0px 4px;
+  color: var(--color-white);
+  font-size: 12px;
+  text-align: center;
+  line-height: 16px;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.modo-table-column-setting-drawer .table-size-container .table-size-content .item .check-icon svg {
+  transform: scale(0.8);
+}
+.modo-table-column-setting-drawer .table-size-container .table-size-content .item:hover {
+  border: 1px solid var(--color-primary-6);
+}
+.modo-table-column-setting-drawer .table-size-container .table-size-content .item.checked {
+  border: 1px solid var(--color-primary-6);
+}
+.modo-table-column-setting-drawer .table-size-container .table-size-content .item.checked .check-icon {
+  z-index: 2;
+  opacity: 1;
+}
+.modo-table-column-setting-drawer .table-size-container .table-size-content .item img {
+  width: 122px;
+  margin-top: -1px;
+  margin-left: -1px;
+}
+.modo-table-column-setting-drawer .table-size-container .table-size-content .item:first-child {
+  margin-left: 0px;
+}
+.modo-table-column-setting-drawer .column-list-title {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 0px 18px;
+  padding-top: 20px;
+}
+.modo-table-column-setting-drawer .column-list-title .title {
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  font-weight: 600;
+}
+.modo-table-column-setting-drawer .column-list-title .back-default {
+  color: var(--color-arcoblue-6);
+  cursor: pointer;
+}
+.modo-table-column-setting-drawer .column-list-title .back-default:hover {
+  color: var(--color-arcoblue-4);
+}
+.modo-table-column-setting-drawer .column-list {
+  padding: 0px 18px 20px 18px;
+}
+.modo-table-column-setting-drawer .column-list .column-item {
+  display: flex;
+  height: 36px;
+  align-items: center;
+}
+.modo-table-column-setting-drawer .column-list .column-item .column-title {
+  flex: 1;
+  overflow: hidden;
+}
+.arco-table.disable-select {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.arco-table-border .arco-table-body:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0px !important;
+  height: 100%;
+  background: var(--color-neutral-3);
+}
+.arco-table-border .arco-table-container {
+  position: relative;
+}
+.arco-table-content-scroll .arco-table-content-inner {
+  display: flex;
+  flex-direction: column;
+}
+.arco-table-content-scroll .arco-table-content-inner > .arco-table-body {
+  flex: 1;
+}
+.arco-table-col-fixed-left,
+.arco-table-col-fixed-right {
+  position: sticky !important;
+}
+.modo-table-scroll {
+  height: 100%;
+}
+.modo-table-scroll .arco-spin {
+  height: 100%;
+}
+.modo-table-scroll .arco-spin-children {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.modo-table-scroll .arco-table-container {
+  flex: 1;
+  overflow: hidden;
+}
+.modo-table-scroll .arco-table-content-scroll {
+  height: 100%;
+}
+.modo-table-scroll .arco-table-content-scroll .arco-table-content-inner {
+  height: 100%;
+}
+.modo-table-scroll .arco-table-body {
+  height: calc(100% - 37px);
+  position: relative;
+}
+.modo-table-scroll .arco-table-empty-row td {
+  padding: 0px;
+}
+.modo-table-scroll tr.arco-table-tr.arco-table-empty-row td {
+  border-bottom: 0px;
+}
+.modo-table-scroll .arco-table-no-data {
+  position: absolute;
+  top: 50%;
+  transform: translate(0px, -50%);
+}
+.modo-table-scroll .arco-empty {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-70px);
+}
+.modo-table-scroll .arco-table-container::before {
+  height: 1px;
+}
+.arco-table.header-wrap .arco-table-th-item {
+  white-space: normal;
+  overflow: visible;
+  word-break: break-all;
+  height: auto;
+  line-height: 1.5;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+.arco-table.mini .arco-table-td {
+  padding: 0px 8px;
+}
+.arco-table.mini .arco-table-th-item {
+  padding: 0px 8px;
+}
+.arco-table.mini .arco-table-td:first-child {
+  padding: 0px 8px;
+}
+.arco-table.mini .arco-table-th:first-child {
+  padding: 0px;
+}
+.arco-table-border .arco-table-container .arco-table-th:last-child .react-resizable-handle {
+  display: none;
+}
+

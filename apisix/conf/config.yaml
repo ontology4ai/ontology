@@ -1,0 +1,33 @@
+apisix:
+  node_listen: 9080              # APISIX listening port
+  enable_ipv6: false
+  ssl:
+    enable: true
+    listen:
+      - port: 9443
+        enable_http2: false
+    fallback_sni: "test.dataatlas.com"
+  enable_control: true
+  control:
+    ip: "0.0.0.0"
+    port: 9092
+
+deployment:
+  admin:
+    allow_admin:               # https://nginx.org/en/docs/http/ngx_http_access_module.html#allow
+      - 0.0.0.0/0              # We need to restrict ip access rules for security. 0.0.0.0/0 is for test.
+
+    admin_listen:
+      ip: 0.0.0.0
+      port: 9180
+
+    admin_key:
+      - name: "admin"
+        key: 2bfbf9a4156599844cf49f8aa75f3f4f
+        role: admin                 # admin: manage all configuration data
+
+  etcd:
+    host:                           # it's possible to define multiple etcd hosts addresses of the same etcd cluster.
+      - "http://etcd:2379"          # multiple etcd address
+    prefix: "/apisix"               # apisix configurations prefix
+    timeout: 30

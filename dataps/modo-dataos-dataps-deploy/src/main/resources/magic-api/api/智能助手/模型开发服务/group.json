@@ -1,0 +1,14 @@
+{
+  "properties" : { },
+  "id" : "2c92ce51f14943ff9d155e952e077246",
+  "name" : "模型开发服务",
+  "type" : "api",
+  "parentId" : "4489e4a313974cadb795d58656710ff8",
+  "path" : "open",
+  "createTime" : 1715137884598,
+  "updateTime" : 1715137890372,
+  "createBy" : null,
+  "updateBy" : null,
+  "paths" : [ ],
+  "options" : [ ]
+}

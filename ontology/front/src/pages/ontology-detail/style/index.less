@@ -1,0 +1,253 @@
+.ontology-detail-spin {
+	width: 100%;
+    height: 100%;
+    .arco-spin-children {
+    	width: 100%;
+    	height: 100%;
+    }
+	.form-graph-btn{
+		height: 36px;
+		line-height: 36px;
+		display: inline-flex;
+		justify-content: flex-end;
+		width: 100%;
+		position: absolute;
+		z-index: 1;
+		top: 10px;
+		right: 16px;
+		button{
+			padding: 0 10px;
+			&.arco-btn-outline:not(.arco-btn-disabled){
+				background-color: #fff;
+			}
+		}
+
+	}
+}
+.ontology-detail {
+	height: 100%;
+    width: 100%;
+	display: block;
+    overflow: auto;
+	box-sizing: border-box;
+	&.hide{
+		display: none;
+	}
+	&.show{
+	//	height: calc(100% - 36px);
+	}
+	* {
+		box-sizing: border-box;
+	}
+	.base-info {
+		margin-bottom: 16px;
+		&.card {
+			display: block;
+		}
+		.card-content {
+			overflow: hidden;
+			padding-bottom: 0px !important;
+		}
+	}
+	.layout-5-5 {
+		width: 100%;
+		display: flex;
+		.card-header .title .moda-tag {
+			margin-left: 8px;
+			padding: 0px 6px;
+		}
+		.object-type {
+			width: calc(50% - 8px);
+			height: 272px;
+			margin-right: 16px;
+			.object-item {
+				.icon {
+					margin-right: 4px;
+					color: var(--color-text-2);
+				}
+				.label {
+					flex: 1;
+					color: var(--color-text-1);
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+				.date {
+					color: var(--color-text-3)
+				}
+			}
+		}
+		.logic-type{
+			width: calc(50% - 8px);
+			height: 272px;
+			.logic-item {
+				.icon {
+					margin-right: 4px;
+					color: var(--color-text-2);
+				}
+				.label {
+					flex: 1;
+					color: var(--color-text-1);
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+				.date {
+					color: var(--color-text-3)
+				}
+			}
+		}
+		.attr {
+			width: calc(50% - 8px);
+			height: 272px;
+			.card-header .title .moda-tag {
+				margin-left: 8px;
+				padding: 0px 6px;
+			}
+			.attr-item {
+				.icon {
+					margin-right: 4px;
+					color: var(--color-text-2);
+				}
+				.label {
+					flex: 1;
+					color: var(--color-text-1);
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					overflow: hidden;
+				}
+				.num {
+					color: var(--color-text-2);
+					margin-right: 20px;
+					svg {
+						margin-right: 2px;
+					}
+				}
+				.date {
+					color: var(--color-text-3)
+				}
+			}
+		}
+		.action-type {
+			width: calc(50% - 8px);
+			height: 272px;
+			margin-top: 16px;
+			.action-item {
+				.icon {
+					margin-right: 4px;
+					color: var(--color-text-2);
+				}
+				.label {
+					flex: 1;
+					color: var(--color-text-1);
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
+				.date {
+					color: var(--color-text-3)
+				}
+			}
+		}
+	}
+	.link-type {
+		width: calc(50% - 8px);
+		height: 272px;
+		margin-right: 16px;
+		margin-top: 16px;
+		margin-bottom: 16px;
+		.link-item {
+			.link-item-info {
+				flex: 1;
+				display: inline-flex;
+				&>div {
+					display: inline-block;
+					margin-right: 8px;
+					.moda-tag {
+						svg {
+							margin-right: 2px;
+						}
+					}
+					svg {
+						color: var(--color-text-2);
+					}
+				}
+				.source,.target{
+					max-width: 214px;
+					.moda-tag{
+						overflow: hidden;
+						text-overflow: ellipsis;
+						display: inline-block;
+						width: 100%;
+					}
+				}
+			}
+		}
+		.date {
+			color: var(--color-text-3)
+		}
+	}
+	.card {
+		border-radius: 4px;
+		border: 1px solid var(--color-border-2);
+		background: var(---color-bg-2);
+		display: flex;
+		flex-direction: column;
+		.card-header {
+			height: 38px;
+			margin-bottom: 12px;
+			display: flex;
+			padding: 16px 20px 0px;
+			.title {
+				flex: 1;
+				overflow: hidden;
+				color: var(--color-text-1);
+				font-size: 14px;
+				font-weight: 600;
+				line-height: 22px;
+				display: flex;
+				align-items: center;
+				&:before {
+					content: '';
+					width: 3px;
+					height: 12px;
+					margin-right: 4px;
+					border-radius: 6px;
+					background: var(--color-primary-6);
+					display: inline-block;
+					position: relative;
+					top: 1px;
+				}
+			}
+			.oper-group {
+				button {
+					padding: 0px 4px;
+				}
+			}
+		}
+		.card-content {
+			flex: 1;
+			overflow-y: auto;
+			overflow-x: hidden;
+			padding: 0px 16px 20px;
+			.list {
+				.item {
+					height: 40px;
+					padding: 10px 0px;
+					line-height: 20px;
+					display: flex;
+					border-bottom: 1px solid var(--color-border-2);
+					.icon {
+						.warning-point {
+							display: inline-block;
+						    margin-right: 4px;
+						    vertical-align: baseline;
+						    line-height: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}

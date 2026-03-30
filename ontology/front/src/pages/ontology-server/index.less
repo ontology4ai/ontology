@@ -1,0 +1,300 @@
+.ontology-list-container{
+  * {
+    box-sizing: border-box;
+  }
+  width: 100%;
+  height: 100%;
+  padding: 10px 12px;
+  box-sizing: border-box;
+  background: var(--color-fill-2);
+  .container-header{
+    height: 44px;
+    padding: 10px 16px;
+    background-color: #fff;
+    border-bottom: 1px solid var(--color-border-1, #EFF4F9);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .server-title span{
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text-1);
+    }
+  }
+  .modo-tabs.editable{
+    .arco-tabs{
+      border-bottom: 1px solid var(--color-border-1, #EFF4F9);
+    }
+    .tab-placeholder{
+      overflow: hidden;
+    }
+    .arco-tabs-header-nav{
+      padding: 10px 0;
+    }
+    .tab-title{
+      display: inline-flex;
+      align-items: center;
+      svg {
+        font-size: 14px;
+        color: var(--color-text-2);
+        margin-right: 6px;
+      }
+    }
+  }
+  .arco-spin-children{
+    width: 100%;
+    height: calc(100% - 46px);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    .ontology-server-container{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      .left-content{
+        width: 200px;
+        height: 100%;
+        flex-shrink: 0;
+        border-right: 1px solid var(--color-border-1, #EFF4F9);
+        background: var(--color-white, #FFF);
+        .list-header{
+          display: inline-flex;
+          width: 100%;
+          padding: 10px 16px 12px;
+          align-items: center;
+        }
+        .list-body{
+          height: calc(100% - 50px);
+
+          padding: 10px 16px 0;
+          overflow: auto;
+          .ontology-card{
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid #E4E9EE;
+            background: #F9FBFD;
+            margin-bottom: 6px;
+            padding: 3px  0  3px 10px;
+            cursor: pointer;
+            display: flex;
+            &.active{
+              border-color:var(--color-primary-6) ;
+            }
+            .ontology-content{
+              display: flex;
+              flex-direction: column;
+              margin: 0 4px;
+              span:first-child{
+                color: var(--color-link-6);
+              }
+              span{
+                display: inline-block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                max-width: 116px;
+              }
+            }
+            svg{
+              margin-top: 3px;
+            }
+          }
+        }
+      }
+      .right-content{
+        flex: 1;
+        width: calc(100% - 200px);
+        height: 100%;
+        background: var(--color-white);
+        padding: 16px 14px;
+        .arco-alert{
+          padding: 6px 12px;
+        }
+        .ontology-info-panel{
+          height: 100%;
+          overflow: auto;
+          display: flex;
+          flex-direction: column;
+          border-radius: var(--border-radius-large, 6px);
+          border: 1px solid var(--color-border-2, #E3E9EF);
+          background: var(--color-bg-1, #FFF);
+          .panel-head{
+            padding: 10px 16px 0px;
+            border-bottom: 1px solid var(---color-border-1, #EFF4F9);
+            .head-title{
+             color: var(--color-text-2);
+             .title-label{
+               color: var(--color-text-1);
+               font-size: 14px;
+               font-weight: 600;
+             }
+             .title-name{
+               color: var(--color-text-3);
+             }
+           }
+            .head-detail{
+              padding: 12px;
+            }
+          }
+          .panel-content{
+            flex: 1;
+            height: calc(100% - 108px);
+            .arco-tabs,.arco-tabs-content-inner, .arco-tabs-pane{
+              height: 100%;
+            }
+            .arco-tabs-content{
+              height: calc(100% - 42px);
+              padding-top: 0;
+            }
+            .arco-tabs-header-title-active, .arco-tabs-header-title-active:hover{
+              color: var(--color-text-1);
+              font-weight: 600;
+            }
+            .preview-container{
+              display: flex;
+              height: 100%;
+              .dot {
+                display: inline-block;
+                width: 3px;
+                height: 10px;
+                margin-right: 5px;
+                border-radius: 2px;
+                background: var(--color-primary-6, #3261CE);
+              }
+              .preview-content{
+                flex: 1;
+                padding: 10px  0 10px 16px;
+                height: 100%;
+                .content-title{
+                  height: 36px;
+                  line-height: 36px;
+                  font-weight: 600;
+                }
+                .content-body{
+                  background: var(--color-fill-1);
+                  height: calc(100% - 40px);
+                  overflow-y: auto;
+                  padding: 10px;
+                  .mcp-title {
+                    font-family: 'PingFang SC';
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 20px;
+                    margin-bottom: 7px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+      }
+      .ontology-logic-action-table{
+        .key-item{
+          color: var(--color-primary-6);
+        }
+        .arco-table-cell-text-ellipsis{
+          span{
+            span{
+              display: inline-block;
+              max-width: 100%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              vertical-align: middle;
+            }
+          }
+        }
+        .arco-table-expand-icon-cell button{
+          color: var(--color-primary-6);
+          background: var(--color-border-1);
+          &:hover{
+            color: var(--color-primary-6);
+            background: var(--color-border-1);
+          }
+        }
+      }
+      .comment{
+        width: 350px;
+      }
+      .expanded{
+        background: var(--color-fill-2, #EFF4F9);
+        padding: 16px 20px;
+        .expand-container{
+          position: relative;
+          &>div:first-child{
+            margin: 12px 0;
+            font-weight: 600;
+          }
+          .arco-btn{
+            position: absolute;
+            top: -6px;
+            right: 0;
+          }
+          .expand-content{
+            border-radius: 4px;
+            border: 1px solid var(--color-border-2);
+            background-color: var(--color-white);
+            .expand-content-head{
+              display: flex;
+              justify-content: space-between;
+              border-bottom: 1px solid var(--color-border-2);
+              &>div{
+                flex: 1;
+                height: 36px;
+                line-height: 36px;
+                padding-left: 20px;
+                span:first-child{
+                  margin-right: 10px;
+                }
+                span:last-child{
+                  span{
+                    display: inline-block;
+                    max-width: 300px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    height: 22px;
+                  }
+                }
+              }
+            }
+            .expand-content-body{
+              display: flex;
+              justify-content: space-between;
+              .expand-content-item{
+                width: 50%;
+                flex: 1;
+                padding: 10px 0 10px 20px;
+                .content-item{
+                  height: 100px;
+                  overflow: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.token-container{
+  textarea{
+    min-height: 100px;
+  }
+  .desc-info{
+    margin-top: 10px;
+  }
+  .title{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .desc-detail{
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,200 @@
+.agent-app {
+	transform: scale(0.5);
+	.agent-app-content {
+		transform: scale(2.0);
+		* {
+			pointer-events: none;
+		}
+	}
+	.event-layer {
+		width: 998px;
+	    height: 610px;
+	    background: red;
+	    position: absolute;
+	    top: 200px;
+	}
+	.ground {
+		width: 998px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: none;
+	}
+	.ground-top {
+		width: 998px;
+		position: absolute;
+		top: 200px;
+		left: 0px;
+		pointer-events: all;
+		cursor: pointer;
+	}
+	.ground-bottom {
+		width: 998px;
+		position: absolute;
+		top: 494px;
+		left: 0px;
+	}
+	.grid-ground {
+		width: 998px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	.road {
+		position: absolute;
+		top: 303px;
+		left: 131px;
+		width: 725.5px;
+	}
+	.arrow-line-1 {
+		position: absolute;
+		top: 303px;
+		left: 131px;
+	}
+	.arrow-line-2 {
+		position: absolute;
+		top: 304px;
+		left: 533px;
+	}
+	.arrow-line-3 {
+		position: absolute;
+		top: 514px;
+		left: 498px;
+	}
+	.arrow-line-4 {
+		position: absolute;
+		top: 513px;
+		left: 169px;
+	}
+	.icon {
+		height: max-content;
+		cursor: pointer;
+		pointer-events: all;
+		img {
+			width: 100%;
+			opacity: 1;
+			transition: all .2s;
+			&.light {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				opacity: 0;
+				transition: all .2s;
+			}
+		}
+		&:hover,
+		&.active {
+			img {
+				opacity: 0;
+				&.light {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.icon-1 {
+		position: absolute;
+		top: 366px;
+		left: 50px;
+		width: 156px;
+	}
+	.icon-2 {
+		position: absolute;
+		top: 156px;
+		left: 415px;
+		width: 156px;
+	}
+	.icon-3 {
+		position: absolute;
+		top: 366px;
+		left: 779px;
+		width: 156px;
+	}
+	.icon-4 {
+		position: absolute;
+		top: 583px;
+		left: 415px;
+		width: 156px;
+	}
+	.screen {
+		cursor: pointer;
+		height: max-content;
+		pointer-events: all;
+		img {
+			width: 100%;
+			// width: 276px;
+			// height: 100%;
+			opacity: 1;
+			transition: all .2s;
+			&.light {
+				// width: 274px;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				opacity: 0;
+				transition: all .2s;
+			}
+		}
+		&:hover,
+		&.active {
+			img {
+				opacity: 0;
+				&.light {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.screen-1 {
+		position: absolute;
+		top: 214px;
+		left: 238px;
+		width: 138px;
+		// height: 166px;
+	}
+	.screen-2 {
+		position: absolute;
+		top: 228px;
+		left: 605px;
+		width: 138px;
+		// height: 166px;
+	}
+	.screen-3 {
+		position: absolute;
+		top: 430px;
+		left: 607px;
+		width: 138px;
+		// height: 166px;
+	}
+	.screen-4 {
+		position: absolute;
+		top: 443px;
+		left: 236px;
+		width: 138px;
+		// height: 166px;
+	}
+	.main-screen {
+		position: absolute;
+		top: 294px;
+		left: 473px;
+		width: 148px;
+	}
+	.desktop {
+		position: absolute;
+		top: 387px;
+		left: 348px;
+		width: 187px;
+	}
+	.robot {
+		position: absolute;
+		top: 454px;
+		left: 375px;
+		width: 79px;
+	}
+	.title {
+		position: absolute;
+		top: 564px;
+		left: 195px;
+		width: 136px;
+	}
+}

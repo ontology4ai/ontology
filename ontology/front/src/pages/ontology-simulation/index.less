@@ -1,0 +1,156 @@
+.ontology-simulation {
+  padding: 24px;
+  background: var(--color-fill-2);
+  height: 100%;
+  box-sizing: border-box;
+  color: #202939;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .arco-btn-size-default {
+    height: 32px;
+    // padding: 0 10px;
+  }
+
+  &-container {
+    height: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  &-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 12px;
+    gap: 20px;
+
+    &-header {
+      // height: 250px;
+      padding: 20px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, rgba(204, 230, 255, 0.80) -35.15%, rgba(181, 216, 250, 0.20) 52.24%, rgba(181, 216, 250, 0.20) 82.09%);
+
+      &-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+          margin: 0;
+        }
+      }
+
+      &-subtitle {
+        color: #4B5665;
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 4px;
+      }
+
+      &-list {
+        margin-top: 12px;
+        display: flex;
+
+        &-item {
+          flex: 1;
+          border-radius: 10px;
+          border: 2px solid rgba(255, 255, 255, 0.50);
+          background: linear-gradient(114deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.25) 99.37%);
+          backdrop-filter: blur(5px);
+          
+          padding: 12px 16px;
+          
+
+          &-title {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 22px;
+            margin-bottom: 4px;
+            margin-top: 8px;
+          }
+
+          &-subtitle {
+            font-size: 14px;
+            color: #7D8999;
+            line-height: 22px;
+          }
+        }
+
+        img:last-child {
+          display: none;
+        }
+      }
+      
+    }
+
+    &-filter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &-title {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      &-right {
+        display: flex;
+        gap: 16px;
+      }
+    }
+    &-batch {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &-left {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+
+      &-title {
+        font-size: 16px;
+
+        span {
+          font-size: 16px;
+          color: #2E90FA
+        }
+      }
+    }
+
+    &-main {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+
+      > .arco-spin-children {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .ontology-simulation-card-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 16px;
+      }
+
+      .arco-table, .ontology-simulation-card-list {
+        flex: 1;
+        overflow: auto;
+      }
+
+      .arco-pagination {
+        justify-content: flex-end;
+        padding: 16px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "198090799599079424",
+  "name": "getGptInfo",
+  "label": "通过GPT自动补全元数据",
+  "descr": "通过GPT自动补全元数据",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"350\" y\u003d\"190\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"3\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-httpdiaoyong;title\u003d3.HTTP调用\" title\u003d\"HTTP调用\" modelData\u003d\"\" stepInst\u003d\"http\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"220\" y\u003d\"190\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"4\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"3\" target\u003d\"2\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"5\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d5.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"80\" y\u003d\"190\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"6\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"5\" target\u003d\"3\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "172665357969428480",
+  "respContentType": "application/json",
+  "url": "model/getGptInfo",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\"body\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}],\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "liutao26",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "210083847641481216",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "198090799599079424",
+      "stepInst": "script",
+      "preStepId": "3",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import org.apache.commons.collections.MapUtils;\\nimport org.apache.commons.lang3.StringUtils;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport io.github.suanchou.utils.JsonUtil;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\nimport io.github.suanchou.utils.HttpUtil;\\nimport java.utils.*;\\n\\nSystem.out.println(\\\"返回信息\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d:\\\");\\nSystem.out.println(res);\\n// String jobVersion \u003d SpringContextUtil.getBean(\\\"modoConfigRepo\\\").findById(\\\"JOB_VERSION\\\").get().getLabel();\\n// String datageUrl \u003d SpringContextUtil.getBean(\\\"modoConfigRepo\\\").findById(\\\"DATAGE_URL\\\").get().getLabel();\\n\\nMap\u003cString,Object\u003e resData \u003d new HashMap\u003c\u003e();\\n\\nMap\u003cString,Object\u003e params\u003dnew HashMap();\\nparams.put(\\\"llm_model_name\\\",\\\"qwen\\\");\\nparams.put(\\\"question\\\",body.get(\\\"question\\\"));\\n\\nresData.put(\\\"createSql\\\",res.get(\\\"createSql\\\"));\\nresData.put(\\\"tabLabel\\\",res.get(\\\"tabLabel\\\"));\\nresData.put(\\\"tabDesc\\\",res.get(\\\"tabDesc\\\"));\\n\\nreturn resData;\\n\"}",
+      "createUser": "liutao26",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import org.apache.commons.collections.MapUtils;\nimport org.apache.commons.lang3.StringUtils;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport io.github.suanchou.utils.JsonUtil;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\nimport io.github.suanchou.utils.HttpUtil;\nimport java.utils.*;\n\nSystem.out.println(\"返回信息\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d:\");\nSystem.out.println(res);\n// String jobVersion \u003d SpringContextUtil.getBean(\"modoConfigRepo\").findById(\"JOB_VERSION\").get().getLabel();\n// String datageUrl \u003d SpringContextUtil.getBean(\"modoConfigRepo\").findById(\"DATAGE_URL\").get().getLabel();\n\nMap\u003cString,Object\u003e resData \u003d new HashMap\u003c\u003e();\n\nMap\u003cString,Object\u003e params\u003dnew HashMap();\nparams.put(\"llm_model_name\",\"qwen\");\nparams.put(\"question\",body.get(\"question\"));\n\nresData.put(\"createSql\",res.get(\"createSql\"));\nresData.put(\"tabLabel\",res.get(\"tabLabel\"));\nresData.put(\"tabDesc\",res.get(\"tabDesc\"));\n\nreturn resData;\n"
+      }
+    },
+    {
+      "id": "210083847645675520",
+      "stepSeq": "3",
+      "parentStepId": "-1",
+      "label": "3.HTTP调用",
+      "graphId": "198090799599079424",
+      "stepInst": "http",
+      "preStepId": "5",
+      "nextStepId": "2",
+      "successStepId": "2",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"3.HTTP调用\",\"method\":\"POST\",\"url\":\"ask\",\"reqContentType\":\"application/json\",\"jsonParams\":\"reqParams\",\"socketTimeout\":\"30000\",\"variable\":\"res\",\"dataSource\":\"gpt_http_service\",\"jsonHeaders\":\"{\\\"Content-Type\\\":\\\"application/json;charset\u003dUTF-8\\\"}\"}",
+      "createUser": "liutao26",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "3.HTTP调用",
+        "method": "POST",
+        "url": "ask",
+        "reqContentType": "application/json",
+        "jsonParams": "reqParams",
+        "socketTimeout": "30000",
+        "variable": "res",
+        "dataSource": "gpt_http_service",
+        "jsonHeaders": "{\"Content-Type\":\"application/json;charset\u003dUTF-8\"}"
+      }
+    },
+    {
+      "id": "210083847645675521",
+      "stepSeq": "5",
+      "parentStepId": "-1",
+      "label": "5.执行脚本",
+      "graphId": "198090799599079424",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "3",
+      "successStepId": "3",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"5.执行脚本\",\"scriptText\":\"import org.apache.commons.collections.MapUtils;\\nimport org.apache.commons.lang3.StringUtils;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport io.github.suanchou.utils.JsonUtil;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\nimport io.github.suanchou.utils.HttpUtil;\\nimport java.utils.*;\\n\\nSystem.out.println(body);\\n// String jobVersion \u003d SpringContextUtil.getBean(\\\"modoConfigRepo\\\").findById(\\\"JOB_VERSION\\\").get().getLabel();\\n// String datageUrl \u003d SpringContextUtil.getBean(\\\"modoConfigRepo\\\").findById(\\\"DATAGE_URL\\\").get().getLabel();\\n\\nreqParams\u003dnew HashMap();\\nreqParams.put(\\\"llm_model_name\\\",\\\"qwen\\\");\\nreqParams.put(\\\"question\\\",body.get(\\\"question\\\"));\\n\"}",
+      "createUser": "liutao26",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "5.执行脚本",
+        "scriptText": "import org.apache.commons.collections.MapUtils;\nimport org.apache.commons.lang3.StringUtils;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport io.github.suanchou.utils.JsonUtil;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\nimport io.github.suanchou.utils.HttpUtil;\nimport java.utils.*;\n\nSystem.out.println(body);\n// String jobVersion \u003d SpringContextUtil.getBean(\"modoConfigRepo\").findById(\"JOB_VERSION\").get().getLabel();\n// String datageUrl \u003d SpringContextUtil.getBean(\"modoConfigRepo\").findById(\"DATAGE_URL\").get().getLabel();\n\nreqParams\u003dnew HashMap();\nreqParams.put(\"llm_model_name\",\"qwen\");\nreqParams.put(\"question\",body.get(\"question\"));\n"
+      }
+    }
+  ]
+}

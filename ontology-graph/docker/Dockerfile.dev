@@ -1,0 +1,39 @@
+# Development Dockerfile with hot reloading
+
+FROM python:3.12-slim
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    APP_ENVIRONMENT=development
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Poetry
+RUN pip install poetry
+
+# Set working directory
+WORKDIR /app
+
+# Copy Poetry configuration
+COPY pyproject.toml poetry.lock ./
+
+# Configure Poetry and install dependencies (including dev dependencies)
+RUN poetry config virtualenvs.create false \
+    && poetry install --no-interaction --no-ansi
+
+# Create directories
+RUN mkdir -p /app/logs /app/config
+
+# Copy application code (will be overridden by volume mount in development)
+COPY . .
+
+# Expose port
+EXPOSE 8000
+
+# Default command (will be overridden in docker-compose)
+CMD ["python", "-m", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

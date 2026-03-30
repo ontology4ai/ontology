@@ -1,0 +1,40 @@
+{
+  "id": "78502590924689408",
+  "name": "getLogicModelDetail",
+  "label": "获取逻辑模型详情",
+  "descr": "获取逻辑模型详情",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"230\" y\u003d\"170\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236063466669670400",
+  "respContentType": "application/json",
+  "url": "get/logic/model/detail",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[{\"id\":\"a357fb33-3a8b-4dd1-a7ad-0a42ace8a15a\",\"name\":\"id\",\"required\":\"1\",\"example\":\"178600570444288000\",\"desc\":\"模型ID\",\"value\":\"178600570444288000\"},{\"id\":\"fb1c93e0-7840-4f7b-84b9-8f172147fc9e\",\"name\":\"dataSrc\",\"required\":\"0\",\"example\":\"draft\",\"desc\":\"模型来源（draft:取草稿，publish:取正式）\"}]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "254738901678411776",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "78502590924689408",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport com.asiainfo.modo.dataps.LogicModelService;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport java.util.List;\\nimport java.util.Map;\\n\\n\\n\\n    public Object getDetail(Map\u003cString, Object\u003e params) {\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        String impl \u003d \\\"logicModelService\\\";\\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select prop_label from dacp_meta_property where prop_name\u003d\u0027useArchAsTag\u0027\\\", params));\\n        for (Map\u003cString, Object\u003e map : list) {\\n            if (\\\"true\\\".equals(MapUtils.getString(map, \\\"propLabel\\\"))) {\\n                impl \u003d \\\"archPropLogicModelService\\\";\\n            }\\n        }\\n        LogicModelService logicModelService \u003d (LogicModelService) SpringContextUtil.getBean(impl);\\n        return logicModelService.getModelDetail(params);\\n    }\\n\\n\\n\\nreturn getDetail(params);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport com.asiainfo.modo.dataps.LogicModelService;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport java.util.List;\nimport java.util.Map;\n\n\n\n    public Object getDetail(Map\u003cString, Object\u003e params) {\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        String impl \u003d \"logicModelService\";\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select prop_label from dacp_meta_property where prop_name\u003d\u0027useArchAsTag\u0027\", params));\n        for (Map\u003cString, Object\u003e map : list) {\n            if (\"true\".equals(MapUtils.getString(map, \"propLabel\"))) {\n                impl \u003d \"archPropLogicModelService\";\n            }\n        }\n        LogicModelService logicModelService \u003d (LogicModelService) SpringContextUtil.getBean(impl);\n        return logicModelService.getModelDetail(params);\n    }\n\n\n\nreturn getDetail(params);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

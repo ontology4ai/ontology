@@ -1,0 +1,40 @@
+{
+  "id": "179343467011608576",
+  "name": "getWorkspaceMaxVersion",
+  "label": "查询工作空间最大版本",
+  "descr": "查询工作空间最大版本",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"190\" y\u003d\"170\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "173889682855469056",
+  "respContentType": "application/json",
+  "url": "workspace/max/version",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[{\"id\":\"4ea2cb10-1d34-4c5a-b842-c1ba237c3563\",\"name\":\"workspaceId\",\"required\":\"1\",\"example\":\"\",\"desc\":\"\"}]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "xutb",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "179345012201803776",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "179343467011608576",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import java.util.*;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.lang3.StringUtils;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport io.github.suanchou.utils.JsonUtil;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\n\\npublic Object getMaxVersion(Map\u003cString, Object\u003e params) {\\n        String workspaceId \u003d MapUtils.getString(params, \\\"workspaceId\\\");\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        // 查询指定工作空间的dataps_subject的当前最新版本号\\n        Integer maxVersionNumber \u003d jt.queryForObject(\\\"select max(version_number) from dataps_subject where workspace_id \u003d :workspaceId\\\", params, Integer.class);\\n        return maxVersionNumber;\\n        }\\n    return  getMaxVersion(params);\"}",
+      "createUser": "xutb",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import java.util.*;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.lang3.StringUtils;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport io.github.suanchou.utils.JsonUtil;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\n\npublic Object getMaxVersion(Map\u003cString, Object\u003e params) {\n        String workspaceId \u003d MapUtils.getString(params, \"workspaceId\");\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        // 查询指定工作空间的dataps_subject的当前最新版本号\n        Integer maxVersionNumber \u003d jt.queryForObject(\"select max(version_number) from dataps_subject where workspace_id \u003d :workspaceId\", params, Integer.class);\n        return maxVersionNumber;\n        }\n    return  getMaxVersion(params);"
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+.prompt-setting {
+    & *{
+        box-sizing: border-box;
+    }
+    form{
+        padding: 12px 24px;
+        .arco-form-item:last-child{
+            margin-bottom: 0;
+        }
+        .arco-alert{
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #B8DFFF;
+            span{
+                font-size: 14px;
+                color: #202939;
+            }
+            .prompt-setting-alert-name{
+                font-weight: 700;
+            }
+        }
+    }
+
+
+    .prompt-content {
+        position: relative;
+        .prompt-btns{
+            position: absolute;
+            top: -35px;
+            right: 10px;
+            svg{
+                font-size: 14px;
+            }
+            span{
+                font-size: 14px;
+            }
+            .arco-btn-text:not(.arco-btn-disabled){
+                padding: 0;
+            }
+            .arco-btn-text:not(.arco-btn-disabled):not(.arco-btn-loading):hover{
+                background: transparent;
+                //color: rgb(var(--primary-6));
+            }
+        }
+        .prompt-setting-markdown{
+            min-height: 350px;
+            max-height: 500px;
+            overflow: auto;
+            background: #fafbfc;
+            border: 1px solid #eeeeee;
+            border-radius: 6px;
+            padding: 12px;
+        }
+        textarea{
+            min-height: 350px !important;
+            max-height: 500px !important;
+        }
+    }
+    .prompt-setting-footer{
+        border-top: 1px solid var(--color-neutral-3);
+        padding: 12px 24px; 
+        display: flex;
+        justify-content: space-between;
+        .left-btns{
+            button{
+                padding: 0;
+            }
+        }
+    }
+    .arco-form-label-item label{
+        font-size: 14px;
+        color: #202934;
+    }
+} 

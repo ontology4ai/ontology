@@ -1,0 +1,83 @@
+.attr-config{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 20px;
+    .arco-table .arco-table-container {
+      padding: 0;
+    }
+    .arco-btn-dashed {
+      color: var(--color-primary-6);
+    }
+    .action-setting-head{
+      box-sizing: border-box;
+      height: 36px;
+      line-height: 20px;
+      padding: 8px 0;
+      font-size: 12px;
+      font-weight: 600;
+      .dot{
+        display: inline-block;
+        width: 3px;
+        height: 10px;
+        margin-right: 5px;
+        border-radius: 2px;
+        background: var(--color-primary-6, #3261CE);
+      }
+    }
+    .action-list{
+      margin-top: 4px;
+      .arco-checkbox-group{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .arco-checkbox{
+          display: flex;
+          align-items: center;
+          padding: 10px 20px;
+          height: 63px;
+          border-top: 1px solid var(--color-border-2, #E3E9EF);
+  
+          border-left: 1px solid var(--color-border-2, #E3E9EF);
+  
+          border-right: 1px solid var(--color-border-2, #E3E9EF);
+          &:first-of-type {
+  
+            border-radius: 4px 4px 0 0;
+          }
+  
+          &:last-of-type {
+            border-radius: 0 0 4px 4px;
+  
+            border-bottom: 1px solid var(--color-border-2, #E3E9EF);
+          }
+        }
+        .check-content{
+          display: flex;
+          .action-icon{
+            box-sizing: border-box;
+            height: 36px;
+            width: 36px;
+            padding: 8px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: var(---border-radius-medium, 4px);
+            background: var(--color-fill-2, #EFF4F9);
+          }
+          .action-detail{
+            .action-title{
+              font-size: 14px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+    .action-object{
+      margin-top: 20px;
+      .action-title{
+        margin-bottom: 6px;
+      }
+    }
+  }
+  

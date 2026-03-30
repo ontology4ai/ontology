@@ -1,0 +1,40 @@
+{
+  "id": "220166051286528000",
+  "name": "getDevCheckResult",
+  "label": "获取质量检查结果",
+  "descr": "获取质量检查结果",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"340\" y\u003d\"190\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236065630355501056",
+  "respContentType": "application/json",
+  "url": "get/dev/check/result",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[{\"id\":\"6e5a36f8-2175-4e7e-bc9f-b19a2d6c9608\",\"name\":\"tabId\",\"required\":\"1\",\"example\":\"\",\"desc\":\"\"}]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "232524557706551296",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "220166051286528000",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport java.util.ArrayList;\\nimport java.util.HashMap;\\nimport java.util.List;\\nimport java.util.Map;\\n\\n\\n    public Object get(Map\u003cString, Object\u003e params) {\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        Map\u003cString, Object\u003e result \u003d new HashMap\u003c\u003e();\\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d jt.queryForList(\\\"select * from dataps_dev_check_res where obj_id\u003d:tabId\\\", params);\\n        if (!list.isEmpty()) {\\n            Map\u003cString, Object\u003e sum \u003d DatapsHumpHelper.lineToHump(list.get(0));\\n            sum.put(\\\"checkResult\\\", MapUtils.getString(sum, \\\"result\\\"));\\n            sum.put(\\\"errRuleCnt\\\", MapUtils.getString(sum, \\\"errorRuleCnt\\\"));\\n            result.put(\\\"sum\\\", sum);\\n        }\\n        result.put(\\\"tableDtl\\\", DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select * from dataps_dev_check_detail where obj_type\u003d\u0027TAB\u0027 and obj_id\u003d:tabId\\\", params)));\\n        List\u003cMap\u003cString, Object\u003e\u003e fieldSum \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select * from dataps_dev_check_detail where obj_type is null and obj_id\u003d:tabId\\\", params));\\n        Map\u003cString, Map\u003cString, Object\u003e\u003e fieldSumMap \u003d new HashMap\u003c\u003e();\\n        fieldSum.forEach(map -\u003e {\\n            fieldSumMap.put(MapUtils.getString(map, \\\"id\\\"), map);\\n        });\\n        List\u003cMap\u003cString, Object\u003e\u003e fieldList \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select * from dataps_dev_check_detail where obj_type \u003d \u0027FIELD\u0027 and obj_id\u003d:tabId\\\", params));\\n        fieldList.forEach(field -\u003e {\\n            String parentId \u003d MapUtils.getString(field, \\\"parentId\\\");\\n            if (fieldSumMap.containsKey(parentId)) {\\n                if (!fieldSumMap.get(parentId).containsKey(\\\"fieldDtl\\\")) {\\n                    fieldSumMap.get(parentId).put(\\\"fieldDtl\\\", new ArrayList\u003c\u003e());\\n                }\\n                List\u003cMap\u003cString, Object\u003e\u003e tempList \u003d (List\u003cMap\u003cString, Object\u003e\u003e) fieldSumMap.get(parentId).get(\\\"fieldDtl\\\");\\n                tempList.add(field);\\n            }\\n        });\\n        result.put(\\\"fieldDtl\\\", fieldSum);\\n        return result;\\n    }\\n\\nreturn get(params);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport java.util.ArrayList;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\n\n    public Object get(Map\u003cString, Object\u003e params) {\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        Map\u003cString, Object\u003e result \u003d new HashMap\u003c\u003e();\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d jt.queryForList(\"select * from dataps_dev_check_res where obj_id\u003d:tabId\", params);\n        if (!list.isEmpty()) {\n            Map\u003cString, Object\u003e sum \u003d DatapsHumpHelper.lineToHump(list.get(0));\n            sum.put(\"checkResult\", MapUtils.getString(sum, \"result\"));\n            sum.put(\"errRuleCnt\", MapUtils.getString(sum, \"errorRuleCnt\"));\n            result.put(\"sum\", sum);\n        }\n        result.put(\"tableDtl\", DatapsHumpHelper.lineToHump(jt.queryForList(\"select * from dataps_dev_check_detail where obj_type\u003d\u0027TAB\u0027 and obj_id\u003d:tabId\", params)));\n        List\u003cMap\u003cString, Object\u003e\u003e fieldSum \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select * from dataps_dev_check_detail where obj_type is null and obj_id\u003d:tabId\", params));\n        Map\u003cString, Map\u003cString, Object\u003e\u003e fieldSumMap \u003d new HashMap\u003c\u003e();\n        fieldSum.forEach(map -\u003e {\n            fieldSumMap.put(MapUtils.getString(map, \"id\"), map);\n        });\n        List\u003cMap\u003cString, Object\u003e\u003e fieldList \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select * from dataps_dev_check_detail where obj_type \u003d \u0027FIELD\u0027 and obj_id\u003d:tabId\", params));\n        fieldList.forEach(field -\u003e {\n            String parentId \u003d MapUtils.getString(field, \"parentId\");\n            if (fieldSumMap.containsKey(parentId)) {\n                if (!fieldSumMap.get(parentId).containsKey(\"fieldDtl\")) {\n                    fieldSumMap.get(parentId).put(\"fieldDtl\", new ArrayList\u003c\u003e());\n                }\n                List\u003cMap\u003cString, Object\u003e\u003e tempList \u003d (List\u003cMap\u003cString, Object\u003e\u003e) fieldSumMap.get(parentId).get(\"fieldDtl\");\n                tempList.add(field);\n            }\n        });\n        result.put(\"fieldDtl\", fieldSum);\n        return result;\n    }\n\nreturn get(params);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

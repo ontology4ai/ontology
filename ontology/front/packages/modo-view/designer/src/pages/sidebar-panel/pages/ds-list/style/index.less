@@ -1,0 +1,27 @@
+.modo-design-ds-list {
+	height: 100%;
+	flex: 1;
+	border-left: 1px solid var(--color-gray-2);
+	padding: 5px 10px;
+	box-sizing: border-box;
+    overflow: auto;
+    .arco-collapse-item-header {
+    	padding-top: 2px;
+    	padding-bottom: 2px;
+    	.label {
+    		color: var(--color-gray-6);
+    	}
+        .arco-collapse-item-header-title {
+            white-space: nowrap;
+            overflow: hidden;
+            width: calc(100% - 50px);
+        }
+    }
+    .var-oper {
+    	.moda-icon {
+    		&:hover {
+    			color: var(--color-primary-6);
+    		}
+    	}
+    }
+}

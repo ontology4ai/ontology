@@ -1,0 +1,40 @@
+{
+  "id": "238353156519817216",
+  "name": "sysDataArchPublish",
+  "label": "系统数据编目发布",
+  "descr": "系统数据编目发布",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" parent\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" vertex\u003d\"1\" parent\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"280\" y\u003d\"170\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236138156394217472",
+  "respContentType": "application/json",
+  "url": "sys/data/arch/publish",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\"body\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}],\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "238353156549177344",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "238353156519817216",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.dataps.SysDataArchPublishTransactional;\\nimport io.github.suanchou.utils.SpringContextUtil;\\n\\nimport java.util.Map;\\n\\n\\n\\n    public Object doSync(Map\u003cString, Object\u003e body) {\\n        SysDataArchPublishTransactional targetBean \u003d SpringContextUtil.getBean(SysDataArchPublishTransactional.class);\\n        Object result \u003d targetBean.publish(body);\\n        return result;\\n    }\\n\\n\\nreturn doSync(body);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.dataps.SysDataArchPublishTransactional;\nimport io.github.suanchou.utils.SpringContextUtil;\n\nimport java.util.Map;\n\n\n\n    public Object doSync(Map\u003cString, Object\u003e body) {\n        SysDataArchPublishTransactional targetBean \u003d SpringContextUtil.getBean(SysDataArchPublishTransactional.class);\n        Object result \u003d targetBean.publish(body);\n        return result;\n    }\n\n\nreturn doSync(body);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

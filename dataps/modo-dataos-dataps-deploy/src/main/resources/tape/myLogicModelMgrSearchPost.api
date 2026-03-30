@@ -1,0 +1,40 @@
+{
+  "id": "266260109041848320",
+  "name": "myLogicModelMgrSearchPost",
+  "label": "我的数据-逻辑模型管理查询（post）",
+  "descr": "我的数据-逻辑模型管理查询（post）",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"180\" y\u003d\"160\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236150763746426880",
+  "respContentType": "application/json",
+  "url": "my/logic/model/mgr/search/post",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\"body\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}],\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "jiash",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "267623080406011904",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "266260109041848320",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport com.asiainfo.modo.dataps.LogicModelService;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport java.util.List;\\nimport java.util.Map;\\n\\n\\n\\n    public Object search(Map\u003cString, Object\u003e body) {\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        String impl \u003d \\\"logicModelService\\\";\\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select prop_label from dacp_meta_property where prop_name\u003d\u0027useArchAsTag\u0027\\\", body));\\n        for (Map\u003cString, Object\u003e map : list) {\\n            if (\\\"true\\\".equals(MapUtils.getString(map, \\\"propLabel\\\"))) {\\n                impl \u003d \\\"archPropLogicModelService\\\";\\n            }\\n        }\\n        LogicModelService logicModelService \u003d (LogicModelService) SpringContextUtil.getBean(impl);\\n        return logicModelService.myLogicModelMgrSearch(body);\\n    }\\n\\n\\n\\nreturn search(body);\"}",
+      "createUser": "jiash",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport com.asiainfo.modo.dataps.LogicModelService;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport java.util.List;\nimport java.util.Map;\n\n\n\n    public Object search(Map\u003cString, Object\u003e body) {\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        String impl \u003d \"logicModelService\";\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select prop_label from dacp_meta_property where prop_name\u003d\u0027useArchAsTag\u0027\", body));\n        for (Map\u003cString, Object\u003e map : list) {\n            if (\"true\".equals(MapUtils.getString(map, \"propLabel\"))) {\n                impl \u003d \"archPropLogicModelService\";\n            }\n        }\n        LogicModelService logicModelService \u003d (LogicModelService) SpringContextUtil.getBean(impl);\n        return logicModelService.myLogicModelMgrSearch(body);\n    }\n\n\n\nreturn search(body);"
+      }
+    }
+  ]
+}

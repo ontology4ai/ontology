@@ -1,0 +1,18 @@
+export default {
+    "查询": "Query",
+    "保存": "Save",
+    "新建": "Create",
+    '清空': 'Clear',
+    '预览': 'Preview',
+    '编辑': 'Edit',
+    '设计': 'Design',
+    "删除": "Delete",
+    "取消": "Cancel",
+    "关闭": "Close",
+    "确定": "Confirm",
+    "新增": "Insert",
+    "导入": "Import",
+    "导出": "Export",
+    "请输入关键字": "Please enter keywords",
+    "变更": "Update",
+}

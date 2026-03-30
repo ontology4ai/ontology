@@ -1,0 +1,40 @@
+{
+  "id": "176049917920980992",
+  "name": "getSysDataArch",
+  "label": "获取系统数据编目",
+  "descr": "获取系统数据编目",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"330\" y\u003d\"160\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236137972616593408",
+  "respContentType": "application/json",
+  "url": "get/sys/data/arch",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[{\"id\":\"a8343152-fa99-4042-a9a6-aac867e30c3b\",\"name\":\"privUser\",\"required\":\"0\",\"example\":\"\",\"desc\":\"\"}]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "236139538479886336",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "176049917920980992",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.dataps.SysDataArchService;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport org.apache.commons.collections.MapUtils;\\n\\nimport java.util.Map;\\n\\n\\n\\n    public Object getFromCommonSubjects(Map\u003cString, Object\u003e params) {\\n        String archType \u003d MapUtils.getString(params, \\\"archType\\\");\\n        String impl \u003d MapUtils.getString(params, \\\"impl\\\", \\\"sysDataArchService\\\");\\n        String privUser \u003d MapUtils.getString(params, \\\"privUser\\\");\\n        SysDataArchService dataArchService \u003d (SysDataArchService) SpringContextUtil.getBean(impl);\\n        return dataArchService.getPublishedArch(archType, privUser);\\n    }\\n\\n\\n\\nreturn getFromCommonSubjects(params);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.dataps.SysDataArchService;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport org.apache.commons.collections.MapUtils;\n\nimport java.util.Map;\n\n\n\n    public Object getFromCommonSubjects(Map\u003cString, Object\u003e params) {\n        String archType \u003d MapUtils.getString(params, \"archType\");\n        String impl \u003d MapUtils.getString(params, \"impl\", \"sysDataArchService\");\n        String privUser \u003d MapUtils.getString(params, \"privUser\");\n        SysDataArchService dataArchService \u003d (SysDataArchService) SpringContextUtil.getBean(impl);\n        return dataArchService.getPublishedArch(archType, privUser);\n    }\n\n\n\nreturn getFromCommonSubjects(params);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

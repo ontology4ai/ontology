@@ -1,0 +1,197 @@
+.summary-container{
+  padding: 0 16px;
+  padding-right: 10px;
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  .arco-spin .arco-spin-children{
+    background-color: var(--color-white);
+    gap: 0;
+  }
+  .summary-cards{
+    height: calc(100% - 40px);
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: space-between;
+    .arco-card{
+      border-radius: 4px;
+
+      .arco-card-header {
+        padding: 16px 20px 12px;
+        border: 0;
+
+        .dot {
+          display: inline-block;
+          width: 3px;
+          height: 10px;
+          margin-right: 5px;
+          border-radius: 2px;
+          background: var(--color-primary-6, #3261CE);
+        }
+      }
+      .arco-card-body{
+        padding: 0;
+        color: var(--color-text-1);
+        ul,li{
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        ul{
+          height: 220px;
+          overflow: auto;
+        }
+      }
+      .more-btn{
+      //  position: absolute;
+       // bottom: 0;
+        height: 24px;
+        width: 100%;
+        line-height: 24px;
+        text-align: center;
+        color:#000;
+        border-top: 1px solid var(--color-border-2, #E3E9EF);
+        background-color: var(--color-fill-1);
+        cursor: pointer;
+      }
+      li.data-info{
+        padding: 10px 0;
+        margin: 0 16px;
+        border-bottom: 1px solid var(--color-border-2, #E3E9EF);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &:last-child{
+          border: 0;
+        }
+        .left-content{
+          width: calc(100% - 120px);
+          span{
+            display: inline-block;
+            width: 100%;
+            overflow: hidden;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+        .right-content{
+          width: 120px;
+          display: inline-flex;
+          justify-content: flex-end;
+          .num-text{
+            width: 32px;
+            margin-left: 3px;
+            text-align: center;
+          }
+          .arco-progress-line-wrapper{
+            .arco-progress-line-outer{
+              height: 6px !important;
+              background-color: #fff;
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+    .summary-left{
+      width: 66%;
+      display: flex;
+      flex:1;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      .arco-card{
+        width: 49%;
+        margin-bottom: 12px;
+      }
+      .card-empty{
+        height: 245px;
+        .arco-empty-wrapper{
+          img{
+            height: 48px;
+          }
+        }
+      }
+    }
+    .summary-right{
+      width: 386px;
+      margin-left: 12px;
+      .title-card{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        .arco-card-body{
+          ul{
+            //max-height: 510px;
+            height: auto;
+          }
+        }
+        .title-empty{
+          height: 300px;
+        }
+      }
+      .object-card{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top: 0;
+        .arco-card-body{
+          ul{
+            height: auto;
+          }
+        }
+      }
+    }
+    .search-container {
+      position: relative;
+      width: 180px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+
+      .search-icon {
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &.show {
+          opacity: 1;
+          visibility: visible;
+          transform: scale(1);
+        }
+
+        &.hide {
+          opacity: 0;
+          visibility: hidden;
+          transform: scale(0.8);
+        }
+
+        &:hover {
+          color: var(--color-primary);
+        }
+      }
+
+      .search-input-wrapper {
+        position: absolute;
+        right: 0;
+        width: 180px;
+        transition: all 0.3s ease;
+
+        &.show {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(0);
+        }
+
+        &.hide {
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(10px);
+        }
+      }
+    }
+  }
+}

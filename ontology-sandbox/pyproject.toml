@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "code_gen"
+version = "0.1.0"
+description = ""
+authors = ["yifanchang <yifanchang08@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["standard"], version = "^0.116.1"}
+loguru = "^0.7.3"
+aiomysql = "^0.2.0"
+pymysql = "^1.1.1"
+pydantic = "^2.11.7"
+cryptography = "^45.0.6"
+sqlalchemy = "^2.0.43"
+sqlmodel = "^0.0.24"
+rdflib = "^7.1.4"
+requests = "^2.32.5"
+mcp = {extras = ["cli"], version = "^1.14.1"}
+langchain = "^1.0.5"
+langchain-openai = "^1.0.2"
+pandas = "^2.3.3"
+redis = "^7.1.0"
+psycopg2-binary = "^2.9.11"
+pyjwt = "^2.10.1"
+aiohttp = "^3.13.2"
+minio= "^7.2.13"
+scipy = "^1.16.3"
+matplotlib = "^3.10.8"
+markdown = "^3.10.1"
+pygments = "^2.19.2"
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.30.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "aliyun"
+url = "https://mirrors.aliyun.com/pypi/simple/"
+priority = "primary"  # 将该源设置为默认源

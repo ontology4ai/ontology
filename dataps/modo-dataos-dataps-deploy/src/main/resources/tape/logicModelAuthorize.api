@@ -1,0 +1,87 @@
+{
+  "id": "267703579824607232",
+  "name": "logicModelAuthorize",
+  "label": "模型授权",
+  "descr": "模型授权",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"50\" y\u003d\"170\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"3\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-httpdiaoyong;title\u003d3.HTTP调用\" title\u003d\"HTTP调用\" modelData\u003d\"\" stepInst\u003d\"http\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"230\" y\u003d\"190\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"4\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d4.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"410\" y\u003d\"210\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"5\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"2\" target\u003d\"3\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"6\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"3\" target\u003d\"4\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236150763746426880",
+  "respContentType": "application/json",
+  "url": "logicModelAuthorize",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\"body\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}],\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "jiash",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "267711050412707840",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "267703579824607232",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "3",
+      "successStepId": "3",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import java.util.*;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.lang3.StringUtils;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport io.github.suanchou.utils.JsonUtil;\\n\\n// String[] tableIds \u003d(String[]) body.get(\\\"tableIds\\\");\\n// String[] userIds \u003d(String[]) body.get(\\\"userIds\\\");\\n\\nString tableIds \u003d MapUtils.getString(body, \\\"tableIds\\\");\\nString userIds \u003d MapUtils.getString(body, \\\"userIds\\\");\\n\\n    targetParams \u003d new HashMap\u003c\u003e();\\n\\n    targetParams.put(\\\"tableIds\\\",Arrays.asList(tableIds.split(\\\",\\\")));\\n    targetParams.put(\\\"userIds\\\",Arrays.asList(userIds.split(\\\",\\\")));\"}",
+      "createUser": "jiash",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import java.util.*;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.lang3.StringUtils;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport org.apache.commons.collections.MapUtils;\nimport io.github.suanchou.utils.JsonUtil;\n\n// String[] tableIds \u003d(String[]) body.get(\"tableIds\");\n// String[] userIds \u003d(String[]) body.get(\"userIds\");\n\nString tableIds \u003d MapUtils.getString(body, \"tableIds\");\nString userIds \u003d MapUtils.getString(body, \"userIds\");\n\n    targetParams \u003d new HashMap\u003c\u003e();\n\n    targetParams.put(\"tableIds\",Arrays.asList(tableIds.split(\",\")));\n    targetParams.put(\"userIds\",Arrays.asList(userIds.split(\",\")));"
+      }
+    },
+    {
+      "id": "267711050412707841",
+      "stepSeq": "3",
+      "parentStepId": "-1",
+      "label": "3.HTTP调用",
+      "graphId": "267703579824607232",
+      "stepInst": "http",
+      "preStepId": "2",
+      "nextStepId": "4",
+      "successStepId": "4",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"3.HTTP调用\",\"method\":\"POST\",\"dataSource\":\"dataps_http_service\",\"url\":\"_api/_/modoTab/logicModelAuthorize\",\"jsonHeaders\":\"{\\\"Content-Type\\\":\\\"application/json;charset\u003dUTF-8\\\"}\",\"jsonParams\":\"targetParams\",\"reqContentType\":\"application/json\",\"socketTimeout\":\"30000\",\"variable\":\"result\"}",
+      "createUser": "jiash",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "3.HTTP调用",
+        "method": "POST",
+        "dataSource": "dataps_http_service",
+        "url": "_api/_/modoTab/logicModelAuthorize",
+        "jsonHeaders": "{\"Content-Type\":\"application/json;charset\u003dUTF-8\"}",
+        "jsonParams": "targetParams",
+        "reqContentType": "application/json",
+        "socketTimeout": "30000",
+        "variable": "result"
+      }
+    },
+    {
+      "id": "267711050412707842",
+      "stepSeq": "4",
+      "parentStepId": "-1",
+      "label": "4.执行脚本",
+      "graphId": "267703579824607232",
+      "stepInst": "script",
+      "preStepId": "3",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"4.执行脚本\",\"scriptText\":\"return result;\"}",
+      "createUser": "jiash",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "4.执行脚本",
+        "scriptText": "return result;"
+      }
+    }
+  ]
+}

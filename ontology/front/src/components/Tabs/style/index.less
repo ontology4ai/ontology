@@ -1,0 +1,163 @@
+.modo-tabs.editable {
+    background: var(--color-white);
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    &>.arco-tabs {
+        height: 100%;
+        &>.arco-tabs-header-nav {
+            padding: 8px 0px;
+            box-shadow: inset 0px -1px 0px 0px rgb(242 243 245);
+            &::before {
+                display: none;
+            }
+            .arco-icon-hover:hover::before {
+                display: none;
+            }
+            &>.arco-tabs-header-scroll {
+                flex-direction: row-reverse;
+                &>.arco-tabs-header-wrapper {
+                    &>.arco-tabs-header {
+                        .arco-tabs-header-ink {
+                            display: none;
+                        }
+                        .arco-tabs-header-title {
+                            background: var(--color-gray-3);
+                            color: var(--color-text-2);
+                            border-radius: 4px;
+                            border: 0px;
+                            height: 24px;
+                            padding: 6px 8px !important;
+                            margin-left: 6px !important;
+                            margin-right: 0px !important;
+                            width: 110px;
+                            display: inline-flex;
+                            transition: all 0.2s cubic-bezier(0, 0, 1, 1);
+                            span {
+                                display: block;
+                            }
+                            .arco-typography {
+                                width: 100%;
+                            }
+                            &:first-of-type {
+                                margin-left: 0px !important;
+                            }
+                            .arco-tabs-header-title-text {
+                                flex: 1;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                &>.arco-typography {
+                                    margin-bottom: 0px;
+                                    color: inherit;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                }
+                            }
+                            &:hover {
+                                .arco-tabs-close-icon {
+                                    width: 12px;
+                                }
+                                .arco-tabs-icon-hover {
+                                    opacity: 1;
+                                    transform: scale(1);
+                                }
+                            }
+                            .arco-tabs-close-icon {
+                                width: 0px;
+                                margin-left: 0px;
+                                overflow: hidden;
+                            }
+                            .arco-tabs-icon-hover {
+                                color: var(--color-gray-8);
+                                vertical-align: middle;
+                                opacity: 0;
+                                transform: scale(0);
+                                transition: all .1s;
+                            }
+                        }
+                        .arco-tabs-header-title-active,
+                        .arco-tabs-header-title-active:hover {
+                            background-color: var(--color-primary-6);
+                            color: var(--color-white);
+                            font-weight: 500;
+                            .arco-typography {
+                                color: var(--color-white);
+                            }
+                            &:hover {
+                                .arco-tabs-icon-hover {
+                                    opacity: 1
+                                }
+                            }
+                            .arco-tabs-icon-hover {
+                                color: var(--color-white);
+                                vertical-align: middle;
+                                opacity: 0;
+                                transition: all .1s;
+                            }
+                        }
+                    }
+                }
+                &>.arco-tabs-header-extra {
+                    .tab-title {
+                        background: var(--color-white);
+                        border-radius: 4px;
+                        padding: 0px 10px;
+                        height: 24px;
+                        line-height: 24px;
+                        cursor: pointer;
+                        svg {
+                            color: var(--color-primary-6);
+                            margin-right: 7.5px;
+                        }
+                        span {
+                            font-size: 14px;
+                            color: var(--color-text-1);
+                            font-weight: 600;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+                
+        }
+
+        &>.arco-tabs-content {
+            border: 0px;
+            padding-top: 0px;
+            height: calc(100% - 40px);
+            &>.arco-tabs-content-inner {
+                height: 100%;
+                &>.arco-tabs-content-item  {
+                    &>.arco-tabs-pane {
+                        background: var(--color-white);
+                        // padding: 16px;
+                        height: 100%;
+                        border-radius: 0px 0px 6px 6px;
+                        box-sizing: border-box;
+                        overflow: auto;
+                    }
+                }
+            }
+        }
+    }
+    &.no-tabs {
+        &>.arco-tabs {
+            height: 40px;
+        }
+    }
+    
+    
+    &>.tab-placeholder {
+        background: var(--color-white);
+        // padding: 16px;
+        height: calc(100% - 40px);
+        box-sizing: border-box;
+        overflow: auto;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+    
+}

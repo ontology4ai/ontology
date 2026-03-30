@@ -1,0 +1,37 @@
+.modo-tabs-form-editable {
+	padding-top:20px;
+	border: 2px solid var(--color-gray-2);
+	.header .widget-list-canvas {
+		display: block !important;
+	}
+	.list .widget-list-canvas {
+		flex: 1;
+		overflow: hidden;
+		display: flex !important;
+		width: 100%;
+		min-height: 80px;
+		z-index: 10000;
+		border: 1px dashed var(--color-gray-3) !important;
+	}
+	ul {
+	    margin: 0px;
+	    padding: 0px
+	}
+	li {
+	    margin: 0px;
+	    padding: 0px;
+	    list-style-type: none;
+	}
+	.header li {
+	    float: left;
+    	margin-right: 10px;
+    	padding: 0px 10px 6px;
+        &.active {
+        	border-bottom: 2px solid var(--color-primary);
+        }
+	}
+	.list li {
+		width: 100%;
+
+	}
+}

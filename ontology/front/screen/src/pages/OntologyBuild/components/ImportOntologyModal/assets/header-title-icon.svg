@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="29px" viewBox="0 0 32 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 8</title>
+    <defs>
+        <linearGradient x1="59.7680919%" y1="50%" x2="69.3000436%" y2="92.8363974%" id="linearGradient-1">
+            <stop stop-color="#6861D1" offset="0%"></stop>
+            <stop stop-color="#8A9FE3" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="35.1201227%" y1="3.46944695e-15%" x2="60.5452641%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#BEC5FF" offset="0%"></stop>
+            <stop stop-color="#29283F" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-3" cx="12" cy="12" r="12"></circle>
+        <filter x="-29.2%" y="-29.2%" width="158.3%" height="158.3%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="-4" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.670215814   0 0 0 0 0.660201075   0 0 0 0 0.890540082  0 0 0 0.200174825 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <filter x="-93.5%" y="-116.9%" width="287.0%" height="333.8%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.259334879   0 0 0 0 0.243636403   0 0 0 0 0.639237998  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="-38.507562%" y1="50%" x2="158.625265%" y2="53.4099662%" id="linearGradient-6">
+            <stop stop-color="#EA2BFF" offset="0%"></stop>
+            <stop stop-color="#01FFDF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="new" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="打开代码" transform="translate(-612.000000, -243.000000)">
+            <g id="编组-2" transform="translate(345.000000, 150.000000)">
+                <g id="编组-8" transform="translate(271.000000, 95.000000)">
+                    <g id="椭圆形">
+                        <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-3"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        <circle stroke="url(#linearGradient-2)" stroke-width="1" stroke-linejoin="square" cx="12" cy="12" r="11.5"></circle>
+                    </g>
+                    <g id="编组-5" filter="url(#filter-5)" transform="translate(5.614973, 7.219251)">
+                        <g id="二维表-(1)">
+                            <path d="M0.641711234,0 L12.1925134,0 C12.5469207,0 12.8342246,0.287303897 12.8342246,0.641711219 L12.8342246,2.56684491 L0,2.56684491 L0,0.641711219 C0,0.287303897 0.287303912,0 0.641711234,0 Z" id="路径" fill="url(#linearGradient-6)"></path>
+                            <polygon id="路径" fill="#D4D8FF" fill-rule="nonzero" points="0 3.85026738 3.20855616 3.85026738 3.20855616 6.41711228 0 6.41711228"></polygon>
+                            <path d="M0,7.70053475 L3.20855616,7.70053475 L3.20855616,10.2673797 L0.641711234,10.2673797 C0.287303912,10.2673797 0,9.98007576 0,9.62566844 L0,7.70053475 Z" id="路径" fill="#D4D8FF" fill-rule="nonzero"></path>
+                            <polygon id="路径" fill="#D4D8FF" fill-rule="nonzero" points="4.49197861 3.85026738 8.34224599 3.85026738 8.34224599 6.41711228 4.49197861 6.41711228"></polygon>
+                            <polygon id="路径" fill="#D4D8FF" fill-rule="nonzero" points="4.49197861 7.70053475 8.34224599 7.70053475 8.34224599 10.2673797 4.49197861 10.2673797"></polygon>
+                            <polygon id="路径" fill="#D4D8FF" fill-rule="nonzero" points="9.62566844 3.85026738 12.8342246 3.85026738 12.8342246 6.41711228 9.62566844 6.41711228"></polygon>
+                            <path d="M9.62566844,7.70053475 L12.8342246,7.70053475 L12.8342246,9.62566844 C12.8342246,9.98007576 12.5469207,10.2673797 12.1925134,10.2673797 L9.62566844,10.2673797 L9.62566844,7.70053475 L9.62566844,7.70053475 Z" id="路径" fill="#D4D8FF" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

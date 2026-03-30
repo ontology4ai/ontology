@@ -1,0 +1,151 @@
+server:
+  port: 8373
+  compression:
+    enabled: true #静态 gzip压缩
+    min-response-size: 2KB
+  servlet:
+    context-path: /dataps
+
+workspace:
+  git:
+    git-password: ENC(JK5WzzsHysTPYQhHlLlc=)
+    git-server: http://gitlab.apaas-dnc.asiainfo.com.cn/apaas
+    git-user-name: AITech-DNC-modo-git@asiainfo.com
+    location: /Users/qqz/work/modo-dnc/repo/mlops
+    repo-name: mlops
+  studio:
+    workspace-type: 0
+    workspace-creator: liukun
+  k8s:
+    #    kube-config-path: /Users/qqz/.kube/config
+    kube-config-path: /Users/qqz/.kube/config.yaml.wrong
+    namespace: modo
+
+spring:
+  profiles:
+    active: prod # prod是应用运行态，额外加载application-prod.yaml；dev是设计器，额外加载application-dev.yaml
+
+  jackson:
+    date-format: 'yyyy-MM-dd HH:mm:ss'
+    time-zone: Asia/Shanghai
+
+
+suanchou:
+  microservice:
+    admin:
+      host: ${APISIX_ADMIN_HOST:${APISIX_GATEWAY_HOST:http://10.1.2.14:80}}
+    gateway:
+      host: ${APISIX_GATEWAY_HOST:http://10.1.1.1:30539}
+      routeHostMatch: ${APISIX_GATEWAY_HOSTNAME:}
+      app-secret: ${APISIX_SECRET:ch1vxdlm4leq}
+      upstream-nodes-expr: ${APISIX_UPSTREAM_NODES_EXPR:$.value.upstream.nodes}
+      connTimeout: ${APISIX_CONN_TIMEOUT:60}
+      sendTimeout: ${APISIX_SEND_TIMEOUT:6000}
+      readTimeout: ${APISIX_READ_TIMEOUT:6000}
+  jdbc:
+    use-cache: false
+    singleton: false
+    ttl: 30
+
+appName: dataps
+deployMode: ${DEPLOY_MODE:jar}
+
+modo:
+  platform:
+    enableDetailLogging: true
+    local:
+      path: ${MODO_PLATFORM_LOCAL_PATH:D:/asiainfo/code/dataos5.0/dataos-dataps/modo-dataos-dataps/src/main/resources}  #绝对路径
+  file-upload:
+    uploadSuffixs: csv,doc,docx,jar,jpg,png,py,sh,sql,txt,xls,xlsx,plugin,js,css,html,gif,xml,ttf,eot,svg,woff,ico,webp,zip
+    fileUtil: minio
+    minio:
+      address: ${MINIO_URL:http://10.1.2.1:9090}
+      accessKey: ${MINIO_USER:modo}
+      secretKey: ${MINIO_PWD:Modo@123}
+      defaultBucketName: ${MINIO_BUCKET:modo}
+      appAddress: ${MINIO_URL:http://10.1.2.1:9090}
+      appAccessKey: ${MINIO_USER:modo}
+      appSecretKey: ${MINIO_PWD:Modo@123}
+      appDefaultBucketName: ${MINIO_BUCKET:modo}
+  app:
+    publish:
+      fileList:
+        - application.yaml
+        - modo-rte-boot.jar
+    web:
+      regex:
+        proxyToApp: ${PROXY_APP:}
+        currentContext: ${PROXY_CONTEXT:}
+      staticResourceProxy: false
+      plugin:
+        keycloak-filter:
+          enable: ${MODO_WEB_PLUGIN_KEYCLOAKFILTER_ENABLED:false}
+          order: ${MODO_WEB_PLUGIN_KEYCLOAKFILTER_ORDER:-10}
+          url-pattern: ${MODO_WEB_PLUGIN_KEYCLOAKFILTER_URLPATTERN:/*} #多个指定pattern使用逗号分割, /api,/_api
+          client-id: ${MODO_WEB_PLUGIN_KEYCLOAKFILTER_CLIENTID:dataos}
+          client-secret: ${MODO_WEB_PLUGIN_KEYCLOAKFILTER_CLIENTSECRET:Uxx73QAIn50ZQ9vzEL8929P5NzOk0oKG}
+          gateway: ${MODO_WEB_PLUGIN_KEYCLOAKFILTER_GATEWAY:http://10.1.3.1:8080/}
+          realm: ${MODO_WEB_PLUGIN_KEYCLOAKFILTER_REALM:DataAtlas}
+  links:
+    host: ${suanchou.microservice.gateway.host}
+  extraAutoDDL: # dsName#STRATEGY#DIALECT，默认使用当前JPA配置，strategy建议用update/none,dialect按数据库配置
+    - METADBS#update#org.hibernate.dialect.MySQL5InnoDBDialect
+    
+logging:
+  level:
+    root: info
+
+email:
+  pwd: 7GYIjZXQv3t8Vor/fwUZaA==
+
+docker:
+  script:
+    env:
+      httpUrl: ${APISIX_GATEWAY_HOST:}/dataps/api/open/proc/project/
+      mount: /home/dataos/share
+      appUrl: ${APISIX_GATEWAY_HOST:}/datamodel/api/open/token
+      jwt: 0
+      jwtExpire: 86400
+    username: ${DOCKER_USER:dataos}
+    password: ${DOCKER_PWD:1qaz@WSX}
+  webssh:
+    env:
+      appsecret: dacp123321
+      aes_key: d9e6b141f8c26d74
+      aes_iv: 7b51fd7053196308
+    session_url: http://%s:%s/api/session/create/
+    page_url: ${APISIX_GATEWAY_HOST:}/docker/page/
+
+yarn:
+  hiveClientUrl: 10.1.1.1 22022 user password
+
+chat:
+  gpt:
+    socketTimeOut: 30000
+    default:
+      url: http://10.1.3.9:5050/proxy/Chat/v1/chat/completions
+      apiToken: ZXlKaGJHY2lPa5TTdnN1pvdTZr
+
+
+feign:
+  httpclient:
+    enabled: true
+
+app:
+  platform:
+    url: ${suanchou.microservice.gateway.host}/_common_
+  datastash:
+    url: ${suanchou.microservice.gateway.host}/dataos_datastash
+  dataflow:
+    url: ${suanchou.microservice.gateway.host}/dataflow
+  stream:
+    url: ${suanchou.microservice.gateway.host}/dataos_stream
+  dataps:
+    url: ${suanchou.microservice.gateway.host}/dataps
+
+# 每小时采集一次
+datainfra_collect:
+  cron: "0 0 0/1 * * ?"
+
+meta-catalog:
+  enable: false

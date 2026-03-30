@@ -1,0 +1,312 @@
+.agent-app-chat {
+	width: 100%;
+	height: 100%;
+	padding: 40px;
+	display: flex;
+	column-gap: 52px;
+	.menu-container {
+		width: 380px;
+		height: 100%;
+		 
+		position: relative;
+		// .menu-arrow {
+		// 	position: absolute;
+		// 	top: 93px;
+		// 	left: 30px;
+		// 	width: 280px;
+		// }
+		.menu-robot {
+			position: absolute;
+			top: 0px;
+			left: 126px;
+			width: 128px;
+		}
+		.background {
+			position: absolute;
+			top: 90px;
+			height: calc(100% - 90px);
+			width: 100%;
+			z-index: -1;
+		}
+		.menu-content {
+			width: 100%;
+			height: 100%;
+			padding: 227px 20px 20px;
+			border-radius: 20px;
+			background: transparent;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			.add-chat {
+				width: 225px;
+			}
+			.add-chat-container{
+				position: relative;
+    			height: 57px;
+				.add-chat-text{
+					cursor: pointer;
+					position: absolute;
+					top: 0;
+					height: 100%;
+					width: 100%;
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+					color: #FFF;
+					font-family: "DingTalk JinBuTi";
+					font-size: 24px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 24px;
+					gap: 8px;
+				}
+			}
+			.chat-history{
+				width: 100%;
+				flex: 1;
+				overflow: hidden;
+				overflow-y: auto;
+				.empty{
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					.empty-text{
+						color: rgba(255, 255, 255, 0.5);
+						text-align: center;
+						font-size: 16px;
+						font-style: normal;
+						font-weight: 400;
+						line-height: 20px;
+					}
+					img{
+						margin-bottom: 6px;
+					}
+				}
+				.chat-history-item{ 
+					border-radius: 16px; 
+					border: 1px solid rgba(255, 255, 255, 0.08);
+					background: rgba(255, 255, 255, 0.06);
+					backdrop-filter: blur(16px);
+					display: flex;
+					padding: 14px 20px;
+					margin-top: 20px;
+					flex-direction: column;
+					cursor: pointer;
+					&.active {
+						border-radius: 16px; 
+						background:  radial-gradient(837.88% 230.53% at 0% -13.89%, rgba(27, 62, 248, 0.20) 0%, rgba(152, 61, 255, 0.20) 74.9%, rgba(236, 125, 255, 0.20) 100%);
+						backdrop-filter: blur(15px);
+						&::before {
+							content: '';
+							position: absolute;
+							inset: -1px;
+							border-radius: 16px;
+							padding: 1px;
+							mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+							mask-composite: exclude;
+							z-index: -1;
+							background: linear-gradient(105deg, #4598FF 10.34%, #983DFF 43.63%, #EC7DFF 68.27%, #FFB096 89.66%), url(<path-to-image>) lightgray 50% / cover no-repeat;
+							backdrop-filter: blur(15px);
+						}
+					}
+					.chat-history-item-title{
+						overflow: hidden;
+						color: #FFF;
+						text-overflow: ellipsis;
+						font-family: "DingTalk JinBuTi";
+						font-size: 18px;
+						font-weight: 400;
+						line-height: 24px;  
+						white-space: nowrap;
+						
+					}
+					.chat-history-item-time{
+						color: rgba(255, 255, 255, 0.50);
+						font-family: "HarmonyOS Sans SC";
+						font-size: 12px;
+						font-weight: 400;
+						line-height: 16px;
+					}
+				}
+			}
+			.menu-item {
+				width: 280px;
+				height: 72px;
+				padding: 16px 20px;
+				border-radius: 16px;
+				background: #2E3263;
+				margin-bottom: 20px;
+				display: flex;
+				column-gap: 10px;
+				align-items: center;
+				cursor: pointer;
+				&.active {
+					background: #fff;
+					.icon {
+						background: linear-gradient(90deg, #1D4BFF 0%, #DF23FE 100%);
+					}
+					.text {
+						color: #1A1939;
+					}
+				}
+				.icon {
+					display: flex;
+					width: 40px;
+					height: 40px;
+					padding: 8px;
+					align-items: center;
+					gap: 10px;
+					flex-shrink: 0;
+					border-radius: 12px;
+					background: #5A5E90;
+				}
+				.text {
+					flex: 1;
+					overflow: hidden;
+					color: #fff;
+					font-family: "DingTalk JinBuTi";
+					font-size: 18px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 24px; /* 133.333% */
+				}
+			}
+			.chat-prompt-container {
+				width: 100%;
+				height: 256px;
+				overflow: hidden;
+				//position: absolute;
+				//bottom: 20px; 
+				.chat-prompt {
+					width: 100%;
+					height: 100%;
+					padding-top: 14px;
+					.chat-prompt-title{
+						display: flex;
+						column-gap: 10px;
+						align-items: center;
+					}
+					.chat-prompt-title-text {
+						color: #FFF;
+						font-family: "DingTalk JinBuTi";
+						font-size: 18px;
+						font-weight: 400;
+						line-height: 24px;
+					}
+					.chat-prompt-title-info{
+						color: rgba(255, 255, 255, 0.65);
+						font-family: "HarmonyOS Sans SC";
+						font-size: 14px;
+						font-weight: 400;
+						line-height: 16px;  
+					}
+					.chat-prompt-content{
+						margin-top: 20px;
+						height: 178px;
+						overflow: auto;
+						pre {
+							margin: 0px;
+							padding: 0px;
+							font-family: inherit;
+							word-break: break-all;
+							width: 100%;
+							white-space: pre-wrap;
+							color: rgba(255, 255, 255, 0.65);
+							font-family: "HarmonyOS Sans SC";
+							font-size: 14px;
+							font-weight: 400;
+							line-height: 24px; 
+						}
+					}
+				}
+			}
+		}
+	}
+	.chat-container {
+		flex: 1;
+		height: 100%;
+		overflow: hidden;
+	}
+	.chat-flow-container {
+		width: 320px;
+		height: 100%;
+		border-radius: 20px;
+		background: transparent;
+		display: flex;
+    	flex-direction: column;
+		position: relative;
+		.chat-flow-container-bg {
+			position: absolute;
+			top: 0;
+			height: 100%;
+			z-index: -1;
+		}
+		.chat-flow-graph {
+			flex: 1;
+			overflow: hidden;
+			.empty {
+				width: 64px;
+				height: 90px;
+				flex-shrink: 0;
+				margin: 0px auto;
+				position: relative;
+				top: 50%;
+				transform: translateY(-45px);
+				svg {
+					margin-bottom: 6px;
+				}
+				.text {
+					color: rgba(255, 255, 255, 0.50);
+					text-align: center;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 20px; /* 125% */
+				}
+			}
+		}
+		.chat-flow-sh {
+			width: 320px;
+			height: 180px;
+			padding: 0px 20px;
+			margin-bottom: 50px;
+			flex-shrink: 0;
+			color: #C3CAD4;
+			font-family: "HarmonyOS Sans SC";
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 26px; /* 162.5% */
+			svg {
+				// margin-bottom: 20px;
+			}
+			&>div {
+				width: 100%;
+				height: 100%;
+				word-break: break-all;
+				overflow: auto;
+				padding-top: 20px;
+			}
+			pre {
+				margin: 0px;
+				padding: 0px;
+				font-family: inherit;
+				word-break: break-all;
+			    width: 100%;
+			    white-space: pre-wrap;
+			}
+			/*&:before {
+				content: '';
+				width: calc(100%);
+				height: 1px;
+				background: rgba(80, 87, 110, 0.50);
+				display: block;
+				margin-bottom: 20px;
+			}*/
+		}
+	}
+}

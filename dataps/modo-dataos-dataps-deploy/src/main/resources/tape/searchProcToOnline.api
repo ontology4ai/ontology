@@ -1,0 +1,140 @@
+{
+  "id": "dataps-75300686392430592",
+  "name": "searchProcToOnline",
+  "label": "查询待上线程序",
+  "descr": "查询待上线程序",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"40\" y\u003d\"130\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"3\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-tiaojianpanduan;title\u003d3.条件判断\" title\u003d\"条件判断\" modelData\u003d\"\" stepInst\u003d\"if\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"190\" y\u003d\"130\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"4\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"2\" target\u003d\"3\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"5\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d5.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"340\" y\u003d\"250\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"6\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d6.TMF参数转换\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"340\" y\u003d\"80\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"7\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"3\" target\u003d\"6\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"8\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"3\" target\u003d\"5\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"9\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-httpdiaoyong;title\u003d9.HTTP调用\" title\u003d\"HTTP调用\" modelData\u003d\"\" stepInst\u003d\"http\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"480\" y\u003d\"80\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"10\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"6\" target\u003d\"9\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"11\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d11.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"620\" y\u003d\"80\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"12\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"9\" target\u003d\"11\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "235831935786856448",
+  "respContentType": "application/json",
+  "url": "proc/searchToOnline",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "dataps-77838698288484357",
+      "stepSeq": "11",
+      "parentStepId": "-1",
+      "label": "11.执行脚本",
+      "graphId": "dataps-75300686392430592",
+      "stepInst": "script",
+      "preStepId": "9",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"11.执行脚本\",\"scriptText\":\"import org.apache.commons.collections.MapUtils;\\nimport org.springframework.data.domain.PageImpl;\\nimport org.springframework.data.domain.PageRequest;\\nimport org.springframework.data.domain.Pageable;\\n\\n\\nint limit \u003d MapUtils.getIntValue(params, \\\"limit\\\", 10);\\nint offset \u003d MapUtils.getIntValue(params, \\\"offset\\\", 0);\\nint pageNum \u003d offset/limit;\\nPageable pageable \u003d PageRequest.of(pageNum, limit);\\nreturn new PageImpl\u003c\u003e( (List)result.get(\\\"content\\\"), pageable, MapUtils.getLongValue(result, \\\"totalElements\\\"))\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "11.执行脚本",
+        "scriptText": "import org.apache.commons.collections.MapUtils;\nimport org.springframework.data.domain.PageImpl;\nimport org.springframework.data.domain.PageRequest;\nimport org.springframework.data.domain.Pageable;\n\n\nint limit \u003d MapUtils.getIntValue(params, \"limit\", 10);\nint offset \u003d MapUtils.getIntValue(params, \"offset\", 0);\nint pageNum \u003d offset/limit;\nPageable pageable \u003d PageRequest.of(pageNum, limit);\nreturn new PageImpl\u003c\u003e( (List)result.get(\"content\"), pageable, MapUtils.getLongValue(result, \"totalElements\"))"
+      }
+    },
+    {
+      "id": "dataps-77838698288484352",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "dataps-75300686392430592",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "3",
+      "successStepId": "3",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import java.util.Arrays;\\nimport org.apache.commons.collections.MapUtils;\\n\\nteamName \u003d MapUtils.getString(params, \\\"teamName\\\");\\nonePlusNTeamNames \u003d Arrays.asList(\\\"1plusn\\\",\\\"HW_5G_DPI\\\",\\\"IT_center\\\",\\\"MT_XCK_TEAM\\\",\\\"huawei_dpi\\\",\\\"huawei_ims\\\",\\\"huawei_xdr\\\",\\\"oneplusN\\\",\\\"oneplusn\\\",\\\"team_dsjptb\\\",\\\"team_mingtong\\\",\\\"team_nrdc_xdr\\\",\\\"team_yaxin\\\",\\\"zj_insight\\\");\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import java.util.Arrays;\nimport org.apache.commons.collections.MapUtils;\n\nteamName \u003d MapUtils.getString(params, \"teamName\");\nonePlusNTeamNames \u003d Arrays.asList(\"1plusn\",\"HW_5G_DPI\",\"IT_center\",\"MT_XCK_TEAM\",\"huawei_dpi\",\"huawei_ims\",\"huawei_xdr\",\"oneplusN\",\"oneplusn\",\"team_dsjptb\",\"team_mingtong\",\"team_nrdc_xdr\",\"team_yaxin\",\"zj_insight\");"
+      }
+    },
+    {
+      "id": "dataps-77838698288484353",
+      "stepSeq": "3",
+      "parentStepId": "-1",
+      "label": "3.条件判断",
+      "graphId": "dataps-75300686392430592",
+      "stepInst": "if",
+      "preStepId": "2",
+      "nextStepId": "6,5",
+      "successStepId": "6,5",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"3.条件判断\",\"expressions\":\"[{\\\"id\\\":\\\"6\\\",\\\"label\\\":\\\"6.执行脚本\\\",\\\"expression\\\":\\\"onePlusNTeamNames.contains(teamName)\\\",\\\"__ORIGIN_DATA\\\":{\\\"id\\\":\\\"6\\\",\\\"label\\\":\\\"6.执行脚本\\\",\\\"expression\\\":\\\"\\\"}},{\\\"id\\\":\\\"5\\\",\\\"label\\\":\\\"5.执行脚本\\\",\\\"expression\\\":\\\"!onePlusNTeamNames.contains(teamName)\\\",\\\"__ORIGIN_DATA\\\":{\\\"id\\\":\\\"5\\\",\\\"label\\\":\\\"5.执行脚本\\\",\\\"expression\\\":\\\"!\\\",\\\"__ORIGIN_DATA\\\":{\\\"id\\\":\\\"5\\\",\\\"label\\\":\\\"5.执行脚本\\\",\\\"expression\\\":\\\"\\\",\\\"__ORIGIN_DATA\\\":{\\\"id\\\":\\\"5\\\",\\\"label\\\":\\\"5.执行脚本\\\",\\\"expression\\\":\\\"！\\\",\\\"__ORIGIN_DATA\\\":{\\\"id\\\":\\\"5\\\",\\\"label\\\":\\\"5.执行脚本\\\",\\\"expression\\\":\\\"\\\"}}}}}]\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "3.条件判断",
+        "expressions": "[{\"id\":\"6\",\"label\":\"6.执行脚本\",\"expression\":\"onePlusNTeamNames.contains(teamName)\",\"__ORIGIN_DATA\":{\"id\":\"6\",\"label\":\"6.执行脚本\",\"expression\":\"\"}},{\"id\":\"5\",\"label\":\"5.执行脚本\",\"expression\":\"!onePlusNTeamNames.contains(teamName)\",\"__ORIGIN_DATA\":{\"id\":\"5\",\"label\":\"5.执行脚本\",\"expression\":\"!\",\"__ORIGIN_DATA\":{\"id\":\"5\",\"label\":\"5.执行脚本\",\"expression\":\"\",\"__ORIGIN_DATA\":{\"id\":\"5\",\"label\":\"5.执行脚本\",\"expression\":\"！\",\"__ORIGIN_DATA\":{\"id\":\"5\",\"label\":\"5.执行脚本\",\"expression\":\"\"}}}}}]"
+      }
+    },
+    {
+      "id": "dataps-77838698288484354",
+      "stepSeq": "5",
+      "parentStepId": "-1",
+      "label": "5.执行脚本",
+      "graphId": "dataps-75300686392430592",
+      "stepInst": "script",
+      "preStepId": "3",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"5.执行脚本\",\"scriptText\":\"import org.apache.commons.collections.MapUtils;\\nimport org.springframework.data.domain.PageImpl;\\nimport org.springframework.data.domain.PageRequest;\\nimport org.springframework.data.domain.Pageable;\\nimport java.util.ArrayList;\\n\\n\\nint limit \u003d MapUtils.getIntValue(params, \\\"limit\\\", 10);\\nint offset \u003d MapUtils.getIntValue(params, \\\"offset\\\", 0);\\nint pageNum \u003d offset/limit;\\nPageable pageable \u003d PageRequest.of(pageNum, limit);\\nreturn new PageImpl\u003c\u003e( new ArrayList\u003c\u003e(), pageable, 0)\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "5.执行脚本",
+        "scriptText": "import org.apache.commons.collections.MapUtils;\nimport org.springframework.data.domain.PageImpl;\nimport org.springframework.data.domain.PageRequest;\nimport org.springframework.data.domain.Pageable;\nimport java.util.ArrayList;\n\n\nint limit \u003d MapUtils.getIntValue(params, \"limit\", 10);\nint offset \u003d MapUtils.getIntValue(params, \"offset\", 0);\nint pageNum \u003d offset/limit;\nPageable pageable \u003d PageRequest.of(pageNum, limit);\nreturn new PageImpl\u003c\u003e( new ArrayList\u003c\u003e(), pageable, 0)"
+      }
+    },
+    {
+      "id": "dataps-77838698288484355",
+      "stepSeq": "6",
+      "parentStepId": "-1",
+      "label": "6.TMF参数转换",
+      "graphId": "dataps-75300686392430592",
+      "stepInst": "script",
+      "preStepId": "3",
+      "nextStepId": "9",
+      "successStepId": "9",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"6.TMF参数转换\",\"scriptText\":\"import org.apache.commons.lang3.StringUtils;\\nimport org.apache.commons.collections.MapUtils;\\nimport java.util.*;\\n\\nconvertParams \u003d new HashMap\u003c\u003e();\\nint limit \u003d MapUtils.getInteger(params, \\\"limit\\\", 10);\\nint offset \u003d MapUtils.getInteger(params, \\\"offset\\\", 0);\\nString _orGroup_ \u003d MapUtils.getString(params, \\\"_orGroup_\\\");\\nString state \u003d MapUtils.getString(params, \\\"state\\\");\\n\\nurl \u003d \\\"open/metamodel/metaflow/outside/canChooseProc/\\\"+teamName;\\nString name \u003d MapUtils.getString(params, \\\"name\\\");\\nconvertParams.put(\\\"pageNum\\\", offset/limit);\\nconvertParams.put(\\\"pageSize\\\", limit);\\nconvertParams.put(\\\"state\\\", state);\\nif(StringUtils.isNotBlank(_orGroup_)){\\n    convertParams.put(\\\"name\\\", _orGroup_.substring(_orGroup_.indexOf(\\\"%\\\")+1,_orGroup_.lastIndexOf(\\\"%\\\")));\\n}\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "6.TMF参数转换",
+        "scriptText": "import org.apache.commons.lang3.StringUtils;\nimport org.apache.commons.collections.MapUtils;\nimport java.util.*;\n\nconvertParams \u003d new HashMap\u003c\u003e();\nint limit \u003d MapUtils.getInteger(params, \"limit\", 10);\nint offset \u003d MapUtils.getInteger(params, \"offset\", 0);\nString _orGroup_ \u003d MapUtils.getString(params, \"_orGroup_\");\nString state \u003d MapUtils.getString(params, \"state\");\n\nurl \u003d \"open/metamodel/metaflow/outside/canChooseProc/\"+teamName;\nString name \u003d MapUtils.getString(params, \"name\");\nconvertParams.put(\"pageNum\", offset/limit);\nconvertParams.put(\"pageSize\", limit);\nconvertParams.put(\"state\", state);\nif(StringUtils.isNotBlank(_orGroup_)){\n    convertParams.put(\"name\", _orGroup_.substring(_orGroup_.indexOf(\"%\")+1,_orGroup_.lastIndexOf(\"%\")));\n}"
+      }
+    },
+    {
+      "id": "dataps-77838698288484356",
+      "stepSeq": "9",
+      "parentStepId": "-1",
+      "label": "9.HTTP调用",
+      "graphId": "dataps-75300686392430592",
+      "stepInst": "http",
+      "preStepId": "6",
+      "nextStepId": "11",
+      "successStepId": "11",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"9.HTTP调用\",\"method\":\"GET\",\"dataSource\":\"onePlusN_asiainfo_cloud\",\"url\":\"${url}\",\"jsonParams\":\"convertParams\",\"reqContentType\":\"application/json\",\"socketTimeout\":\"30000\",\"variable\":\"result\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "9.HTTP调用",
+        "method": "GET",
+        "dataSource": "onePlusN_asiainfo_cloud",
+        "url": "${url}",
+        "jsonParams": "convertParams",
+        "reqContentType": "application/json",
+        "socketTimeout": "30000",
+        "variable": "result"
+      }
+    }
+  ]
+}

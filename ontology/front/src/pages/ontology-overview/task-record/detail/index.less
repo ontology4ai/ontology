@@ -1,0 +1,20 @@
+.task-record-detail {
+  &-object, &-relation, &-logic, &-action, &-interface {
+    height: 435px;
+    overflow: auto;
+  }
+
+  &-relation {
+    .link-type-item {
+      color: var(--color-text-1, #242E43);
+      border-radius: var(---border-radius-small, 2px);
+      background: var(--color-fill-2, #EFF4F9);
+      padding: 2px 6px;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 110px;
+    }
+  }
+}

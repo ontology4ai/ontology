@@ -1,0 +1,66 @@
+{
+  "id": "dataps-139382567316197376",
+  "name": "getArchTemplatePage",
+  "label": "获取模版架构列表数据",
+  "descr": "通过http请求获取数据治理的模版列表接口的数据",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"3\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-httpdiaoyong;title\u003d3.HTTP调用\" title\u003d\"HTTP调用\" modelData\u003d\"\" stepInst\u003d\"http\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"140\" y\u003d\"80\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"4\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d4.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"340\" y\u003d\"120\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"5\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"3\" target\u003d\"4\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "235831935786856448",
+  "respContentType": "application/json",
+  "url": "getArchTemplatePage",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[{\"id\":\"50405b95-916e-49a7-9496-eef992868b1f\",\"name\":\"type\",\"required\":\"\",\"example\":\"\",\"desc\":\"\"}]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "186984015129300992",
+      "stepSeq": "3",
+      "parentStepId": "-1",
+      "label": "3.HTTP调用",
+      "graphId": "dataps-139382567316197376",
+      "stepInst": "http",
+      "preStepId": "-1",
+      "nextStepId": "4",
+      "successStepId": "4",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"3.HTTP调用\",\"method\":\"GET\",\"dataSource\":\"datago_http_service\",\"url\":\"/api/getStdArchTemplatePage\",\"reqContentType\":\"application/json\",\"variable\":\"result\",\"jsonParams\":\"params\",\"socketTimeout\":\"30000\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "3.HTTP调用",
+        "method": "GET",
+        "dataSource": "datago_http_service",
+        "url": "/api/getStdArchTemplatePage",
+        "reqContentType": "application/json",
+        "variable": "result",
+        "jsonParams": "params",
+        "socketTimeout": "30000"
+      }
+    },
+    {
+      "id": "186984015129300993",
+      "stepSeq": "4",
+      "parentStepId": "-1",
+      "label": "4.执行脚本",
+      "graphId": "dataps-139382567316197376",
+      "stepInst": "script",
+      "preStepId": "3",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"4.执行脚本\",\"scriptText\":\"return result;\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "4.执行脚本",
+        "scriptText": "return result;"
+      }
+    }
+  ]
+}

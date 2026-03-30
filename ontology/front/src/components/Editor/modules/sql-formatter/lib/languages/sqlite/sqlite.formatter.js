@@ -1,0 +1,49 @@
+import { expandPhrases } from '../../expandPhrases.js';
+import Formatter from '../../formatter/Formatter.js';
+import Tokenizer from '../../lexer/Tokenizer.js';
+import { functions } from './sqlite.functions.js';
+import { keywords } from './sqlite.keywords.js';
+const reservedSelect = expandPhrases(['SELECT [ALL | DISTINCT]']);
+const reservedClauses = expandPhrases([// queries
+'WITH [RECURSIVE]', 'FROM', 'WHERE', 'GROUP BY', 'HAVING', 'WINDOW', 'PARTITION BY', 'ORDER BY', 'LIMIT', 'OFFSET', // Data manipulation
+// - insert:
+'INSERT [OR ABORT | OR FAIL | OR IGNORE | OR REPLACE | OR ROLLBACK] INTO', 'REPLACE INTO', 'VALUES', // - update:
+'UPDATE [OR ABORT | OR FAIL | OR IGNORE | OR REPLACE | OR ROLLBACK]', 'SET', // - delete:
+'DELETE FROM', // Data definition
+'CREATE [TEMPORARY | TEMP] VIEW [IF NOT EXISTS]', 'CREATE [TEMPORARY | TEMP] TABLE [IF NOT EXISTS]', 'DROP TABLE [IF EXISTS]', // - alter table:
+'ALTER TABLE', 'ADD [COLUMN]', 'DROP [COLUMN]', 'RENAME [COLUMN]', 'RENAME TO', // other
+'SET SCHEMA']);
+const reservedSetOperations = expandPhrases(['UNION [ALL]', 'EXCEPT', 'INTERSECT']); // joins - https://www.sqlite.org/syntax/join-operator.html
+
+const reservedJoins = expandPhrases(['JOIN', '{LEFT | RIGHT | FULL} [OUTER] JOIN', '{INNER | CROSS} JOIN', 'NATURAL [INNER] JOIN', 'NATURAL {LEFT | RIGHT | FULL} [OUTER] JOIN']);
+const reservedPhrases = expandPhrases(['ON {UPDATE | DELETE} [SET NULL | SET DEFAULT]', '{ROWS | RANGE | GROUPS} BETWEEN']);
+export default class SqliteFormatter extends Formatter {
+  tokenizer() {
+    return new Tokenizer({
+      reservedClauses,
+      reservedSelect,
+      reservedSetOperations,
+      reservedJoins,
+      reservedPhrases,
+      reservedKeywords: keywords,
+      reservedFunctionNames: functions,
+      stringTypes: ["''-qq", {
+        quote: "''-raw",
+        prefixes: ['X'],
+        requirePrefix: true
+      } // Depending on context SQLite also supports double-quotes for strings,
+      // and single-quotes for identifiers.
+      ],
+      identTypes: [`""-qq`, '``', '[]'],
+      // https://www.sqlite.org/lang_expr.html#parameters
+      paramTypes: {
+        positional: true,
+        numbered: ['?'],
+        named: [':', '@', '$']
+      },
+      operators: ['%', '~', '&', '|', '<<', '>>', '==', '->', '->>', '||']
+    });
+  }
+
+}
+//# sourceMappingURL=sqlite.formatter.js.map

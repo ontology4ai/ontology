@@ -1,0 +1,32 @@
+.modo-form {
+	gap: 0px 10px;
+    grid-template-columns: repeat(24, minmax(0px, 1fr));
+    display: grid;
+    &.modo-widget-editor {
+	    min-height: 30px;
+	}
+    &.arco-form-inline {
+    	gap: 0px 10px;
+    	grid-template-columns: repeat(24, minmax(0px, 1fr));
+	    grid-area: span 24 / span 24 / auto / auto;
+	    display: grid !important;
+    }
+	.widget-list-canvas {
+	    gap: 0px 10px;
+	    grid-template-columns: repeat(24, minmax(0px, 1fr));
+	    grid-area: span 24 / span 24 / auto / auto;
+	    display: grid !important;
+	}
+	button {
+		width: max-content;
+	}
+	.arco-btn-group {
+	    white-space: nowrap;
+	}
+}
+.arco-form-layout-inline {
+    margin-right: 10px;
+}
+.arco-form-item > .arco-form-label-item {
+	overflow: hidden;
+}

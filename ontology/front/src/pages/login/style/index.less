@@ -1,0 +1,177 @@
+#root {
+  background-color: #f2f3f5;
+}
+.modo-app-login {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(45, 132, 251, 0.05);
+  .bg {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+  }
+  .logo {
+    position: absolute;
+    top: 60px;
+    left: 70px;
+    height: 32px;
+    z-index: 1;
+  }
+  .login-all {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 816px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 30px 0 rgb(117 145 175 / 18%);
+    display: flex;
+    &.hasverfiy {
+      height: 520px;
+    }
+    .login-img {
+      width: 50%;
+      height: 100%;
+      display: inline-block;
+      float: left;
+      img {
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+      }
+    }
+    .login-dialog {
+      flex: 1;
+      overflow: hidden;
+      display: inline-block;
+      float: right;
+      height: 100%;
+      position: relative;
+      padding: 56px 70px 65px 70px;
+      .login-info {
+        position: relative;
+        .login-hello {
+          font-size: 16px;
+          font-weight: bold;
+          color: var(--color-text-1);
+          line-height: 1;
+        }
+        .login-title {
+          width: 100%;
+          line-height: 1;
+          .login-welcome {
+            color: var(--color-text-1);
+            line-height: 1;
+          }
+          .login-title-label {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2f3c4e;
+            display: inline-block;
+            position: relative;
+            margin-left: 8px;
+            color: var(--color-primary-6);
+            line-height: 1;
+          }
+        }
+        .login-form {
+          margin-top: 50px;
+          .arco-form-label-item > label {
+            font-size: 16px;
+            color: var(--color-text-1);
+            line-height: 1;
+          }
+          .arco-form-item {
+            display: block;
+            #infoData_remember_input {
+              padding-left: 0px;
+            }
+            .arco-form-label-item {
+              width: 100%;
+              text-align: left;
+              padding: 0 0px 0 0px;
+            }
+            .arco-input {
+              border: none;
+              background-color: #fff;
+              border-bottom: 1px solid #dadfe6 !important;
+              padding: 5px 0px;
+              border-radius: 0px;
+              &.arco-input-error {
+                border-bottom: 1px solid #cb2634 !important;
+              }
+            }
+            .arco-col-19 {
+              width: 100%;
+            }
+            .arco-col-offset-5 {
+              margin-left: 0;
+            }
+            .arco-btn-primary:not(.arco-btn-disabled), .long-round-btn {
+              width: 100%;
+              border-radius: 21px;
+              height: 35px;
+              line-height: 1;
+              font-size: 14px;
+            }
+            .arco-form-item-symbol {
+              display: none;
+            }
+            .arco-checkbox-mask {
+              border-width: 1px;
+              width: 16px;
+              height: 16px;
+              &:hover {
+                border-color: #165dff;
+              }
+            }
+            .arco-checkbox:hover .arco-checkbox-icon-hover::before,
+            .arco-icon-hover:hover::before {
+              background-color: transparent;
+            }
+          }
+          .item-remember{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+        .find-password {
+          text-align: center;
+          cursor: pointer;
+          -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+          position: absolute;
+          bottom: -30px;
+          right: 150px;
+          color: #4e5969;
+          &:hover {
+            background-color: transparent;
+            color: #165dff;
+          }
+        }
+      }
+    }
+  }
+}
+.arco-drawer-wrapper .arco-drawer-inner .arco-drawer-content {
+  height: calc(100% - 109px);
+  padding: 10px;
+  overflow: auto;
+}
+.drawer-form {
+  width: 40%;
+  padding: 30px 80px 0px;
+  margin: 20px auto 0px;
+  .send-btn {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    &:hover {
+      background-color: transparent !important;
+    }
+  }
+}

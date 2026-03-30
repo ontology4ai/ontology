@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  # Main application
+  odlm-app:
+    image: odlm-python:1.0
+    container_name: odlm-python
+    ports:
+      - "5050:5050"
+    environment:
+      # Environment configuration
+      - APP_ENVIRONMENT=development
+      # Logging configuration
+      - CONFIG_LOGGING__LEVEL=INFO
+      - CONFIG_LOGGING__FILE_PATH=/app/logs/app.log
+
+    volumes:
+      - ./code:/app
+      # Mount logs directory
+      - ./logs:/app/logs
+    command: ["python", "app.py"]
+    restart: unless-stopped

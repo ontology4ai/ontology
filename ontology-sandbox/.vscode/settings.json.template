@@ -1,0 +1,37 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true,
+        "**/__pycache__": true,
+        "**/*.log": true,
+        "config": true,
+        "apis": true,
+        "mcp_service": true,
+        "public": true,
+        "routers": true,
+        "test": true,
+        ".dockerignore": true,
+        ".gitignore": true,
+        "api_doc.md": true,
+        "*.py": true,
+        "*.json": true,
+        "*.md":true,
+        "*.lock":true,
+        "Dockerfile":true,
+        "*.toml":true,
+        "core/runtime" : true,
+        ".vscode": true,
+        "nginx.conf": true,
+        "requirement.txt": true
+    },
+    "search.exclude": {
+
+    },
+    "python.defaultInterpreterPath": "/home/coder/venv/bin/python3.11",
+    "python.terminal.activateEnvironment": true,
+    "python.analysis.autoImportCompletions": true
+}

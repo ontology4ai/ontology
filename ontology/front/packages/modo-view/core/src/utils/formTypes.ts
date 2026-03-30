@@ -1,0 +1,22 @@
+export default [
+	'input',
+	'inputTag',
+	'select',
+	'radioGroup',
+	'checkboxGroup',
+	'datePicker',
+	'rangePicker',
+	'timepicker',
+	'switch',
+	'treeSelect',
+	'cascader',
+	'inputNumber',
+	'slider',
+	'transfer',
+	'upload',
+	'editor',
+	'tableForm',
+	'iconSelect',
+	'textarea',
+	'rate'
+];

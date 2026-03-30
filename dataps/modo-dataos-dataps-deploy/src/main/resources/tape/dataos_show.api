@@ -1,0 +1,39 @@
+{
+  "id": "8a7499568fc78ab0018ffaec9c210029",
+  "name": "dataos_show",
+  "label": "dataos展会演示demo",
+  "descr": "dataos展会演示接口",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" parent\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" vertex\u003d\"1\" parent\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"290\" y\u003d\"140\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "8a7494bd8f51c770018f51cab8ac0001",
+  "respContentType": "application/json",
+  "url": "open/copilotDataShow",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\n    \"body\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": [\n                {\n                    \"name\": \"taskId\",\n                    \"id\": \"713d7d22-f0e3-44aa-86e7-0542ceb9ebd8\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false\n                },\n                {\n                    \"name\": \"question\",\n                    \"id\": \"ba049fee-891a-4e70-ba4e-8af8aaa4bb39\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false\n                },\n                {\n                    \"name\": \"command\",\n                    \"id\": \"fac6c440-d588-4c1b-a459-ab2358ebc285\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false\n                }\n            ]\n        }\n    ],\n    \"headers\": [],\n    \"query\": []\n}",
+  "apiOutputParams": "{\n    \"mockJson\": \"\",\n    \"responseBody\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ]\n}",
+  "createUser": "huqiang",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "8a7499568fc78ab0018ffca7c69a002d",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "8a7499568fc78ab0018ffaec9c210029",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import java.util.*;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.lang3.StringUtils;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport io.github.suanchou.utils.JsonUtil;\\nimport com.asiainfo.modo.dataps.VectorExecutor;\\n\\n\\nString taskId \u003d MapUtils.getString(body, \\\"taskId\\\");\\nString question \u003d MapUtils.getString(body, \\\"question\\\");\\nString command \u003d MapUtils.getString(body, \\\"command\\\");\\n\\ndef copilotShowService \u003d SpringContextUtil.getBean(\\\"copilotShowService\\\");\\nVectorExecutor.asyncSearchExecutor.execute(() -\u003e {\\n    try {\\n        copilotShowService.execTask(taskId,  question, command);\\n    } catch (Exception e) {\\n        System.out.println(e);\\n        return e;\\n    }\\n});\\n\\nreturn taskId;\\n\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import java.util.*;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.lang3.StringUtils;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport org.apache.commons.collections.MapUtils;\nimport io.github.suanchou.utils.JsonUtil;\nimport com.asiainfo.modo.dataps.VectorExecutor;\n\n\nString taskId \u003d MapUtils.getString(body, \"taskId\");\nString question \u003d MapUtils.getString(body, \"question\");\nString command \u003d MapUtils.getString(body, \"command\");\n\ndef copilotShowService \u003d SpringContextUtil.getBean(\"copilotShowService\");\nVectorExecutor.asyncSearchExecutor.execute(() -\u003e {\n    try {\n        copilotShowService.execTask(taskId,  question, command);\n    } catch (Exception e) {\n        System.out.println(e);\n        return e;\n    }\n});\n\nreturn taskId;\n"
+      }
+    }
+  ]
+}

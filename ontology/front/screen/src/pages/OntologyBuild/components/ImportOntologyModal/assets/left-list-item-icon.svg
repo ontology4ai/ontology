@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="31px" viewBox="0 0 30 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 7</title>
+    <defs>
+        <linearGradient x1="59.7680919%" y1="50%" x2="69.3000436%" y2="92.8363974%" id="linearGradient-1">
+            <stop stop-color="#6861D1" offset="0%"></stop>
+            <stop stop-color="#8A9FE3" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="35.1201227%" y1="3.46944695e-15%" x2="60.5452641%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#BEC5FF" offset="0%"></stop>
+            <stop stop-color="#29283F" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-3" cx="15" cy="15" r="15"></circle>
+        <filter x="-23.3%" y="-23.3%" width="146.7%" height="146.7%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="-4" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.670215814   0 0 0 0 0.660201075   0 0 0 0 0.890540082  0 0 0 0.200174825 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="-38.507562%" y1="50%" x2="158.625265%" y2="52.5341604%" id="linearGradient-5">
+            <stop stop-color="#EA2BFF" offset="0%"></stop>
+            <stop stop-color="#01FFDF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="new" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="打开代码" transform="translate(-380.000000, -330.000000)">
+            <g id="编组-2" transform="translate(345.000000, 150.000000)">
+                <g id="编组-7" transform="translate(35.000000, 180.665343)">
+                    <g id="椭圆形">
+                        <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-3"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        <circle stroke="url(#linearGradient-2)" stroke-width="1" stroke-linejoin="square" cx="15" cy="15" r="14.5"></circle>
+                    </g>
+                    <g id="文件-(3)" transform="translate(7.500000, 7.500000)">
+                        <path d="M0,0.517241373 C0,0.231576851 0.231576851,0 0.517241373,0 L14.4827586,0 C14.7684231,0 15,0.231576851 15,0.517241373 L15,2.06896551 C15,2.35463004 14.7684231,2.58620689 14.4827586,2.58620689 L0.517241373,2.58620689 C0.231576851,2.58620689 0,2.35463004 0,2.06896551 L0,0.517241373 Z" id="路径" fill="url(#linearGradient-5)"></path>
+                        <path d="M0,4.20372051 C0,3.88172146 0.231576851,3.62068966 0.517241373,3.62068966 L14.4827586,3.62068966 C14.7684231,3.62068966 15,3.88172146 15,4.20372051 L15,14.1152451 C15,14.4372441 14.7684231,14.6982759 14.4827586,14.6982759 L0.517241373,14.6982759 C0.231576851,14.6982759 0,14.4372441 0,14.1152451 L0,4.20372051 Z" id="路径" fill="#D4D8FF" fill-rule="nonzero"></path>
+                        <path d="M1.03448275,7.75862069 C1.03448275,7.62143974 1.08897767,7.48987737 1.18597924,7.3928758 C1.28298082,7.29587422 1.4145432,7.24137931 1.55172414,7.24137931 L8.27586206,7.24137931 C8.41304301,7.24137931 8.54460538,7.29587422 8.64160696,7.3928758 C8.73860854,7.48987737 8.79310346,7.62143974 8.79310346,7.75862069 L8.79310346,8.79310343 C8.79310346,8.93028438 8.73860854,9.06184676 8.64160696,9.15884834 C8.54460539,9.25584992 8.41304301,9.31034483 8.27586206,9.31034483 L1.55172414,9.31034483 C1.41454319,9.31034483 1.28298082,9.25584992 1.18597924,9.15884834 C1.08897766,9.06184676 1.03448275,8.93028438 1.03448275,8.79310343 L1.03448275,7.75862069 L1.03448275,7.75862069 Z" id="路径" fill="#859EFF" fill-rule="nonzero"></path>
+                        <path d="M12.4137931,10.8620689 C12.4137931,10.724888 12.3592982,10.5933256 12.2622966,10.4963241 C12.165295,10.3993225 12.0337327,10.3448276 11.8965517,10.3448276 L1.55172414,10.3448276 C1.4145432,10.3448276 1.28298082,10.3993225 1.18597924,10.4963241 C1.08897767,10.5933256 1.03448275,10.724888 1.03448275,10.8620689 L1.03448275,11.8965517 C1.03448275,12.0337327 1.08897767,12.165295 1.18597924,12.2622966 C1.28298082,12.3592982 1.4145432,12.4137931 1.55172414,12.4137931 L11.8965517,12.4137931 C12.1822162,12.4137931 12.4137931,12.1822162 12.4137931,11.8965517 L12.4137931,10.8620689 L12.4137931,10.8620689 Z" id="路径" fill="#859EFF" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+{
+  "properties" : { },
+  "id" : "f90df6421e5f4ab5878e9e29d32fa9cc",
+  "name" : "sql编写助手",
+  "type" : "api",
+  "parentId" : "2c92ce51f14943ff9d155e952e077246",
+  "path" : "sql",
+  "createTime" : null,
+  "updateTime" : 1715137908033,
+  "createBy" : null,
+  "updateBy" : null,
+  "paths" : [ ],
+  "options" : [ ]
+}

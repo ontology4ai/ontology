@@ -1,0 +1,9 @@
+.chart-container {
+  width: 900px;
+  height: 500px;
+}
+.chart-container .chart-main {
+  height: 100%;
+  width: 100%;
+}
+

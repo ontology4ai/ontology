@@ -1,0 +1,949 @@
+[
+    {
+        "id": "0",
+        "label": "用户创建视图",
+        "name": "view",
+        "type": "view",
+        "options": {
+            "type": "one-screen-layout",
+            "titleVisible": true,
+            "css": ":root {\n    height: 100%;\n}",
+            "eventMap": {},
+            "hidden": false,
+            "hiddenBindVar": null,
+            "vars": [
+                {
+                    "name": "user",
+                    "descr": null,
+                    "value": "{}"
+                },
+                {
+                    "name": "type",
+                    "descr": null,
+                    "value": "'create'"
+                }
+            ],
+            "models": [
+                {
+                    "id": "ModaUser",
+                    "modelId": null,
+                    "namespace": "com.asiainfo.moda.app.usersystem.user",
+                    "doc": "用户",
+                    "topic": "inner_domain",
+                    "loc": "880 3585",
+                    "language": "zh-cn",
+                    "expand": false,
+                    "type": "record",
+                    "name": "ModaUser",
+                    "valueObjectSql": null,
+                    "tableName": "moda_user",
+                    "oneToMany": [],
+                    "oneToOne": [],
+                    "manyToMany": [],
+                    "fields": [
+                        {
+                            "name": "id",
+                            "columnName": "id",
+                            "doc": "id",
+                            "type": "string",
+                            "length": 32,
+                            "primary": true,
+                            "renderType": "input",
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "userId",
+                            "columnName": "user_id",
+                            "doc": "userId",
+                            "type": "string",
+                            "length": 32,
+                            "primary": false,
+                            "renderType": "input",
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "userName",
+                            "columnName": "user_name",
+                            "doc": "userName",
+                            "type": "string",
+                            "length": 128,
+                            "primary": false,
+                            "renderType": "input",
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "password",
+                            "columnName": "user_pwd",
+                            "doc": "password",
+                            "type": "string",
+                            "length": 256,
+                            "primary": false,
+                            "renderType": "input",
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "phone",
+                            "columnName": "phone",
+                            "doc": "phone",
+                            "type": "string",
+                            "length": 16,
+                            "primary": false,
+                            "renderType": "input",
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "email",
+                            "columnName": "email",
+                            "doc": "email",
+                            "type": "string",
+                            "length": 64,
+                            "primary": false,
+                            "renderType": "input",
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "createDt",
+                            "columnName": "create_dt",
+                            "doc": "createDt",
+                            "type": "string",
+                            "length": 32,
+                            "primary": false,
+                            "renderType": "input",
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "state",
+                            "columnName": "state",
+                            "doc": "state",
+                            "type": "string",
+                            "length": 1,
+                            "primary": false,
+                            "renderType": "input",
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "defaultTeamName",
+                            "columnName": "default_team",
+                            "doc": "defaultTeamName",
+                            "type": "string",
+                            "length": 32,
+                            "primary": false,
+                            "renderType": "input",
+                            "defaultValue": null
+                        },
+                        {
+                            "name": "acctType",
+                            "columnName": "",
+                            "doc": "acctType",
+                            "type": "string",
+                            "length": 8,
+                            "primary": false,
+                            "renderType": "input",
+                            "defaultValue": null
+                        }
+                    ],
+                    "mappers": [],
+                    "methods": [],
+                    "services": [],
+                    "events": [
+                        {
+                            "proxy": true,
+                            "methodType": "POST",
+                            "name": "partialUpdate",
+                            "placeholders": [
+                                "{modelName}"
+                            ],
+                            "descr": "批量更新对象指定字段",
+                            "label": "用户",
+                            "type": "model",
+                            "serviceId": "/_api/_/modaUser/update/partial",
+                            "url": "/_api/_/modaUser/update/partial"
+                        },
+                        {
+                            "proxy": true,
+                            "methodType": "POST",
+                            "name": "update",
+                            "placeholders": [
+                                "{modelName}"
+                            ],
+                            "descr": "更新对象信息",
+                            "label": "用户",
+                            "type": "model",
+                            "serviceId": "/_api/_/modoUser/update",
+                            "url": "/_api/_/modaUser/update",
+                            "method": "post",
+                            "success": "function successCallback(res) {\r\n    if (res.data) {\r\n        $this.utils.notification.success({\r\n            title: '成功',\r\n            content: '更新用户成功',\r\n        });\r\n        $this.parent.datasourceMap.getUserData()\r\n\t\t$this.close();\r\n    } else {\r\n        $this.utils.notification.error({\r\n            title: '失败',\r\n            content: '更新用户失败',\r\n        })\r\n    }\r\n}",
+                            "fail": "function failCallback() {\r\n    $this.utils.notification.error({\r\n        title: '失败',\r\n        content: '更新用户失败',\r\n    })\r\n}"
+                        },
+                        {
+                            "proxy": true,
+                            "methodType": "POST",
+                            "name": "create",
+                            "placeholders": [
+                                "{modelName}"
+                            ],
+                            "descr": "保存对象信息",
+                            "label": "用户",
+                            "type": "model",
+                            "serviceId": "/_api/_/modoUser/create",
+                            "url": "/_api/_/modaUser/create",
+                            "method": "post",
+                            "success": "function successCallback(res) {\r\n    if (res.data) {\r\n        $this.utils.notification.success({\r\n            title: '成功',\r\n            content: '保存用户成功',\r\n        });\r\n        $this.parent.datasourceMap.getUserData()\r\n\t\t$this.close();\r\n    } else {\r\n        $this.utils.notification.error({\r\n            title: '失败',\r\n            content: '保存用户失败',\r\n        })\r\n    }\r\n}",
+                            "fail": "function failCallback() {\r\n    $this.utils.notification.error({\r\n        title: '失败',\r\n        content: '保存用户失败',\r\n    })\r\n}",
+                            "before": ""
+                        },
+                        {
+                            "proxy": true,
+                            "methodType": "GET",
+                            "name": "search",
+                            "placeholders": [
+                                "{modelName}"
+                            ],
+                            "descr": "通过参数分页查询对象",
+                            "label": "用户",
+                            "type": "model",
+                            "serviceId": "/_api/_/modoUser/search",
+                            "url": "/_api/_/modaUser/search"
+                        },
+                        {
+                            "proxy": true,
+                            "methodType": "POST",
+                            "name": "updateBatch",
+                            "placeholders": [
+                                "{modelName}"
+                            ],
+                            "descr": "批量更新对象信息",
+                            "label": "用户",
+                            "type": "model",
+                            "serviceId": "/_api/_/modaUser/updateBatch",
+                            "url": "/_api/_/modaUser/updateBatch"
+                        },
+                        {
+                            "proxy": true,
+                            "methodType": "POST",
+                            "name": "invokeMethod",
+                            "placeholders": [
+                                "{modelName}",
+                                "{id}",
+                                "{methodName}"
+                            ],
+                            "descr": "调用领域对象的行为",
+                            "label": "用户",
+                            "type": "model",
+                            "serviceId": "/_api/_/modaUser/{id}/invoke/{methodName}",
+                            "url": "/_api/_/modaUser/{id}/invoke/{methodName}"
+                        },
+                        {
+                            "proxy": true,
+                            "methodType": "POST",
+                            "name": "invokeService",
+                            "placeholders": [
+                                "{modelName}",
+                                "{methodName}"
+                            ],
+                            "descr": "调用领域服务",
+                            "label": "用户",
+                            "type": "model",
+                            "serviceId": "/_api/_/modaUser/invokeService/{methodName}",
+                            "url": "/_api/_/modaUser/invokeService/{methodName}"
+                        },
+                        {
+                            "proxy": true,
+                            "methodType": "GET",
+                            "name": "list",
+                            "placeholders": [
+                                "{modelName}"
+                            ],
+                            "descr": "获取所有对象",
+                            "label": "用户",
+                            "type": "model",
+                            "serviceId": "/_api/_/modaUser/list",
+                            "url": "/_api/_/modaUser/list",
+                            "stateName": "userList",
+                            "fail": "",
+                            "success": "function successCallback(res) {\r\n    return res.data\r\n}"
+                        },
+                        {
+                            "proxy": true,
+                            "methodType": "GET",
+                            "name": "findById",
+                            "placeholders": [
+                                "{modelName}",
+                                "{id}"
+                            ],
+                            "descr": "通过{id}获取对象",
+                            "label": "用户",
+                            "type": "model",
+                            "serviceId": "/_api/_/modaUser/{id}",
+                            "url": "/_api/_/modaUser/{id}"
+                        },
+                        {
+                            "proxy": true,
+                            "methodType": "POST",
+                            "name": "delete",
+                            "placeholders": [
+                                "{modelName}",
+                                "{id}"
+                            ],
+                            "descr": "删除对象",
+                            "label": "用户",
+                            "type": "model",
+                            "serviceId": "/_api/_/modaUser/delete/{id}",
+                            "url": "/_api/_/modaUser/delete/{id}"
+                        },
+                        {
+                            "proxy": true,
+                            "methodType": "GET",
+                            "name": "findByIds",
+                            "placeholders": [
+                                "{modelName}",
+                                "{ids}"
+                            ],
+                            "descr": "通过{ids}获取对象列表",
+                            "label": "用户",
+                            "type": "model",
+                            "serviceId": "/_api/_/modaUser/list/{ids}",
+                            "url": "/_api/_/modaUser/list/{ids}"
+                        },
+                        {
+                            "proxy": true,
+                            "methodType": "POST",
+                            "name": "createBatch",
+                            "placeholders": [
+                                "{modelName}"
+                            ],
+                            "descr": "批量保存对象信息",
+                            "label": "用户",
+                            "type": "model",
+                            "serviceId": "/_api/_/modaUser/createBatch",
+                            "url": "/_api/_/modaUser/createBatch"
+                        },
+                        {
+                            "proxy": true,
+                            "methodType": "GET",
+                            "name": "find",
+                            "placeholders": [
+                                "{modelName}"
+                            ],
+                            "descr": "通过参数查询对象",
+                            "label": "用户",
+                            "type": "model",
+                            "serviceId": "/_api/_/modaUser/find",
+                            "url": "/_api/_/modaUser/find"
+                        },
+                        {
+                            "proxy": true,
+                            "methodType": "POST",
+                            "name": "deleteBatch",
+                            "placeholders": [
+                                "{modelName}"
+                            ],
+                            "descr": "批量删除对象信息",
+                            "label": "用户",
+                            "type": "model",
+                            "serviceId": "/_api/_/modaUser/deleteBatch",
+                            "url": "/_api/_/modaUser/deleteBatch"
+                        }
+                    ]
+                }
+            ],
+            "services": []
+        },
+        "inputVars": [],
+        "children": [
+            {
+                "id": "74d93fef78ca999f",
+                "name": "74d93fef78ca999f",
+                "label": "容器",
+                "type": "flexLayout",
+                "options": {
+                    "hidden": false,
+                    "hiddenBindVar": null,
+                    "isLoading": false,
+                    "loading": true,
+                    "loadingBindVar": null,
+                    "loadingText": null,
+                    "loadingTextBindVar": null,
+                    "showTooltip": false,
+                    "tooltipText": null,
+                    "className": "",
+                    "css": ":root{}",
+                    "loop": {
+                        "data": null,
+                        "dataBindVar": null,
+                        "var": "item",
+                        "index": "index",
+                        "key": "index",
+                        "paginationVisible": true,
+                        "disabled": false
+                    },
+                    "eventMap": {},
+                    "gutter": "5px",
+                    "width": "100%",
+                    "height": "100%",
+                    "flexDirection": "column",
+                    "flex": "auto"
+                },
+                "defaultOptions": {
+                    "gutter": "5px",
+                    "width": "100%",
+                    "height": "200px",
+                    "flexDirection": "row",
+                    "flex": "auto"
+                },
+                "children": [
+                    {
+                        "id": "d25ea9329006c9f4",
+                        "name": "d25ea9329006c9f4",
+                        "label": "表单容器",
+                        "type": "flexLayout",
+                        "options": {
+                            "hidden": false,
+                            "hiddenBindVar": null,
+                            "isLoading": false,
+                            "loading": true,
+                            "loadingBindVar": null,
+                            "loadingText": null,
+                            "loadingTextBindVar": null,
+                            "showTooltip": false,
+                            "tooltipText": null,
+                            "className": "",
+                            "css": "\n\t\t:root {\n\t\t\toverflow: auto;\n\t\t}\n\t",
+                            "loop": {
+                                "data": null,
+                                "dataBindVar": null,
+                                "var": "item",
+                                "index": "index",
+                                "key": "index",
+                                "paginationVisible": true,
+                                "disabled": false
+                            },
+                            "eventMap": {},
+                            "gutter": "5px",
+                            "width": "100%",
+                            "height": "200px",
+                            "flexDirection": "row",
+                            "flex": "auto"
+                        },
+                        "defaultOptions": {
+                            "gutter": "5px",
+                            "width": "100%",
+                            "height": "200px",
+                            "flexDirection": "row",
+                            "flex": "auto"
+                        },
+                        "children": [
+                            {
+                                "id": "f781a51cfb51e2f7",
+                                "name": "f781a51cfb51e2f7",
+                                "label": "用户表单",
+                                "type": "form",
+                                "options": {
+                                    "hidden": false,
+                                    "hiddenBindVar": null,
+                                    "isLoading": false,
+                                    "loading": true,
+                                    "loadingBindVar": null,
+                                    "loadingText": null,
+                                    "loadingTextBindVar": null,
+                                    "showTooltip": false,
+                                    "tooltipText": null,
+                                    "className": "",
+                                    "css": ":root{\r\n    padding: 10px;\r\n}",
+                                    "loop": {
+                                        "data": null,
+                                        "dataBindVar": null,
+                                        "var": "item",
+                                        "index": "index",
+                                        "key": "index",
+                                        "paginationVisible": true,
+                                        "disabled": false
+                                    },
+                                    "eventMap": {},
+                                    "labelFlex": "60px",
+                                    "modelName": "ModaUser",
+                                    "values": "{}",
+                                    "valuesBindVar": "$this.user"
+                                },
+                                "children": [
+                                    {
+                                        "id": "59dea60e32155bdf",
+                                        "name": "id",
+                                        "label": "id",
+                                        "type": "input",
+                                        "options": {
+                                            "hidden": false,
+                                            "hiddenBindVar": null,
+                                            "isLoading": false,
+                                            "loading": true,
+                                            "loadingBindVar": null,
+                                            "loadingText": null,
+                                            "loadingTextBindVar": null,
+                                            "showTooltip": false,
+                                            "tooltipText": null,
+                                            "className": "",
+                                            "css": ":root{}",
+                                            "loop": {
+                                                "data": null,
+                                                "dataBindVar": null,
+                                                "var": "item",
+                                                "index": "index",
+                                                "key": "index",
+                                                "paginationVisible": true,
+                                                "disabled": false
+                                            },
+                                            "eventMap": {},
+                                            "span": "24",
+                                            "labelFlex": ""
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "464a6ea33306fc00",
+                                        "name": "userId",
+                                        "label": "userId",
+                                        "type": "input",
+                                        "options": {
+                                            "hidden": false,
+                                            "hiddenBindVar": null,
+                                            "isLoading": false,
+                                            "loading": true,
+                                            "loadingBindVar": null,
+                                            "loadingText": null,
+                                            "loadingTextBindVar": null,
+                                            "showTooltip": false,
+                                            "tooltipText": null,
+                                            "className": "",
+                                            "css": ":root{}",
+                                            "loop": {
+                                                "data": null,
+                                                "dataBindVar": null,
+                                                "var": "item",
+                                                "index": "index",
+                                                "key": "index",
+                                                "paginationVisible": true,
+                                                "disabled": false
+                                            },
+                                            "eventMap": {},
+                                            "span": "24",
+                                            "labelFlex": ""
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "37c105bc0699e8b7",
+                                        "name": "userName",
+                                        "label": "userName",
+                                        "type": "input",
+                                        "options": {
+                                            "hidden": false,
+                                            "hiddenBindVar": null,
+                                            "isLoading": false,
+                                            "loading": true,
+                                            "loadingBindVar": null,
+                                            "loadingText": null,
+                                            "loadingTextBindVar": null,
+                                            "showTooltip": false,
+                                            "tooltipText": null,
+                                            "className": "",
+                                            "css": ":root{}",
+                                            "loop": {
+                                                "data": null,
+                                                "dataBindVar": null,
+                                                "var": "item",
+                                                "index": "index",
+                                                "key": "index",
+                                                "paginationVisible": true,
+                                                "disabled": false
+                                            },
+                                            "eventMap": {},
+                                            "span": "24",
+                                            "labelFlex": ""
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "eee19bce2aa3ccb3",
+                                        "name": "password",
+                                        "label": "password",
+                                        "type": "input",
+                                        "options": {
+                                            "hidden": false,
+                                            "hiddenBindVar": null,
+                                            "isLoading": false,
+                                            "loading": true,
+                                            "loadingBindVar": null,
+                                            "loadingText": null,
+                                            "loadingTextBindVar": null,
+                                            "showTooltip": false,
+                                            "tooltipText": null,
+                                            "className": "",
+                                            "css": ":root{}",
+                                            "loop": {
+                                                "data": null,
+                                                "dataBindVar": null,
+                                                "var": "item",
+                                                "index": "index",
+                                                "key": "index",
+                                                "paginationVisible": true,
+                                                "disabled": false
+                                            },
+                                            "eventMap": {},
+                                            "span": "24",
+                                            "labelFlex": ""
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "412ade2624f99b68",
+                                        "name": "phone",
+                                        "label": "phone",
+                                        "type": "input",
+                                        "options": {
+                                            "hidden": false,
+                                            "hiddenBindVar": null,
+                                            "isLoading": false,
+                                            "loading": true,
+                                            "loadingBindVar": null,
+                                            "loadingText": null,
+                                            "loadingTextBindVar": null,
+                                            "showTooltip": false,
+                                            "tooltipText": null,
+                                            "className": "",
+                                            "css": ":root{}",
+                                            "loop": {
+                                                "data": null,
+                                                "dataBindVar": null,
+                                                "var": "item",
+                                                "index": "index",
+                                                "key": "index",
+                                                "paginationVisible": true,
+                                                "disabled": false
+                                            },
+                                            "eventMap": {},
+                                            "span": "24",
+                                            "labelFlex": ""
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "79e271b3d6b70567",
+                                        "name": "email",
+                                        "label": "email",
+                                        "type": "input",
+                                        "options": {
+                                            "hidden": false,
+                                            "hiddenBindVar": null,
+                                            "isLoading": false,
+                                            "loading": true,
+                                            "loadingBindVar": null,
+                                            "loadingText": null,
+                                            "loadingTextBindVar": null,
+                                            "showTooltip": false,
+                                            "tooltipText": null,
+                                            "className": "",
+                                            "css": ":root{}",
+                                            "loop": {
+                                                "data": null,
+                                                "dataBindVar": null,
+                                                "var": "item",
+                                                "index": "index",
+                                                "key": "index",
+                                                "paginationVisible": true,
+                                                "disabled": false
+                                            },
+                                            "eventMap": {},
+                                            "span": "24",
+                                            "labelFlex": ""
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "07288e6ff4391744",
+                                        "name": "createDt",
+                                        "label": "createDt",
+                                        "type": "input",
+                                        "options": {
+                                            "hidden": false,
+                                            "hiddenBindVar": null,
+                                            "isLoading": false,
+                                            "loading": true,
+                                            "loadingBindVar": null,
+                                            "loadingText": null,
+                                            "loadingTextBindVar": null,
+                                            "showTooltip": false,
+                                            "tooltipText": null,
+                                            "className": "",
+                                            "css": ":root{}",
+                                            "loop": {
+                                                "data": null,
+                                                "dataBindVar": null,
+                                                "var": "item",
+                                                "index": "index",
+                                                "key": "index",
+                                                "paginationVisible": true,
+                                                "disabled": false
+                                            },
+                                            "eventMap": {},
+                                            "span": "24",
+                                            "labelFlex": ""
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "0d4d7172552c143d",
+                                        "name": "state",
+                                        "label": "state",
+                                        "type": "input",
+                                        "options": {
+                                            "hidden": false,
+                                            "hiddenBindVar": null,
+                                            "isLoading": false,
+                                            "loading": true,
+                                            "loadingBindVar": null,
+                                            "loadingText": null,
+                                            "loadingTextBindVar": null,
+                                            "showTooltip": false,
+                                            "tooltipText": null,
+                                            "className": "",
+                                            "css": ":root{}",
+                                            "loop": {
+                                                "data": null,
+                                                "dataBindVar": null,
+                                                "var": "item",
+                                                "index": "index",
+                                                "key": "index",
+                                                "paginationVisible": true,
+                                                "disabled": false
+                                            },
+                                            "eventMap": {},
+                                            "span": "24",
+                                            "labelFlex": ""
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "cfa8bdbf41f647a2",
+                                        "name": "defaultTeamName",
+                                        "label": "defaultTeamName",
+                                        "type": "input",
+                                        "options": {
+                                            "hidden": false,
+                                            "hiddenBindVar": null,
+                                            "isLoading": false,
+                                            "loading": true,
+                                            "loadingBindVar": null,
+                                            "loadingText": null,
+                                            "loadingTextBindVar": null,
+                                            "showTooltip": false,
+                                            "tooltipText": null,
+                                            "className": "",
+                                            "css": ":root{}",
+                                            "loop": {
+                                                "data": null,
+                                                "dataBindVar": null,
+                                                "var": "item",
+                                                "index": "index",
+                                                "key": "index",
+                                                "paginationVisible": true,
+                                                "disabled": false
+                                            },
+                                            "eventMap": {},
+                                            "span": "24",
+                                            "labelFlex": ""
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "id": "589ec8cbef37084a",
+                                        "name": "acctType",
+                                        "label": "acctType",
+                                        "type": "input",
+                                        "options": {
+                                            "hidden": false,
+                                            "hiddenBindVar": null,
+                                            "isLoading": false,
+                                            "loading": true,
+                                            "loadingBindVar": null,
+                                            "loadingText": null,
+                                            "loadingTextBindVar": null,
+                                            "showTooltip": false,
+                                            "tooltipText": null,
+                                            "className": "",
+                                            "css": ":root{}",
+                                            "loop": {
+                                                "data": null,
+                                                "dataBindVar": null,
+                                                "var": "item",
+                                                "index": "index",
+                                                "key": "index",
+                                                "paginationVisible": true,
+                                                "disabled": false
+                                            },
+                                            "eventMap": {},
+                                            "span": "24",
+                                            "labelFlex": ""
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "e3de7d26de9226bf",
+                        "name": "e3de7d26de9226bf",
+                        "label": "按钮组容器",
+                        "type": "flexLayout",
+                        "options": {
+                            "hidden": false,
+                            "hiddenBindVar": null,
+                            "isLoading": false,
+                            "loading": true,
+                            "loadingBindVar": null,
+                            "loadingText": null,
+                            "loadingTextBindVar": null,
+                            "showTooltip": false,
+                            "tooltipText": null,
+                            "className": "",
+                            "css": "\n\t\t:root {\n\t\t\tjustify-content: flex-end;\n\t\t\tflex: 0 1 auto !important;\n\t\t\tpadding: 6px 12px;\n\t\t\tborder-top: 1px solid var(--color-neutral-3)\n\t\t}\n\t",
+                            "loop": {
+                                "data": null,
+                                "dataBindVar": null,
+                                "var": "item",
+                                "index": "index",
+                                "key": "index",
+                                "paginationVisible": true,
+                                "disabled": false
+                            },
+                            "eventMap": {},
+                            "gutter": "5px",
+                            "width": "100%",
+                            "height": "41px",
+                            "flexDirection": "row",
+                            "flex": "auto"
+                        },
+                        "defaultOptions": {
+                            "gutter": "5px",
+                            "width": "100%",
+                            "height": "200px",
+                            "flexDirection": "row",
+                            "flex": "auto"
+                        },
+                        "children": [
+                            {
+                                "id": "ea4394a3ba2d505b",
+                                "name": "ea4394a3ba2d505b",
+                                "label": "取消",
+                                "type": "button",
+                                "options": {
+                                    "hidden": false,
+                                    "hiddenBindVar": null,
+                                    "isLoading": false,
+                                    "loading": true,
+                                    "loadingBindVar": null,
+                                    "loadingText": null,
+                                    "loadingTextBindVar": null,
+                                    "showTooltip": false,
+                                    "tooltipText": null,
+                                    "className": "",
+                                    "css": "\n\t\t:root {\n\t\t\tmargin-right: 12px;\n\t    }\n\t",
+                                    "loop": {
+                                        "data": null,
+                                        "dataBindVar": null,
+                                        "var": "item",
+                                        "index": "index",
+                                        "key": "index",
+                                        "paginationVisible": true,
+                                        "disabled": false
+                                    },
+                                    "eventMap": {
+                                        "onClick": {
+                                            "builtIn": {
+                                                "type": "url",
+                                                "isSingleService": true,
+                                                "urlAction": {
+                                                    "url": null,
+                                                    "blank": true
+                                                },
+                                                "viewActions": [
+                                                    {
+                                                        "showType": "dialog",
+                                                        "viewName": null,
+                                                        "before": "",
+                                                        "width": "50%",
+                                                        "top": "15vh",
+                                                        "fullscreen": false,
+                                                        "size": "50%",
+                                                        "tabViewName": null,
+                                                        "tabParams": "",
+                                                        "tabKey": "",
+                                                        "tabLabel": ""
+                                                    }
+                                                ],
+                                                "actions": []
+                                            },
+                                            "callback": "function callback() {\n\t\tconsole.log('cancel');\n\t\t$this.dispatch({\n\t\t\ttype: 'close',\n\t\t\ttarget: 'parent'\n\t\t});\n\t}"
+                                        }
+                                    }
+                                },
+                                "defaultOptions": {
+                                    "css": ":root {\n\n}"
+                                },
+                                "children": []
+                            },
+                            {
+                                "id": "2a92eae139123f4e",
+                                "name": "2a92eae139123f4e",
+                                "label": "保存",
+                                "type": "button",
+                                "options": {
+                                    "hidden": false,
+                                    "hiddenBindVar": null,
+                                    "isLoading": false,
+                                    "loading": true,
+                                    "loadingBindVar": null,
+                                    "loadingText": null,
+                                    "loadingTextBindVar": null,
+                                    "showTooltip": false,
+                                    "tooltipText": null,
+                                    "className": "",
+                                    "css": ":root {\n\n}",
+                                    "loop": {
+                                        "data": null,
+                                        "dataBindVar": null,
+                                        "var": "item",
+                                        "index": "index",
+                                        "key": "index",
+                                        "paginationVisible": true,
+                                        "disabled": false
+                                    },
+                                    "eventMap": {
+                                        "onClick": {
+                                            "builtIn": {
+                                                "type": "view",
+                                                "isSingleService": true,
+                                                "urlAction": {
+                                                    "url": null,
+                                                    "blank": true
+                                                },
+                                                "viewActions": [],
+                                                "actions": []
+                                            },
+                                            "callback": "function callback() {\n\tif ($this.type === 'update') {\n\t\t$this.modelMap.modaUserDao.update($this.user);\n\t} else {\n\t\t$this.modelMap.modaUserDao.create($this.user);\n\t}\n}"
+                                        }
+                                    },
+                                    "type": "primary"
+                                },
+                                "defaultOptions": {
+                                    "css": ":root {\n\n}"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,14 @@
+{
+  "properties" : { },
+  "id" : "e282701361b149f0a36c061c21e46663",
+  "name" : "查询数据",
+  "type" : "api",
+  "parentId" : "2c92ce51f14943ff9d155e952e077246",
+  "path" : "查询数据",
+  "createTime" : 1715423112444,
+  "updateTime" : null,
+  "createBy" : null,
+  "updateBy" : null,
+  "paths" : [ ],
+  "options" : [ ]
+}

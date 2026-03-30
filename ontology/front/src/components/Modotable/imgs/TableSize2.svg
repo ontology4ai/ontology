@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="51px" viewBox="0 0 140 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 5备份</title>
+    <g id="控件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="05.反馈/抽屉/表格配置" transform="translate(-320.000000, -64.000000)">
+            <g id="编组-8" transform="translate(0.000000, 44.000000)">
+                <g id="编组-6" transform="translate(20.000000, 20.000000)">
+                    <g id="编组-5备份" transform="translate(300.000000, 0.000000)">
+                        <rect id="矩形" stroke="#E3E9EF" fill="#FFFFFF" fill-rule="nonzero" x="0.5" y="0.5" width="139" height="50" rx="4"></rect>
+                        <rect id="矩形" fill="#E3E9EF" x="1" y="16" width="138" height="1"></rect>
+                        <rect id="矩形备份-2" fill="#E3E9EF" x="1" y="33" width="138" height="1"></rect>
+                        <g id="编组-4" transform="translate(10.000000, 5.000000)" fill="#E3E9EF" fill-rule="nonzero">
+                            <rect id="矩形备份" x="12" y="0" width="108" height="6" rx="3"></rect>
+                            <circle id="椭圆形" cx="3" cy="3" r="3"></circle>
+                        </g>
+                        <g id="编组-4备份-2" transform="translate(10.000000, 22.000000)" fill="#E3E9EF" fill-rule="nonzero">
+                            <rect id="矩形备份" x="12" y="0" width="108" height="6" rx="3"></rect>
+                            <circle id="椭圆形" cx="3" cy="3" r="3"></circle>
+                        </g>
+                        <g id="编组-4备份" transform="translate(10.000000, 39.000000)" fill="#E3E9EF" fill-rule="nonzero">
+                            <rect id="矩形备份" x="12" y="0" width="108" height="6" rx="3"></rect>
+                            <circle id="椭圆形" cx="3" cy="3" r="3"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

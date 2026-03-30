@@ -1,0 +1,39 @@
+{
+  "id": "dataps-139382576048738304",
+  "name": "dataflowGetNextBatchList",
+  "label": "获取最近5次运行时间",
+  "descr": "根据cron表达式计算最近5次的运行时间",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"320\" y\u003d\"240\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "respContentType": "application/json",
+  "url": "dataflow/getNextBatchList",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[{\"id\":\"c9d93714-053f-4f93-8a9e-84a7c1fac36a\",\"name\":\"cron\",\"required\":\"1\",\"example\":\"\",\"desc\":\"\",\"value\":\"0 4 * * * ?\"},{\"id\":\"189dac3d-5913-457e-ac58-7803f3b80a0a\",\"name\":\"batchOffset\",\"required\":\"1\",\"example\":\"\",\"desc\":\"\",\"value\":\"-1\"},{\"id\":\"da3f08ea-7036-4623-ad04-ab88198a53b2\",\"name\":\"batchType\",\"required\":\"1\",\"example\":\"\",\"desc\":\"\",\"value\":\"hourly\"}]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "jiash",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "dataps-153538137537032192",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "dataps-139382576048738304",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import org.quartz.CronExpression;\\n\\nimport java.text.DateFormat;\\nimport java.text.SimpleDateFormat;\\nimport java.util.ArrayList;\\nimport java.util.Date;\\nimport java.util.List;\\n\\nString cron \u003d params.get(\\\"cron\\\");\\nString batchOffset \u003d params.get(\\\"batchOffset\\\");\\nString batchType \u003d params.get(\\\"batchType\\\");\\n CronExpression expression \u003d new CronExpression(cron);\\n        Date next \u003d new Date();\\n        List\u003cString\u003e list \u003d new ArrayList\u003c\u003e();\\n        DateFormat format \u003d new SimpleDateFormat(\\\"yyyy-MM-dd HH:mm:ss\\\");\\n        DateFormat format1 \u003d new SimpleDateFormat(\\\"yyyyMMddHHmmss\\\");\\n        for (int i \u003d 0; i \u003c 5; i++) {\\n            next \u003d expression.getNextValidTimeAfter(next);\\n            if (next \u003d\u003d null) break;\\n            int dt \u003d 0;\\n            if (\\\"monthly\\\".equals(batchType)) {\\n                dt \u003d Integer.parseInt(format1.format(next).substring(0, 6)) + Integer.parseInt(batchOffset);\\n            }else if (\\\"daily\\\".equals(batchType)) {\\n                dt \u003d Integer.parseInt(format1.format(next).substring(0, 8)) + Integer.parseInt(batchOffset);\\n            } else if (\\\"hourly\\\".equals(batchType)) {\\n                dt \u003d Integer.parseInt(format1.format(next).substring(0, 10)) + Integer.parseInt(batchOffset);\\n            }else if (\\\"minutely\\\".equals(batchType)) {\\n                dt \u003d Integer.parseInt(format1.format(next).substring(0, 12)) + Integer.parseInt(batchOffset);\\n            }\\n            list.add(format.format(next) + \\\" (\\\" + dt + \\\")\\\");\\n        }\\n\\nreturn list;\\n\"}",
+      "createUser": "jiash",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import org.quartz.CronExpression;\n\nimport java.text.DateFormat;\nimport java.text.SimpleDateFormat;\nimport java.util.ArrayList;\nimport java.util.Date;\nimport java.util.List;\n\nString cron \u003d params.get(\"cron\");\nString batchOffset \u003d params.get(\"batchOffset\");\nString batchType \u003d params.get(\"batchType\");\n CronExpression expression \u003d new CronExpression(cron);\n        Date next \u003d new Date();\n        List\u003cString\u003e list \u003d new ArrayList\u003c\u003e();\n        DateFormat format \u003d new SimpleDateFormat(\"yyyy-MM-dd HH:mm:ss\");\n        DateFormat format1 \u003d new SimpleDateFormat(\"yyyyMMddHHmmss\");\n        for (int i \u003d 0; i \u003c 5; i++) {\n            next \u003d expression.getNextValidTimeAfter(next);\n            if (next \u003d\u003d null) break;\n            int dt \u003d 0;\n            if (\"monthly\".equals(batchType)) {\n                dt \u003d Integer.parseInt(format1.format(next).substring(0, 6)) + Integer.parseInt(batchOffset);\n            }else if (\"daily\".equals(batchType)) {\n                dt \u003d Integer.parseInt(format1.format(next).substring(0, 8)) + Integer.parseInt(batchOffset);\n            } else if (\"hourly\".equals(batchType)) {\n                dt \u003d Integer.parseInt(format1.format(next).substring(0, 10)) + Integer.parseInt(batchOffset);\n            }else if (\"minutely\".equals(batchType)) {\n                dt \u003d Integer.parseInt(format1.format(next).substring(0, 12)) + Integer.parseInt(batchOffset);\n            }\n            list.add(format.format(next) + \" (\" + dt + \")\");\n        }\n\nreturn list;\n"
+      }
+    }
+  ]
+}

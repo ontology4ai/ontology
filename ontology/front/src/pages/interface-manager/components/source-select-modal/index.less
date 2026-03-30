@@ -1,0 +1,176 @@
+.dataset-modal {
+  .arco-modal-content {
+    padding: 0px 20px 20px;
+  }
+
+  .dataset-content {
+    flex: 1;
+
+    .arco-spin, .arco-spin-children {
+      height: 100%;
+    }
+
+    .arco-table-container {
+      height: calc(100% - 38px);
+    }
+
+    .datasource-head {
+      box-sizing: border-box;
+      //height: 36px;
+      line-height: 20px;
+      margin: 20px 0 12px;
+      font-size: 12px;
+      font-weight: 600;
+
+      .dot {
+        display: inline-block;
+        width: 3px;
+        height: 10px;
+        margin-right: 5px;
+        border-radius: 2px;
+        background: var(--color-primary-6, #3261CE);
+      }
+    }
+
+    .dataset-form {
+      justify-content: space-between;
+      flex-direction: row;
+      // margin: 20px 0;
+      .arco-form-item {
+        width: 48%;
+      }
+    }
+  }
+
+  .dataset-container {
+    height: 320px;
+    display: flex;
+
+    .dataset-head {
+      box-sizing: border-box;
+      height: 36px;
+      line-height: 20px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .dataset-left {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      width: 188px;
+      border-radius: 4px;
+      border: 1px solid var(--color-border-2, #E3E9EF);
+
+      .search-input {
+        width: 164px;
+        padding: 6px 12px;
+      }
+
+      .arco-spin {
+        flex: 1;
+        height: calc(100% - 36px);
+
+        .arco-spin-children {
+          height: 100%;
+
+          .arco-list-wrapper {
+            height: calc(100% - 40px);
+          }
+        }
+      }
+
+      .dataset-list {
+        height: 100%;
+        border: none;
+        overflow-y: auto;
+
+        .list-item {
+          height: 20px;
+          margin: 6px 0;
+          padding: 0px 12px;
+          border: none;
+          font-size: 12px;
+          font-weight: 400;
+          cursor: pointer;
+          display: inline-block;
+          width: 100%;
+          box-sizing: border-box;
+
+          span {
+            display: inline-block;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          &.active, &:hover {
+            color: var(--color-link-6, #3261CE);
+            font-weight: 600;
+          }
+        }
+      }
+
+      .arco-pagination {
+        height: 36px;
+        line-height: 36px;
+        width: 100%;
+        float: right;
+        justify-content: flex-end;
+        border-top: 1px solid var(--color-border-2, #E3E9EF);
+      }
+    }
+
+    .dataset-arrow {
+      width: 24px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .right-icon {
+        height: 12px;
+        line-height: 12px;
+        width: 12px;
+        padding: 6px;
+        border-radius: 2px;
+        background: var(--color-fill-2, #EFF4F9);
+        color: var(--color-text-2);
+
+        &.empty {
+          border-radius: var(---border-radius-small, 2px);
+          background: var(--color-fill-2, #EFF4F9);
+          color: var(--color-text-4);
+        }
+      }
+    }
+
+    .dataset-right {
+      height: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      border-radius: 4px;
+      border: 1px solid var(--color-border-2, #E3E9EF);
+
+      .dataset-content {
+        flex: 1;
+
+        .arco-spin, .arco-spin-children {
+          height: 100%;
+        }
+
+        .arco-table-container {
+          height: calc(100% - 38px);
+        }
+      }
+    }
+
+    .arco-empty .arco-empty-wrapper img {
+      height: 48px;
+    }
+  }
+}

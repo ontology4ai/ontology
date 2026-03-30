@@ -1,0 +1,147 @@
+{
+  "id": "dataps-139382537985429504",
+  "name": "searchLogicModelToOnline",
+  "label": "查询待上线模型",
+  "descr": "查询待上线模型",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.TMF参数转换\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"240\" y\u003d\"60\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"5\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-httpdiaoyong;title\u003d5.HTTP调用\" title\u003d\"HTTP调用\" modelData\u003d\"\" stepInst\u003d\"http\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"400\" y\u003d\"60\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"6\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"2\" target\u003d\"5\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"7\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d7.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"560\" y\u003d\"60\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"8\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"5\" target\u003d\"7\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"10\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d10.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"240\" y\u003d\"260\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"13\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d13.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"30\" y\u003d\"160\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"14\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-tiaojianpanduan;title\u003d14.条件判断\" title\u003d\"条件判断\" modelData\u003d\"\" stepInst\u003d\"if\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"130\" y\u003d\"150\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"15\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"13\" target\u003d\"14\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"16\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"14\" target\u003d\"2\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"17\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"14\" target\u003d\"10\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236064944930729984",
+  "respContentType": "application/json",
+  "url": "modelLogicModel/searchToOnline",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "dataps-139382538014789635",
+      "stepSeq": "10",
+      "parentStepId": "-1",
+      "label": "10.执行脚本",
+      "graphId": "dataps-139382537985429504",
+      "stepInst": "script",
+      "preStepId": "14",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"10.执行脚本\",\"scriptText\":\"import com.asiainfo.modo.app.web.TapeController;\\nimport io.github.suanchou.utils.JsonUtil;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport io.github.suanchou.web.Response;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.apache.commons.lang3.StringUtils;\\n\\nimport java.util.HashMap;\\nimport java.util.List;\\nimport java.util.Map;\\n\\n\\nMap\u003cString, Object\u003e binding \u003d new HashMap();\\nbinding.put(\\\"params\\\", params);\\nString state \u003d MapUtils.getString(params, \\\"state\\\");\\nif (StringUtils.isNotBlank(state)) {\\n    params.put(\\\"state\\\", state.replaceAll(\\\";\\\", \\\",\\\"));\\n}\\nTapeController tapeController \u003d (TapeController) SpringContextUtil.getBean(\\\"tapeController\\\");\\nResponse tapeResult \u003d (Response) tapeController.execByTapeName(\\\"logicModelOnlineSelect\\\", binding);\\nObject dataObj \u003d tapeResult.getData();\\nMap\u003cString, Object\u003e data \u003d JsonUtil.getInstance().read(JsonUtil.getInstance().write(dataObj), Map.class);\\nList\u003cMap\u003cString, Object\u003e\u003e tables \u003d (List\u003cMap\u003cString, Object\u003e\u003e) data.get(\\\"content\\\");\\ntables.forEach(table -\u003e {\\n    table.put(\\\"name\\\", MapUtils.getString(table, \\\"modelName\\\"));\\n    table.put(\\\"label\\\", MapUtils.getString(table, \\\"modelLabel\\\"));\\n});\\nreturn data;\"}",
+      "createUser": "xiacj3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "10.执行脚本",
+        "scriptText": "import com.asiainfo.modo.app.web.TapeController;\nimport io.github.suanchou.utils.JsonUtil;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport io.github.suanchou.web.Response;\nimport org.apache.commons.collections.MapUtils;\nimport org.apache.commons.lang3.StringUtils;\n\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\n\nMap\u003cString, Object\u003e binding \u003d new HashMap();\nbinding.put(\"params\", params);\nString state \u003d MapUtils.getString(params, \"state\");\nif (StringUtils.isNotBlank(state)) {\n    params.put(\"state\", state.replaceAll(\";\", \",\"));\n}\nTapeController tapeController \u003d (TapeController) SpringContextUtil.getBean(\"tapeController\");\nResponse tapeResult \u003d (Response) tapeController.execByTapeName(\"logicModelOnlineSelect\", binding);\nObject dataObj \u003d tapeResult.getData();\nMap\u003cString, Object\u003e data \u003d JsonUtil.getInstance().read(JsonUtil.getInstance().write(dataObj), Map.class);\nList\u003cMap\u003cString, Object\u003e\u003e tables \u003d (List\u003cMap\u003cString, Object\u003e\u003e) data.get(\"content\");\ntables.forEach(table -\u003e {\n    table.put(\"name\", MapUtils.getString(table, \"modelName\"));\n    table.put(\"label\", MapUtils.getString(table, \"modelLabel\"));\n});\nreturn data;"
+      }
+    },
+    {
+      "id": "dataps-139382538014789636",
+      "stepSeq": "13",
+      "parentStepId": "-1",
+      "label": "13.执行脚本",
+      "graphId": "dataps-139382537985429504",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "14",
+      "successStepId": "14",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"13.执行脚本\",\"scriptText\":\"import com.asiainfo.modo.app.web.TapeController;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport io.github.suanchou.web.Response;\\n\\nimport java.util.HashMap;\\nimport java.util.Map;\\n\\n\\nMap\u003cString, Object\u003e binding \u003d new HashMap();\\nisModo \u003d false;\\nTapeController tapeController \u003d (TapeController) SpringContextUtil.getBean(\\\"tapeController\\\");\\nResponse tapeResult \u003d (Response) tapeController.execByTapeName(\\\"oneNModelSrcCtrl\\\", binding);\\nif (\\\"modo\\\".equals(tapeResult.getData())) {\\n    isModo \u003d true;\\n}\"}",
+      "createUser": "xiacj3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "13.执行脚本",
+        "scriptText": "import com.asiainfo.modo.app.web.TapeController;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport io.github.suanchou.web.Response;\n\nimport java.util.HashMap;\nimport java.util.Map;\n\n\nMap\u003cString, Object\u003e binding \u003d new HashMap();\nisModo \u003d false;\nTapeController tapeController \u003d (TapeController) SpringContextUtil.getBean(\"tapeController\");\nResponse tapeResult \u003d (Response) tapeController.execByTapeName(\"oneNModelSrcCtrl\", binding);\nif (\"modo\".equals(tapeResult.getData())) {\n    isModo \u003d true;\n}"
+      }
+    },
+    {
+      "id": "dataps-139382538014789637",
+      "stepSeq": "14",
+      "parentStepId": "-1",
+      "label": "14.条件判断",
+      "graphId": "dataps-139382537985429504",
+      "stepInst": "if",
+      "preStepId": "13",
+      "nextStepId": "2,10",
+      "successStepId": "2,10",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"14.条件判断\",\"expressions\":\"[{\\\"id\\\":\\\"2\\\",\\\"label\\\":\\\"2.执行脚本\\\",\\\"expression\\\":\\\"!isModo\\\",\\\"__ORIGIN_DATA\\\":{\\\"id\\\":\\\"2\\\",\\\"label\\\":\\\"2.执行脚本\\\",\\\"expression\\\":\\\"isModo\\\",\\\"__ORIGIN_DATA\\\":{\\\"id\\\":\\\"2\\\",\\\"label\\\":\\\"2.执行脚本\\\",\\\"expression\\\":\\\"\\\"}}},{\\\"id\\\":\\\"10\\\",\\\"label\\\":\\\"10.执行脚本\\\",\\\"expression\\\":\\\"isModo\\\",\\\"__ORIGIN_DATA\\\":{\\\"id\\\":\\\"10\\\",\\\"label\\\":\\\"10.执行脚本\\\",\\\"expression\\\":\\\"!isModo\\\",\\\"__ORIGIN_DATA\\\":{\\\"id\\\":\\\"10\\\",\\\"label\\\":\\\"10.执行脚本\\\",\\\"expression\\\":\\\"isModo\\\",\\\"__ORIGIN_DATA\\\":{\\\"id\\\":\\\"10\\\",\\\"label\\\":\\\"10.执行脚本\\\",\\\"expression\\\":\\\"！isModo\\\",\\\"__ORIGIN_DATA\\\":{\\\"id\\\":\\\"10\\\",\\\"label\\\":\\\"10.执行脚本\\\",\\\"expression\\\":\\\"isModo\\\",\\\"__ORIGIN_DATA\\\":{\\\"id\\\":\\\"10\\\",\\\"label\\\":\\\"10.执行脚本\\\",\\\"expression\\\":\\\"\\\"}}}}}}]\"}",
+      "createUser": "xiacj3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "14.条件判断",
+        "expressions": "[{\"id\":\"2\",\"label\":\"2.执行脚本\",\"expression\":\"!isModo\",\"__ORIGIN_DATA\":{\"id\":\"2\",\"label\":\"2.执行脚本\",\"expression\":\"isModo\",\"__ORIGIN_DATA\":{\"id\":\"2\",\"label\":\"2.执行脚本\",\"expression\":\"\"}}},{\"id\":\"10\",\"label\":\"10.执行脚本\",\"expression\":\"isModo\",\"__ORIGIN_DATA\":{\"id\":\"10\",\"label\":\"10.执行脚本\",\"expression\":\"!isModo\",\"__ORIGIN_DATA\":{\"id\":\"10\",\"label\":\"10.执行脚本\",\"expression\":\"isModo\",\"__ORIGIN_DATA\":{\"id\":\"10\",\"label\":\"10.执行脚本\",\"expression\":\"！isModo\",\"__ORIGIN_DATA\":{\"id\":\"10\",\"label\":\"10.执行脚本\",\"expression\":\"isModo\",\"__ORIGIN_DATA\":{\"id\":\"10\",\"label\":\"10.执行脚本\",\"expression\":\"\"}}}}}}]"
+      }
+    },
+    {
+      "id": "dataps-139382538014789632",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.TMF参数转换",
+      "graphId": "dataps-139382537985429504",
+      "stepInst": "script",
+      "preStepId": "14",
+      "nextStepId": "5",
+      "successStepId": "5",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.TMF参数转换\",\"scriptText\":\"import org.apache.commons.lang3.StringUtils;\\nimport org.apache.commons.collections.MapUtils;\\nimport java.util.*;\\n\\nconvertParams \u003d new HashMap\u003c\u003e();\\nint limit \u003d MapUtils.getInteger(params, \\\"limit\\\", 10);\\nint offset \u003d MapUtils.getInteger(params, \\\"offset\\\", 0);\\nString _orGroup_ \u003d MapUtils.getString(params, \\\"_orGroup_\\\");\\nString state \u003d MapUtils.getString(params, \\\"state\\\");\\nString teamName \u003d MapUtils.getString(params, \\\"teamName\\\");\\n\\nurl \u003d \\\"open/metamodel/outside/table/canChooseTab/\\\"+teamName;\\nconvertParams.put(\\\"pageNum\\\", offset/limit);\\nconvertParams.put(\\\"pageSize\\\", limit);\\nconvertParams.put(\\\"state\\\", state);\\nif(StringUtils.isNotBlank(_orGroup_)){\\n    convertParams.put(\\\"name\\\", _orGroup_.substring(_orGroup_.indexOf(\\\"%\\\")+1,_orGroup_.lastIndexOf(\\\"%\\\")));\\n}\"}",
+      "createUser": "xiacj3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.TMF参数转换",
+        "scriptText": "import org.apache.commons.lang3.StringUtils;\nimport org.apache.commons.collections.MapUtils;\nimport java.util.*;\n\nconvertParams \u003d new HashMap\u003c\u003e();\nint limit \u003d MapUtils.getInteger(params, \"limit\", 10);\nint offset \u003d MapUtils.getInteger(params, \"offset\", 0);\nString _orGroup_ \u003d MapUtils.getString(params, \"_orGroup_\");\nString state \u003d MapUtils.getString(params, \"state\");\nString teamName \u003d MapUtils.getString(params, \"teamName\");\n\nurl \u003d \"open/metamodel/outside/table/canChooseTab/\"+teamName;\nconvertParams.put(\"pageNum\", offset/limit);\nconvertParams.put(\"pageSize\", limit);\nconvertParams.put(\"state\", state);\nif(StringUtils.isNotBlank(_orGroup_)){\n    convertParams.put(\"name\", _orGroup_.substring(_orGroup_.indexOf(\"%\")+1,_orGroup_.lastIndexOf(\"%\")));\n}"
+      }
+    },
+    {
+      "id": "dataps-139382538014789633",
+      "stepSeq": "5",
+      "parentStepId": "-1",
+      "label": "5.HTTP调用",
+      "graphId": "dataps-139382537985429504",
+      "stepInst": "http",
+      "preStepId": "2",
+      "nextStepId": "7",
+      "successStepId": "7",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"5.HTTP调用\",\"method\":\"GET\",\"url\":\"${url}\",\"jsonHeaders\":\"{\\\"Content-Type\\\":\\\"application/json;charset\u003dUTF-8\\\"}\",\"jsonParams\":\"convertParams\",\"reqContentType\":\"application/json\",\"socketTimeout\":\"30000\",\"variable\":\"result\",\"dataSource\":\"onePlusN_asiainfo_cloud\"}",
+      "createUser": "xiacj3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "5.HTTP调用",
+        "method": "GET",
+        "url": "${url}",
+        "jsonHeaders": "{\"Content-Type\":\"application/json;charset\u003dUTF-8\"}",
+        "jsonParams": "convertParams",
+        "reqContentType": "application/json",
+        "socketTimeout": "30000",
+        "variable": "result",
+        "dataSource": "onePlusN_asiainfo_cloud"
+      }
+    },
+    {
+      "id": "dataps-139382538014789634",
+      "stepSeq": "7",
+      "parentStepId": "-1",
+      "label": "7.执行脚本",
+      "graphId": "dataps-139382537985429504",
+      "stepInst": "script",
+      "preStepId": "5",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"7.执行脚本\",\"scriptText\":\"import org.apache.commons.collections.MapUtils;\\nimport org.springframework.data.domain.PageImpl;\\nimport org.springframework.data.domain.PageRequest;\\nimport org.springframework.data.domain.Pageable;\\n\\nSystem.out.println(result);\\nint limit \u003d MapUtils.getIntValue(params, \\\"limit\\\", 10);\\nint offset \u003d MapUtils.getIntValue(params, \\\"offset\\\", 0);\\nint pageNum \u003d offset/limit;\\nPageable pageable \u003d PageRequest.of(pageNum, limit);\\nreturn new PageImpl\u003c\u003e( (List)result.get(\\\"content\\\"), pageable, MapUtils.getLongValue(result, \\\"totalElements\\\"))\"}",
+      "createUser": "xiacj3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "7.执行脚本",
+        "scriptText": "import org.apache.commons.collections.MapUtils;\nimport org.springframework.data.domain.PageImpl;\nimport org.springframework.data.domain.PageRequest;\nimport org.springframework.data.domain.Pageable;\n\nSystem.out.println(result);\nint limit \u003d MapUtils.getIntValue(params, \"limit\", 10);\nint offset \u003d MapUtils.getIntValue(params, \"offset\", 0);\nint pageNum \u003d offset/limit;\nPageable pageable \u003d PageRequest.of(pageNum, limit);\nreturn new PageImpl\u003c\u003e( (List)result.get(\"content\"), pageable, MapUtils.getLongValue(result, \"totalElements\"))"
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+# Docker Compose for Development Environment
+# This file is optimized for local development with hot reloading
+
+version: '3.8'
+
+services:
+  # Development application with hot reloading
+  odlm-app-dev:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.dev
+    container_name: odlm-python-dev
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENVIRONMENT=development
+      - CONFIG_SERVER__RELOAD=true
+      - CONFIG_SERVER__DEBUG=true
+      - CONFIG_LOGGING__LEVEL=DEBUG
+    volumes:
+      # Mount source code for hot reloading
+      - ..:/app
+      # Mount development config
+      - ./config/development:/app/config:ro
+    depends_on:
+      - mysql-dev
+      - neo4j-dev
+      - qdrant-dev
+    networks:
+      - odlm-dev-network
+    command: ["python", "-m", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+
+  # Development MySQL
+  mysql-dev:
+    image: mysql:8.0
+    container_name: odlm-mysql-dev
+    environment:
+      - MYSQL_ROOT_PASSWORD=dev_password
+      - MYSQL_DATABASE=odlm_dev
+      - MYSQL_USER=dev_user
+      - MYSQL_PASSWORD=dev_password
+    ports:
+      - "3307:3306"  # Different port to avoid conflicts
+    volumes:
+      - mysql_dev_data:/var/lib/mysql
+    networks:
+      - odlm-dev-network
+
+  # Development Neo4j
+  neo4j-dev:
+    image: neo4j:5.15
+    container_name: odlm-neo4j-dev
+    environment:
+      - NEO4J_AUTH=neo4j/dev_password
+    ports:
+      - "7475:7474"  # Different ports to avoid conflicts
+      - "7688:7687"
+    volumes:
+      - neo4j_dev_data:/data
+    networks:
+      - odlm-dev-network
+
+  # Development Qdrant (in-memory mode)
+  qdrant-dev:
+    image: qdrant/qdrant:latest
+    container_name: odlm-qdrant-dev
+    ports:
+      - "6334:6333"  # Different port to avoid conflicts
+      - "6335:6334"
+    volumes:
+      - qdrant_dev_data:/qdrant/storage
+    networks:
+      - odlm-dev-network
+
+networks:
+  odlm-dev-network:
+    driver: bridge
+
+volumes:
+  mysql_dev_data:
+  neo4j_dev_data:
+  qdrant_dev_data:

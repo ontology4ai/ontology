@@ -1,0 +1,14 @@
+{
+  "properties" : { },
+  "id" : "beda2e33e47a4a7ab0f32c484f3047dc",
+  "name" : "大模型函数",
+  "type" : "function",
+  "parentId" : "0",
+  "path" : "llm",
+  "createTime" : 1715138034683,
+  "updateTime" : null,
+  "createBy" : null,
+  "updateBy" : null,
+  "paths" : [ ],
+  "options" : [ ]
+}

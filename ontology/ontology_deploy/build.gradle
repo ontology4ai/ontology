@@ -1,0 +1,147 @@
+
+plugins {
+    id 'java'
+    id 'java-library'
+    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+}
+
+
+
+group = 'com.asiainfo.modo'
+version = '1.0.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenLocal()
+    maven { url "https://maven.aliyun.com/nexus/content/repositories/central/" }
+    maven {
+        setAllowInsecureProtocol(true)
+        url "http://10.19.83.120/nexus/content/repositories/snapshots/"
+    }
+    maven {
+        setAllowInsecureProtocol(true)
+        url "http://10.19.83.120/nexus/content/repositories/releases/"
+    }
+    maven {
+        setAllowInsecureProtocol(true)
+        url "http://10.19.83.120/nexus/content/repositories/public/"
+    }
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(":ontology")
+}
+
+
+
+tasks.register('copyConfigFile', Copy) {
+   
+    
+    // 清除目标目录
+    delete "$buildDir/libs/build/resources/frontend"
+    // 从 src/main/resources/frontend 复制文件
+    from('src/main/resources/frontend')
+    // 复制到 build/libs/build/resources/frontend
+    into "$buildDir/libs/build/resources/frontend"
+    
+    
+   
+}
+tasks.register('copyConfigYaml', Copy) { 
+     //delete "$buildDir/libs"  
+     from('src/main/resources/application-prod.yaml')
+     into "$buildDir/libs"
+    
+     from('src/main/resources/application.yaml')
+     into "$buildDir/libs"
+    
+     from('src/main/resources/application-dev.yaml')
+     into "$buildDir/libs" 
+     
+     from('src/main/resources/start.sh')
+     into "$buildDir/libs"
+
+     from('src/main/resources/stop.sh')
+     into "$buildDir/libs"
+             
+}
+
+tasks.register('copyConfigApp', Copy) {   
+    delete "$buildDir/libs/build/resources/application"
+    from('src/main/resources/application')
+    into "$buildDir/libs/build/resources/application"         
+}
+
+tasks.register('copyModoJar', Copy) {   
+   from configurations.runtimeClasspath
+    // 指定目标目录
+    into "${buildDir}/libs/lib"
+}
+
+tasks.register('copyFrontend', Copy) {   
+    delete "$buildDir/libs/build/resources/frontend"
+    from('src/main/resources/frontend')
+    into "$buildDir/libs/build/resources/frontend"         
+}
+
+//task unjarTask(type: Copy) {
+//    def specificJar = configurations.runtimeClasspath.find { file ->
+ //         file.name.startsWith('data_supply-') && file.name.endsWith('.jar')
+//    }
+ //   from zipTree(specificJar)
+//    into "${buildDir}/libs/unpacked"
+ //   dependsOn(':data_supply:jar')
+    
+//}
+
+Set<File> getThirdPartJars() {
+    configurations.runtimeClasspath.files.findAll { it-> true/*!(it.name.startsWith('ontology') && it.name.endsWith('.jar'))*/ }
+}
+
+
+bootJar {
+    // 排除 src/main/resources/frontend 文件夹
+    //excludes = ["**/frontend/**"]
+    excludes = ["**/frontend/**","**/application/**","*.yaml","*.sh", "*.jar"]
+    // 依赖 copyConfigFile 任务
+ //   dependsOn unjarTask 
+    dependsOn copyConfigYaml
+    dependsOn copyConfigFile
+    dependsOn copyConfigApp
+    dependsOn copyModoJar  
+    
+//      exclude { details ->
+//        // 使用正则表达式匹配文件名
+//        def pattern = ~/(?!.*dmg_copilot).*\.jar$/
+//        return details.file.name ==~ pattern
+//    }
+
+  //  from("${buildDir}/libs/unpacked"){
+ //      into "/BOOT-INF/classes"
+ //   } 
+    
+  //  doLast {
+        // 在 bootJar 完成后删除指定的文件或目录
+  //     delete "$buildDir/libs/unpacked"
+ //      delete fileTree(dir: "${buildDir}/libs/lib", include: "data_supply-*.jar")
+ //   }
+    manifest.attributes.put('Class-Path',getThirdPartJars().collect { "lib/$it.name" }.join(' '))
+
+    
+}
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

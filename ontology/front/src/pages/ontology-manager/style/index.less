@@ -1,0 +1,587 @@
+.ontology-manager-spin {
+  width: 100%;
+  height: 100%;
+  & > .arco-spin-children {
+    width: 100%;
+    height: 100%;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    background: var(--color-fill-2);
+
+    &::after {
+      z-index: 1002;
+    }
+  }
+
+  & > .arco-spin-loading-layer {
+    .arco-spin-loading-layer-inner {
+      z-index: 1003;
+    }
+  }
+}
+.ontology-manager {
+  width: 100%;
+  height: 100%;
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 6px;
+  box-shadow: 0px 2px 5px rgba(36, 46, 67, 0.1);
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  * {
+    box-sizing: border-box;
+  }
+  .ontology-manager-header {
+    height: 45px;
+    line-height: 24px;
+    border-bottom: 1px solid var(--color-border-1);
+    display: flex;
+    overflow: hidden;
+    .pos-left {
+      flex: 1;
+      padding: 10px 16px !important;
+      display: flex;
+      overflow: hidden;
+      &.single-ontology {
+        .arco-tabs-header .arco-tabs-header-title:first-child {
+          display: none;
+        }
+      }
+      .title-container {
+        cursor: pointer;
+      }
+      .title {
+        color: var(--color-text-1);
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .icon svg {
+        font-size: 14px;
+        color: var(--color-text-2);
+        margin-right: 6px;
+      }
+      .modo-tabs {
+        height: 44px;
+        flex: 1;
+        margin-left: 16px;
+        margin-top: -8px;
+        overflow: hidden;
+        .arco-tabs-header-nav {
+          box-shadow: none;
+        }
+        .arco-tabs-header-extra {
+          display: none;
+        }
+      }
+    }
+    .pos-right {
+      padding: 8px 16px;
+      display: flex;
+      gap: 16px;
+      .arco-input-inner-wrapper {
+        width: 200px;
+        border-radius: 12px;
+      }
+      .arco-badge-number {
+        top: 4px;
+        right: 14px;
+      }
+      .save {
+        // width: 72px;
+        padding: 0 23px;
+        // margin-right: 8px;
+        // margin-left: 8px;
+        border-radius: 28px;
+        flex-shrink: 0;
+      }
+      .more-action {
+        display: flex;
+        padding: var(---size-2, 8px);
+        justify-content: center;
+        align-items: center;
+        border-radius: var(--border-radius-circle, 50%);
+        background: var(--color-fill-2, #eff4f9);
+      }
+    }
+  }
+  .placeholder {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+  }
+  .overview {
+    background: var(--color-white);
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    height: calc(100% - 45px);
+  }
+  .ontology-manager-content {
+    padding: 0px 16px 16px;
+    flex: 1;
+    overflow: auto;
+    .filter-result-info {
+      height: 36px;
+      padding: 7px 16px;
+      margin: 0px -16px;
+      background: var(--color-fill-1);
+      color: var(--color-text-1);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 22px;
+      .key {
+        color: var(--color-primary-6);
+      }
+    }
+    .ontology-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 16px;
+      .ontology-item {
+        width: calc((100% - 24px) / 3);
+        margin-right: 12px;
+        margin-bottom: 12px;
+        height: 152px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 4px;
+        border: 1px solid var(--color-border-2);
+        cursor: pointer;
+        &:nth-child(3n) {
+          margin-right: 0px;
+        }
+        &:hover {
+          box-shadow: 0px 2px 5px 0px rgba(36, 46, 67, 0.1);
+          .upload-link {
+          }
+        }
+        &.create {
+          border: 1px dashed var(--color-primary-light-4);
+          color: var(--color-primary-6);
+          line-height: 152px;
+          text-align: center;
+          position: relative;
+          cursor: pointer;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .text-link {
+           /* position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: -12px;*/
+            display: inline-block;
+            height: 28px;
+            line-height: 28px;
+            svg {
+              margin-right: 4px;
+            }
+          }
+          &:hover {
+            border: 1px dashed var(--color-primary-light-3);
+            color: var(--color-primary-7);
+            box-shadow: 0px 2px 5px 0px rgba(36, 46, 67, 0.1);
+          }
+        }
+        .ontology-item-header {
+          display: flex;
+          padding: 16px 16px 8px;
+          .icon {
+            padding-top: 4px;
+            margin-right: 10px;
+            .icon-bg {
+              width: 34px;
+              height: 34px;
+              border-radius: 34px;
+              font-size: 16px;
+              line-height: 34px;
+              text-align: center;
+              background: var(--color-primary-light-1);
+              color: var(--color-primary-6);
+            }
+          }
+          .info {
+            flex: 1;
+            overflow: hidden;
+            .ontology-item-label {
+              color: var(--color-text-1);
+              text-overflow: ellipsis;
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 22px;
+              width: 100%;
+              overflow: hidden;
+              white-space: nowrap;
+              span {
+                display: inline-block;
+                max-width: 100%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+              }
+            }
+            .ontology-item-name {
+              color: var(--color-text-3);
+              line-height: 20px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+          .build-status-button {
+            background: var(--color-primary-light-1);
+            color: var(--color-primary-6);
+          }
+        }
+        .ontology-item-content {
+          flex: 1;
+          padding: 0px 16px;
+          line-height: 20px;
+          .label {
+            color: var(--color-text-3);
+          }
+          .value {
+            color: var(--color-text-1);
+            &.descr {
+              max-width: calc(100% - 40px);
+              display: inline-block;
+              text-overflow: ellipsis;
+              vertical-align: bottom;
+              white-space: nowrap;
+              overflow: hidden;
+            }
+          }
+          .sub-info > div {
+            display: inline-block;
+            &.version {
+              margin-left: 16px;
+            }
+          }
+        }
+        .ontology-item-footer {
+          height: 38px;
+          line-height: 22px;
+          padding: 8px 16px;
+          border-top: 1px solid var(--color-border-2);
+          display: flex;
+          .info {
+            flex: 1;
+            overflow: hidden;
+            .label {
+              color: var(--color-text-3);
+            }
+            .value {
+              color: var(--color-text-2);
+            }
+          }
+          .oper-group {
+            button {
+              padding: 0px 4px;
+            }
+            button:hover,
+            button:active {
+              // background: var(--color-white);
+              // color: var(--color-primary-7);
+            }
+            .split {
+              display: inline-block;
+              width: 1px;
+              height: 10px;
+              margin: 0px 6px;
+              background: var(--color-border-2);
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+      .upload-link {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) translateY(12px);
+        height: 28px;
+        top: 50%;
+        .arco-upload-trigger {
+          line-height: 28px;
+          & > div > .arco-btn {
+            width: 100%;
+          }
+        }
+        .arco-upload-type-text {
+          width: 100%;
+        }
+      }
+      .upload-file{
+        height: 28px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  .ontology-manager-footer {
+    height: 36px;
+    padding: 6px 16px;
+    background: var(--color-fill-1);
+  }
+}
+
+.ontology-create-modal {
+  .arco-modal-header {
+    height: 44px;
+    .arco-modal-title {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 22px;
+      color: var(--color-text-1);
+    }
+  }
+  .arco-modal-footer {
+    padding: 8px 20px;
+    button {
+      width: 72px;
+      margin-left: 8px;
+    }
+  }
+  .arco-radio-group {
+    display: flex;
+    column-gap: 10px;
+  }
+  .arco-radio {
+    margin-right: 0px;
+    width: calc((100% - 20px) / 3);
+    padding-left: 0px;
+  }
+  .arco-upload{
+    width: 100%;
+    .arco-upload-trigger {
+    box-sizing: border-box;
+    padding: 20px 12px;
+    color: var(--color-text-3);
+    border-radius: var(-----border-radius-small, 2px);
+    background: var(--color-fill-2, #eff4f9);
+    text-align: center;
+  }
+  }
+
+  input[name='button-radio-group']:focus-visible + .arco-btn {
+    box-shadow: 0 0 0 2px var(--color-primary-light-3);
+  }
+
+  .custom-radio-card {
+    padding: 10px 16px;
+    border: 1px solid var(--color-border-2);
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .custom-radio-card-mask {
+    height: 14px;
+    width: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 1px solid var(--color-border-2);
+    box-sizing: border-box;
+  }
+
+  .custom-radio-card-mask-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+  }
+
+  .custom-radio-card-title {
+    color: var(--color-text-2);
+    font-size: 12px;
+  }
+
+  input[name='card-radio-group']:focus-visible + .custom-radio-card {
+    box-shadow: 0 0 0 2px var(--color-primary-light-3);
+  }
+
+  .custom-radio-card:hover,
+  .custom-radio-card-checked,
+  .custom-radio-card:hover .custom-radio-card-mask,
+  .custom-radio-card-checked .custom-radio-card-mask {
+    border-color: rgb(var(--primary-6));
+  }
+
+  .custom-radio-card-checked {
+    background-color: var(--color-primary-light-1);
+  }
+
+  .custom-radio-card:hover .custom-radio-card-title,
+  .custom-radio-card-checked .custom-radio-card-title {
+    color: rgb(var(--primary-6));
+  }
+
+  .custom-radio-card-checked .custom-radio-card-mask-dot {
+    background-color: rgb(var(--primary-6));
+  }
+  .arco-radio-disabled {
+    .custom-radio-card {
+      border: 1px solid var(--color-border-1);
+      background: var(--color-fill-1);
+    }
+    .custom-radio-card-mask {
+      border: 1px solid var(--color-border-1);
+    }
+    .custom-radio-card-title {
+      color: var(--color-text-3);
+    }
+    .custom-radio-card:hover,
+    .custom-radio-card-checked,
+    .custom-radio-card:hover .custom-radio-card-mask,
+    .custom-radio-card-checked .custom-radio-card-mask {
+      border-color: var(--color-border-1);
+    }
+    .custom-radio-card:hover .custom-radio-card-title,
+    .custom-radio-card-checked .custom-radio-card-title {
+      color: var(--color-text-3);
+    }
+  }
+}
+.new-menu {
+  svg {
+    margin-right: 8px;
+  }
+  .create-btn-group {
+    padding: 0 var(--size-3, 12px);
+    color: var(--color-text-3, #79879c);
+    line-height: 20px;
+  }
+}
+.arco-popconfirm-content {
+  .arco-popconfirm-btn {
+    button {
+      margin-left: 8px;
+    }
+  }
+}
+.import-modal {
+  .arco-modal-header {
+    height: 44px;
+    .arco-modal-title {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 22px;
+      color: var(--color-text-1);
+    }
+  }
+  .arco-modal-footer {
+    padding: 8px 20px;
+    button {
+      width: 72px;
+      margin-left: 8px;
+    }
+  }
+  .arco-upload {
+    width: 100%;
+    overflow: hidden;
+  }
+  .arco-upload-trigger {
+    padding: 20px 12px;
+    color: var(--color-text-3);
+    border-radius: var(-----border-radius-small, 2px);
+    background: var(--color-fill-2, #eff4f9);
+    text-align: center;
+    .text {
+      color: var(--color-text-2, #4d5e7d);
+      line-height: 20px;
+    }
+    .tips {
+      color: var(--color-text-3, #4d5e7d);
+      line-height: 20px;
+      margin-top: 4px;
+    }
+    .icon {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+  }
+  .rdf-upload.arco-upload-list .arco-upload-list-item {
+    border-radius: var(--border-radius-small, 2px);
+    background: var(--color-fill-2, #eff4f9);
+    .arco-upload-list-item-text {
+      background-color: transparent;
+    }
+    .arco-upload-list-item-operation {
+      right: 12px;
+      .arco-icon-hover {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+.more-action-menu {
+  display: flex;
+  width: 120px;
+  padding: var(--size-1, 4px) 0;
+  align-items: center;
+  gap: var(--size-2, 8px);
+  .arco-dropdown-menu-inner {
+    width: 100%;
+  }
+  .arco-dropdown-menu-item,
+  .arco-dropdown-menu-pop-header {
+    padding: 0 12px;
+  }
+  .arco-dropdown-menu-item {
+    padding: 0 12px;
+  }
+  .menu-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+.arco-dropdown-menu {
+  .menu-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+.progress-modal {
+  width: 32%;
+  top: 40px;
+  .arco-modal-content {
+    padding: 9px 12px;
+    border-radius: var(--border-radius-small, 2px);
+    border: 1px solid var(--color-primary-light-4, #739ce2);
+    background: var(--color-primary-light-1, #e8f3ff);
+  }
+  .publish-progress {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    .moda-icon {
+      color: var(--color-primary-7);
+      font-size: 14px;
+      margin-right: 3px;
+    }
+    .title {
+      display: flex;
+      align-items: center;
+    }
+    .progress-wrapper {
+      flex: 1;
+      height: 8px;
+      border-radius: 60px;
+      background: #fff;
+      .progress {
+        height: 100%;
+        border-radius: 60px;
+        background: var(---color-primary-6, #3261ce);
+        transition: 'width 0.3s ease';
+      }
+    }
+  }
+}

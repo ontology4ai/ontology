@@ -1,0 +1,40 @@
+{
+  "id": "212940907481542656",
+  "name": "listTeamArchModelNum",
+  "label": "获取架构节点团队模型数",
+  "descr": "获取架构节点团队模型数",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"380\" y\u003d\"270\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236063466669670400",
+  "respContentType": "application/json",
+  "url": "list/team/arch/model/num",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\"body\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[{\"name\":\"teamName\",\"id\":\"f2bb2c92-ff1c-4a17-9f6e-81bef9e962e3\",\"required\":\"1\",\"type\":\"string\",\"desc\":\"\",\"disabled\":false},{\"name\":\"nodeIds\",\"id\":\"795d54eb-3450-4af1-8aef-c11aedfa526f\",\"required\":\"1\",\"type\":\"array\",\"desc\":\"\",\"disabled\":false,\"children\":[{\"name\":\"items\",\"required\":\"0\",\"type\":\"string\",\"desc\":\"\",\"disabled\":true,\"id\":\"6db37a0a-40fd-4ffa-ac12-5d1258d1965c\"}]}]}],\"headers\":[],\"query\":[]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "232874881633968128",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "212940907481542656",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport java.util.*;\\n\\n\\n\\n    public Object ListArchModelNum(Map\u003cString, Object\u003e body) {\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        Set\u003cString\u003e numIds \u003d new HashSet\u003c\u003e();\\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select p.prop_value, count(*) num from dataps_model_busi_prop_draft p left join dataps_logic_model_draft t on p.model_id\u003dt.id where t.team_name\u003d:teamName and p.prop_value in (:nodeIds) group by prop_value\\\", body));\\n        list.forEach(map -\u003e {\\n            int num \u003d MapUtils.getIntValue(map, \\\"num\\\", 0);\\n            if (num \u003e 0) {\\n                numIds.add(MapUtils.getString(map, \\\"propValue\\\"));\\n            }\\n        });\\n        list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select p.prop_value, count(*) num from dataps_model_busi_prop p left join dataps_logic_model t on p.model_id\u003dt.id where t.team_name\u003d:teamName and p.prop_value in (:nodeIds) group by prop_value\\\", body));\\n        list.forEach(map -\u003e {\\n            int num \u003d MapUtils.getIntValue(map, \\\"num\\\", 0);\\n            if (num \u003e 0) {\\n                numIds.add(MapUtils.getString(map, \\\"propValue\\\"));\\n            }\\n        });\\n        return new ArrayList\u003c\u003e(numIds);\\n    }\\n\\n\\nreturn ListArchModelNum(body);\",\"label\":\"2.执行脚本\"}",
+      "createUser": "chengkai3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport java.util.*;\n\n\n\n    public Object ListArchModelNum(Map\u003cString, Object\u003e body) {\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        Set\u003cString\u003e numIds \u003d new HashSet\u003c\u003e();\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select p.prop_value, count(*) num from dataps_model_busi_prop_draft p left join dataps_logic_model_draft t on p.model_id\u003dt.id where t.team_name\u003d:teamName and p.prop_value in (:nodeIds) group by prop_value\", body));\n        list.forEach(map -\u003e {\n            int num \u003d MapUtils.getIntValue(map, \"num\", 0);\n            if (num \u003e 0) {\n                numIds.add(MapUtils.getString(map, \"propValue\"));\n            }\n        });\n        list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select p.prop_value, count(*) num from dataps_model_busi_prop p left join dataps_logic_model t on p.model_id\u003dt.id where t.team_name\u003d:teamName and p.prop_value in (:nodeIds) group by prop_value\", body));\n        list.forEach(map -\u003e {\n            int num \u003d MapUtils.getIntValue(map, \"num\", 0);\n            if (num \u003e 0) {\n                numIds.add(MapUtils.getString(map, \"propValue\"));\n            }\n        });\n        return new ArrayList\u003c\u003e(numIds);\n    }\n\n\nreturn ListArchModelNum(body);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+[{
+	"id": "m1",
+	"type": "layout",
+	"options": {
+		"className": "modo-layout",
+		"style": {
+			"height": "100%"
+		}
+	},
+	"children": [
+		{
+			"id": "m10",
+			"type": "header",
+			"options": {
+				"className": "modo-header",
+				"style": {
+					"height": "40px",
+					"background": "var(--color-neutral-1)"
+				}
+			}
+		},
+		{
+			"id": "m11",
+			"type": "content",
+			"options": {
+				"className": "modo-content",
+				"style": {
+					"background": "var(--color-white)"
+				}
+			},
+			"children": [
+				{
+					"id": "m110",
+					"type": "table",
+					"label": "表格",
+					"options": {
+						"rowKey": "name",
+						"columns": [{
+    						"title": "Name",
+    						"dataIndex": "name"
+  						},
+  						{
+    						"title": "Email",
+    						"dataIndex": "email"
+  						}],
+						"data": [{
+						    "name": "Jane Doe",
+						    "email": "jane.doe@example.com"
+						},
+						{
+						    "name": "Alisa Ross",
+						    "email": "alisa.ross@example.com"
+						},
+						{
+						    "name": "Kevin Sandra",
+						    "email": "kevin.sandra@example.com"
+						}]
+					}
+				},
+				{
+					"id": "m112",
+					"type": "form",
+					"options": {
+						"labelAlign": "left",
+						"labelCol": {
+							"span": 1
+						},
+						"wrapperCol": {
+							"span": 23
+						}
+					},
+					"children": [
+						{
+							"id": "m1120",
+							"type": "formItem",
+							"options": {
+								"noStyle": true
+							},
+							"children": [
+								{
+									"id": "row1",
+									"type": "row",
+									"options": {
+										"gutter": 10
+									},
+									"children": [
+										{
+											"id": "col1",
+											"type": "col",
+											"options": {
+												"span": 12
+											},
+											"children": [
+												{
+													"id": "m11201",
+													"type": "formItem",
+													"options": {
+														"label": "表单项",
+														"labelCol": {
+															"span": 2
+														},
+														"wrapperCol": {
+															"span": 22
+														}
+													},
+													"children": [
+														{
+															"id": "m112011",
+															"type": "input",
+															"options": {
+																"placeholder": "please enter your post..."
+																
+															}
+														}
+													]
+												}
+											]
+										},
+										{
+											"id": "col2",
+											"type": "col",
+											"options": {
+												"span": 12
+											},
+											"children": [
+												{
+													"id": "m11201",
+													"type": "formItem",
+													"options": {
+														"label": "表单项",
+														"labelCol": {
+															"span": 2
+														},
+														"wrapperCol": {
+															"span": 22
+														}
+													},
+													"children": [
+														{
+															"id": "m112011",
+															"type": "input",
+															"options": {
+																"placeholder": "please enter your post..."
+																
+															}
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "m1121",
+							"type": "formItem",
+							"options": {
+								"label": "表单项"
+							},
+							"children": [
+								{
+									"id": "m11211",
+									"type": "input",
+									"options": {
+										"placeholder": "please enter your post..."
+										
+									}
+								}
+							]
+						},
+						{
+							"id": "m1122",
+							"type": "formItem",
+							"options": {
+								"wrapperCol": {
+									"offset": 1
+								}
+							},
+							"children": [
+								{
+									"id": "m11221",
+									"type": "button",
+									"label": "重置",
+									"options": {
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "m12",
+			"type": "footer",
+			"options": {
+				"className": "modo-footer",
+				"style": {
+					"height": "40px",
+					"background": "var(--color-neutral-1)"
+				}
+			}
+		}
+	]
+}]

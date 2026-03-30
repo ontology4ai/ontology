@@ -1,0 +1,84 @@
+{
+  "id": "245587372905156608",
+  "name": "getModelDevDsOptions",
+  "label": "获取模型开发支持的数据库选项",
+  "descr": "获取模型开发支持的数据库选项",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"320\" y\u003d\"230\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"3\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-httpdiaoyong;title\u003d3.HTTP调用\" title\u003d\"HTTP调用\" modelData\u003d\"\" stepInst\u003d\"http\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"490\" y\u003d\"240\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"4\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"2\" target\u003d\"3\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"5\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d5.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"670\" y\u003d\"240\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"6\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"3\" target\u003d\"5\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "",
+  "respContentType": "application/json",
+  "url": "get/model/dev/ds/options",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\n    \"headers\": [],\n    \"query\": [\n        {\n            \"id\": \"5899748c-a618-4e12-a3a5-b72610d5ecc3\",\n            \"name\": \"workspaceId\",\n            \"required\": \"1\",\n            \"example\": \"\",\n            \"desc\": \"\"\n        },\n        {\n            \"id\": \"d850a271-2868-4b34-bae9-068ee6eabd28\",\n            \"name\": \"dsCategory\",\n            \"required\": \"1\",\n            \"example\": \"\",\n            \"desc\": \"\"\n        }\n    ]\n}",
+  "apiOutputParams": "{\n    \"mockJson\": \"\",\n    \"responseBody\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ]\n}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "8a7499568fc78ab001900a6686e00033",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "245587372905156608",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "3",
+      "successStepId": "3",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"import com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport java.util.ArrayList;\\nimport java.util.List;\\nimport java.util.Map;\\n\\n\\n\\n    public Object getDsTypes(Map\u003cString, Object\u003e params) {\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        List\u003cString\u003e dsTypes \u003d new ArrayList\u003c\u003e();\\n        jt.queryForList(\\\"select name from dataps_sys_enums_def where name like \u0027%FieldDataType\u0027\\\", params).forEach(map -\u003e {\\n            String name \u003d MapUtils.getString(map, \\\"name\\\");\\n            dsTypes.add(name.substring(0, name.indexOf(\\\"FieldDataType\\\")));\\n        });\\n        return dsTypes;\\n    }\\n    \\n    public Object checkDevProSchemaGroup(Map\u003cString, Object\u003e params) {\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        List\u003cString\u003e dsTypes \u003d new ArrayList\u003c\u003e();\\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select prop_label from dacp_meta_property where prop_name\u003d\u0027devProSchemaGroup\u0027\\\", params));\\n        String devProSchemaGroup \u003d \\\"1\\\";\\n        for (Map\u003cString, Object\u003e map : list) {\\n            devProSchemaGroup \u003d MapUtils.getString(map, \\\"propLabel\\\");\\n        }\\n        return devProSchemaGroup;\\n    }\\n\\ntargetDsTypes \u003d getDsTypes(params);\\ndevProSchemaGroup \u003d checkDevProSchemaGroup(params);\",\"label\":\"2.执行脚本\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "import com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport java.util.ArrayList;\nimport java.util.List;\nimport java.util.Map;\n\n\n\n    public Object getDsTypes(Map\u003cString, Object\u003e params) {\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        List\u003cString\u003e dsTypes \u003d new ArrayList\u003c\u003e();\n        jt.queryForList(\"select name from dataps_sys_enums_def where name like \u0027%FieldDataType\u0027\", params).forEach(map -\u003e {\n            String name \u003d MapUtils.getString(map, \"name\");\n            dsTypes.add(name.substring(0, name.indexOf(\"FieldDataType\")));\n        });\n        return dsTypes;\n    }\n    \n    public Object checkDevProSchemaGroup(Map\u003cString, Object\u003e params) {\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        List\u003cString\u003e dsTypes \u003d new ArrayList\u003c\u003e();\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select prop_label from dacp_meta_property where prop_name\u003d\u0027devProSchemaGroup\u0027\", params));\n        String devProSchemaGroup \u003d \"1\";\n        for (Map\u003cString, Object\u003e map : list) {\n            devProSchemaGroup \u003d MapUtils.getString(map, \"propLabel\");\n        }\n        return devProSchemaGroup;\n    }\n\ntargetDsTypes \u003d getDsTypes(params);\ndevProSchemaGroup \u003d checkDevProSchemaGroup(params);",
+        "label": "2.执行脚本"
+      }
+    },
+    {
+      "id": "8a7499568fc78ab001900a6686e00034",
+      "stepSeq": "3",
+      "parentStepId": "-1",
+      "label": "3.HTTP调用",
+      "graphId": "245587372905156608",
+      "stepInst": "http",
+      "preStepId": "2",
+      "nextStepId": "5",
+      "successStepId": "5",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"3.HTTP调用\",\"method\":\"GET\",\"url\":\"_api/_/workspace/ds-list\",\"dataSource\":\"_common__http_service\",\"jsonHeaders\":\"{\\\"Content-Type\\\":\\\"application/json;charset\u003dUTF-8\\\"}\",\"jsonParams\":\"params\",\"reqContentType\":\"application/json\",\"socketTimeout\":\"30000\",\"variable\":\"result\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "3.HTTP调用",
+        "method": "GET",
+        "url": "_api/_/workspace/ds-list",
+        "dataSource": "_common__http_service",
+        "jsonHeaders": "{\"Content-Type\":\"application/json;charset\u003dUTF-8\"}",
+        "jsonParams": "params",
+        "reqContentType": "application/json",
+        "socketTimeout": "30000",
+        "variable": "result"
+      }
+    },
+    {
+      "id": "8a7499568fc78ab001900a6686e00035",
+      "stepSeq": "5",
+      "parentStepId": "-1",
+      "label": "5.执行脚本",
+      "graphId": "245587372905156608",
+      "stepInst": "script",
+      "preStepId": "3",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"5.执行脚本\",\"scriptText\":\"import java.util.*;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.lang3.StringUtils;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport io.github.suanchou.utils.JsonUtil;\\nimport io.github.suanchou.utils.StringUtil;\\nimport java.text.SimpleDateFormat;\\nimport java.util.stream.Collectors;\\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport java.util.ArrayList;\\nimport java.util.HashMap;\\nimport java.util.List;\\nimport java.util.Map;\\nimport java.util.stream.Collectors;\\n\\npublic Object getDss(List\u003cString\u003e dsNames, Map\u003cString, Object\u003e params) {\\n    String workspaceId \u003d MapUtils.getString(params, \\\"workspaceId\\\");\\n    String teamName \u003d getWorkspaceTeamName(workspaceId);\\n    params.put(\\\"teamName\\\", teamName);\\n    params.put(\\\"dsNames\\\", dsNames);\\n    NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n    List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select ds.ds_category,td.ds_conf,td.ds_schema,ds.ds_type,ds.ds_version,ds.ds_label label,ds.ds_name name from modo_team_ds td left join modo_datasource ds on td.ds_name\u003dds.ds_name where team_name\u003d:teamName and ds.ds_name in (:dsNames) and td.ds_profile\u003d\u0027pro\u0027\\\", params));\\n    return list;\\n}\\n\\nprivate String getWorkspaceTeamName(String workspaceId) {\\n    NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n    Map\u003cString, Object\u003e params \u003d new HashMap\u003c\u003e();\\n    params.put(\\\"id\\\", workspaceId);\\n    List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select team_name from dataos_platform_workspace where id\u003d:id\\\", params));\\n    String teamName \u003d null;\\n    for (Map\u003cString, Object\u003e map : list) {\\n        teamName \u003d MapUtils.getString(map, \\\"teamName\\\");\\n    }\\n    return teamName;\\n}\\n\\nreturn result.data.stream().filter(ds-\u003e{\\n    String dsType \u003d MapUtils.getString(ds, \\\"dsType\\\");\\n    return targetDsTypes.contains(dsType);\\n}).collect(Collectors.toList());\\n\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "5.执行脚本",
+        "scriptText": "import java.util.*;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.lang3.StringUtils;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport org.apache.commons.collections.MapUtils;\nimport io.github.suanchou.utils.JsonUtil;\nimport io.github.suanchou.utils.StringUtil;\nimport java.text.SimpleDateFormat;\nimport java.util.stream.Collectors;\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport java.util.ArrayList;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\nimport java.util.stream.Collectors;\n\npublic Object getDss(List\u003cString\u003e dsNames, Map\u003cString, Object\u003e params) {\n    String workspaceId \u003d MapUtils.getString(params, \"workspaceId\");\n    String teamName \u003d getWorkspaceTeamName(workspaceId);\n    params.put(\"teamName\", teamName);\n    params.put(\"dsNames\", dsNames);\n    NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n    List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select ds.ds_category,td.ds_conf,td.ds_schema,ds.ds_type,ds.ds_version,ds.ds_label label,ds.ds_name name from modo_team_ds td left join modo_datasource ds on td.ds_name\u003dds.ds_name where team_name\u003d:teamName and ds.ds_name in (:dsNames) and td.ds_profile\u003d\u0027pro\u0027\", params));\n    return list;\n}\n\nprivate String getWorkspaceTeamName(String workspaceId) {\n    NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n    Map\u003cString, Object\u003e params \u003d new HashMap\u003c\u003e();\n    params.put(\"id\", workspaceId);\n    List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select team_name from dataos_platform_workspace where id\u003d:id\", params));\n    String teamName \u003d null;\n    for (Map\u003cString, Object\u003e map : list) {\n        teamName \u003d MapUtils.getString(map, \"teamName\");\n    }\n    return teamName;\n}\n\nreturn result.data.stream().filter(ds-\u003e{\n    String dsType \u003d MapUtils.getString(ds, \"dsType\");\n    return targetDsTypes.contains(dsType);\n}).collect(Collectors.toList());\n"
+      }
+    }
+  ]
+}

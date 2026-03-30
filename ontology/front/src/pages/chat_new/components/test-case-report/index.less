@@ -1,0 +1,33 @@
+.test-case-report-page {
+  padding: 20px;
+  height: 100%;
+  overflow: auto;
+
+  .test-case-report-header {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .test-status {
+    display: flex;
+    align-items: center;
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      margin-right: 4px;
+    }
+  }
+
+  .prompt-tag {
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+

@@ -1,0 +1,39 @@
+{
+  "id": "8a7494bd8f51c770018f52441a31000f",
+  "name": "copilotPgTest",
+  "label": "Copilot测试",
+  "descr": "Copilot测试接口",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"330\" y\u003d\"180\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "8a7494bd8f51c770018f51cab8ac0001",
+  "respContentType": "application/json",
+  "url": "copilotPgTest",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\n    \"body\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": [\n                {\n                    \"name\": \"pgID\",\n                    \"id\": \"b6f11006-e0b0-4a6a-8b89-06f01a84dde5\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"程序ID\",\n                    \"disabled\": false\n                },\n                {\n                    \"name\": \"pgType\",\n                    \"id\": \"81e57cbb-1300-4874-9eef-1f5b7865769e\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"程序类型：程序解析、解释、注释\",\n                    \"disabled\": false\n                }\n            ]\n        }\n    ],\n    \"headers\": [],\n    \"query\": []\n}",
+  "apiOutputParams": "{\n    \"mockJson\": \"\",\n    \"responseBody\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ]\n}",
+  "createUser": "zouyc",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "8a7494bd8f51c770018f532069d70023",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "8a7494bd8f51c770018f52441a31000f",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import java.util.*;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.lang3.StringUtils;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport io.github.suanchou.utils.JsonUtil;\\nimport org.springframework.http.HttpEntity;\\nimport org.springframework.http.HttpHeaders;\\nimport org.springframework.http.MediaType;\\nimport org.springframework.web.client.RestTemplate;\\n\\nString pgType \u003d MapUtils.getString(body, \\\"pgType\\\");\\nString url \u003d \\\"\\\";\\nswitch (pgType) {\\n    case \\\"sqlcompletionsql\\\":\\n        url \u003d \\\"http://dataps-fengwen.modo.asiainfo.com.cn/dataps/api/open/sql/\\\" + pgType;\\n        break;\\n    case \\\"sqlexplain\\\":\\n        url \u003d \\\"http://dataps-fengwen.modo.asiainfo.com.cn/dataps/api/open/sql/\\\" + pgType;\\n        break;\\n    case \\\"sqlrevise\\\":\\n        url \u003d \\\"http://dataps-fengwen.modo.asiainfo.com.cn/dataps/api/open/sql/\\\" + pgType;\\n        break;\\n    case \\\"sqloptimize\\\":\\n        url \u003d \\\"http://dataps-fengwen.modo.asiainfo.com.cn/dataps/api/open/sql/\\\" + pgType;\\n        break;\\n    case \\\"sqlannotition\\\":\\n        url \u003d \\\"http://dataps-fengwen.modo.asiainfo.com.cn/dataps/api/open/sql/\\\" + pgType;\\n        break;\\n    case \\\"proc_explain\\\":\\n        url \u003d \\\"http://dataps-fengwen.modo.asiainfo.com.cn/dataps/api/open/proc/\\\" + pgType;\\n        break;\\n}\\n\\nRestTemplate restTemplate \u003d new RestTemplate();\\nHttpHeaders headers \u003d new HttpHeaders();\\nheaders.setContentType(MediaType.APPLICATION_JSON);\\n\\nMap reqBody \u003d new HashMap();\\nreqBody.put(\\\"model\\\", \\\"yi-34b-chat-int4\\\");\\nreqBody.put(\\\"name\\\", \\\"数据开发 SQL纠错 v2\\\");\\nreqBody.put(\\\"meta_db\\\", \\\"Data0s副驾\\\");\\nreqBody.put(\\\"question\\\", \\\"select * from test1\\\");\\nHttpEntity\u003cObject\u003e entity \u003d new HttpEntity\u003c\u003e(reqBody, headers);\\n\\nObject result \u003d restTemplate.postForObject(url, entity, Object.class);\\n\\nreturn result;\\n\\n\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import java.util.*;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.lang3.StringUtils;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport org.apache.commons.collections.MapUtils;\nimport io.github.suanchou.utils.JsonUtil;\nimport org.springframework.http.HttpEntity;\nimport org.springframework.http.HttpHeaders;\nimport org.springframework.http.MediaType;\nimport org.springframework.web.client.RestTemplate;\n\nString pgType \u003d MapUtils.getString(body, \"pgType\");\nString url \u003d \"\";\nswitch (pgType) {\n    case \"sqlcompletionsql\":\n        url \u003d \"http://dataps-fengwen.modo.asiainfo.com.cn/dataps/api/open/sql/\" + pgType;\n        break;\n    case \"sqlexplain\":\n        url \u003d \"http://dataps-fengwen.modo.asiainfo.com.cn/dataps/api/open/sql/\" + pgType;\n        break;\n    case \"sqlrevise\":\n        url \u003d \"http://dataps-fengwen.modo.asiainfo.com.cn/dataps/api/open/sql/\" + pgType;\n        break;\n    case \"sqloptimize\":\n        url \u003d \"http://dataps-fengwen.modo.asiainfo.com.cn/dataps/api/open/sql/\" + pgType;\n        break;\n    case \"sqlannotition\":\n        url \u003d \"http://dataps-fengwen.modo.asiainfo.com.cn/dataps/api/open/sql/\" + pgType;\n        break;\n    case \"proc_explain\":\n        url \u003d \"http://dataps-fengwen.modo.asiainfo.com.cn/dataps/api/open/proc/\" + pgType;\n        break;\n}\n\nRestTemplate restTemplate \u003d new RestTemplate();\nHttpHeaders headers \u003d new HttpHeaders();\nheaders.setContentType(MediaType.APPLICATION_JSON);\n\nMap reqBody \u003d new HashMap();\nreqBody.put(\"model\", \"yi-34b-chat-int4\");\nreqBody.put(\"name\", \"数据开发 SQL纠错 v2\");\nreqBody.put(\"meta_db\", \"Data0s副驾\");\nreqBody.put(\"question\", \"select * from test1\");\nHttpEntity\u003cObject\u003e entity \u003d new HttpEntity\u003c\u003e(reqBody, headers);\n\nObject result \u003d restTemplate.postForObject(url, entity, Object.class);\n\nreturn result;\n\n"
+      }
+    }
+  ]
+}

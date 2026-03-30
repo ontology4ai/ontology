@@ -1,0 +1,32 @@
+.modo-design-history {
+	height: 100%;
+	flex: 1;
+	padding: 0px;
+	box-sizing: border-box;
+    overflow: auto;
+    border-left: 1px solid var(--border-color-base);
+    .header {
+    	height: 30px;
+        line-height: 30px;
+    	padding: 0px 10px;
+        border-bottom: 1px solid var(--border-color-base);
+    }
+    .content {
+        height: calc(100% - 31px);
+        overflow: auto;
+        padding: 0px;
+        box-sizing: border-box;
+        .modo-filter-form .arco-form-item {
+            width: 100%;
+        }
+        .modo-filter-form .arco-form-item > .arco-form-label-item {
+            display: none;
+        }
+        .modo-filter-form .modo-filter-form-content {
+            padding: 8px 10px;
+        }
+        .modo-history .arco-table {
+            padding: 0px 10px;
+        }
+    }
+}

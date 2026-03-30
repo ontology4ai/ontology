@@ -1,0 +1,79 @@
+import { Circle as CircleGeometry } from '@antv/g';
+import { CanvasEvent, Circle, ExtensionCategory, Graph, NodeEvent, register } from '@antv/g6';
+
+class LightNode extends Circle {
+  render(attributes, container) {
+    super.render(attributes, container);
+    // this.upsert('light', CircleGeometry, { r: 8, fill: '#0f0', cx: 0, cy: -25 }, container);
+  }
+}
+
+register(ExtensionCategory.NODE, 'light', LightNode);
+
+const graph = new Graph({
+  container: 'container',
+  data: {
+    nodes: [
+      { id: 'node1', data: {label: 'xxx1'}, style: { x: 100, y: 150 } },
+      { id: 'node2', data: {label: 'xxx2'}, style: { x: 300, y: 150 } },
+    ],
+    edges: [{ source: 'node1', target: 'node2' }],
+  },
+  edge: {
+    style: {
+      labelText: (d) => d.id,
+      labelBackground: true,
+      endArrow: true,
+      endArrowType: (d) => d.id.split('-')[0],
+    },
+  },
+  node: {
+    type: 'light',
+    style: {
+      size: 80,
+      fill: '#3261CE',
+      labelText: (d) => {
+        return d.data.label;
+        return d.style.labelText || 'Click the Light';
+      },
+      labelPlacement: 'center',
+      labelFill: '#fff',
+      // labelBackground: true,
+      // labelBackgroundFill: '#fff',
+      // labelBackgroundFillOpacity: 0.8,
+    },
+    state: {
+      selected: {
+        stroke: '#fff',
+        lineWidth: 4,
+        halo: true,
+        haloStroke: '#d7e8fb',
+        haloLineWidth: 30,
+        haloStrokeOpacity: 1,
+      }
+    }
+  },
+  behaviors: ['drag-element'],
+});
+
+graph.render();
+
+graph.on(NodeEvent.CLICK, (event) => {
+  const { target, originalTarget, client } = event;
+  console.log('鼠标屏幕位置:', `X: ${client.x}, Y: ${client.y}`);
+  // if (originalTarget.className === 'light') {
+    graph.updateNodeData([{ id: target.id, states: ['selected'], style: { labelText: 'Clicked!' } }]);
+    graph.draw();
+  //}
+});
+
+graph.on(CanvasEvent.CLICK, () => {
+  const selectedIds = graph.getElementDataByState('node', 'selected').map((node) => node.id);
+  graph.updateNodeData(selectedIds.map((id) => ({ id, states: [], style: { labelText: 'Click the Light' } })));
+  graph.draw();
+});
+
+
+
+
+Match (n) Return n limit 10000

@@ -1,0 +1,38 @@
+{
+  "id": "dataps-139382575914520576",
+  "name": "dataflowBatchCalExpression",
+  "label": "获取预览批次",
+  "descr": "根据给定的批次号和批次计算表达式计算依赖的预览批次号",
+  "graph": "",
+  "state": "1",
+  "respContentType": "application/json",
+  "url": "dataflow/batchCalExpression",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[{\"id\":\"aedfac2b-1ce1-4bb8-9571-d4d3170ba152\",\"name\":\"batchCalExp\",\"required\":\"1\",\"example\":\"\",\"desc\":\"批次计算表达式\"},{\"id\":\"348c5bc6-6b2b-45db-bb2a-9ce6c5378ca0\",\"name\":\"batchNo\",\"required\":\"1\",\"example\":\"\",\"desc\":\"批次号\"}]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "dataps-139382575943880704",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "dataps-139382575914520576",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import java.util.Map;\\nimport java.util.HashMap;\\nimport com.asiainfo.dacp.util.StringUtils;\\n\\nString batchNo \u003d params.get(\\\"batchCalExp\\\");\\nString batchCalExp \u003d params.get(\\\"batchCalExp\\\");\\nMap\u003cString, String map \u003d new HashMap\u003c\u003e();\\nmap.put(\\\"batchNo\\\", batchNo);\\nString str \u003d StringUtils.variableSubstitution(batchCalExp, map);\\nMap\u003cString, String\u003e resultMap \u003d new HashMap\u003c\u003e();\\nresultMap.put(\\\"batchNo\\\", str);\\n\\nreturn resultMap;\\n\"}",
+      "createUser": "xiacj3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import java.util.Map;\nimport java.util.HashMap;\nimport com.asiainfo.dacp.util.StringUtils;\n\nString batchNo \u003d params.get(\"batchCalExp\");\nString batchCalExp \u003d params.get(\"batchCalExp\");\nMap\u003cString, String map \u003d new HashMap\u003c\u003e();\nmap.put(\"batchNo\", batchNo);\nString str \u003d StringUtils.variableSubstitution(batchCalExp, map);\nMap\u003cString, String\u003e resultMap \u003d new HashMap\u003c\u003e();\nresultMap.put(\"batchNo\", str);\n\nreturn resultMap;\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "179354679027929088",
+  "name": "getWorkspaceSubjectVersionData",
+  "label": "查询工作空间定义表版本数据",
+  "descr": "查询工作空间定义表版本数据",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"280\" y\u003d\"130\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "173889682855469056",
+  "respContentType": "application/json",
+  "url": "workspace/version/subjectData",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[{\"id\":\"5dd130a7-1bbe-4b41-990c-027ba9c7b159\",\"name\":\"workspaceId\",\"required\":\"1\",\"example\":\"\",\"desc\":\"\",\"value\":\"testWorkspaceId\"},{\"id\":\"5461309e-a7ae-4a7a-aac6-baa93a7d2c7a\",\"name\":\"subjectId\",\"required\":\"1\",\"example\":\"\",\"desc\":\"\",\"value\":\"174910029886099458\"}]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "xutb",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "179607792555585536",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "179354679027929088",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import io.github.suanchou.driver.repo.AbstractRepository;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.springframework.data.jpa.domain.Specification;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport javax.persistence.criteria.Predicate;\\nimport java.util.*;\\n\\npublic Object search(Map\u003cString, Object\u003e params) {\\n        String workspaceId \u003d MapUtils.getString(params, \\\"workspaceId\\\");\\n        String subjectId \u003d MapUtils.getString(params, \\\"subjectId\\\");\\n        Objects.requireNonNull(subjectId, \\\"subjectId不能为空！\\\");\\n        Objects.requireNonNull(workspaceId, \\\"workspaceId不能为空！\\\");\\n\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        // 查询指定工作空间的dataps_subject的当前最新版本号\\n        Integer maxVersionNumber \u003d jt.queryForObject(\\\"select max(version_number) from dataps_subject where workspace_id \u003d :workspaceId\\\", params, Integer.class);\\n        System.out.println(maxVersionNumber);\\n        AbstractRepository datapsSubjectRepo \u003d (AbstractRepository) SpringContextUtil.getBean(\\\"datapsSubjectRepo\\\");\\n        Specification specification \u003d (root, query, cb) -\u003e {\\n            List\u003cPredicate\u003e predicateList \u003d new ArrayList\u003c\u003e();\\n            predicateList.add(cb.equal(root.get(\\\"subjectId\\\").as(String.class), subjectId));\\n            predicateList.add(cb.equal(root.get(\\\"versionNumber\\\").as(String.class), maxVersionNumber));\\n            return query.where(predicateList.toArray(new Predicate[predicateList.size()])).getRestriction();\\n        };\\n        List all \u003d datapsSubjectRepo.findAll(specification);\\n\\n        return all;\\n    }\\n\\n\\n\\nreturn search(params);\\n\"}",
+      "createUser": "xutb",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import io.github.suanchou.driver.repo.AbstractRepository;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.springframework.data.jpa.domain.Specification;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport javax.persistence.criteria.Predicate;\nimport java.util.*;\n\npublic Object search(Map\u003cString, Object\u003e params) {\n        String workspaceId \u003d MapUtils.getString(params, \"workspaceId\");\n        String subjectId \u003d MapUtils.getString(params, \"subjectId\");\n        Objects.requireNonNull(subjectId, \"subjectId不能为空！\");\n        Objects.requireNonNull(workspaceId, \"workspaceId不能为空！\");\n\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        // 查询指定工作空间的dataps_subject的当前最新版本号\n        Integer maxVersionNumber \u003d jt.queryForObject(\"select max(version_number) from dataps_subject where workspace_id \u003d :workspaceId\", params, Integer.class);\n        System.out.println(maxVersionNumber);\n        AbstractRepository datapsSubjectRepo \u003d (AbstractRepository) SpringContextUtil.getBean(\"datapsSubjectRepo\");\n        Specification specification \u003d (root, query, cb) -\u003e {\n            List\u003cPredicate\u003e predicateList \u003d new ArrayList\u003c\u003e();\n            predicateList.add(cb.equal(root.get(\"subjectId\").as(String.class), subjectId));\n            predicateList.add(cb.equal(root.get(\"versionNumber\").as(String.class), maxVersionNumber));\n            return query.where(predicateList.toArray(new Predicate[predicateList.size()])).getRestriction();\n        };\n        List all \u003d datapsSubjectRepo.findAll(specification);\n\n        return all;\n    }\n\n\n\nreturn search(params);\n"
+      }
+    }
+  ]
+}

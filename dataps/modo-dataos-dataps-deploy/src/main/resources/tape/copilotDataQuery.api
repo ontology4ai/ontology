@@ -1,0 +1,38 @@
+{
+  "id": "8a7499668f0ebdfe018f5ca32c69000e",
+  "name": "copilotDataQuery",
+  "label": "copilot数据查询接口",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" parent\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" vertex\u003d\"1\" parent\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"240\" y\u003d\"200\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "8a7494bd8f51c770018f51cab8ac0001",
+  "respContentType": "application/json",
+  "url": "open/copilotDataQuery",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\n    \"body\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": [\n                {\n                    \"name\": \"taskId\",\n                    \"id\": \"6c33c039-231d-4ace-bc7a-961f180b4629\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false\n                },\n                {\n                    \"name\": \"question\",\n                    \"id\": \"af27844b-f237-4062-95fc-64ced82854da\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false\n                },\n                {\n                    \"name\": \"tableName\",\n                    \"id\": \"3dcb70f6-ceda-4d79-84ae-11fb58d13e0c\",\n                    \"required\": \"1\",\n                    \"type\": \"string\",\n                    \"desc\": \"\",\n                    \"disabled\": false\n                }\n            ]\n        }\n    ],\n    \"headers\": [],\n    \"query\": []\n}",
+  "apiOutputParams": "{\n    \"mockJson\": \"\",\n    \"responseBody\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ]\n}",
+  "createUser": "zouyc",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "8a7499668f0ebdfe018f5ca7a6ca0010",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "8a7499668f0ebdfe018f5ca32c69000e",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"2.执行脚本\",\"scriptText\":\"import com.asiainfo.modo.dataps.VectorExecutor;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport io.github.suanchou.utils.StringUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.apache.commons.lang.exception.ExceptionUtils;\\nimport org.apache.commons.lang3.StringUtils;\\n\\nimport java.util.*;\\n\\n\\nString taskId\u003dMapUtils.getString(body, \\\"taskId\\\");\\nString question\u003dMapUtils.getString(body, \\\"question\\\");\\nString tableName\u003dMapUtils.getString(body, \\\"tableName\\\");\\ndef copilotDataQueryService \u003d SpringContextUtil.getBean(\\\"copilotDataQueryService\\\");\\nVectorExecutor.asyncSearchExecutor.execute(() -\u003e {\\ntry {\\n  copilotDataQueryService.execTask(taskId,question,tableName);\\n} catch (Exception e) {\\n  System.out.println(e);\\n  return e;\\n}\\n});\\n\\nreturn taskId;\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "2.执行脚本",
+        "scriptText": "import com.asiainfo.modo.dataps.VectorExecutor;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport io.github.suanchou.utils.StringUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.apache.commons.lang.exception.ExceptionUtils;\nimport org.apache.commons.lang3.StringUtils;\n\nimport java.util.*;\n\n\nString taskId\u003dMapUtils.getString(body, \"taskId\");\nString question\u003dMapUtils.getString(body, \"question\");\nString tableName\u003dMapUtils.getString(body, \"tableName\");\ndef copilotDataQueryService \u003d SpringContextUtil.getBean(\"copilotDataQueryService\");\nVectorExecutor.asyncSearchExecutor.execute(() -\u003e {\ntry {\n  copilotDataQueryService.execTask(taskId,question,tableName);\n} catch (Exception e) {\n  System.out.println(e);\n  return e;\n}\n});\n\nreturn taskId;"
+      }
+    }
+  ]
+}

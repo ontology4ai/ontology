@@ -1,0 +1,872 @@
+.modo-chat-message .arco-icon-loading {
+  margin-right: 4px;
+}
+
+.modo-chat {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.modo-chat *,
+.modo-chat *::before,
+.modo-chat *::after {
+  box-sizing: border-box;
+}
+.modo-chat .arco-btn-text:not(.arco-btn-disabled):focus-visible {
+  box-shadow: none;
+}
+.modo-chat .msg-list-container {
+  flex: 1;
+  overflow: auto;
+  padding: 0px 12px 10px;
+}
+.modo-chat .msg-list-container .msg-list .msg-container {
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.modo-chat .msg-list-container .msg-list .msg-container .msg-header {
+  display: flex;
+  margin-bottom: 4px;
+}
+.modo-chat .msg-list-container .msg-list .msg-container .msg-header .create-time {
+  flex: 1;
+  color: var(--color-text-4);
+  line-height: 28px;
+  text-align: right;
+}
+.modo-chat .msg-list-container .msg-list .msg-container .msg-header .avatar {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 2px;
+  padding: 0px 5px;
+  margin-left: 6px;
+  flex-shrink: 0;
+  background: var(--color-fill-2);
+}
+.modo-chat .msg-list-container .msg-list .msg-container .msg-header .avatar img {
+  width: 18px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.modo-chat .msg-list-container .msg-list .msg-container .msg-content-container {
+  width: max-content;
+  max-width: 100%;
+  min-width: 150px;
+}
+.modo-chat .msg-list-container .msg-list .msg-container .msg-content {
+  background: var(--color-primary-1);
+  border-radius: 6px 0px 6px 6px;
+  padding: 6px 12px;
+  margin-bottom: 4px;
+  width: max-content;
+  max-width: 100%;
+  min-width: 150px;
+}
+.modo-chat .msg-list-container .msg-list .msg-container .msg-footer {
+  display: flex;
+}
+.modo-chat .msg-list-container .msg-list .msg-container .msg-footer .re-gen {
+  flex: 1;
+  overflow: hidden;
+}
+.modo-chat .msg-list-container .msg-list .msg-container .msg-footer .re-gen button {
+  height: 20px;
+  line-height: 18px;
+  padding: 0px 8px;
+}
+.modo-chat .msg-list-container .msg-list .msg-container .msg-footer .msg-oper-group {
+  flex-shrink: 0;
+}
+.modo-chat .msg-list-container .msg-list .msg-container .msg-footer .msg-oper-group button {
+  width: 16px;
+  height: 16px;
+  line-height: 14px;
+  padding: 0px;
+  margin-right: 4px;
+}
+.modo-chat .msg-list-container .msg-list .msg-container .msg-footer .msg-oper-group button:last-child {
+  margin-right: 0px;
+}
+.modo-chat .msg-list-container .msg-list .msg-container.user {
+  align-items: flex-end;
+}
+.modo-chat .msg-list-container .msg-list .msg-container.user .msg-content-container {
+  min-width: 60px;
+}
+.modo-chat .msg-list-container .msg-list .msg-container.user .msg-content {
+  min-width: 60px;
+  line-height: 20px;
+}
+.modo-chat .msg-list-container .msg-list .msg-container.user .msg-footer {
+  justify-content: flex-end;
+}
+.modo-chat .msg-list-container .msg-list .msg-container.assistant .msg-header,
+.modo-chat .msg-list-container .msg-list .msg-container.system .msg-header {
+  flex-direction: row-reverse;
+}
+.modo-chat .msg-list-container .msg-list .msg-container.assistant .msg-header .create-time,
+.modo-chat .msg-list-container .msg-list .msg-container.system .msg-header .create-time {
+  text-align: left;
+}
+.modo-chat .msg-list-container .msg-list .msg-container.assistant .msg-header .avatar,
+.modo-chat .msg-list-container .msg-list .msg-container.system .msg-header .avatar {
+  margin-right: 6px;
+  margin-left: 0px;
+}
+.modo-chat .msg-list-container .msg-list .msg-container.assistant .msg-content,
+.modo-chat .msg-list-container .msg-list .msg-container.system .msg-content {
+  border-radius: 0px 6px 6px 6px;
+}
+.modo-chat .command-list-container {
+  flex-shrink: 0;
+  padding: 6px 12px;
+}
+.modo-chat .command-list-container .arco-tag {
+  margin-right: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 2px;
+}
+.modo-chat .command-list-container .arco-tag:hover {
+  box-shadow: 0px 2px 5px rgba(36, 46, 67, 0.1);
+}
+.modo-chat .command-list-container .arco-tag .icon-dot {
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  border-radius: 6px;
+  background: var(--color-text-2);
+  vertical-align: top;
+  margin-top: 8px;
+}
+.modo-chat .command-list-container .arco-tag.disabled {
+  cursor: not-allowed;
+}
+.modo-chat .command-list-container .arco-tag.disabled .icon-dot {
+  background: var(--color-text-4);
+}
+.modo-chat .send-container {
+  height: 90px;
+  padding: 0px 12px 12px 12px;
+  flex-shrink: 0;
+}
+.modo-chat .send-container .send-content {
+  position: relative;
+}
+.modo-chat .send-container .send-content button {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+}
+.modo-chat .send-container .send-content button:nth-child(2) {
+  right: 42px;
+}
+
+.modo-copilot-btn {
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  height: 32px;
+  line-height: 22px;
+  z-index: 999;
+  border-radius: 22px 0px 0px 22px;
+  background: linear-gradient(90deg, #ff7636, #ffbf1b);
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  width: 32px;
+  white-space: nowrap;
+  padding: 3px 7px 5px;
+  transition: all 0.2s;
+  font-size: 22px;
+  box-sizing: border-box;
+}
+.modo-copilot-btn *,
+.modo-copilot-btn *::before,
+.modo-copilot-btn *::after {
+  box-sizing: border-box;
+}
+.modo-copilot-btn img {
+  width: 22px;
+  height: 22px;
+  transition: all 0.2s;
+  margin-top: 1px;
+  margin-left: 1px;
+}
+.modo-copilot-btn:hover {
+  font-size: 12px;
+  width: 84px;
+  padding: 5px 12px 5px 12px;
+}
+.modo-copilot-btn:hover img {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+}
+.modo-copilot-btn .title {
+  color: var(--color-white);
+  margin-left: 4px;
+  font-weight: 600;
+}
+
+.modo-copilot-layout {
+  width: 100%;
+  height: 100%;
+}
+.modo-copilot-layout > .arco-layout {
+  width: 100%;
+  height: 100%;
+}
+.modo-copilot-layout > .arco-layout > aside {
+  flex-shrink: 0;
+  transition: all 0.2s;
+  z-index: 1000;
+}
+.modo-copilot-layout > .arco-layout > aside.hidden {
+  width: 0px !important;
+  min-width: 0px !important;
+  z-index: -1;
+}
+.modo-copilot-layout > .arco-layout > aside.hidden .arco-resizebox-trigger {
+  display: none;
+}
+.modo-copilot-layout > .arco-layout > aside .arco-layout-sider-children {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.modo-copilot-layout > .arco-layout > aside .arco-layout-sider-children .aside-header {
+  height: 44px;
+  padding: 0px 12px;
+  background-color: var(--color-fill-1);
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border-1);
+}
+.modo-copilot-layout > .arco-layout > aside .arco-layout-sider-children .aside-header .aside-header-title {
+  line-height: 44px;
+  font-weight: 600;
+  flex: 1;
+}
+.modo-copilot-layout > .arco-layout > aside .arco-layout-sider-children .aside-header svg {
+  color: var(--color-text-2);
+  transition: color 0.2s;
+  cursor: pointer;
+  line-height: 44px;
+}
+.modo-copilot-layout > .arco-layout > aside .arco-layout-sider-children .aside-header svg:hover {
+  color: var(--color-text-1);
+}
+.modo-copilot-layout > .arco-layout > aside .arco-layout-sider-children .aside-content {
+  flex: 1;
+  overflow: hidden;
+}
+.modo-copilot-layout > .arco-layout > main {
+  background: var(--color-primary-2);
+}
+
+.modo-tabs.editable {
+  background: var(--color-white);
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+.modo-tabs.editable .arco-tabs {
+  height: 100%;
+}
+.modo-tabs.editable.no-tabs .arco-tabs {
+  height: 40px;
+}
+.modo-tabs.editable .arco-tabs-header-scroll {
+  flex-direction: row-reverse;
+}
+.modo-tabs.editable .arco-tabs-header-nav {
+  padding: 8px 0px;
+  box-shadow: inset 0px -1px 0px 0px #f2f3f5;
+}
+.modo-tabs.editable .arco-tabs-header-nav::before {
+  display: none;
+}
+.modo-tabs.editable .arco-tabs-header-title {
+  background: var(--color-gray-3);
+  color: var(--color-text-2);
+  border-radius: 4px;
+  border: 0px;
+  height: 24px;
+  padding: 6px 8px !important;
+  margin-left: 6px !important;
+  margin-right: 0px !important;
+  width: 110px;
+  display: inline-flex;
+  transition: all 0.2s cubic-bezier(0, 0, 1, 1);
+}
+.modo-tabs.editable .arco-tabs-header-title span {
+  display: block;
+}
+.modo-tabs.editable .arco-tabs-header-title .arco-typography {
+  width: 100%;
+}
+.modo-tabs.editable .arco-tabs-header-title:first-of-type {
+  margin-left: 0px !important;
+}
+.modo-tabs.editable .arco-tabs-header-title .arco-tabs-header-title-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.modo-tabs.editable .arco-tabs-header-title .arco-tabs-header-title-text > .arco-typography {
+  margin-bottom: 0px;
+  color: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
+}
+.modo-tabs.editable .arco-tabs-header-title:hover .arco-tabs-close-icon {
+  width: 12px;
+}
+.modo-tabs.editable .arco-tabs-header-title:hover .arco-tabs-icon-hover {
+  opacity: 1;
+  transform: scale(1);
+}
+.modo-tabs.editable .arco-tabs-header-title .arco-tabs-close-icon {
+  width: 0px;
+  margin-left: 0px;
+  overflow: hidden;
+}
+.modo-tabs.editable .arco-tabs-header-title .arco-tabs-icon-hover {
+  color: var(--color-gray-8);
+  vertical-align: middle;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.1s;
+}
+.modo-tabs.editable .arco-tabs-header-title-active,
+.modo-tabs.editable .arco-tabs-header-title-active:hover {
+  background-color: var(--color-primary-6);
+  color: var(--color-white);
+  font-weight: 500;
+}
+.modo-tabs.editable .arco-tabs-header-title-active .arco-typography,
+.modo-tabs.editable .arco-tabs-header-title-active:hover .arco-typography {
+  color: var(--color-white);
+}
+.modo-tabs.editable .arco-tabs-header-title-active:hover .arco-tabs-icon-hover,
+.modo-tabs.editable .arco-tabs-header-title-active:hover:hover .arco-tabs-icon-hover {
+  opacity: 1;
+}
+.modo-tabs.editable .arco-tabs-header-title-active .arco-tabs-icon-hover,
+.modo-tabs.editable .arco-tabs-header-title-active:hover .arco-tabs-icon-hover {
+  color: var(--color-white);
+  vertical-align: middle;
+  opacity: 0;
+  transition: all 0.1s;
+}
+.modo-tabs.editable .arco-icon-hover:hover::before {
+  display: none;
+}
+.modo-tabs.editable .tab-title {
+  background: var(--color-white);
+  border-radius: 4px;
+  padding: 0px 10px;
+  height: 24px;
+  line-height: 24px;
+  cursor: pointer;
+}
+.modo-tabs.editable .tab-title svg {
+  color: var(--color-primary-6);
+  margin-right: 7.5px;
+}
+.modo-tabs.editable .tab-title span {
+  font-size: 14px;
+  color: var(--color-text-1);
+  font-weight: 600;
+  vertical-align: middle;
+}
+.modo-tabs.editable .arco-tabs-content {
+  border: 0px;
+  padding-top: 0px;
+  height: calc(100% - 40px);
+}
+.modo-tabs.editable .arco-tabs-content .arco-tabs-content-inner {
+  height: 100%;
+}
+.modo-tabs.editable .arco-tabs-content .arco-tabs-pane {
+  background: var(--color-white);
+  height: 100%;
+  border-radius: 0px 0px 6px 6px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.modo-tabs.editable .tab-placeholder {
+  background: var(--color-white);
+  height: calc(100% - 40px);
+  box-sizing: border-box;
+  overflow: auto;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.modo-tabs.editable .arco-tabs-header-ink {
+  display: none;
+}
+
+.modo-editor {
+  border: 1px solid var(--color-gray-2);
+  background: var(--color-white);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.modo-editor.fullscreen {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 5000;
+  width: 100%;
+  height: 100%;
+}
+.modo-editor > section {
+  left: -1px;
+}
+.modo-editor .margin-view-overlays {
+  background: var(--color-gray-2);
+}
+.modo-editor .modo-editor-header {
+  color: var(--color-gray-6);
+  display: flex;
+  padding-left: 10px;
+  line-height: 30px;
+  border-bottom: 1px solid var(--color-gray-2);
+}
+.modo-editor .modo-editor-header .pos-left {
+  flex: 1;
+}
+.modo-editor .modo-editor-header .arco-tag .moda-icon {
+  margin-right: 0px;
+}
+.modo-editor .modo-editor-header .moda-icon {
+  margin-right: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+.modo-editor .modo-editor-header .moda-icon:hover,
+.modo-editor .modo-editor-header .moda-icon .active {
+  color: var(--color-primary-6);
+}
+.modo-editor .mo-mainBench .monaco-scrollable-element > .scrollbar > .slider {
+  background: rgba(255, 255, 255, 0.2);
+}
+.modo-diff-editor .monaco-editor .margin-view-overlays .line-numbers {
+  padding-right: 8px;
+}
+.ds-container .example-info-container {
+  margin-top: 10px;
+  max-height: 500px;
+  overflow: auto;
+  background-color: var(--color-gray-2);
+  padding: 10px;
+  border-radius: var(--border-radius-small);
+}
+.ds-container .example-info-container .arco-spin-children {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.ds-container .example-info-container p {
+  margin-block-start: 0;
+  margin-block-end: 5px;
+  user-select: text;
+}
+.ds-container .example-info-container p .text-bracket {
+  color: var(--color-magenta-8);
+}
+.modo-editor-context-menu {
+  box-shadow: 0px 0px 5px #d3d3d3;
+  border-radius: 4px;
+}
+.modo-editor-context-menu-item {
+  height: 24px;
+  line-height: 24px !important;
+  padding: 0px 4px !important;
+  margin-bottom: 0px !important;
+}
+.modo-editor-context-menu-item.arco-dropdown-menu-item {
+  padding: 0px 10px !important;
+}
+.modo-editor-context-menu-item svg {
+  margin-right: 4px;
+  display: inline-block;
+  margin-bottom: 0px;
+}
+.modo-editor-context-menu-item .ai-btn-small {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  background: linear-gradient(90deg, #ff7636, #ffbf1b);
+  border-radius: 2px;
+  vertical-align: top;
+  text-align: center;
+  margin-right: 4px;
+  margin-top: 5px;
+}
+.modo-editor-context-menu-item .ai-btn-small img {
+  width: 10px;
+  height: 10px;
+  vertical-align: top;
+  margin-top: 1px;
+}
+
+.icon-list > div > div {
+  flex-direction: row !important;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 240px;
+}
+.icon-list > div > div > li {
+  width: 24px !important;
+  height: 24px !important;
+  text-align: center !important;
+  line-height: 24px !important;
+  padding: 0px !important;
+}
+
+.arco-drawer-header-title {
+  font-size: 12px;
+}
+.source-code .arco-drawer-header {
+  height: 30px;
+  padding: 0px 10px;
+}
+.source-code .arco-drawer-close-icon {
+  top: 8px;
+  right: 10px;
+}
+.source-code .arco-drawer-content {
+  padding: 0px;
+}
+.source-code .arco-drawer-footer {
+  padding: 5px 10px;
+}
+.source-code .arco-drawer-footer .arco-btn {
+  height: 22px;
+}
+
+.modo-designer-bind-var {
+  display: flex;
+}
+.modo-designer-bind-var .element {
+  flex: 1;
+}
+.modo-designer-bind-var .code {
+  background: var(--color-white);
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  color: var(--color-gray-6);
+  text-align: center;
+  transition: all 0.1s linear;
+  cursor: pointer;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.modo-designer-bind-var .code.mini {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+}
+.modo-designer-bind-var .code.small {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+}
+.modo-designer-bind-var .code.large {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+}
+.modo-designer-bind-var .code:hover {
+  background: var(--color-fill-2);
+}
+.modo-designer-bind-var .code:active {
+  background: var(--color-fill-3);
+}
+.modo-designer-bind-var .code.active {
+  background: var(--color-primary-6);
+  color: var(--color-white);
+}
+
+.modo-table-form .table-form-header {
+  display: flex;
+  justify-content: flex-end;
+}
+.modo-table-form.empty .arco-table-body {
+  min-height: 120px;
+}
+.modo-table-form.empty .arco-table-body .arco-table-no-data {
+  height: auto;
+}
+.modo-table-form .arco-table .arco-table-td,
+.modo-table-form .arco-table .arco-table-th-item {
+  padding: 0px 6px;
+}
+.modo-table-form .arco-form-item.arco-form-item-error {
+  position: relative;
+}
+.modo-table-form .arco-form-item.arco-form-item-error:hover .arco-form-message {
+  display: block;
+}
+.modo-table-form .arco-form-message {
+  display: none;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  line-height: 24px;
+  transform: translateY(100%);
+  border-radius: 2px;
+  z-index: 10;
+  background: var(--color-white);
+  padding: 0px 4px;
+  box-shadow: 0px 0px 5px #d3d3d3;
+  animation: none;
+}
+.modo-table-form .editable-row .editable-cell {
+  display: inline-block;
+  padding: 5px 11px;
+}
+.modo-table-form .editable-row .editable-cell .arco-table-td {
+  padding: 0px 5px;
+}
+.modo-table-form .editable-row .editable-cell:hover {
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  padding: 4px 10px;
+}
+/* .modo-table-form {
+	.arco-table-td {
+		padding: 0px 5px;
+	}
+	.arco-table-th-item {
+		padding: 0px 10px;
+		white-space: pre;
+		overflow: hidden;
+	    text-overflow: ellipsis;
+	}
+} */
+.arco-table-td {
+  padding: 0px 5px;
+}
+.arco-table-th-item {
+  padding: 0px 10px;
+  white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modo-cascader-panel {
+  width: 100%;
+  height: 200px;
+  box-shadow: none;
+  border-radius: 0px;
+}
+.modo-cascader-panel .arco-cascader-popup-inner {
+  height: 100%;
+}
+
+.modo-form-list {
+  width: 100%;
+}
+.modo-form-list .modo-form-list-container {
+  width: 100%;
+}
+.modo-form-list .modo-form-list-container .row {
+  display: flex;
+  margin-bottom: 10px;
+}
+.modo-form-list .modo-form-list-container .row .form-row {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+}
+.modo-form-list .modo-form-list-container .row .form-row .form-col {
+  margin-right: 10px;
+}
+.modo-form-list .modo-form-list-container .row .form-row .arco-radio-group-type-button {
+  white-space: nowrap;
+}
+
+
+.modo-filter-form {
+  position: relative;
+  transition: all 0.2s;
+  width: 100%;
+  height: 72px;
+}
+.modo-filter-form.full {
+  height: auto !important;
+}
+.modo-filter-form.full .modo-filter-form-content {
+  height: auto !important;
+}
+.modo-filter-form .modo-filter-form-content {
+  height: 74px !important;
+  padding: 10px 16px !important;
+  padding-bottom: 4px !important;
+  position: relative;
+  background: var(--color-gray-1) !important;
+  transition: all 0.2s;
+}
+.modo-filter-form .arco-form {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.modo-filter-form .oper-group {
+  white-space: pre;
+}
+.modo-filter-form.more .modo-filter-form-content {
+  height: auto !important;
+  padding: 10px 34px !important;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.modo-filter-form.more .arco-form-item {
+  width: 25%;
+}
+.modo-filter-form.more .oper-group {
+  position: absolute;
+  right: 34px;
+  bottom: 10px;
+}
+.modo-filter-form.more .filter-form-result {
+  margin-top: 10px;
+}
+.modo-filter-form .arco-form-item {
+  width: 33.333%;
+  margin-bottom: 6px;
+  flex-wrap: nowrap;
+}
+.modo-filter-form .arco-radio-group-type-button {
+  white-space: nowrap;
+}
+.modo-filter-form .arco-form-item > .arco-form-label-item {
+  padding-right: 12px;
+  vertical-align: middle;
+  display: inline-block;
+  width: 84px;
+  padding-left: 0;
+}
+.modo-filter-form .arco-form-layout-inline {
+  padding-right: 10px;
+  margin-right: 0px;
+  box-sizing: border-box;
+}
+.modo-filter-form .arco-form-item[span="2"] {
+  width: calc(100% / 12);
+}
+.modo-filter-form .arco-form-item[span="3"] {
+  width: calc(100% / 8);
+}
+.modo-filter-form .arco-form-item[span="4"] {
+  width: calc(100% / 6);
+}
+.modo-filter-form .arco-form-item[span="6"] {
+  width: calc(100% / 4);
+}
+.modo-filter-form .arco-form-item[span="8"] {
+  width: calc(100% / 3);
+}
+.modo-filter-form .arco-form-item[span="12"] {
+  width: calc(100% / 2);
+}
+.modo-filter-form .arco-form-item[span="16"] {
+  width: calc(100% * 2 / 3);
+}
+.modo-filter-form .arco-form-item[span="18"] {
+  width: calc(100% * 3 / 4);
+}
+.modo-filter-form .arco-form-item[span="20"] {
+  width: calc(100% * 5 / 6);
+}
+.modo-filter-form .arco-form-item[span="21"] {
+  width: calc(100% * 7 / 8);
+}
+.modo-filter-form .arco-form-item[span="22"] {
+  width: calc(100% * 11 / 12);
+}
+.modo-filter-form .arco-form-item[span="24"] {
+  width: 100%;
+}
+.modo-filter-form .arco-form-item.no-label > .arco-form-label-item {
+  padding-right: 0px;
+}
+.modo-filter-form .arco-form-item-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+}
+.modo-filter-form .group-check {
+  min-width: 0px !important;
+}
+.modo-filter-form .group-check label {
+  padding-left: 2px;
+}
+.modo-filter-form .arco-form-label-item > label {
+  white-space: nowrap;
+  width: 100%;
+  display: flex;
+  padding-left: 2px;
+}
+.modo-filter-form .arco-form-label-item > label .label {
+  flex: 1;
+  margin-bottom: 0px;
+  vertical-align: middle;
+  line-height: inherit;
+}
+.modo-filter-form .arco-picker {
+  width: 100%;
+}
+.modo-filter-form .arco-form-item.cascader > .arco-form-item-wrapper {
+  overflow: hidden;
+}
+.modo-filter-form .filter-form-result {
+  display: flex;
+}
+.modo-filter-form .tag-list {
+  flex: 1;
+  box-sizing: border-box;
+  margin-bottom: -6px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.modo-filter-form .tag-list .moda-tag {
+  max-width: 300px;
+  vertical-align: top;
+}
+.modo-filter-form .tag-list .moda-tag .result {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+}
+.modo-filter-form .tag-list .moda-tag .result > span {
+  flex: 1;
+  overflow: hidden;
+}
+.modo-filter-form .tag-list .moda-tag .result > span .value {
+  width: 100%;
+  overflow: hidden;
+  vertical-align: top;
+}
+.modo-filter-form .tag-list .moda-tag .result .label {
+  margin-right: 4px;
+  flex: none;
+}
+.modo-filter-form .tag-list .moda-tag .result div.arco-typography {
+  color: var(--color-primary);
+  margin-bottom: 0px;
+}
+

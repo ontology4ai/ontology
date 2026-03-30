@@ -1,0 +1,83 @@
+{
+  "id": "dataps-139382539247915008",
+  "name": "getWorkSpace",
+  "label": "工作空间查询",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"3\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-httpdiaoyong;title\u003d3.HTTP调用\" title\u003d\"HTTP调用\" modelData\u003d\"\" stepInst\u003d\"http\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"290\" y\u003d\"220\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"4\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d4.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"130\" y\u003d\"190\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"5\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"4\" target\u003d\"3\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"6\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d6.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"450\" y\u003d\"230\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003cmxCell id\u003d\"7\" value\u003d\"成功时\" parent\u003d\"1\" source\u003d\"3\" target\u003d\"6\" edge\u003d\"1\" modelData\u003d\"\"\u003e\u003cmxGeometry relative\u003d\"1\" as\u003d\"geometry\"/\u003e\u003cObject label\u003d\"成功时\" state\u003d\"1\" as\u003d\"modelData\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "236063466669670400",
+  "respContentType": "application/json",
+  "url": "getWorkSpace",
+  "reqMethod": "GET",
+  "serviceType": "api",
+  "apiInputParams": "{\"headers\":[],\"query\":[{\"id\":\"ab08f00c-c641-47d9-b0b9-f5429ade1434\",\"name\":\"limit\",\"required\":\"1\",\"example\":\"10\",\"desc\":\"\",\"value\":\"10\"},{\"id\":\"e8fb571b-7a0e-46f0-9410-c682e887085a\",\"name\":\"offset\",\"required\":\"1\",\"example\":\"0\",\"desc\":\"\",\"value\":\"0\"},{\"id\":\"3c8ad00c-78b3-40f6-affc-2452d516605a\",\"name\":\"sort\",\"required\":\"1\",\"example\":\"-updateDate\",\"desc\":\"\",\"value\":\"-updateDate\"}]}",
+  "apiOutputParams": "{\"mockJson\":\"\",\"responseBody\":[{\"name\":\"root\",\"required\":\"1\",\"type\":\"object\",\"desc\":\"\",\"disabled\":true,\"id\":\"1\",\"children\":[]}]}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "dataps-139382539264692224",
+      "stepSeq": "3",
+      "parentStepId": "-1",
+      "label": "3.HTTP调用",
+      "graphId": "dataps-139382539247915008",
+      "stepInst": "http",
+      "preStepId": "4",
+      "nextStepId": "6",
+      "successStepId": "6",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"3.HTTP调用\",\"method\":\"GET\",\"url\":\"http://10.19.28.145/datamodel/_api/modelWorkspace/search/cascade\",\"reqContentType\":\"application/json\",\"variable\":\"res\",\"jsonParams\":\"params\"}",
+      "createUser": "xiacj3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "3.HTTP调用",
+        "method": "GET",
+        "url": "http://10.19.28.145/datamodel/_api/modelWorkspace/search/cascade",
+        "reqContentType": "application/json",
+        "variable": "res",
+        "jsonParams": "params"
+      }
+    },
+    {
+      "id": "dataps-139382539264692225",
+      "stepSeq": "4",
+      "parentStepId": "-1",
+      "label": "4.执行脚本",
+      "graphId": "dataps-139382539247915008",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "3",
+      "successStepId": "3",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"4.执行脚本\",\"scriptText\":\"import com.asiainfo.modo.utils.JwtUtil;\\n\\njwtToken\u003dJwtUtil.generate(\\\"\\\", \\\"sys\\\");\\nparams \u003d new HashMap\u003c\u003e();\\nparams.put(\\\"jwt\\\",jwtToken);\\nSystem.out.println(\\\"\u003d\u003d\u003d\u003d\u003d\\\");\\nSystem.out.println(jwtToken);\"}",
+      "createUser": "xiacj3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "4.执行脚本",
+        "scriptText": "import com.asiainfo.modo.utils.JwtUtil;\n\njwtToken\u003dJwtUtil.generate(\"\", \"sys\");\nparams \u003d new HashMap\u003c\u003e();\nparams.put(\"jwt\",jwtToken);\nSystem.out.println(\"\u003d\u003d\u003d\u003d\u003d\");\nSystem.out.println(jwtToken);"
+      }
+    },
+    {
+      "id": "dataps-139382539264692226",
+      "stepSeq": "6",
+      "parentStepId": "-1",
+      "label": "6.执行脚本",
+      "graphId": "dataps-139382539247915008",
+      "stepInst": "script",
+      "preStepId": "3",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"label\":\"6.执行脚本\",\"scriptText\":\"return res\"}",
+      "createUser": "xiacj3",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "label": "6.执行脚本",
+        "scriptText": "return res"
+      }
+    }
+  ]
+}

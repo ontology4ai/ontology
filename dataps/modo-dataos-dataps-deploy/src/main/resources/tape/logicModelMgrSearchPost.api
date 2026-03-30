@@ -1,0 +1,39 @@
+{
+  "id": "192960566994395136",
+  "name": "logicModelMgrSearchPost",
+  "label": "逻辑模型管理查询（post）",
+  "descr": "逻辑模型管理查询（post）",
+  "graph": "\u003cmxGraphModel\u003e\u003croot\u003e\u003cmxCell id\u003d\"0\" modelData\u003d\"\"/\u003e\u003cmxCell id\u003d\"1\" modelData\u003d\"\" parent\u003d\"0\"/\u003e\u003cmxCell id\u003d\"2\" value\u003d\"\" style\u003d\"shape\u003diconLabel;image\u003dicon-m-jiaobenzhixing;title\u003d2.执行脚本\" title\u003d\"执行脚本\" modelData\u003d\"\" stepInst\u003d\"script\" parent\u003d\"1\" vertex\u003d\"1\"\u003e\u003cmxGeometry x\u003d\"230\" y\u003d\"160\" width\u003d\"80\" height\u003d\"90\" as\u003d\"geometry\"/\u003e\u003c/mxCell\u003e\u003c/root\u003e\u003c/mxGraphModel\u003e",
+  "state": "1",
+  "treeNodeId": "",
+  "respContentType": "application/json",
+  "url": "logic/model/mgr/search/post",
+  "reqMethod": "POST",
+  "serviceType": "api",
+  "apiInputParams": "{\n    \"body\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ],\n    \"headers\": [],\n    \"query\": []\n}",
+  "apiOutputParams": "{\n    \"mockJson\": \"\",\n    \"responseBody\": [\n        {\n            \"name\": \"root\",\n            \"required\": \"1\",\n            \"type\": \"object\",\n            \"desc\": \"\",\n            \"disabled\": true,\n            \"id\": \"1\",\n            \"children\": []\n        }\n    ]\n}",
+  "createUser": "chengkai3",
+  "appName": "dataps",
+  "mockState": "0",
+  "tapeStepList": [
+    {
+      "id": "8a7499568fc78ab0018ff1c2d9420028",
+      "stepSeq": "2",
+      "parentStepId": "-1",
+      "label": "2.执行脚本",
+      "graphId": "192960566994395136",
+      "stepInst": "script",
+      "preStepId": "-1",
+      "nextStepId": "-1",
+      "successStepId": "-1",
+      "failStepId": "-1",
+      "completeStepId": "-1",
+      "stepConfig": "{\"scriptText\":\"\\n\\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\\nimport com.asiainfo.modo.dataps.LogicModelService;\\nimport com.asiainfo.modo.dataps.ArchPropLogicModelService;\\nimport com.asiainfo.modo.dataps.DatapsModoDevLogHelper;\\nimport io.github.suanchou.utils.SpringContextUtil;\\nimport io.github.suanchou.utils.SpringJdbcUtil;\\nimport org.apache.commons.collections.MapUtils;\\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\\n\\nimport java.util.List;\\nimport java.util.Map;\\n\\n\\n\\n    public Object search(Map\u003cString, Object\u003e body) {\\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\\n        String impl \u003d \\\"logicModelService\\\";\\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\\\"select prop_label from dacp_meta_property where prop_name\u003d\u0027useArchAsTag\u0027\\\", body));\\n        for (Map\u003cString, Object\u003e map : list) {\\n            if (\\\"true\\\".equals(MapUtils.getString(map, \\\"propLabel\\\"))) {\\n                //impl \u003d \\\"archPropLogicModelService\\\";\\n                ArchPropLogicModelService logicModelService \u003d new ArchPropLogicModelService();\\n                return logicModelService.search(body);\\n            }\\n        }\\n        LogicModelService logicModelService \u003d (LogicModelService) SpringContextUtil.getBean(impl);\\n        return logicModelService.search(body);\\n    }\\n\\n\\n\\nreturn search(body);\",\"label\":\"2.执行脚本\"}",
+      "appName": "dataps",
+      "stepConfigMap": {
+        "scriptText": "\n\nimport com.asiainfo.modo.dataps.DatapsHumpHelper;\nimport com.asiainfo.modo.dataps.LogicModelService;\nimport com.asiainfo.modo.dataps.ArchPropLogicModelService;\nimport com.asiainfo.modo.dataps.DatapsModoDevLogHelper;\nimport io.github.suanchou.utils.SpringContextUtil;\nimport io.github.suanchou.utils.SpringJdbcUtil;\nimport org.apache.commons.collections.MapUtils;\nimport org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;\n\nimport java.util.List;\nimport java.util.Map;\n\n\n\n    public Object search(Map\u003cString, Object\u003e body) {\n        NamedParameterJdbcTemplate jt \u003d SpringJdbcUtil.getNamedParameterJdbcTemplate();\n        String impl \u003d \"logicModelService\";\n        List\u003cMap\u003cString, Object\u003e\u003e list \u003d DatapsHumpHelper.lineToHump(jt.queryForList(\"select prop_label from dacp_meta_property where prop_name\u003d\u0027useArchAsTag\u0027\", body));\n        for (Map\u003cString, Object\u003e map : list) {\n            if (\"true\".equals(MapUtils.getString(map, \"propLabel\"))) {\n                //impl \u003d \"archPropLogicModelService\";\n                ArchPropLogicModelService logicModelService \u003d new ArchPropLogicModelService();\n                return logicModelService.search(body);\n            }\n        }\n        LogicModelService logicModelService \u003d (LogicModelService) SpringContextUtil.getBean(impl);\n        return logicModelService.search(body);\n    }\n\n\n\nreturn search(body);",
+        "label": "2.执行脚本"
+      }
+    }
+  ]
+}

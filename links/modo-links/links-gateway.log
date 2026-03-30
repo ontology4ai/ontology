@@ -1,0 +1,37 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.18)
+
+2026-03-28 15:09:05.472 [main] INFO  org.springframework.boot.StartupInfoLogger.logStarting:55 - Starting LinksGatewayBootApp using Java 1.8.0_482 on DESKTOP-82JST41 with PID 9911 (/home/luc/ontology/links/modo-links/modo-links-gateway-boot-1.1.0.jar started by luc in /home/luc/ontology/links/modo-links)
+2026-03-28 15:09:05.475 [main] INFO  org.springframework.boot.SpringApplication.logStartupProfileInfo:632 - No active profile set, falling back to 1 default profile: "default"
+2026-03-28 15:09:09.522 [main] INFO  org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-28 15:09:09.585 [main] INFO  org.hibernate.Version.logVersion:44 - HHH000412: Hibernate ORM core version 5.6.15.Final
+2026-03-28 15:09:09.861 [main] INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2026-03-28 15:09:09.939 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:110 - HikariPool-1 - Starting...
+2026-03-28 15:09:11.003 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection:123 - HikariPool-1 - Start completed.
+2026-03-28 15:09:11.017 [main] INFO  org.hibernate.dialect.Dialect.<init>:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2026-03-28 15:09:11.046 [main] INFO  org.hibernate.envers.boot.internal.EnversServiceImpl.configure:88 - Envers integration enabled? : true
+2026-03-28 15:09:12.822 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-03-28 15:09:15.758 [main] WARN  org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration$GroovyMarkupConfiguration.checkTemplateLocationExists:85 - Cannot find template location: classpath:/templates/ (please add some templates, check your Groovy configuration, or set spring.groovy.template.check-template-location=false)
+2026-03-28 15:09:17.568 [main] WARN  org.springframework.context.support.AbstractApplicationContext.refresh:599 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8333 is already in use
+2026-03-28 15:09:17.574 [main] INFO  com.zaxxer.hikari.HikariDataSource.close:350 - HikariPool-1 - Shutdown initiated...
+2026-03-28 15:09:19.716 [main] INFO  com.zaxxer.hikari.HikariDataSource.close:352 - HikariPool-1 - Shutdown completed.
+2026-03-28 15:09:19.747 [main] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report:40 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8333 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8333 or configure this application to listen on another port.
+

@@ -1,0 +1,136 @@
+buildscript {
+    ext {
+        Versions = [
+                'lombok'      : '1.18.24',
+                'suanchou'    : '0.6.9.beta',
+                'modoApp'     : '1.0.11',
+                'modoFront'   : '1.0.8',
+                'elasticSearch': '7.17.12',
+                'lucene'      : '8.11.1',
+                'spring'      : '5.3.31',
+                'servlet'     : '4.0.1',
+                'junit'       : '5.9.2',
+                'pgvector'    : '0.1.6',
+                'feign'       : '11.10',
+                'feign_form'  : '3.8.0',
+                'httpmime'    : '4.5.13',
+                'jsch'        : '0.1.55',
+                'druid'       : '1.2.27',
+                'springBoot'  : '2.7.10',
+                'fastjson'    : '1.2.83'
+        ]
+    }
+}
+plugins {
+    id 'java'
+    id 'java-library'
+//    id 'org.springframework.boot'
+    id 'io.spring.dependency-management'
+}
+
+group = 'com.asiainfo.modo'
+version = '0.0.1'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenLocal()
+    maven { url "https://maven.aliyun.com/nexus/content/repositories/central/" }
+    maven {
+        setAllowInsecureProtocol(true)
+        url "http://10.19.83.120/nexus/content/repositories/snapshots/"
+    }
+    maven {
+        setAllowInsecureProtocol(true)
+        url "http://10.19.83.120/nexus/content/repositories/releases/"
+    }
+    maven {
+        setAllowInsecureProtocol(true)
+        url "http://10.19.83.120/nexus/content/repositories/public/"
+    }
+    mavenCentral()
+}
+
+dependencies {
+
+    // Spring Web 相关依赖
+    api "org.springframework.boot:spring-boot-starter-web:${Versions.springBoot}"
+    api "org.springframework.boot:spring-boot-starter-websocket:${Versions.springBoot}"
+//    api "org.springframework.boot:spring-message:${Versions.springBoot}"
+//    api "org.springframework.boot:spring-websocket:${Versions.springBoot}"
+    implementation "com.alibaba:fastjson:${Versions.fastjson}"
+    implementation "com.alibaba:druid:${Versions.druid}"
+
+
+    api "io.github.suanchou:suanchou-driver:${Versions.suanchou}"
+    api "io.github.suanchou:suanchou-weaver:${Versions.suanchou}"
+    api "io.github.suanchou:suanchou-common:${Versions.suanchou}"
+    api "io.github.suanchou:suanchou-servicediscovery:${Versions.suanchou}"
+    api "com.asiainfo.modo:modo-app:${Versions.modoApp}"
+    api "com.asiainfo.modo:modo-workflow:${Versions.modoApp}"
+    api "com.asiainfo.modo:modo-platform:${Versions.modoApp}"
+    api "com.asiainfo.modo:modo-platform-boot:${Versions.modoApp}:plain@jar"
+    implementation "com.asiainfo.modo:modo-platform-front:${Versions.modoFront}"
+
+    implementation "com.pgvector:pgvector:${Versions.pgvector}"
+
+    implementation "io.github.openfeign:feign-core:${Versions.feign}"
+    implementation "io.github.openfeign:feign-jackson:${Versions.feign}"
+    implementation "io.github.openfeign:feign-slf4j:${Versions.feign}"
+    implementation "io.github.openfeign.form:feign-form:${Versions.feign_form}"
+
+    //  jsch with openssh
+    implementation "com.jcraft:jsch:${Versions.jsch}"
+
+    implementation "org.apache.httpcomponents:httpmime:${Versions.httpmime}"
+
+    var _lombok = "org.projectlombok:lombok:${Versions.lombok}"
+    annotationProcessor _lombok
+    testAnnotationProcessor _lombok
+    compileOnly _lombok
+    testCompileOnly _lombok
+    // 测试依赖
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${Versions.junit}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${Versions.junit}"
+}
+
+def excludeJars = [
+        "modo-app-*.jar",
+        "suanchou-*.jar",
+        "groovy-*.jar",
+        "spring-*.jar",
+        "springdoc-*.jar",
+        "swagger-*.jar",
+        "*.pom",
+        "flowable-*.jar",
+        "liquibase-*.jar"
+]
+
+task copyJar(type: Copy) {
+// jenkins构建时，文件系统与当前镜像不一定一致，不用绝对路径了
+    delete "$buildDir/libs/plugin"
+    from configurations.runtimeClasspath
+    into "$buildDir/libs/plugin"
+    excludes = excludeJars
+}
+task copyDataosJar(type: Copy) {
+    from "$buildDir/libs/dmg_copilot-1.0.0.jar"
+    into "$buildDir/libs/plugin"
+}
+build {
+    dependsOn('copyJar')
+    finalizedBy("copyDataosJar")
+}
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

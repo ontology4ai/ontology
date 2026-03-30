@@ -1,0 +1,174 @@
+// 引入抽屉样式
+@import './drawer.less';
+
+// 自定义下拉选择框样式
+.custom-select-container {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 12px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: #4080ff;
+    box-shadow: 0 0 0 2px rgba(64, 128, 255, 0.1);
+  }
+}
+
+.custom-select-content {
+  display: flex;
+  flex: 1;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.custom-select-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.custom-select-text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.custom-select-name {
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.custom-select-english-name {
+  overflow: hidden;
+  font-size: 12px;
+  color: #999;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.custom-select-arrow {
+  margin-left: 8px;
+  font-size: 12px;
+  color: #999;
+  transition: transform 0.3s ease;
+
+  &.open {
+    transform: rotate(180deg);
+  }
+}
+
+.custom-select-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  margin-top: 4px;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.custom-select-option {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #f5f7fa;
+  }
+
+  &.active {
+    background-color: #e6f7ff;
+    border-left: 3px solid #4080ff;
+  }
+}
+
+// 右侧垂直工具栏样式
+.simulation-tool-right-container {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+
+  * {
+    box-sizing: content-box !important;
+  }
+}
+
+.simulation-tool-right-menu-line {
+  width: 16px;
+  height: 1px;
+  background-color: #ebeef2;
+}
+
+// 菜单列表容器
+.simulation-tool-right-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  width: fit-content;
+  background: var(--Colors-Neutral-Bg-colorBgContainer, #fff);
+  border-radius: var(--Border-Radius-borderRadius, 6px) 0 0 var(--Border-Radius-borderRadius, 6px);
+  box-shadow:
+    0 1px 2px 0 rgba(0, 0, 0, 0.03),
+    0 1px 6px -1px rgba(0, 0, 0, 0.02),
+    0 2px 4px 0 rgba(0, 0, 0, 0.02);
+}
+
+// 菜单项样式
+.simulation-tool-right-menu-item {
+  width: 15px;
+  height: 65px;
+  padding: 8px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  white-space: break-spaces;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &.disabled {
+    color: #999;
+    cursor: not-allowed;
+  }
+
+  &:not(.disabled):hover {
+    color: #2e90fa;
+  }
+
+  &:active {
+    color: #2e90fa;
+  }
+
+  &.active {
+    color: #2e90fa;
+  }
+}
+
+// 下拉菜单样式
+.simulation-tool-right-dropdown-menu {
+  width: 150px;
+}

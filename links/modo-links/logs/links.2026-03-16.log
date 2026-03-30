@@ -1,0 +1,1336 @@
+2026-03-16 09:41:24.699 [http-nio-8333-exec-40] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@1bc18fec (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-16 09:41:24.708 [http-nio-8333-exec-40] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@4cc4e949 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-16 09:56:17.513 [http-nio-8333-exec-34] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@4b697ca6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-16 09:56:17.522 [http-nio-8333-exec-34] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@4d8aa7f3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-16 10:58:47.045 [http-nio-8333-exec-38] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@17f63d6 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-16 10:58:47.051 [http-nio-8333-exec-38] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@1e3a1148 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-16 10:58:47.053 [http-nio-8333-exec-38] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@7630d86f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-16 10:58:47.056 [http-nio-8333-exec-38] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@cab64ac (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-16 10:58:47.058 [http-nio-8333-exec-38] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@79d1c032 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-16 10:58:47.061 [http-nio-8333-exec-38] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@372f2e11 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-16 11:16:32.550 [http-nio-8333-exec-15] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@75ea235d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-16 11:16:32.551 [http-nio-8333-exec-15] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@2f8a6963 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-16 11:16:32.552 [http-nio-8333-exec-15] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@37a427ab (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-16 11:16:32.553 [http-nio-8333-exec-15] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@13701ac9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-16 15:26:17.321 [http-nio-8333-exec-5] WARN  i.g.s.crypto.cipher.AesCipher - Input length must be multiple of 16 when decrypting with padded cipher
+2026-03-16 15:26:17.326 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 加载扩展数据源:mysql-8.x，路径为:/data/atlas/modo-links
+2026-03-16 15:26:17.428 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，com.asiainfo.modo.links.dsx.DataSourceClassLoader
+2026-03-16 15:26:17.429 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，com.asiainfo.modo.links.dsx.exception.JdbcGatewayException
+2026-03-16 15:26:17.430 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，com.asiainfo.modo.links.dsx.DataSourceInfo
+2026-03-16 15:26:17.430 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.slf4j.LoggerFactory
+2026-03-16 15:26:17.720 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，com.mysql.fabric.jdbc.FabricMySQLDriver
+2026-03-16 15:26:17.721 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，dm.jdbc.driver.DmDriver
+2026-03-16 15:26:17.721 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.postgresql.Driver
+2026-03-16 15:26:17.722 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，com.asiainfo.modo.links.jdbc.Driver
+2026-03-16 15:26:17.723 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.726 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.727 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.729 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.730 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.731 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.733 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.734 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.735 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.736 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.738 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.740 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.742 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.743 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.745 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.746 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.749 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.751 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.753 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.754 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.756 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.758 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.760 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.762 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.764 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.845 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.846 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.848 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.849 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.850 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.851 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.853 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.854 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.856 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.857 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.858 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.860 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.861 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.862 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.863 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.864 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.866 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.868 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.869 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.870 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.872 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.873 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.875 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.876 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.877 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.879 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.880 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.882 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.884 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:17.885 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.113 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，com.mysql.cj.LocalizedErrorMessages
+2026-03-16 15:26:18.120 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，com.mysql.cj.LocalizedErrorMessages_en
+2026-03-16 15:26:18.121 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，com.mysql.cj.LocalizedErrorMessages_en_US
+2026-03-16 15:26:18.727 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.728 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.730 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.731 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.732 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.733 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.735 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.737 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.738 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.739 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.740 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.742 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.744 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.745 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.747 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.748 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.749 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.751 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.752 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.753 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.755 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.756 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.757 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.759 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.760 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.762 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.763 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.764 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.765 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.766 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.767 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.769 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.772 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.773 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.774 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.775 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.777 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.778 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.779 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.780 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.781 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.783 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.784 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.786 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.787 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.789 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.790 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.791 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.794 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.795 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.797 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.799 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.800 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.801 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:18.802 [http-nio-8333-exec-5] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:22.448 [http-nio-8333-exec-36] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@76f0a97a (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-16 15:26:22.452 [http-nio-8333-exec-36] WARN  c.a.m.l.jdbc.utils.cipher.AesCipher - Input length must be multiple of 16 when decrypting with padded cipher
+2026-03-16 15:26:22.460 [http-nio-8333-exec-36] ERROR i.g.suanchou.utils.BeanConvertUtil - Could not copy property 'createDate' from source to target
+java.lang.IllegalArgumentException: java.lang.ClassCastException@41bc5f5e
+	at sun.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.github.suanchou.utils.BeanConvertUtil.copyProperties(BeanConvertUtil.java:82)
+	at io.github.suanchou.utils.BeanConvertUtil.copyBean(BeanConvertUtil.java:45)
+	at io.github.suanchou.driver.repo.AbstractRepositoryImpl.save(AbstractRepositoryImpl.java:74)
+	at sun.reflect.GeneratedMethodAccessor100.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:76)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at com.sun.proxy.$Proxy171.save(Unknown Source)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.syncDatasource(LinksSyncController.java:94)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.datasource(LinksSyncController.java:52)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$FastClassBySpringCGLIB$$e3dcd4f9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$EnhancerBySpringCGLIB$$7129ad54.datasource(<generated>)
+	at sun.reflect.GeneratedMethodAccessor99.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at io.github.suanchou.web.WebDefaultFilter.doFilter(WebDefaultFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2026-03-16 15:26:22.467 [http-nio-8333-exec-36] INFO  i.g.s.d.repo.AbstractRepositoryImpl - 领域事件的队列不存在LinksDatasource,没有观察者
+2026-03-16 15:26:22.504 [http-nio-8333-exec-34] WARN  c.a.m.l.jdbc.utils.cipher.AesCipher - Input length must be multiple of 16 when decrypting with padded cipher
+2026-03-16 15:26:22.501 [http-nio-8333-exec-15] WARN  c.a.m.l.jdbc.utils.cipher.AesCipher - Input length must be multiple of 16 when decrypting with padded cipher
+2026-03-16 15:26:22.507 [http-nio-8333-exec-41] WARN  c.a.m.l.jdbc.utils.cipher.AesCipher - Input length must be multiple of 16 when decrypting with padded cipher
+2026-03-16 15:26:22.508 [http-nio-8333-exec-39] WARN  c.a.m.l.jdbc.utils.cipher.AesCipher - Input length must be multiple of 16 when decrypting with padded cipher
+2026-03-16 15:26:22.507 [http-nio-8333-exec-34] ERROR i.g.suanchou.utils.BeanConvertUtil - Could not copy property 'createDate' from source to target
+java.lang.IllegalArgumentException: java.lang.ClassCastException@4a50f810
+	at sun.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.github.suanchou.utils.BeanConvertUtil.copyProperties(BeanConvertUtil.java:82)
+	at io.github.suanchou.utils.BeanConvertUtil.copyBean(BeanConvertUtil.java:45)
+	at io.github.suanchou.driver.repo.AbstractRepositoryImpl.save(AbstractRepositoryImpl.java:74)
+	at sun.reflect.GeneratedMethodAccessor100.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:76)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at com.sun.proxy.$Proxy171.save(Unknown Source)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.syncDatasource(LinksSyncController.java:94)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.datasource(LinksSyncController.java:52)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$FastClassBySpringCGLIB$$e3dcd4f9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$EnhancerBySpringCGLIB$$7129ad54.datasource(<generated>)
+	at sun.reflect.GeneratedMethodAccessor99.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at io.github.suanchou.web.WebDefaultFilter.doFilter(WebDefaultFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2026-03-16 15:26:22.510 [http-nio-8333-exec-15] ERROR i.g.suanchou.utils.BeanConvertUtil - Could not copy property 'createDate' from source to target
+java.lang.IllegalArgumentException: java.lang.ClassCastException@6b785bbc
+	at sun.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.github.suanchou.utils.BeanConvertUtil.copyProperties(BeanConvertUtil.java:82)
+	at io.github.suanchou.utils.BeanConvertUtil.copyBean(BeanConvertUtil.java:45)
+	at io.github.suanchou.driver.repo.AbstractRepositoryImpl.save(AbstractRepositoryImpl.java:74)
+	at sun.reflect.GeneratedMethodAccessor100.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:76)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at com.sun.proxy.$Proxy171.save(Unknown Source)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.syncDatasource(LinksSyncController.java:94)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.datasource(LinksSyncController.java:52)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$FastClassBySpringCGLIB$$e3dcd4f9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$EnhancerBySpringCGLIB$$7129ad54.datasource(<generated>)
+	at sun.reflect.GeneratedMethodAccessor99.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at io.github.suanchou.web.WebDefaultFilter.doFilter(WebDefaultFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2026-03-16 15:26:22.510 [http-nio-8333-exec-41] ERROR i.g.suanchou.utils.BeanConvertUtil - Could not copy property 'createDate' from source to target
+java.lang.IllegalArgumentException: java.lang.ClassCastException@74d01526
+	at sun.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.github.suanchou.utils.BeanConvertUtil.copyProperties(BeanConvertUtil.java:82)
+	at io.github.suanchou.utils.BeanConvertUtil.copyBean(BeanConvertUtil.java:45)
+	at io.github.suanchou.driver.repo.AbstractRepositoryImpl.save(AbstractRepositoryImpl.java:74)
+	at sun.reflect.GeneratedMethodAccessor100.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:76)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at com.sun.proxy.$Proxy171.save(Unknown Source)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.syncDatasource(LinksSyncController.java:94)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.datasource(LinksSyncController.java:52)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$FastClassBySpringCGLIB$$e3dcd4f9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$EnhancerBySpringCGLIB$$7129ad54.datasource(<generated>)
+	at sun.reflect.GeneratedMethodAccessor99.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at io.github.suanchou.web.WebDefaultFilter.doFilter(WebDefaultFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2026-03-16 15:26:22.511 [http-nio-8333-exec-34] INFO  i.g.s.d.repo.AbstractRepositoryImpl - 领域事件的队列不存在LinksDatasource,没有观察者
+2026-03-16 15:26:22.511 [http-nio-8333-exec-15] INFO  i.g.s.d.repo.AbstractRepositoryImpl - 领域事件的队列不存在LinksDatasource,没有观察者
+2026-03-16 15:26:22.512 [http-nio-8333-exec-39] ERROR i.g.suanchou.utils.BeanConvertUtil - Could not copy property 'createDate' from source to target
+java.lang.IllegalArgumentException: java.lang.ClassCastException@12c95071
+	at sun.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.github.suanchou.utils.BeanConvertUtil.copyProperties(BeanConvertUtil.java:82)
+	at io.github.suanchou.utils.BeanConvertUtil.copyBean(BeanConvertUtil.java:45)
+	at io.github.suanchou.driver.repo.AbstractRepositoryImpl.save(AbstractRepositoryImpl.java:74)
+	at sun.reflect.GeneratedMethodAccessor100.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:76)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at com.sun.proxy.$Proxy171.save(Unknown Source)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.syncDatasource(LinksSyncController.java:94)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.datasource(LinksSyncController.java:52)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$FastClassBySpringCGLIB$$e3dcd4f9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$EnhancerBySpringCGLIB$$7129ad54.datasource(<generated>)
+	at sun.reflect.GeneratedMethodAccessor99.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at io.github.suanchou.web.WebDefaultFilter.doFilter(WebDefaultFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2026-03-16 15:26:22.513 [http-nio-8333-exec-41] INFO  i.g.s.d.repo.AbstractRepositoryImpl - 领域事件的队列不存在LinksDatasource,没有观察者
+2026-03-16 15:26:22.514 [http-nio-8333-exec-39] INFO  i.g.s.d.repo.AbstractRepositoryImpl - 领域事件的队列不存在LinksDatasource,没有观察者
+2026-03-16 15:26:25.559 [http-nio-8333-exec-11] WARN  c.a.m.l.jdbc.utils.cipher.AesCipher - Input length must be multiple of 16 when decrypting with padded cipher
+2026-03-16 15:26:25.565 [http-nio-8333-exec-40] WARN  c.a.m.l.jdbc.utils.cipher.AesCipher - Input length must be multiple of 16 when decrypting with padded cipher
+2026-03-16 15:26:25.565 [http-nio-8333-exec-11] ERROR i.g.suanchou.utils.BeanConvertUtil - Could not copy property 'createDate' from source to target
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.github.suanchou.utils.BeanConvertUtil.copyProperties(BeanConvertUtil.java:82)
+	at io.github.suanchou.utils.BeanConvertUtil.copyBean(BeanConvertUtil.java:45)
+	at io.github.suanchou.driver.repo.AbstractRepositoryImpl.save(AbstractRepositoryImpl.java:74)
+	at sun.reflect.GeneratedMethodAccessor100.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:76)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at com.sun.proxy.$Proxy171.save(Unknown Source)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.syncDatasource(LinksSyncController.java:94)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.datasource(LinksSyncController.java:52)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$FastClassBySpringCGLIB$$e3dcd4f9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$EnhancerBySpringCGLIB$$7129ad54.datasource(<generated>)
+	at sun.reflect.GeneratedMethodAccessor99.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at io.github.suanchou.web.WebDefaultFilter.doFilter(WebDefaultFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at java.text.SimpleDateFormat.parse(SimpleDateFormat.java:1439)
+	at java.text.DateFormat.parse(DateFormat.java:364)
+	at java_text_DateFormat$parse.call(Unknown Source)
+	at com.asiainfo.modo.links.domain.LinksDatasource.setCreateDate(com.asiainfo.modo.links.domain.LinksDatasource:65)
+	... 103 common frames omitted
+2026-03-16 15:26:25.567 [http-nio-8333-exec-11] INFO  i.g.s.d.repo.AbstractRepositoryImpl - 领域事件的队列不存在LinksDatasource,没有观察者
+2026-03-16 15:26:25.568 [http-nio-8333-exec-40] ERROR i.g.suanchou.utils.BeanConvertUtil - Could not copy property 'createDate' from source to target
+java.lang.IllegalArgumentException: java.lang.ClassCastException@3e70354
+	at sun.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.github.suanchou.utils.BeanConvertUtil.copyProperties(BeanConvertUtil.java:82)
+	at io.github.suanchou.utils.BeanConvertUtil.copyBean(BeanConvertUtil.java:45)
+	at io.github.suanchou.driver.repo.AbstractRepositoryImpl.save(AbstractRepositoryImpl.java:74)
+	at sun.reflect.GeneratedMethodAccessor100.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:76)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at com.sun.proxy.$Proxy171.save(Unknown Source)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.syncDatasource(LinksSyncController.java:94)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.datasource(LinksSyncController.java:52)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$FastClassBySpringCGLIB$$e3dcd4f9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$EnhancerBySpringCGLIB$$7129ad54.datasource(<generated>)
+	at sun.reflect.GeneratedMethodAccessor99.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at io.github.suanchou.web.WebDefaultFilter.doFilter(WebDefaultFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2026-03-16 15:26:25.569 [http-nio-8333-exec-40] INFO  i.g.s.d.repo.AbstractRepositoryImpl - 领域事件的队列不存在LinksDatasource,没有观察者
+2026-03-16 15:26:25.599 [http-nio-8333-exec-4] WARN  c.a.m.l.jdbc.utils.cipher.AesCipher - Input length must be multiple of 16 when decrypting with padded cipher
+2026-03-16 15:26:25.603 [http-nio-8333-exec-4] ERROR i.g.suanchou.utils.BeanConvertUtil - Could not copy property 'createDate' from source to target
+java.lang.IllegalArgumentException: java.lang.ClassCastException@72538020
+	at sun.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.github.suanchou.utils.BeanConvertUtil.copyProperties(BeanConvertUtil.java:82)
+	at io.github.suanchou.utils.BeanConvertUtil.copyBean(BeanConvertUtil.java:45)
+	at io.github.suanchou.driver.repo.AbstractRepositoryImpl.save(AbstractRepositoryImpl.java:74)
+	at sun.reflect.GeneratedMethodAccessor100.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:76)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at com.sun.proxy.$Proxy171.save(Unknown Source)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.syncDatasource(LinksSyncController.java:94)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.datasource(LinksSyncController.java:52)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$FastClassBySpringCGLIB$$e3dcd4f9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$EnhancerBySpringCGLIB$$7129ad54.datasource(<generated>)
+	at sun.reflect.GeneratedMethodAccessor99.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at io.github.suanchou.web.WebDefaultFilter.doFilter(WebDefaultFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2026-03-16 15:26:25.605 [http-nio-8333-exec-4] INFO  i.g.s.d.repo.AbstractRepositoryImpl - 领域事件的队列不存在LinksDatasource,没有观察者
+2026-03-16 15:26:25.631 [http-nio-8333-exec-38] WARN  c.a.m.l.jdbc.utils.cipher.AesCipher - Input length must be multiple of 16 when decrypting with padded cipher
+2026-03-16 15:26:25.636 [http-nio-8333-exec-38] ERROR i.g.suanchou.utils.BeanConvertUtil - Could not copy property 'createDate' from source to target
+java.lang.IllegalArgumentException: java.lang.ClassCastException@93d2aca
+	at sun.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.github.suanchou.utils.BeanConvertUtil.copyProperties(BeanConvertUtil.java:82)
+	at io.github.suanchou.utils.BeanConvertUtil.copyBean(BeanConvertUtil.java:45)
+	at io.github.suanchou.driver.repo.AbstractRepositoryImpl.save(AbstractRepositoryImpl.java:74)
+	at sun.reflect.GeneratedMethodAccessor100.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:76)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at com.sun.proxy.$Proxy171.save(Unknown Source)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.syncDatasource(LinksSyncController.java:94)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.datasource(LinksSyncController.java:52)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$FastClassBySpringCGLIB$$e3dcd4f9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$EnhancerBySpringCGLIB$$7129ad54.datasource(<generated>)
+	at sun.reflect.GeneratedMethodAccessor99.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at io.github.suanchou.web.WebDefaultFilter.doFilter(WebDefaultFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2026-03-16 15:26:25.637 [http-nio-8333-exec-38] INFO  i.g.s.d.repo.AbstractRepositoryImpl - 领域事件的队列不存在LinksDatasource,没有观察者
+2026-03-16 15:26:25.663 [http-nio-8333-exec-5] WARN  c.a.m.l.jdbc.utils.cipher.AesCipher - Input length must be multiple of 16 when decrypting with padded cipher
+2026-03-16 15:26:25.667 [http-nio-8333-exec-5] ERROR i.g.suanchou.utils.BeanConvertUtil - Could not copy property 'createDate' from source to target
+java.lang.IllegalArgumentException: java.lang.ClassCastException@35f46520
+	at sun.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.github.suanchou.utils.BeanConvertUtil.copyProperties(BeanConvertUtil.java:82)
+	at io.github.suanchou.utils.BeanConvertUtil.copyBean(BeanConvertUtil.java:45)
+	at io.github.suanchou.driver.repo.AbstractRepositoryImpl.save(AbstractRepositoryImpl.java:74)
+	at sun.reflect.GeneratedMethodAccessor100.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:76)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:241)
+	at com.sun.proxy.$Proxy171.save(Unknown Source)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.syncDatasource(LinksSyncController.java:94)
+	at com.asiainfo.modo.links.gateway.LinksSyncController.datasource(LinksSyncController.java:52)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$FastClassBySpringCGLIB$$e3dcd4f9.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:792)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:762)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:707)
+	at com.asiainfo.modo.links.gateway.LinksSyncController$$EnhancerBySpringCGLIB$$7129ad54.datasource(<generated>)
+	at sun.reflect.GeneratedMethodAccessor99.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at io.github.suanchou.web.WebDefaultFilter.doFilter(WebDefaultFilter.java:63)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2026-03-16 15:26:25.668 [http-nio-8333-exec-5] INFO  i.g.s.d.repo.AbstractRepositoryImpl - 领域事件的队列不存在LinksDatasource,没有观察者
+2026-03-16 15:26:40.443 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 加载扩展数据源:mysql-8.x，路径为:/data/atlas/modo-links
+2026-03-16 15:26:40.446 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，com.asiainfo.modo.links.dsx.DataSourceClassLoader
+2026-03-16 15:26:40.447 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，com.asiainfo.modo.links.dsx.exception.JdbcGatewayException
+2026-03-16 15:26:40.447 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，com.asiainfo.modo.links.dsx.DataSourceInfo
+2026-03-16 15:26:40.448 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.slf4j.LoggerFactory
+2026-03-16 15:26:40.457 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，com.mysql.fabric.jdbc.FabricMySQLDriver
+2026-03-16 15:26:40.458 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，dm.jdbc.driver.DmDriver
+2026-03-16 15:26:40.458 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.postgresql.Driver
+2026-03-16 15:26:40.458 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，com.asiainfo.modo.links.jdbc.Driver
+2026-03-16 15:26:40.459 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.461 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.463 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.464 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.466 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.467 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.468 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.470 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.471 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.474 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.476 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.477 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.480 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.481 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.483 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.484 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.485 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.487 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.488 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.489 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.491 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.493 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.495 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.496 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.498 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.499 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.501 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.502 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.504 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.505 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.507 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.508 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.509 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.511 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.513 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.514 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.515 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.517 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.518 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.520 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.521 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.523 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.524 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.525 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.527 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.528 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.529 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.530 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.532 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.533 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.534 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.536 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.537 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.538 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.539 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.563 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，com.mysql.cj.LocalizedErrorMessages
+2026-03-16 15:26:40.566 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，com.mysql.cj.LocalizedErrorMessages_en
+2026-03-16 15:26:40.568 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，com.mysql.cj.LocalizedErrorMessages_en_US
+2026-03-16 15:26:40.786 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.788 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.789 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.790 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.791 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.793 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.794 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.796 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.797 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.800 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.801 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.802 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.803 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.805 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.806 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.807 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.808 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.809 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.810 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.811 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.812 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.815 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.816 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.817 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.819 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.820 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.821 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.822 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.824 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.825 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.827 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.829 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.830 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.831 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.832 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.833 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.834 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.836 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.837 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.838 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.839 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.840 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.842 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.843 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.844 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.845 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.846 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.848 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.849 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.850 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.851 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.852 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.854 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.855 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver
+2026-03-16 15:26:40.856 [http-nio-8333-exec-36] INFO  c.a.m.l.dsx.DataSourceClassLoader - 从AppClassLoader中加载依赖类，org.apache.hive.jdbc.HiveDriver

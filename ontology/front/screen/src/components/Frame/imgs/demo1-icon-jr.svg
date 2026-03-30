@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>行业-金融</title>
+    <defs>
+        <linearGradient x1="79.249375%" y1="86.5657031%" x2="9.838375%" y2="75.2628906%" id="linearGradient-1">
+            <stop stop-color="#1D85FF" offset="0%"></stop>
+            <stop stop-color="#9CCAFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="行业-金融" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="金融" transform="translate(2.000000, 3.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <path d="M12,2.7 L0,2.7 L0,1.65 C0,0.73875 0.73875,0 1.65,0 L10.35,0 C11.26125,0 12,0.73875 12,1.65 L12,2.7 Z M12,3.6 L12,8.85 C12,9.76125 11.26125,10.5 10.35,10.5 L1.65,10.5 C0.73875,10.5 0,9.76125 0,8.85 L0,3.6 L12,3.6 L12,3.6 Z M9.45,7.5 L7.95,7.5 C7.830675,7.5 7.716225,7.5474 7.631775,7.631775 C7.5474,7.716225 7.5,7.830675 7.5,7.95 C7.5,8.069325 7.5474,8.183775 7.631775,8.268225 C7.716225,8.3526 7.830675,8.4 7.95,8.4 L9.45,8.4 C9.569325,8.4 9.683775,8.3526 9.768225,8.268225 C9.8526,8.183775 9.9,8.069325 9.9,7.95 C9.9,7.830675 9.8526,7.716225 9.768225,7.631775 C9.683775,7.5474 9.569325,7.5 9.45,7.5 L9.45,7.5 Z" id="形状"></path>
+        </g>
+    </g>
+</svg>

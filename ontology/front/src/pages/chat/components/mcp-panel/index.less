@@ -1,0 +1,229 @@
+// 定义颜色变量
+@primary-color: #1890ff;
+@success-color: #52c41a;
+@background-light: #f0f7ff;
+@background-content: #f8f9fa;
+@background-code: #1e1e1e;
+@text-primary: #262626;
+@text-secondary: #8a8a8a;
+@text-code: #d4d4d4;
+@border-radius: 8px;
+@shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+// 动画过渡
+@transition-duration: 0.3s;
+@transition-timing: ease-in-out;
+
+// 主容器
+.custom-collapse-panel {
+  width: 100%;
+  margin: 10px auto;
+
+  // 卡片样式
+  .collapse-card {
+    border-radius: @border-radius;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    border: 1px solid #B8DFFF;
+
+    // 收起状态
+    &.collapsed {
+      background-color: @background-light;
+    }
+
+    // 展开状态
+    &.expanded {
+      background-color: #ffffff;
+      box-shadow: @shadow;
+      .panel-header {
+        background-color: #D6EEFF;
+        border-bottom: 1px solid #B8DFFF;
+      }
+    }
+
+    // 标题栏样式
+    .panel-header {
+      height: 46px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 16px;
+      user-select: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      width: 100%;
+      overflow: hidden;
+      span{
+        font-size: 14px;
+      }
+      .tool-name{
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        justify-content: space-between;
+        white-space: nowrap;
+        span{
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.02);
+      }
+
+      .header-icon {
+        font-size: 16px;
+        color: #2E90FA;
+        font-size: 16px;
+        color: #1890ff;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        margin-right: 8px;
+        .arco-spin-icon{
+          position: relative;
+          top: -5px;
+        }
+      }
+
+      .header-extra {
+        color: @text-secondary;
+        font-size: 14px;
+        transition: transform @transition-duration @transition-timing;
+        
+        display: flex;
+        align-items: center;
+        .mcp-tag{
+          margin-right: 8px;
+          border-radius: 4px;
+          &.object{
+            border: var(--Components-Tag-Global-lineWidth, 1px) solid var(--Colors-Base-Geekblue-3, #ADCEFF);
+            background: var(--Colors-Base-Geekblue-1, #E4F0FF);
+          }
+          &.logic{
+            border: var(--Components-Tag-Global-lineWidth, 1px) solid var(--Colors-Base-Cyan-3, #B1F0EC);
+            background: var(--Colors-Base-Cyan-1, #F0FFFD);
+          }
+          &.action{
+            border: var(--Components-Tag-Global-lineWidth, 1px) solid var(--Colors-Base-Purple-3, #CCBCFF);
+            background: var(--Colors-Base-Purple-1, #F4F2FF);
+          }
+          &.interface,&.oag,&.python{
+            border: var(--Components-Tag-Global-lineWidth, 1px) solid var(--Colors-Base-Pink-3, #FFBFDA);
+            background: var(--Colors-Base-Pink-1, #FFF0F6);
+          }
+        }
+      }
+    }
+
+    // 内容区域容器
+    .content-wrapper {
+      overflow: hidden;
+      transition: all @transition-duration @transition-timing;
+      max-height: 0;
+      opacity: 0;
+      transform: translateY(-10px);
+      // 收起状态
+      &.collapsed {
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      // 展开状态
+      &.expanded {
+        max-height: 1000px; // 根据内容自适应高度
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .content-inner {
+        padding: 0 16px 16px 16px;
+      }
+    }
+
+    // 内容区块样式
+    .content-section {
+      .content-header{
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
+        .dot{
+          border-left: 4px solid #2E90FA;
+          border-radius: 2px;
+          width: 4px;
+          margin-right: 6px;
+          display: inline-block;
+          height: 12px;
+        }
+        .text{
+          font-size: 14px;
+          color: var(--color-text-1);
+          display: inline-block;
+          margin-right: 6px;
+        }
+        .arco-divider{
+          width: calc(100% - 54px);
+          min-width: min-content;
+        }
+      }
+      .sql-code{
+        background-color: #F8FAFC;
+        overflow: auto;
+        font-size: 14px;
+        line-height: 28px;
+        color: var(--color-text-1);
+        padding: 10px;
+        font-family: HarmonyOS Sans SC;
+        font-weight: 400;
+      }
+    }
+
+    // 内容区域间距
+    .arco-space-vertical {
+      width: 100%;
+
+      .arco-space-item {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+// 加载动画
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 1000px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    max-height: 1000px;
+    opacity: 1;
+  }
+  to {
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+.content-wrapper.expanded {
+  animation: slideDown @transition-duration @transition-timing;
+}
+
+.content-wrapper.collapsed {
+  animation: slideUp @transition-duration @transition-timing;
+}

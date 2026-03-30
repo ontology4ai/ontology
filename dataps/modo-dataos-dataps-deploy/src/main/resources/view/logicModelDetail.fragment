@@ -1,0 +1,1236 @@
+{
+    "id": "76628f8ae1d682",
+    "module": "236063466669670400",
+    "moduleLabel": null,
+    "name": "logicModelDetail",
+    "label": "逻辑模型详情",
+    "descr": "逻辑模型详情",
+    "type": "fragment",
+    "state": "1",
+    "parameters": "[
+    {
+        \"id\": \"0\",
+        \"name\": \"0\",
+        \"label\": \"页面\",
+        \"type\": \"view\",
+        \"options\": {
+            \"hidden\": false,
+            \"hiddenBindVar\": null,
+            \"isLoading\": false,
+            \"loading\": false,
+            \"loadingBindVar\": null,
+            \"loadingText\": null,
+            \"loadingTextBindVar\": null,
+            \"showTooltip\": false,
+            \"tooltip\": null,
+            \"tooltipBindVar\": null,
+            \"className\": \"\",
+            \"css\": \":root {\\n  padding:16px;\\n  background: #ffffff;\\n}\\n\\n\\n:root .item-container {\\n    height:50px;\\n    padding: 0 20px;\\n    float:right;\\n    border-right: 1px solid #F2F3F5;\\n}\\n\\n:root .value-container {\\n  margin-top:11px;\\n}\\n\\n:root .model-img {\\n  float:right;\\n  width: 36px;\\n  height: 36px;\\n  border-radius:50%;\\n  background-size: 100% 100%;\\n  text-align:center;\\n}\\n\\n:root .model-img .arco-image-img {\\n  margin-top:10px;\\n  width: 16px;\\n  height: 16px;\\n  border-radius:0px;\\n}\\n\\n:root .value{\\n  font-family: SourceHanSansCN-Medium, SourceHanSansCN;\\n  font-weight: 500;\\n  color: #1D2129;\\n  margin-right:2px;\\n}\\n\\n:root .label {\\n  font-family: SourceHanSansCN-Regular, SourceHanSansCN;\\n  font-weight: 400;\\n  color: #4E5969;\\n  margin-right:4px;\\n}\\n\\n:root .model-tag{\\n    height:20px;\\n    // width:36px;\\n    margin-right: 8px;\\n    padding: 6px 4px;\\n}\\n:root div::-webkit-scrollbar-track {\\n    display: none;\\n    -webkit-box-shadow: 0;\\n    border-radius: 0;\\n    background: #4d4d4b; //滚动槽背景色\\n    border-radius: 10px; //滚动条边框半径设置\\n}\",
+            \"loop\": {
+                \"isLoading\": false,
+                \"loading\": false,
+                \"loadingBindVar\": null,
+                \"data\": null,
+                \"dataBindVar\": null,
+                \"item\": \"item\",
+                \"index\": \"index\",
+                \"key\": \"index\",
+                \"paginationVisible\": true,
+                \"disabled\": false,
+                \"pagination\": {
+                    \"style\": {
+                        \"display\": \"block\"
+                    },
+                    \"sizeOptions\": [
+                        10,
+                        20,
+                        30,
+                        40,
+                        50
+                    ],
+                    \"show\": true,
+                    \"showTotal\": true,
+                    \"pageSizeChangeResetCurrent\": true,
+                    \"sizeCanChange\": true,
+                    \"total\": 0,
+                    \"pageSize\": 20,
+                    \"current\": 1
+                },
+                \"event\": {
+                    \"builtIn\": {
+                        \"type\": \"url\",
+                        \"isSingleService\": true,
+                        \"urlAction\": {
+                            \"url\": null,
+                            \"blank\": true
+                        },
+                        \"viewActions\": [
+                            {
+                                \"condition\": \"true\",
+                                \"showType\": \"modal\",
+                                \"viewName\": null,
+                                \"before\": \"function beforeCallback() {}\",
+                                \"width\": \"50%\",
+                                \"top\": \"15vh\",
+                                \"fullscreen\": false,
+                                \"size\": \"50%\",
+                                \"tabViewName\": null,
+                                \"tabParams\": \"\",
+                                \"tabKey\": \"\",
+                                \"tabLabel\": \"\"
+                            }
+                        ],
+                        \"actions\": []
+                    },
+                    \"callback\": \"function callback() {}\"
+                }
+            },
+            \"eventMap\": {
+                \"onMount\": {
+                    \"builtIn\": {
+                        \"type\": \"url\",
+                        \"isSingleService\": true,
+                        \"urlAction\": {
+                            \"url\": null,
+                            \"blank\": true
+                        },
+                        \"viewActions\": [
+                            {
+                                \"condition\": \"true\",
+                                \"showType\": \"modal\",
+                                \"viewName\": null,
+                                \"before\": \"function beforeCallback() {}\",
+                                \"width\": \"50%\",
+                                \"top\": \"15vh\",
+                                \"fullscreen\": false,
+                                \"size\": \"50%\",
+                                \"tabViewName\": null,
+                                \"tabParams\": \"\",
+                                \"tabKey\": \"\",
+                                \"tabLabel\": \"\"
+                            }
+                        ],
+                        \"actions\": []
+                    },
+                    \"callback\": \"function callback() {\\r\\n    var vars = $this.utils.getUrlParams();\\r\\n    if (vars.modelId) {\\r\\n        $this.setModelId(vars.modelId);\\r\\n        $this.modelId = vars.modelId;\\r\\n    }\\r\\n    if (vars.workspaceId) {\\r\\n        $this.setWorkspaceId(vars.workspaceId);\\r\\n        $this.workspaceId = vars.workspaceId;\\r\\n    }\\r\\n}\"
+                }
+            },
+            \"type\": \"one-screen-layout\",
+            \"titleVisible\": false,
+            \"vars\": [
+                {
+                    \"name\": \"modelId\",
+                    \"descr\": null,
+                    \"value\": \"''\"
+                },
+                {
+                    \"name\": \"dataSrc\",
+                    \"descr\": null,
+                    \"value\": \"'draft'\"
+                },
+                {
+                    \"name\": \"tabInfo\",
+                    \"descr\": null,
+                    \"value\": \"{}\"
+                },
+                {
+                    \"name\": \"loading\",
+                    \"descr\": null,
+                    \"value\": \"true\"
+                },
+                {
+                    \"name\": \"workspaceId\",
+                    \"descr\": null,
+                    \"value\": \"''\"
+                },
+                {
+                    \"name\": \"tabHisId\",
+                    \"descr\": null,
+                    \"value\": \"''\"
+                },
+                {
+                    \"name\": \"maskRuleOptionsMap\",
+                    \"descr\": \"脱敏规则列表\",
+                    \"value\": \"{}\"
+                },
+                {
+                    \"name\": \"customModelFields\",
+                    \"descr\": \"自定义模型基本信息字段列表\",
+                    \"value\": \"[]\"
+                },
+                {
+                    \"name\": \"changeFieldList\",
+                    \"descr\": \"字段变化列表\",
+                    \"value\": \"{}\"
+                }
+            ],
+            \"models\": [],
+            \"services\": [
+                {
+                    \"name\": \"listMsSecurityRules\",
+                    \"stateName\": \"maskRuleOptions\",
+                    \"descr\": \"\",
+                    \"autoLoad\": true,
+                    \"serviceId\": \"210409579380326400\",
+                    \"method\": \"get\",
+                    \"dataBindVar\": \"\",
+                    \"placeholders\": \"[]\",
+                    \"condition\": true,
+                    \"conditionBindVar\": \"\",
+                    \"before\": \"function beforeCallback(vars, config) {\\n    // 通过 vars.params 可以更改查询参数\\n    // 通过 vars.data 可以更改requestdata\\n    // 通过 config.header 可以更改 header\\n    // 通过 config.url 可以更改  url\\n    /* vars.data = {\\n    } */\\n    // console.log(vars, config);\\n    // 可以查看还有哪些参数可以修改。\\n}\",
+                    \"success\": \"function successCallback(data) {\\n    // data.data.b = 1; 修改返回数据结构中的 b 字段为1\\n    let obj = data.data.reduce((acc, cur) => {\\n        acc[cur.ruleId] = cur.ruleLabel;\\n        return acc;\\n    }, {});\\n    $this.setMaskRuleOptionsMap(obj);\\n\\n    return data.data; // 重要，需返回 data\\n}\",
+                    \"fail\": \"function failCallback(error){\\n    // console.log(error);\\n    // 可以在这里做弹框提示等操作\\n}\",
+                    \"callback\": \"\"
+                }
+            ],
+            \"i18n\": {
+                \"zh-CN\": \"{}\",
+                \"en-US\": \"{}\"
+            },
+            \"isSkeleton\": false,
+            \"initRenderCondiBindVar\": \"\",
+            \"skeletonLoading\": false,
+            \"skeletonLoadingBindVar\": \"\",
+            \"skeletonWidth\": \"\"
+        },
+        \"children\": [
+            {
+                \"id\": \"e61d257183608a4e\",
+                \"name\": \"base-container\",
+                \"label\": \"基本信息容器\",
+                \"type\": \"container\",
+                \"options\": {
+                    \"hidden\": false,
+                    \"hiddenBindVar\": null,
+                    \"isLoading\": false,
+                    \"loading\": false,
+                    \"loadingBindVar\": null,
+                    \"loadingText\": null,
+                    \"loadingTextBindVar\": null,
+                    \"showTooltip\": false,
+                    \"tooltip\": null,
+                    \"tooltipBindVar\": null,
+                    \"className\": \"base-container\",
+                    \"css\": \":root{\\n/* padding: 16px 16px 0 16px; */\\ndisplay: flex;\\n    justify-content: space-between;\\n}\",
+                    \"loop\": {
+                        \"isLoading\": false,
+                        \"loading\": false,
+                        \"loadingBindVar\": null,
+                        \"data\": null,
+                        \"dataBindVar\": null,
+                        \"item\": \"item\",
+                        \"index\": \"index\",
+                        \"key\": \"index\",
+                        \"paginationVisible\": true,
+                        \"disabled\": false,
+                        \"pagination\": {
+                            \"style\": {
+                                \"display\": \"block\"
+                            },
+                            \"sizeOptions\": [
+                                10,
+                                20,
+                                30,
+                                40,
+                                50
+                            ],
+                            \"show\": true,
+                            \"showTotal\": true,
+                            \"pageSizeChangeResetCurrent\": true,
+                            \"sizeCanChange\": true,
+                            \"total\": 0,
+                            \"pageSize\": 20,
+                            \"current\": 1
+                        },
+                        \"event\": {
+                            \"builtIn\": {
+                                \"type\": \"url\",
+                                \"isSingleService\": true,
+                                \"urlAction\": {
+                                    \"url\": null,
+                                    \"blank\": true
+                                },
+                                \"viewActions\": [
+                                    {
+                                        \"condition\": \"true\",
+                                        \"showType\": \"modal\",
+                                        \"viewName\": null,
+                                        \"before\": \"function beforeCallback() {}\",
+                                        \"width\": \"50%\",
+                                        \"top\": \"15vh\",
+                                        \"fullscreen\": false,
+                                        \"size\": \"50%\",
+                                        \"tabViewName\": null,
+                                        \"tabParams\": \"\",
+                                        \"tabKey\": \"\",
+                                        \"tabLabel\": \"\"
+                                    }
+                                ],
+                                \"actions\": []
+                            },
+                            \"callback\": \"function callback() {}\"
+                        }
+                    },
+                    \"eventMap\": {}
+                },
+                \"defaultOptions\": {
+                    \"css\": \":root {\\nheight: 200px;\\n}\"
+                },
+                \"children\": [
+                    {
+                        \"id\": \"87f005a3575f3b1e\",
+                        \"name\": \"87f005a3575f3b1e\",
+                        \"label\": \"容器\",
+                        \"type\": \"container\",
+                        \"options\": {
+                            \"hidden\": false,
+                            \"hiddenBindVar\": null,
+                            \"isLoading\": false,
+                            \"loading\": false,
+                            \"loadingBindVar\": null,
+                            \"loadingText\": null,
+                            \"loadingTextBindVar\": null,
+                            \"showTooltip\": false,
+                            \"tooltip\": null,
+                            \"tooltipBindVar\": null,
+                            \"className\": \"\",
+                            \"css\": \":root {\\n    /* width:fit-content;\\n    display:inline-block;\\n    height:60px; */\\n     white-space: nowrap;\\n    overflow: hidden;\\n}\",
+                            \"loop\": {
+                                \"isLoading\": false,
+                                \"loading\": false,
+                                \"loadingBindVar\": null,
+                                \"data\": null,
+                                \"dataBindVar\": null,
+                                \"item\": \"item\",
+                                \"index\": \"index\",
+                                \"key\": \"index\",
+                                \"paginationVisible\": true,
+                                \"disabled\": false,
+                                \"pagination\": {
+                                    \"style\": {
+                                        \"display\": \"block\"
+                                    },
+                                    \"sizeOptions\": [
+                                        10,
+                                        20,
+                                        30,
+                                        40,
+                                        50
+                                    ],
+                                    \"show\": true,
+                                    \"showTotal\": true,
+                                    \"pageSizeChangeResetCurrent\": true,
+                                    \"sizeCanChange\": true,
+                                    \"total\": 0,
+                                    \"pageSize\": 20,
+                                    \"current\": 1
+                                }
+                            },
+                            \"eventMap\": {}
+                        },
+                        \"defaultOptions\": {
+                            \"css\": \":root {\\nheight: 200px;\\n}\"
+                        },
+                        \"children\": [
+                            {
+                                \"id\": \"03acc7fdd78558ac\",
+                                \"name\": \"03acc7fdd78558ac\",
+                                \"label\": \"容器\",
+                                \"type\": \"container\",
+                                \"options\": {
+                                    \"hidden\": false,
+                                    \"hiddenBindVar\": null,
+                                    \"isLoading\": false,
+                                    \"loading\": false,
+                                    \"loadingBindVar\": null,
+                                    \"loadingText\": null,
+                                    \"loadingTextBindVar\": null,
+                                    \"showTooltip\": false,
+                                    \"tooltip\": null,
+                                    \"tooltipBindVar\": null,
+                                    \"className\": \"\",
+                                    \"css\": \":root {\\nposition:absolute;\\n}\",
+                                    \"loop\": {
+                                        \"isLoading\": false,
+                                        \"loading\": false,
+                                        \"loadingBindVar\": null,
+                                        \"data\": null,
+                                        \"dataBindVar\": null,
+                                        \"item\": \"item\",
+                                        \"index\": \"index\",
+                                        \"key\": \"index\",
+                                        \"paginationVisible\": true,
+                                        \"disabled\": false,
+                                        \"pagination\": {
+                                            \"style\": {
+                                                \"display\": \"block\"
+                                            },
+                                            \"sizeOptions\": [
+                                                10,
+                                                20,
+                                                30,
+                                                40,
+                                                50
+                                            ],
+                                            \"show\": true,
+                                            \"showTotal\": true,
+                                            \"pageSizeChangeResetCurrent\": true,
+                                            \"sizeCanChange\": true,
+                                            \"total\": 0,
+                                            \"pageSize\": 20,
+                                            \"current\": 1
+                                        }
+                                    },
+                                    \"eventMap\": {}
+                                },
+                                \"defaultOptions\": {
+                                    \"css\": \":root {\\nheight: 200px;\\n}\"
+                                },
+                                \"children\": [
+                                    {
+                                        \"id\": \"6da43337fa96684d\",
+                                        \"name\": \"6da43337fa96684d\",
+                                        \"label\": \"模型图片\",
+                                        \"type\": \"image\",
+                                        \"options\": {
+                                            \"hidden\": false,
+                                            \"hiddenBindVar\": null,
+                                            \"isLoading\": false,
+                                            \"loading\": false,
+                                            \"loadingBindVar\": null,
+                                            \"loadingText\": null,
+                                            \"loadingTextBindVar\": null,
+                                            \"showTooltip\": false,
+                                            \"tooltip\": null,
+                                            \"tooltipBindVar\": null,
+                                            \"className\": \"model-img\",
+                                            \"css\": \":root {\\n    background-color: #165DFF;\\n}\",
+                                            \"loop\": {
+                                                \"isLoading\": false,
+                                                \"loading\": false,
+                                                \"loadingBindVar\": null,
+                                                \"data\": null,
+                                                \"dataBindVar\": null,
+                                                \"item\": \"item\",
+                                                \"index\": \"index\",
+                                                \"key\": \"index\",
+                                                \"paginationVisible\": true,
+                                                \"disabled\": false,
+                                                \"pagination\": {
+                                                    \"style\": {
+                                                        \"display\": \"block\"
+                                                    },
+                                                    \"sizeOptions\": [
+                                                        10,
+                                                        20,
+                                                        30,
+                                                        40,
+                                                        50
+                                                    ],
+                                                    \"show\": true,
+                                                    \"showTotal\": true,
+                                                    \"pageSizeChangeResetCurrent\": true,
+                                                    \"sizeCanChange\": true,
+                                                    \"total\": 0,
+                                                    \"pageSize\": 20,
+                                                    \"current\": 1
+                                                },
+                                                \"event\": {
+                                                    \"builtIn\": {
+                                                        \"type\": \"url\",
+                                                        \"isSingleService\": true,
+                                                        \"urlAction\": {
+                                                            \"url\": null,
+                                                            \"blank\": true
+                                                        },
+                                                        \"viewActions\": [
+                                                            {
+                                                                \"condition\": \"true\",
+                                                                \"showType\": \"modal\",
+                                                                \"viewName\": null,
+                                                                \"before\": \"function beforeCallback() {}\",
+                                                                \"width\": \"50%\",
+                                                                \"top\": \"15vh\",
+                                                                \"fullscreen\": false,
+                                                                \"size\": \"50%\",
+                                                                \"tabViewName\": null,
+                                                                \"tabParams\": \"\",
+                                                                \"tabKey\": \"\",
+                                                                \"tabLabel\": \"\"
+                                                            }
+                                                        ],
+                                                        \"actions\": []
+                                                    },
+                                                    \"callback\": \"function callback() {}\"
+                                                }
+                                            },
+                                            \"eventMap\": {},
+                                            \"width\": \"\",
+                                            \"height\": \"\",
+                                            \"src\": \"/_file/ext/dataps/2023/9/7/icon1694076013125.svg\",
+                                            \"alt\": \"\",
+                                            \"preview\": false,
+                                            \"loader\": true
+                                        },
+                                        \"children\": []
+                                    },
+                                    {
+                                        \"id\": \"287881c6846bb3e9\",
+                                        \"name\": \"287881c6846bb3e9\",
+                                        \"label\": \"中文名\",
+                                        \"type\": \"image\",
+                                        \"options\": {
+                                            \"hidden\": true,
+                                            \"hiddenBindVar\": null,
+                                            \"isLoading\": false,
+                                            \"loading\": false,
+                                            \"loadingBindVar\": null,
+                                            \"loadingText\": null,
+                                            \"loadingTextBindVar\": null,
+                                            \"showTooltip\": false,
+                                            \"tooltip\": null,
+                                            \"tooltipBindVar\": null,
+                                            \"className\": \"model-img\",
+                                            \"css\": \":root {\\n    background-color: #F2F3F5;\\n}\",
+                                            \"loop\": {
+                                                \"isLoading\": false,
+                                                \"loading\": false,
+                                                \"loadingBindVar\": null,
+                                                \"data\": null,
+                                                \"dataBindVar\": null,
+                                                \"item\": \"item\",
+                                                \"index\": \"index\",
+                                                \"key\": \"index\",
+                                                \"paginationVisible\": true,
+                                                \"disabled\": false,
+                                                \"pagination\": {
+                                                    \"style\": {
+                                                        \"display\": \"block\"
+                                                    },
+                                                    \"sizeOptions\": [
+                                                        10,
+                                                        20,
+                                                        30,
+                                                        40,
+                                                        50
+                                                    ],
+                                                    \"show\": true,
+                                                    \"showTotal\": true,
+                                                    \"pageSizeChangeResetCurrent\": true,
+                                                    \"sizeCanChange\": true,
+                                                    \"total\": 0,
+                                                    \"pageSize\": 20,
+                                                    \"current\": 1
+                                                },
+                                                \"event\": {
+                                                    \"builtIn\": {
+                                                        \"type\": \"url\",
+                                                        \"isSingleService\": true,
+                                                        \"urlAction\": {
+                                                            \"url\": null,
+                                                            \"blank\": true
+                                                        },
+                                                        \"viewActions\": [
+                                                            {
+                                                                \"condition\": \"true\",
+                                                                \"showType\": \"modal\",
+                                                                \"viewName\": null,
+                                                                \"before\": \"function beforeCallback() {}\",
+                                                                \"width\": \"50%\",
+                                                                \"top\": \"15vh\",
+                                                                \"fullscreen\": false,
+                                                                \"size\": \"50%\",
+                                                                \"tabViewName\": null,
+                                                                \"tabParams\": \"\",
+                                                                \"tabKey\": \"\",
+                                                                \"tabLabel\": \"\"
+                                                            }
+                                                        ],
+                                                        \"actions\": []
+                                                    },
+                                                    \"callback\": \"function callback() {}\"
+                                                }
+                                            },
+                                            \"eventMap\": {},
+                                            \"width\": \"\",
+                                            \"height\": \"\",
+                                            \"src\": \"/_file/ext/dataps/2023/9/7/icon1694076013125.svg\",
+                                            \"alt\": \"\",
+                                            \"preview\": false,
+                                            \"loader\": true
+                                        },
+                                        \"children\": []
+                                    },
+                                    {
+                                        \"id\": \"cf0eb7cccdc0ab3b\",
+                                        \"name\": \"cf0eb7cccdc0ab3b\",
+                                        \"label\": \"模型图片\",
+                                        \"type\": \"image\",
+                                        \"options\": {
+                                            \"hidden\": true,
+                                            \"hiddenBindVar\": null,
+                                            \"isLoading\": false,
+                                            \"loading\": false,
+                                            \"loadingBindVar\": null,
+                                            \"loadingText\": null,
+                                            \"loadingTextBindVar\": null,
+                                            \"showTooltip\": false,
+                                            \"tooltip\": null,
+                                            \"tooltipBindVar\": null,
+                                            \"className\": \"model-img\",
+                                            \"css\": \":root {\\n    background-color: #E8F3FF;\\n}\",
+                                            \"loop\": {
+                                                \"isLoading\": false,
+                                                \"loading\": false,
+                                                \"loadingBindVar\": null,
+                                                \"data\": null,
+                                                \"dataBindVar\": null,
+                                                \"item\": \"item\",
+                                                \"index\": \"index\",
+                                                \"key\": \"index\",
+                                                \"paginationVisible\": true,
+                                                \"disabled\": false,
+                                                \"pagination\": {
+                                                    \"style\": {
+                                                        \"display\": \"block\"
+                                                    },
+                                                    \"sizeOptions\": [
+                                                        10,
+                                                        20,
+                                                        30,
+                                                        40,
+                                                        50
+                                                    ],
+                                                    \"show\": true,
+                                                    \"showTotal\": true,
+                                                    \"pageSizeChangeResetCurrent\": true,
+                                                    \"sizeCanChange\": true,
+                                                    \"total\": 0,
+                                                    \"pageSize\": 20,
+                                                    \"current\": 1
+                                                },
+                                                \"event\": {
+                                                    \"builtIn\": {
+                                                        \"type\": \"url\",
+                                                        \"isSingleService\": true,
+                                                        \"urlAction\": {
+                                                            \"url\": null,
+                                                            \"blank\": true
+                                                        },
+                                                        \"viewActions\": [
+                                                            {
+                                                                \"condition\": \"true\",
+                                                                \"showType\": \"modal\",
+                                                                \"viewName\": null,
+                                                                \"before\": \"function beforeCallback() {}\",
+                                                                \"width\": \"50%\",
+                                                                \"top\": \"15vh\",
+                                                                \"fullscreen\": false,
+                                                                \"size\": \"50%\",
+                                                                \"tabViewName\": null,
+                                                                \"tabParams\": \"\",
+                                                                \"tabKey\": \"\",
+                                                                \"tabLabel\": \"\"
+                                                            }
+                                                        ],
+                                                        \"actions\": []
+                                                    },
+                                                    \"callback\": \"function callback() {}\"
+                                                }
+                                            },
+                                            \"eventMap\": {},
+                                            \"width\": \"\",
+                                            \"height\": \"\",
+                                            \"src\": \"/_file/ext/dataps/2023/9/7/icon1694076013125.svg\",
+                                            \"alt\": \"\",
+                                            \"preview\": false,
+                                            \"loader\": true
+                                        },
+                                        \"children\": []
+                                    }
+                                ]
+                            },
+                            {
+                                \"id\": \"a37dbb569aca2fbd\",
+                                \"name\": \"a37dbb569aca2fbd\",
+                                \"label\": \"容器\",
+                                \"type\": \"container\",
+                                \"options\": {
+                                    \"hidden\": false,
+                                    \"hiddenBindVar\": null,
+                                    \"isLoading\": false,
+                                    \"loading\": false,
+                                    \"loadingBindVar\": null,
+                                    \"loadingText\": null,
+                                    \"loadingTextBindVar\": null,
+                                    \"showTooltip\": false,
+                                    \"tooltip\": null,
+                                    \"tooltipBindVar\": null,
+                                    \"className\": \"\",
+                                    \"css\": \":root {\\n  width:calc(100% - 50px);\\n    display:inline-block;\\n  margin: 0 0 0 50px;\\n}\",
+                                    \"loop\": {
+                                        \"isLoading\": false,
+                                        \"loading\": false,
+                                        \"loadingBindVar\": null,
+                                        \"data\": null,
+                                        \"dataBindVar\": null,
+                                        \"item\": \"item\",
+                                        \"index\": \"index\",
+                                        \"key\": \"index\",
+                                        \"paginationVisible\": true,
+                                        \"disabled\": false,
+                                        \"pagination\": {
+                                            \"style\": {
+                                                \"display\": \"block\"
+                                            },
+                                            \"sizeOptions\": [
+                                                10,
+                                                20,
+                                                30,
+                                                40,
+                                                50
+                                            ],
+                                            \"show\": true,
+                                            \"showTotal\": true,
+                                            \"pageSizeChangeResetCurrent\": true,
+                                            \"sizeCanChange\": true,
+                                            \"total\": 0,
+                                            \"pageSize\": 20,
+                                            \"current\": 1
+                                        }
+                                    },
+                                    \"eventMap\": {}
+                                },
+                                \"defaultOptions\": {
+                                    \"css\": \":root {\\nheight: 200px;\\n}\"
+                                },
+                                \"children\": [
+                                    {
+                                        \"id\": \"a0ebaea2e9ac9e5b\",
+                                        \"name\": \"name-container\",
+                                        \"label\": \"表名容器\",
+                                        \"type\": \"container\",
+                                        \"options\": {
+                                            \"hidden\": false,
+                                            \"hiddenBindVar\": null,
+                                            \"isLoading\": false,
+                                            \"loading\": false,
+                                            \"loadingBindVar\": null,
+                                            \"loadingText\": null,
+                                            \"loadingTextBindVar\": null,
+                                            \"showTooltip\": false,
+                                            \"tooltip\": null,
+                                            \"tooltipBindVar\": null,
+                                            \"className\": \"\",
+                                            \"css\": \":root {\\n        display: flex;\\n    white-space: nowrap;\\n    overflow: hidden;\\n}\\n:root>span{\\n     text-overflow: ellipsis;\\n    white-space: nowrap;\\n    overflow: hidden;\\n}\",
+                                            \"loop\": {
+                                                \"isLoading\": false,
+                                                \"loading\": false,
+                                                \"loadingBindVar\": null,
+                                                \"data\": null,
+                                                \"dataBindVar\": null,
+                                                \"item\": \"item\",
+                                                \"index\": \"index\",
+                                                \"key\": \"index\",
+                                                \"paginationVisible\": true,
+                                                \"disabled\": false,
+                                                \"pagination\": {
+                                                    \"style\": {
+                                                        \"display\": \"block\"
+                                                    },
+                                                    \"sizeOptions\": [
+                                                        10,
+                                                        20,
+                                                        30,
+                                                        40,
+                                                        50
+                                                    ],
+                                                    \"show\": true,
+                                                    \"showTotal\": true,
+                                                    \"pageSizeChangeResetCurrent\": true,
+                                                    \"sizeCanChange\": true,
+                                                    \"total\": 0,
+                                                    \"pageSize\": 20,
+                                                    \"current\": 1
+                                                },
+                                                \"event\": {
+                                                    \"builtIn\": {
+                                                        \"type\": \"url\",
+                                                        \"isSingleService\": true,
+                                                        \"urlAction\": {
+                                                            \"url\": null,
+                                                            \"blank\": true
+                                                        },
+                                                        \"viewActions\": [
+                                                            {
+                                                                \"condition\": \"true\",
+                                                                \"showType\": \"modal\",
+                                                                \"viewName\": null,
+                                                                \"before\": \"function beforeCallback() {}\",
+                                                                \"width\": \"50%\",
+                                                                \"top\": \"15vh\",
+                                                                \"fullscreen\": false,
+                                                                \"size\": \"50%\",
+                                                                \"tabViewName\": null,
+                                                                \"tabParams\": \"\",
+                                                                \"tabKey\": \"\",
+                                                                \"tabLabel\": \"\"
+                                                            }
+                                                        ],
+                                                        \"actions\": []
+                                                    },
+                                                    \"callback\": \"function callback() {}\"
+                                                }
+                                            },
+                                            \"eventMap\": {}
+                                        },
+                                        \"defaultOptions\": {
+                                            \"css\": \":root {\\nheight: 200px;\\n}\"
+                                        },
+                                        \"children\": [
+                                            {
+                                                \"id\": \"c6c9f7fb860ab899\",
+                                                \"name\": \"tab-name\",
+                                                \"label\": \"英文名\",
+                                                \"type\": \"text\",
+                                                \"options\": {
+                                                    \"hidden\": false,
+                                                    \"hiddenBindVar\": null,
+                                                    \"isLoading\": false,
+                                                    \"loading\": false,
+                                                    \"loadingBindVar\": null,
+                                                    \"loadingText\": null,
+                                                    \"loadingTextBindVar\": null,
+                                                    \"showTooltip\": false,
+                                                    \"tooltip\": null,
+                                                    \"tooltipBindVar\": null,
+                                                    \"className\": \"\",
+                                                    \"css\": \":root {\\n    margin-right:10px;\\n       overflow: hidden;\\n    flex-shrink: 0;\\n}\",
+                                                    \"loop\": {
+                                                        \"isLoading\": false,
+                                                        \"loading\": false,
+                                                        \"loadingBindVar\": null,
+                                                        \"data\": null,
+                                                        \"dataBindVar\": null,
+                                                        \"item\": \"item\",
+                                                        \"index\": \"index\",
+                                                        \"key\": \"index\",
+                                                        \"paginationVisible\": true,
+                                                        \"disabled\": false,
+                                                        \"pagination\": {
+                                                            \"style\": {
+                                                                \"display\": \"block\"
+                                                            },
+                                                            \"sizeOptions\": [
+                                                                10,
+                                                                20,
+                                                                30,
+                                                                40,
+                                                                50
+                                                            ],
+                                                            \"show\": true,
+                                                            \"showTotal\": true,
+                                                            \"pageSizeChangeResetCurrent\": true,
+                                                            \"sizeCanChange\": true,
+                                                            \"total\": 0,
+                                                            \"pageSize\": 20,
+                                                            \"current\": 1
+                                                        },
+                                                        \"event\": {
+                                                            \"builtIn\": {
+                                                                \"type\": \"url\",
+                                                                \"isSingleService\": true,
+                                                                \"urlAction\": {
+                                                                    \"url\": null,
+                                                                    \"blank\": true
+                                                                },
+                                                                \"viewActions\": [
+                                                                    {
+                                                                        \"condition\": \"true\",
+                                                                        \"showType\": \"modal\",
+                                                                        \"viewName\": null,
+                                                                        \"before\": \"function beforeCallback() {}\",
+                                                                        \"width\": \"50%\",
+                                                                        \"top\": \"15vh\",
+                                                                        \"fullscreen\": false,
+                                                                        \"size\": \"50%\",
+                                                                        \"tabViewName\": null,
+                                                                        \"tabParams\": \"\",
+                                                                        \"tabKey\": \"\",
+                                                                        \"tabLabel\": \"\"
+                                                                    }
+                                                                ],
+                                                                \"actions\": []
+                                                            },
+                                                            \"callback\": \"function callback() {}\"
+                                                        }
+                                                    },
+                                                    \"eventMap\": {}
+                                                },
+                                                \"labelBindVar\": \"$this.tabInfo.modelName\",
+                                                \"children\": []
+                                            },
+                                            {
+                                                \"id\": \"867d286488d51464\",
+                                                \"name\": \"tab-label\",
+                                                \"label\": \"中文名\",
+                                                \"type\": \"text\",
+                                                \"options\": {
+                                                    \"hidden\": false,
+                                                    \"hiddenBindVar\": null,
+                                                    \"isLoading\": false,
+                                                    \"loading\": false,
+                                                    \"loadingBindVar\": null,
+                                                    \"loadingText\": null,
+                                                    \"loadingTextBindVar\": null,
+                                                    \"showTooltip\": false,
+                                                    \"tooltip\": null,
+                                                    \"tooltipBindVar\": null,
+                                                    \"className\": \"\",
+                                                    \"css\": \":root {\\n    margin-right:5px;\\n}\",
+                                                    \"loop\": {
+                                                        \"isLoading\": false,
+                                                        \"loading\": false,
+                                                        \"loadingBindVar\": null,
+                                                        \"data\": null,
+                                                        \"dataBindVar\": null,
+                                                        \"item\": \"item\",
+                                                        \"index\": \"index\",
+                                                        \"key\": \"index\",
+                                                        \"paginationVisible\": true,
+                                                        \"disabled\": false,
+                                                        \"pagination\": {
+                                                            \"style\": {
+                                                                \"display\": \"block\"
+                                                            },
+                                                            \"sizeOptions\": [
+                                                                10,
+                                                                20,
+                                                                30,
+                                                                40,
+                                                                50
+                                                            ],
+                                                            \"show\": true,
+                                                            \"showTotal\": true,
+                                                            \"pageSizeChangeResetCurrent\": true,
+                                                            \"sizeCanChange\": true,
+                                                            \"total\": 0,
+                                                            \"pageSize\": 20,
+                                                            \"current\": 1
+                                                        },
+                                                        \"event\": {
+                                                            \"builtIn\": {
+                                                                \"type\": \"url\",
+                                                                \"isSingleService\": true,
+                                                                \"urlAction\": {
+                                                                    \"url\": null,
+                                                                    \"blank\": true
+                                                                },
+                                                                \"viewActions\": [
+                                                                    {
+                                                                        \"condition\": \"true\",
+                                                                        \"showType\": \"modal\",
+                                                                        \"viewName\": null,
+                                                                        \"before\": \"function beforeCallback() {}\",
+                                                                        \"width\": \"50%\",
+                                                                        \"top\": \"15vh\",
+                                                                        \"fullscreen\": false,
+                                                                        \"size\": \"50%\",
+                                                                        \"tabViewName\": null,
+                                                                        \"tabParams\": \"\",
+                                                                        \"tabKey\": \"\",
+                                                                        \"tabLabel\": \"\"
+                                                                    }
+                                                                ],
+                                                                \"actions\": []
+                                                            },
+                                                            \"callback\": \"function callback() {}\"
+                                                        }
+                                                    },
+                                                    \"eventMap\": {}
+                                                },
+                                                \"labelBindVar\": \"$this.tabInfo.modelLabel\",
+                                                \"children\": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        \"id\": \"a58165e9e5fc878c\",
+                                        \"name\": \"descr-container\",
+                                        \"label\": \"描述容器\",
+                                        \"type\": \"container\",
+                                        \"options\": {
+                                            \"hidden\": false,
+                                            \"hiddenBindVar\": null,
+                                            \"isLoading\": false,
+                                            \"loading\": false,
+                                            \"loadingBindVar\": null,
+                                            \"loadingText\": null,
+                                            \"loadingTextBindVar\": null,
+                                            \"showTooltip\": false,
+                                            \"tooltip\": null,
+                                            \"tooltipBindVar\": null,
+                                            \"className\": \"\",
+                                            \"css\": \":root {\\n    margin-top:10px;\\n    white-space: nowrap;\\n        overflow: hidden;\\n    text-overflow: ellipsis;\\n}\\n:root>span{\\n    display: inline!important;\\n}\",
+                                            \"loop\": {
+                                                \"isLoading\": false,
+                                                \"loading\": false,
+                                                \"loadingBindVar\": null,
+                                                \"data\": null,
+                                                \"dataBindVar\": null,
+                                                \"item\": \"item\",
+                                                \"index\": \"index\",
+                                                \"key\": \"index\",
+                                                \"paginationVisible\": true,
+                                                \"disabled\": false,
+                                                \"pagination\": {
+                                                    \"style\": {
+                                                        \"display\": \"block\"
+                                                    },
+                                                    \"sizeOptions\": [
+                                                        10,
+                                                        20,
+                                                        30,
+                                                        40,
+                                                        50
+                                                    ],
+                                                    \"show\": true,
+                                                    \"showTotal\": true,
+                                                    \"pageSizeChangeResetCurrent\": true,
+                                                    \"sizeCanChange\": true,
+                                                    \"total\": 0,
+                                                    \"pageSize\": 20,
+                                                    \"current\": 1
+                                                }
+                                            },
+                                            \"eventMap\": {}
+                                        },
+                                        \"defaultOptions\": {
+                                            \"css\": \":root {\\nheight: 200px;\\n}\"
+                                        },
+                                        \"children\": [
+                                            {
+                                                \"id\": \"44ba1a743ff9d28e\",
+                                                \"name\": \"tab-descr\",
+                                                \"label\": \"描述：这里展示模型描述\",
+                                                \"type\": \"text\",
+                                                \"options\": {
+                                                    \"hidden\": false,
+                                                    \"hiddenBindVar\": null,
+                                                    \"isLoading\": false,
+                                                    \"loading\": false,
+                                                    \"loadingBindVar\": null,
+                                                    \"loadingText\": null,
+                                                    \"loadingTextBindVar\": null,
+                                                    \"showTooltip\": false,
+                                                    \"tooltip\": null,
+                                                    \"tooltipBindVar\": null,
+                                                    \"className\": \"\",
+                                                    \"css\": \":root {\\n    font-family: SourceHanSansCN-Regular, SourceHanSansCN;\\n    font-weight: 400;\\n    color: #86909C;\\n  /* width:400px;\\n  font-size: 12px;\\n  text-align: left;\\n  overflow: hidden;\\n\\ttext-overflow: ellipsis;\\n  display: -webkit-box;\\n  -webkit-line-clamp: 2;\\n  -webkit-box-orient: vertical; */\\n}\\n\",
+                                                    \"loop\": {
+                                                        \"isLoading\": false,
+                                                        \"loading\": false,
+                                                        \"loadingBindVar\": null,
+                                                        \"data\": null,
+                                                        \"dataBindVar\": null,
+                                                        \"item\": \"item\",
+                                                        \"index\": \"index\",
+                                                        \"key\": \"index\",
+                                                        \"paginationVisible\": true,
+                                                        \"disabled\": false,
+                                                        \"pagination\": {
+                                                            \"style\": {
+                                                                \"display\": \"block\"
+                                                            },
+                                                            \"sizeOptions\": [
+                                                                10,
+                                                                20,
+                                                                30,
+                                                                40,
+                                                                50
+                                                            ],
+                                                            \"show\": true,
+                                                            \"showTotal\": true,
+                                                            \"pageSizeChangeResetCurrent\": true,
+                                                            \"sizeCanChange\": true,
+                                                            \"total\": 0,
+                                                            \"pageSize\": 20,
+                                                            \"current\": 1
+                                                        },
+                                                        \"event\": {
+                                                            \"builtIn\": {
+                                                                \"type\": \"url\",
+                                                                \"isSingleService\": true,
+                                                                \"urlAction\": {
+                                                                    \"url\": null,
+                                                                    \"blank\": true
+                                                                },
+                                                                \"viewActions\": [
+                                                                    {
+                                                                        \"condition\": \"true\",
+                                                                        \"showType\": \"modal\",
+                                                                        \"viewName\": null,
+                                                                        \"before\": \"function beforeCallback() {}\",
+                                                                        \"width\": \"50%\",
+                                                                        \"top\": \"15vh\",
+                                                                        \"fullscreen\": false,
+                                                                        \"size\": \"50%\",
+                                                                        \"tabViewName\": null,
+                                                                        \"tabParams\": \"\",
+                                                                        \"tabKey\": \"\",
+                                                                        \"tabLabel\": \"\"
+                                                                    }
+                                                                ],
+                                                                \"actions\": []
+                                                            },
+                                                            \"callback\": \"function callback() {}\"
+                                                        }
+                                                    },
+                                                    \"eventMap\": {}
+                                                },
+                                                \"labelBindVar\": \"'描述：' + ($this.tabInfo.modelDescr || '--')\",
+                                                \"children\": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                \"id\": \"8d9cb02f14252a65\",
+                \"name\": \"8d9cb02f14252a65\",
+                \"label\": \"选项卡\",
+                \"type\": \"tabs\",
+                \"options\": {
+                    \"hidden\": false,
+                    \"hiddenBindVar\": null,
+                    \"isLoading\": false,
+                    \"loading\": false,
+                    \"loadingBindVar\": null,
+                    \"loadingText\": null,
+                    \"loadingTextBindVar\": null,
+                    \"showTooltip\": false,
+                    \"tooltip\": null,
+                    \"tooltipBindVar\": null,
+                    \"className\": \"customTab\",
+                    \"css\": \":root {\\n    margin-top:5px;\\n}\\n.customTab{\\n    height: calc(100% - 60px);\\n}\\n.customTab .arco-tabs{\\n    height: 100%;\\n}\\n.customTab  .arco-tabs-content {\\n    height: calc(100% - 26px);\\n}\\n.customTab  .arco-tabs-content .arco-tabs-content-inner{\\n     height: 100%;\\n}\\n.customTab .arco-tabs-pane{\\n    height: 100%;\\n}\\n.customTab .editor-blood_rela{\\n    overflow: hidden;\\n} \\n.customTab .editor-map_rela{\\n    overflow: hidden;\\n}\",
+                    \"loop\": {
+                        \"isLoading\": false,
+                        \"loading\": false,
+                        \"loadingBindVar\": null,
+                        \"data\": null,
+                        \"dataBindVar\": null,
+                        \"item\": \"item\",
+                        \"index\": \"index\",
+                        \"key\": \"index\",
+                        \"paginationVisible\": true,
+                        \"disabled\": false,
+                        \"pagination\": {
+                            \"style\": {
+                                \"display\": \"block\"
+                            },
+                            \"sizeOptions\": [
+                                10,
+                                20,
+                                30,
+                                40,
+                                50
+                            ],
+                            \"show\": true,
+                            \"showTotal\": true,
+                            \"pageSizeChangeResetCurrent\": true,
+                            \"sizeCanChange\": true,
+                            \"total\": 0,
+                            \"pageSize\": 20,
+                            \"current\": 1
+                        },
+                        \"event\": {
+                            \"builtIn\": {
+                                \"type\": \"url\",
+                                \"isSingleService\": true,
+                                \"urlAction\": {
+                                    \"url\": null,
+                                    \"blank\": true
+                                },
+                                \"viewActions\": [
+                                    {
+                                        \"condition\": \"true\",
+                                        \"showType\": \"modal\",
+                                        \"viewName\": null,
+                                        \"before\": \"function beforeCallback() {}\",
+                                        \"width\": \"50%\",
+                                        \"top\": \"15vh\",
+                                        \"fullscreen\": false,
+                                        \"size\": \"50%\",
+                                        \"tabViewName\": null,
+                                        \"tabParams\": \"\",
+                                        \"tabKey\": \"\",
+                                        \"tabLabel\": \"\"
+                                    }
+                                ],
+                                \"actions\": []
+                            },
+                            \"callback\": \"function callback() {}\"
+                        }
+                    },
+                    \"eventMap\": {},
+                    \"edit\": false,
+                    \"defaultActiveTab\": \"data_sum\",
+                    \"tabs\": [
+                        {
+                            \"title\": \"基本信息\",
+                            \"key\": \"data_sum\",
+                            \"viewName\": \"logicModelBaseInfo\"
+                        },
+                        {
+                            \"title\": \"字段信息\",
+                            \"key\": \"fields\",
+                            \"viewName\": \"logicModelFieldsInfo\"
+                        },
+                        {
+                            \"title\": \"存储策略\",
+                            \"key\": \"store\",
+                            \"viewName\": \"logicModelStoreStrategy\",
+                            \"params\": \"{\\n    modelDetail: $this.tabInfo\\n}\",
+                            \"hiddenBindVar\": \"!($this.tabInfo && $this.tabInfo.datasource ? ($this.tabInfo.datasource.dsType === 'hive' || $this.tabInfo.datasource.dsType === 'gbase' ? true : false) : false)\"
+                        },
+                        {
+                            \"title\": \"清理规则\",
+                            \"key\": \"clear\",
+                            \"viewName\": \"logicModelClearRule\",
+                            \"params\": \"{\\n    clearRule: $this.tabInfo.datapsTabStorageRuleDraftList\\n}\"
+                        },
+                        {
+                            \"title\": \"处理过程\",
+                            \"key\": \"process\",
+                            \"viewName\": \"logicModelProcess\",
+                            \"hidden\": true,
+                            \"params\": \"{\\n    modelId: $this.modelId\\n}\"
+                        }
+                    ],
+                    \"type\": \"line\",
+                    \"size\": \"mini\",
+                    \"tabPosition\": \"top\",
+                    \"direction\": \"horizontal\",
+                    \"lazyload\": true
+                },
+                \"children\": []
+            }
+        ]
+    }
+]",
+    "inputVars": null,
+    "viewPlugins": null,
+    "version": 37,
+    "createUser": "chengkai3",
+    "createDt": null,
+    "lastupd": null,
+    "updateUser": null,
+    "digest": null,
+    "versionInfo": "",
+    "appName": "dataps",
+    "createUserName": null
+}
