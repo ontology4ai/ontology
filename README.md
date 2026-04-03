@@ -80,7 +80,8 @@
 
 ## 🚀 快速开始
 
-参考https://github.com/ontology4ai/ontology/blob/main/quickstart.md
+参考 [快速开始指南](https://github.com/ontology4ai/ontology/blob/main/quickstart.md)
+
 ---
 
 ## 📂 目录结构
